@@ -1,0 +1,13 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    [formControl]="inputControl"
+    (focus)="touched()"
+    matInput
+    [attr.type]="type"
+    [attr.aria-label]="label"
+    [attr.id]="id"
+    [attr.disabled]="isDisabled$ | async" />
+  <mat-icon *ngIf="!!icon" matSuffix>{{ icon }}</mat-icon>
+  <mat-hint>{{ hint }}</mat-hint>
+</mat-form-field>

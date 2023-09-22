@@ -1,0 +1,14 @@
+<mat-grid-list class="grid-layout-custom" cols="3" gutterSize="12" rowHeight="200px">
+  <mat-grid-tile
+    class="tile-custom"
+    *ngFor="let tile of tiles"
+    (click)="navigateTo(tile.route)"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color">
+    <div class="flex flex-col">
+      <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" [fontIcon]="tile.icon"></mat-icon>
+      <span class="font-medium text-xs text-slate-200">{{ tile.text }}</span>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

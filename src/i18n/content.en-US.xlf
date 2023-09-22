@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="pt" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4896787661862010545" datatype="html">
+        <source>Cadastro No Verde</source>
+        <target>Sign-up No Verde</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5084618740190160936" datatype="html">
+        <source>Confirmar cadastro No Verde</source>
+        <target>Confirm sign-up No Verde</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1785676651676813840" datatype="html">
+        <source>Verificar cadastro No Verde</source>
+        <target>Verify sign-up No Verde</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8283585283264580239" datatype="html">
+        <source>Entrar no No Verde</source>
+        <target>Sign-in No Verde</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2131941440883395202" datatype="html">
+        <source>Esqueci minha senha</source>
+        <target>Forgot password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4438825321550789379" datatype="html">
+        <source>Criar nova senha</source>
+        <target>Reset password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

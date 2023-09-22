@@ -1,0 +1,11 @@
+<button
+  [attr.aria-label]="label"
+  [attr.type]="type"
+  [attr.disabled]="isDisabled$ | async"
+  (click)="click($event)"
+  (keydown.enter)="click($event)"
+  (keydown.space)="($event)"
+  mat-raised-button
+  color="primary">
+  {{ title }}
+</button>
