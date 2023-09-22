@@ -1,6 +1,10 @@
 :host{
-    @apply flex justify-center items-center;
+    @apply flex justify-center items-center flex-col gap-y-[24px];
     @apply min-h-screen w-full;
+
+    .chip-icons {
+        @apply w-6 h-6;
+    }
 
     .tile-custom{
         @apply cursor-pointer;
