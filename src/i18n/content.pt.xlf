@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="pt" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="175624764029194350" datatype="html">
         <source>Central Hash</source>
@@ -10,133 +11,133 @@
         </context-group>
       </trans-unit>
       <trans-unit id="7200801166640400616" datatype="html">
-        <source>Central Hash | Home</source>
+        <source>Central Hash | Inicio</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1747126662927806548" datatype="html">
-        <source>Central Hash | Create wallet</source>
+        <source>Central Hash | Criar carteira</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9073462274412492633" datatype="html">
-        <source>Central Hash | Check wallet</source>
+        <source>Central Hash | Verificar carteira</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6704896490811356993" datatype="html">
-        <source>Central Hash | Create transfer</source>
+        <source>Central Hash | Fazer transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1214745977726045534" datatype="html">
-        <source>Central Hash | Check transfer</source>
+        <source>Central Hash | Verificar transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4252027105627904167" datatype="html">
-        <source>Central Hash | Check transaction fee</source>
+        <source>Central Hash | Verificar taxa de transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5689410621135019134" datatype="html">
-        <source>Central Hash | Check transaction history</source>
+        <source>Central Hash | Verificar histórico de transações</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7064825400481119235" datatype="html">
-        <source>Bitcoin icon.</source>
+        <source>ícone do bitcoin.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2179068836268566566" datatype="html">
-        <source>Ethereum icon.</source>
+        <source>ícone do ethereum.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4370895844698115957" datatype="html">
-        <source>Monero icon.</source>
+        <source>Ícone do monero.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7696835135150934392" datatype="html">
-        <source>Check wallet</source>
+        <source>Criar carteira</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.ts</context>
           <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="322477026935471468" datatype="html">
-        <source>Check transaction history</source>
+        <source>Verificar histórico de transações</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.ts</context>
           <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7757652357017200733" datatype="html">
-        <source>Create wallet</source>
+        <source>Criar carteira</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5095810357015793342" datatype="html">
-        <source>Create transfer</source>
+        <source>Criar transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.ts</context>
           <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8709682396535512886" datatype="html">
-        <source>Check transaction fee</source>
+        <source>Calcular taxa de transação</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.ts</context>
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6719429095355215912" datatype="html">
-        <source>Check transfer</source>
+        <source>Verificar transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.ts</context>
           <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3448324243745505890" datatype="html">
-        <source>Button to go to the home page.</source>
+        <source>Botão para ir para home page.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4114200202781656348" datatype="html">
-        <source>Central Hash logo.</source>
+        <source>Logo do Central Hash.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5094207302133053833" datatype="html">
-        <source>Menu options.</source>
+        <source>Menu de opções.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
           <context context-type="linenumber">5</context>
