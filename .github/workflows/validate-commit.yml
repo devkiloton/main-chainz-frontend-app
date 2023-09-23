@@ -1,4 +1,4 @@
-name: Validate Alpha
+name: Validate commit
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - ready_for_review
       - synchronize
       - opened
-    branches: [master]
+    branches: [main]
 
 # Definindo as etapas da pipeline
 jobs:
