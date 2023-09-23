@@ -27,6 +27,9 @@ jobs:
     name: build
     container: node:16.20-alpine3.17
     steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - run: npm i
       - run: npm run build
   # Etapa de teste
@@ -40,8 +43,11 @@ jobs:
       CHROME_BIN: '/usr/bin/google-chrome-stable'
     # Definição das variáveis de ambiente
     steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       # Instalar dependências
-      - run: npm i
+      - run: npm ci
       # Instalar o Chrome
       - run: apt-get update && apt-get install -y wget gnupg ca-certificates
       - run: wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
