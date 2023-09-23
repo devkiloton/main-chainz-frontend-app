@@ -44,7 +44,6 @@ jobs:
       - run: wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
       - run: echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
       - run: apt-get update && apt-get install -y google-chrome-stable
-
       # Configurar usuário personalizado para o Chrome
       - run: groupadd -r chrome && useradd -r -g chrome -G audio,video chrome
       - run: mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
