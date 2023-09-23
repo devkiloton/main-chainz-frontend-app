@@ -20,6 +20,7 @@ jobs:
         with:
           persist-credentials: false
       - run: npm ci
+      - run: npm run format
   # Etapa de build
   build:
     runs-on: ubuntu-latest
