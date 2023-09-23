@@ -16,6 +16,8 @@ jobs:
     name: linters
     container: node:16.20-alpine3.17
     steps:
+      - run: npm cache clean -f
+      - run: rm -rf node_modules
       - run: npm i
       - run: npm run format
   # Etapa de build
