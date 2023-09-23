@@ -17,7 +17,7 @@ function run() {
   const server = express();
   server.use('/pt', appPt);
   server.use('/en-US', appEn);
-  server.use('', appPt);
+  server.use('', appEn);
 
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
