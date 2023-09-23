@@ -16,10 +16,14 @@ jobs:
     name: linters
     container: node:16.20-alpine3.17
     steps:
-      - run: npm cache clean -f
-      - run: rm -rf node_modules
-      - run: npm i
-      - run: npm run format
+      - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
+      - run: npm ci
   # Etapa de build
   build:
     runs-on: ubuntu-latest
