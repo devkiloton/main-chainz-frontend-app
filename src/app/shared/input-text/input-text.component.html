@@ -10,6 +10,14 @@
     [attr.id]="id"
     [name]="name"
     [attr.disabled]="isDisabled$ | async" />
-  <mat-icon *ngIf="!!icon" matSuffix>{{ icon }}</mat-icon>
+  <mat-icon
+    (appAccessiblePress)="onPressInputButton()"
+    matRipple
+    tabindex="0"
+    *ngIf="!!icon"
+    class="cursor-pointer rounded-full"
+    matSuffix
+    >{{ icon }}</mat-icon
+  >
   <mat-hint>{{ hint }}</mat-hint>
 </mat-form-field>
