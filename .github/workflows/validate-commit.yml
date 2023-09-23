@@ -19,7 +19,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-      - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
       - run: npm ci
   # Etapa de build
   build:
