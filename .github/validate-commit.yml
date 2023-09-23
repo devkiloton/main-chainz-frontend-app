@@ -1,5 +1,12 @@
 # Arquivo .gitlab-ci.yml
-
+on:
+  pull_request:
+    # Running when the PR is assigned as Ready for review or when the PR is updated
+    types:
+      - ready_for_review
+      - synchronize
+      - opened
+    branches: [master]
 # Definindo as etapas da pipeline
 stages:
   - linters
