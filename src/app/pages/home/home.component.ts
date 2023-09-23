@@ -1,9 +1,12 @@
-import { NgFor } from '@angular/common';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { AsyncPipe, NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatRippleModule} from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import { map } from 'rxjs';
 
 export type Tile = {
   color: string;
@@ -21,10 +24,22 @@ export type Tile = {
   styleUrls: ['./home.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatGridListModule, MatIconModule, MatChipsModule, NgFor],
+  imports: [MatGridListModule, MatIconModule, MatChipsModule, MatRippleModule, NgFor, AsyncPipe],
 })
 export default class HomeComponent {
   private readonly _router = inject(Router);
+  private readonly _breakpointObserver = inject(BreakpointObserver);
+
+  public readonly isHandset$ = this._breakpointObserver.observe(['(min-width: 768px)', '(min-width: 1024px)']).pipe(map(result => {
+    if (result.breakpoints['(min-width: 1024px)'] === true) {
+      return 3;
+    }
+    if (result.breakpoints['(min-width: 768px)'] === true) {
+      return 2;
+    }
+    return 1;
+  }));
+
   public tiles: Array<Tile> = [
     {text: 'Verificar carteira', cols: 1, rows: 1, color: '#673ab7', icon: 'manage_search', route: 'check-wallet', isActive: true},
     {text: 'Extrato de carteira', cols: 1, rows: 1, color: '#673ab7', icon: 'receipt', route: 'check-transaction-history', isActive: true},

@@ -1,6 +1,11 @@
 :host{
     @apply flex justify-center items-center flex-col gap-y-[24px];
-    @apply min-h-screen w-full;
+    @apply h-full w-full;
+
+    .chips{
+        @apply mt-6;
+        @apply min-[1024px]:mt-0;
+    }
 
     .chip-icons {
         @apply w-6 h-6;

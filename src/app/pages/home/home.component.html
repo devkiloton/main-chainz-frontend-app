@@ -1,4 +1,4 @@
-<mat-chip-listbox aria-label="Dog selection">
+<mat-chip-listbox class="chips" aria-label="Cryptocurrency selection">
   <mat-chip-option selected>
     <img matChipAvatar class="chip-icons" src="assets/images/bitcoin.svg" alt="Bitcoin icon." />
     Bitcoin
@@ -12,13 +12,14 @@
     Monero
   </mat-chip-option>
 </mat-chip-listbox>
-<mat-grid-list class="grid-layout-custom" cols="3" gutterSize="12" rowHeight="200px">
+<mat-grid-list class="grid-layout-custom" [cols]="isHandset$ | async" gutterSize="12" rowHeight="200px">
   <mat-grid-tile
     class="tile-custom"
     *ngFor="let tile of tiles"
     (click)="navigateTo({ route: tile.route, isActive: tile.isActive })"
     [colspan]="tile.cols"
     [rowspan]="tile.rows"
+    matRipple
     [style.background]="tile.color"
     [style.cursor]="tile.isActive ? 'pointer' : 'not-allowed'"
     [style.opacity]="tile.isActive ? 1 : 0.5">
