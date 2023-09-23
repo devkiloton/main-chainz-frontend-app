@@ -58,6 +58,9 @@ export class InputTextComponent implements ControlValueAccessor, OnInit {
   @Input()
   public hint = '';
 
+  @Input()
+  public placeholder = '';
+
   /**
    * Icons provided by Material Design.
    * Table of codes: https://jossef.github.io/material-design-icons-iconfont/

@@ -1,0 +1,9 @@
+:host{
+    @apply flex flex-col justify-center items-center;
+    @apply h-full;
+
+    .wallet-input {
+        @apply w-[40%];
+        @apply min-w-[320px];
+    }
+}

@@ -1,10 +1,11 @@
-<mat-form-field class="w-full" appearance="outline">
+<mat-form-field class="w-full">
   <mat-label aria-hidden="true" [attr.aria-labelledby]="id">{{ label }}</mat-label>
   <input
     [attr.aria-label]="label"
     [formControl]="inputControl"
     (blur)="touched()"
     matInput
+    [placeholder]="placeholder"
     [attr.type]="type"
     [attr.id]="id"
     [name]="name"
