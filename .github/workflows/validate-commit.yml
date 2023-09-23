@@ -23,9 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     name: build
     container: node:16.20-alpine3.17
-    script:
-      - npm ci
-      - npm run build
+    steps:
+      - run: npm ci
+      - run: npm run build
   # Etapa de teste
   test:
     runs-on: ubuntu-latest
