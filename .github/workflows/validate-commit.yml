@@ -17,11 +17,11 @@ jobs:
     container: node:16.20-alpine3.17
     steps:
       - uses: actions/checkout@v2
-      with:
-        persist-credentials: false
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v1
         with:
-          node-version: 16.x
+          node-version: '16'
       - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
       - run: npm ci
   # Etapa de build
