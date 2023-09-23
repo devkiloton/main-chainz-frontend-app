@@ -1,16 +1,16 @@
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
-import CheckWalletComponent from './check-wallet.component';
+import { ToolBarComponent } from './tool-bar.component';
 
-describe('CheckWalletComponent', () => {
-  let component: CheckWalletComponent | null = null;
-  let fixture: ComponentFixture<CheckWalletComponent> | null = null;
+describe('ToolBarComponent', () => {
+  let component: ToolBarComponent | null = null;
+  let fixture: ComponentFixture<ToolBarComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CheckWalletComponent],
+      imports: [ToolBarComponent],
     });
-    fixture = TestBed.createComponent(CheckWalletComponent);
+    fixture = TestBed.createComponent(ToolBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

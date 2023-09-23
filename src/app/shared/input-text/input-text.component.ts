@@ -1,5 +1,7 @@
 import { AsyncPipe, NgIf } from '@angular/common';
-import { ChangeDetectionStrategy, Component, forwardRef, inject, Input } from '@angular/core';
+import type { OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, forwardRef, inject, Input } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   type ControlValueAccessor,
   NG_VALUE_ACCESSOR,
@@ -9,7 +11,7 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { map, startWith, Subject } from 'rxjs';
+import { BehaviorSubject, map, shareReplay, startWith, Subject } from 'rxjs';
 import { UniqueIdService } from 'src/app/services/unique-id/unique-id.service';
 
 @Component({
@@ -27,17 +29,21 @@ import { UniqueIdService } from 'src/app/services/unique-id/unique-id.service';
     },
   ],
 })
-export class InputTextComponent implements ControlValueAccessor {
+export class InputTextComponent implements ControlValueAccessor, OnInit {
   // Dependency Injection
   private readonly _uniqueIdService = inject(UniqueIdService);
   private readonly _nonNullableFormBuilder = inject(NonNullableFormBuilder);
+  private readonly _destroyRef = inject(DestroyRef);
 
   // Reactive properties
-  public _isDisabled$ = new Subject<boolean>();
-  public isDisabled$ = this._isDisabled$.asObservable().pipe(
+  private readonly _isDisabled$ = new Subject<boolean>();
+  public readonly isDisabled$ = this._isDisabled$.pipe(
     map(value => (value ? true : null)),
     startWith(null),
   );
+
+  private readonly _name$ = new BehaviorSubject<string | null>(null);
+  public readonly name$ = this._name$.pipe(shareReplay(1));
 
   // Properties
   @Input({ required: true })
@@ -46,12 +52,11 @@ export class InputTextComponent implements ControlValueAccessor {
   @Input({ required: true })
   public type = '';
 
+  @Input({ required: true })
+  public name = '';
+
   @Input()
   public hint = '';
-
-  public readonly id = this._uniqueIdService.generateUniqueIdWithPrefix('app-input-text');
-
-  public readonly inputControl = this._nonNullableFormBuilder.control('');
 
   /**
    * Icons provided by Material Design.
@@ -59,6 +64,17 @@ export class InputTextComponent implements ControlValueAccessor {
    */
   @Input()
   public icon = '';
+
+  public readonly id = this._uniqueIdService.generateUniqueIdWithPrefix('app-input-text');
+
+  public readonly inputControl = this._nonNullableFormBuilder.control('');
+
+  // Lyfe cycle hooks
+  public ngOnInit(): void {
+    this.inputControl.valueChanges
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe(value => this.writeValue(value));
+  }
 
   // ControlValueAccessor Implementation
   private _onChange = (_value: string): void => void 0;

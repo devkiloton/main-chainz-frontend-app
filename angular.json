@@ -14,11 +14,11 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "pt",
+        "sourceLocale": "en-US",
         "locales": {
-          "en-US": {
-            "translation": "src/i18n/content.en-US.xlf",
-            "baseHref": "en-US/"
+          "pt": {
+            "translation": "src/i18n/content.pt.xlf",
+            "baseHref": "pt/"
           }
         }
       },
@@ -49,7 +49,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "750kb",
                   "maximumError": "1mb"
                 },
                 {
@@ -81,16 +81,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-app:build:production,pt"
-            },
-            "production-en-US": {
               "browserTarget": "angular-app:build:production,en-US"
             },
-            "development": {
-              "browserTarget": "angular-app:build:development,pt"
+            "production-pt": {
+              "browserTarget": "angular-app:build:production,pt"
             },
-            "development-en-US": {
+            "development": {
               "browserTarget": "angular-app:build:development,en-US"
+            },
+            "development-pt": {
+              "browserTarget": "angular-app:build:development,pt"
             }
           },
           "defaultConfiguration": "development"
