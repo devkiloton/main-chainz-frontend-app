@@ -43,7 +43,7 @@ export default class HomeComponent {
 
   public tiles: Array<Tile> = [
     {
-      text: 'Verificar carteira',
+      text: $localize`Check wallet`,
       cols: 1,
       rows: 1,
       color: '#673ab7',
@@ -52,7 +52,7 @@ export default class HomeComponent {
       isActive: true,
     },
     {
-      text: 'Extrato de carteira',
+      text: $localize`Check transaction history`,
       cols: 1,
       rows: 1,
       color: '#673ab7',
@@ -61,7 +61,7 @@ export default class HomeComponent {
       isActive: true,
     },
     {
-      text: 'Criar carteira',
+      text: $localize`Create wallet`,
       cols: 1,
       rows: 1,
       color: '#673ab7',
@@ -70,7 +70,7 @@ export default class HomeComponent {
       isActive: null,
     },
     {
-      text: 'Fazer uma transação',
+      text: $localize`Create transfer`,
       cols: 1,
       rows: 1,
       color: '#673ab7',
@@ -79,7 +79,7 @@ export default class HomeComponent {
       isActive: null,
     },
     {
-      text: 'Calcular taxa de transação',
+      text: $localize`Check transaction fee`,
       cols: 1,
       rows: 1,
       color: '#673ab7',
@@ -88,7 +88,7 @@ export default class HomeComponent {
       isActive: null,
     },
     {
-      text: 'Verificar transação',
+      text: $localize`Check transfer`,
       cols: 1,
       rows: 1,
       color: '#673ab7',
