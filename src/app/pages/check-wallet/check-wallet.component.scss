@@ -3,7 +3,8 @@
     @apply h-full;
 
     .wallet-input {
-        @apply w-[40%];
+        @apply w-[45%];
         @apply min-w-[320px];
+        @apply mt-6;
     }
 }

@@ -1,9 +1,33 @@
-<app-input-text
-  class="wallet-input"
-  type="text"
-  i18n-placeholder
-  placeholder="Ex. tb4ql8agn3j3xdu7h406v48v5cvj40glkgz09uja00"
-  i18n-label
-  label="Type here the wallet address..."
-  i18n-name
-  name="Wallet address input."></app-input-text>
+<div class="flex justify-between w-full">
+  <div class="h-screen w-full flex justify-center items-center flex-col">
+    <span class="font-bold text-6xl text-white">Check wallet</span>
+    <app-chip-icon-list [chipOptions]="allCurrenciesChipOptions"></app-chip-icon-list>
+    <app-input-text
+      class="wallet-input"
+      type="text"
+      i18n-placeholder
+      [formControl]="walletAddressControl"
+      (pressInputButton)="checkWallet()"
+      (keydown.enter)="checkWallet()"
+      icon="search"
+      placeholder="Ex. tb4ql8agn3j3xdu7h406v48v5cvj40glkgz09uja00"
+      i18n-label
+      label="Type here the wallet address..."
+      i18n-name
+      name="Wallet address input."></app-input-text>
+    <div>
+      {{ wallet$ | async | json }}
+    </div>
+  </div>
+  <div class="w-[300px] pt-6 flex flex-col gap-y-1">
+    <span class="text-white font-semibold text-2xl">Other services</span>
+    <mat-chip-listbox aria-label="Dog selection">
+      <mat-chip-option selectable="false" *ngFor="let chip of bitcoinServicesGridTiles">
+        <div class="flex items-center justify-center gap-x-1">
+          <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon">{{ chip.icon }}</mat-icon>
+          <span>{{ chip.text }}</span>
+        </div>
+      </mat-chip-option>
+    </mat-chip-listbox>
+  </div>
+</div>
