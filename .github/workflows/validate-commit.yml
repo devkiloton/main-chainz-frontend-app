@@ -16,7 +16,7 @@ jobs:
     name: linters
     container: node:16.20-alpine3.17
     steps:
-      - run: npm ci
+      - run: npm i
       - run: npm run format
   # Etapa de build
   build:
@@ -24,7 +24,7 @@ jobs:
     name: build
     container: node:16.20-alpine3.17
     steps:
-      - run: npm ci
+      - run: npm i
       - run: npm run build
   # Etapa de teste
   test:
@@ -38,7 +38,7 @@ jobs:
     # Definição das variáveis de ambiente
     steps:
       # Instalar dependências
-      - run: npm ci
+      - run: npm i
       # Instalar o Chrome
       - run: apt-get update && apt-get install -y wget gnupg ca-certificates
       - run: wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -47,7 +47,6 @@ jobs:
       # Configurar usuário personalizado para o Chrome
       - run: groupadd -r chrome && useradd -r -g chrome -G audio,video chrome
       - run: mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
-      - run: npm ci
       # Executar os testes com o Karma
       - run: npm run test
   test_async:
