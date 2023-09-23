@@ -1,16 +1,16 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CalculateFeeTaxComponent } from './calculate-fee-tax.component';
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import CheckTransactionFeeComponent from './check-transaction-fee.component';
 
 describe('CalculateFeeTaxComponent', () => {
-  let component: CalculateFeeTaxComponent;
-  let fixture: ComponentFixture<CalculateFeeTaxComponent>;
+  let component: CheckTransactionFeeComponent | null = null;
+  let fixture: ComponentFixture<CheckTransactionFeeComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CalculateFeeTaxComponent]
+      imports: [CheckTransactionFeeComponent],
     });
-    fixture = TestBed.createComponent(CalculateFeeTaxComponent);
+    fixture = TestBed.createComponent(CheckTransactionFeeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

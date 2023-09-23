@@ -1,16 +1,16 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CheckHistoryComponent } from './check-history.component';
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import CheckTransactionHistoryComponent from './check-transaction-history.component';
 
 describe('CheckHistoryComponent', () => {
-  let component: CheckHistoryComponent;
-  let fixture: ComponentFixture<CheckHistoryComponent>;
+  let component: CheckTransactionHistoryComponent | null = null;
+  let fixture: ComponentFixture<CheckTransactionHistoryComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CheckHistoryComponent]
+      imports: [CheckTransactionHistoryComponent],
     });
-    fixture = TestBed.createComponent(CheckHistoryComponent);
+    fixture = TestBed.createComponent(CheckTransactionHistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

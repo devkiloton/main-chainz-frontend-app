@@ -1,24 +1,22 @@
-:host{
-    .app-logo{
-        @apply w-[135px] h-[41px];
-    }
+:host {
+  .app-logo {
+    @apply w-[135px] h-[41px];
+  }
 
-    .spacer {
-        flex: 1 1 auto;
-      }
+  .spacer {
+    flex: 1 1 auto;
+  }
 
-      span{
-        @apply uppercase;
-        @apply font-bold;
-        @apply text-xs;
+  span {
+    @apply uppercase;
+    @apply font-bold;
+    @apply text-xs;
+  }
 
-      }
-
-      .mat-mdc-chip{
-        cursor: 'pointer' !important;
-  
-      }
-      .mat-chip{
-          background-color: var(--mat-toolbar-container-background-color);
-        }
-    }
+  .mat-mdc-chip {
+    cursor: 'pointer' !important;
+  }
+  .mat-chip {
+    background-color: var(--mat-toolbar-container-background-color);
+  }
+}
