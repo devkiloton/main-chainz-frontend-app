@@ -32,7 +32,7 @@ describe('WalletCardComponent', () => {
                 {
                   code: 'btc',
                   priceUSD: 1,
-                }
+                },
               ],
               date: new Date(),
             },
@@ -41,16 +41,16 @@ describe('WalletCardComponent', () => {
                 {
                   code: 'usd',
                   priceUSD: 1,
-                }
+                },
               ],
               date: new Date(),
-            }
-          }
-        }
+            },
+          },
+        },
       ],
     });
     fixture = TestBed.createComponent(WalletCardComponent);
-    TestBed.inject(LocalStorageService)
+    TestBed.inject(LocalStorageService);
     component = fixture.componentInstance;
   });
 
