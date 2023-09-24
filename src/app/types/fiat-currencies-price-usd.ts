@@ -1,6 +1,6 @@
-import type { FiatCurrencies } from "../enums/fiat-currencies";
+import type { FiatCurrencies } from '../enums/fiat-currencies';
 
-export type FiatCurrenciesPriceUsd =  {
-    priceUSD: number;
-    code: FiatCurrencies;
-}
+export type FiatCurrenciesPriceUsd = {
+  priceUSD: number;
+  code: FiatCurrencies;
+};

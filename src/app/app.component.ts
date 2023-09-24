@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   public readonly localStorageService = inject(LocalStorageService);
   public async ngOnInit(): Promise<void> {
     const { currencies, fiatCurrencies } = await getAllCurrenciesPricesUSD();
-    this.localStorageService.setCurrenciesPriceUSD = {date: new Date(), prices: currencies};
-    this.localStorageService.setFiatCurrenciesPriceUSD = {date: new Date(), prices: fiatCurrencies};
+    this.localStorageService.setCurrenciesPriceUSD = { date: new Date(), prices: currencies };
+    this.localStorageService.setFiatCurrenciesPriceUSD = { date: new Date(), prices: fiatCurrencies };
   }
 }

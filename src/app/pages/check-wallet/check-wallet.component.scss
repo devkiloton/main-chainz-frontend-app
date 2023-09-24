@@ -15,23 +15,20 @@
 
 .input-presentation {
   @apply w-full flex justify-start items-center flex-col;
- 
 }
 
 .other-services {
   @apply w-full flex flex-col gap-y-1 items-center;
 }
 
-.icon-data{
+.icon-data {
   color: white;
   font-size: 11rem;
   @apply w-44 h-44;
 }
 
 @media (min-width: 768px) {
-
-  .other-services{
+  .other-services {
     @apply w-[300px];
-    
   }
 }
