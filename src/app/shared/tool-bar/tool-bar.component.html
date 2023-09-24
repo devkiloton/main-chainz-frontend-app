@@ -40,55 +40,55 @@
     <mat-icon>attach_money</mat-icon>
   </button>
   <mat-menu #menuCurrencies="matMenu">
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('en-US')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.usd)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/usa.webp" alt="United States flag." class="flag" />
         <span>USD</span>
       </div>
     </button>
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.eur)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/eu.webp" alt="Brasil flag." class="flag" />
         <span>EUR</span>
       </div>
     </button>
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.inr)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/india.webp" alt="Brasil flag." class="flag" />
         <span>INR</span>
       </div>
     </button>
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.brl)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
         <span>BRL</span>
       </div>
     </button>
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.rub)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/russia.webp" alt="Brasil flag." class="flag" />
         <span>RUB</span>
       </div>
     </button>
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.ngn)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/nigeria.webp" alt="Brasil flag." class="flag" />
         <span>NGN</span>
       </div>
     </button>
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.cny)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/china.webp" alt="Brasil flag." class="flag" />
         <span>CNY</span>
       </div>
     </button>
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.vnd)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/vietnam.webp" alt="Brasil flag." class="flag" />
         <span>VND</span>
       </div>
     </button>
-    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+    <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.uah)">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/ukraine.webp" alt="Brasil flag." class="flag" />
         <span>UAH</span>

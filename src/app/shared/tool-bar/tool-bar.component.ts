@@ -7,6 +7,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterModule } from '@angular/router';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
+import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -28,10 +30,17 @@ import { environment } from 'src/environments/environment';
 })
 export class ToolBarComponent {
   private readonly _router = inject(Router);
+  private readonly _localStorageService = inject(LocalStorageService);
+
+  public readonly fiatCurrencies = FiatCurrencies;
 
   constructor(@Inject(DOCUMENT) private readonly _document: Document) {}
 
   public changeLocaleServer(locale: string): void {
     this._document.location.href = `${environment.appHostUrl}/${locale}${this._router.routerState.snapshot.url}`;
+  }
+
+  public changeDefaultCurrency(currency: FiatCurrencies): void {
+    this._localStorageService.setDefaultCurrency = currency;
   }
 }
