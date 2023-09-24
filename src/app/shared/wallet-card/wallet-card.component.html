@@ -1,24 +1,24 @@
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title-group>
-      <mat-card-title>BTC {{ wallet.balance / 100000000 }}</mat-card-title>
+      <mat-card-title> {{ wallet.code }} {{ wallet.balance / 100000000 }}</mat-card-title>
       <mat-card-subtitle>USD {{ (wallet.balance / 100000000) * 26000 }}</mat-card-subtitle>
-      <img mat-card-sm-image alt="imagezdkjcsdkjn" src="assets/images/bitcoin.svg" />
+      <img mat-card-sm-image i18n-alt alt="{{ wallet.name }} icon" [src]="'assets/images/' + wallet.name + '.svg'" />
     </mat-card-title-group>
   </mat-card-header>
   <mat-card-content>
     <div>
-      <span><b>Wallet address:</b></span>
+      <span i18n><b>Wallet address:</b></span>
       <p>
         {{ wallet.address }}
       </p>
     </div>
     <div>
-      <span><b>Unconfirmed balance:</b></span>
-      <p>BTC {{ wallet.unconfirmedBalance }}</p>
+      <span i18n><b>Unconfirmed balance:</b></span>
+      <p>{{ wallet.code }} {{ wallet.unconfirmedBalance }}</p>
     </div>
     <div>
-      <span><b>Total of transactions:</b></span>
+      <span i18n><b>Total of transactions:</b></span>
       <p>
         {{ wallet.transactionsReference.length }}
       </p>

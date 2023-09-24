@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { BitcoinWallet } from 'src/app/types/bitcoin-walet';
+import type { WalletIdentifiers } from 'src/app/constants/wallet-indentifiers';
+import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 
 @Component({
   selector: 'app-wallet-card',
@@ -12,6 +13,6 @@ import { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 })
 export class WalletCardComponent {
 
-  @Input({required: true}) public wallet!: BitcoinWallet;
+  @Input({required: true}) public wallet!: BitcoinWallet & WalletIdentifiers;
 
 }
