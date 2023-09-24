@@ -1,8 +1,7 @@
 import { NgFor } from '@angular/common';
 import type { AfterViewInit } from '@angular/core';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, inject,Input, Output, ViewChild } from '@angular/core';
-import type { MatChipOption} from '@angular/material/chips';
-import { MatChipsModule } from '@angular/material/chips';
+import { MatChipOption, MatChipsModule } from '@angular/material/chips';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import type { ChipOption } from 'src/app/types/chip-option';
 
@@ -19,11 +18,13 @@ export class ChipIconListComponent implements AfterViewInit{
 
   @Output() public readonly pressChipButton = new EventEmitter<ChipOption>();
   @Input({ required: true }) public chipOptions: Array<ChipOption> = [];
-  @ViewChild('chipElement') public chipElement!: MatChipOption;
+  @ViewChild(MatChipOption) public chipElement!: MatChipOption;
 
   public ngAfterViewInit(): void {
-    this.chipElement._elementRef.nativeElement.classList.remove('mdc-evolution-chip--selected')
-    this._cd.detectChanges();
+    if (this.chipElement) {
+      this.chipElement._elementRef.nativeElement.classList.remove('mdc-evolution-chip--selected')
+      this._cd.detectChanges();
+    }
   }
 
   public onChipClick(data: ChipOption): void {

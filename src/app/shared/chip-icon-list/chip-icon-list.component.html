@@ -1,6 +1,5 @@
 <mat-chip-listbox class="chips" aria-label="Cryptocurrency selection">
   <mat-chip-option
-    #chipElement
     *ngFor="let option of chipOptions"
     [selected]="option.isDefault"
     [disabled]="!option.isAvailable"
