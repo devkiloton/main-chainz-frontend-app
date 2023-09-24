@@ -1,9 +1,10 @@
 :host {
   @apply flex flex-col justify-center items-center;
-  @apply h-full;
+  @apply px-12 py-4;
+  height: calc(100vh - 64px);
 
   .wallet-input {
-    @apply w-[45%];
+    @apply w-[50%];
     @apply min-w-[320px];
     @apply mt-6;
   }
