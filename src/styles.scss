@@ -126,3 +126,13 @@ body {
 .mdc-button__label {
   @apply px-4;
 }
+
+.mdc-evolution-chip-set__chips{
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .mdc-evolution-chip-set__chips{
+    justify-content: start;
+  }
+}

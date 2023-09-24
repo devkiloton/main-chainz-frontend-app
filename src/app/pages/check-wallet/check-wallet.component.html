@@ -1,6 +1,6 @@
-<div class="flex justify-between w-full">
-  <div style="min-height: calc(100vh - 64px)" class="w-full flex justify-center items-center flex-col">
-    <span class="font-bold text-6xl text-white" i18n>Check wallet</span>
+<div class="container">
+  <div class="input-presentation">
+    <span class="font-bold text-6xl text-white text-center" i18n>Check wallet</span>
     <app-chip-icon-list [chipOptions]="allCurrenciesChipOptions"></app-chip-icon-list>
     <app-input-text
       class="wallet-input"
@@ -16,10 +16,14 @@
       i18n-name
       name="Wallet address input."></app-input-text>
     <app-wallet-card *ngIf="wallet$ | async as wallet" [wallet]="wallet"></app-wallet-card>
+    <div *ngIf="!!!(wallet$ | async)" class="flex flex-col items-center justify-center gap-x-1">
+      <mat-icon class="icon-data" aria-hidden="false" aria-label="Example home icon">query_stats</mat-icon>
+      <span class="text-white">Find data in the blockchain</span>
+    </div>
   </div>
-  <div class="w-[300px] pt-6 flex flex-col gap-y-1">
-    <span class="text-white font-semibold text-2xl" i18n>Other services</span>
-    <mat-chip-listbox aria-label="Dog selection">
+  <div class="other-services">
+    <span class="text-white font-semibold text-2xl text-center" i18n>Other services</span>
+    <mat-chip-listbox i18n-aria-label aria-label="Other services">
       <mat-chip-option selectable="false" *ngFor="let chip of bitcoinServicesGridTiles">
         <div class="flex items-center justify-center gap-x-1">
           <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon">{{ chip.icon }}</mat-icon>
