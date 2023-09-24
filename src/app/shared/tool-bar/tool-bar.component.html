@@ -13,12 +13,12 @@
   <span class="spacer"></span>
   <button
     mat-icon-button
-    [matMenuTriggerFor]="menu"
+    [matMenuTriggerFor]="menuLanguages"
     class="example-icon"
     aria-label="Example icon-button with share icon">
     <mat-icon>translate</mat-icon>
   </button>
-  <mat-menu #menu="matMenu">
+  <mat-menu #menuLanguages="matMenu">
     <button mat-menu-item (appAccessiblePress)="changeLocaleServer('en-US')">
       <div class="flex items-center gap-x-2">
         <img src="assets/images/flags/usa.webp" alt="United States flag." class="flag" />
@@ -32,7 +32,61 @@
       </div>
     </button>
   </mat-menu>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menuCurrencies"
+    class="example-icon"
+    aria-label="Example icon-button with share icon">
+    <mat-icon>attach_money</mat-icon>
   </button>
+  <mat-menu #menuCurrencies="matMenu">
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('en-US')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/usa.webp" alt="United States flag." class="flag" />
+        <span>USD</span>
+      </div>
+    </button>
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
+        <span>EUR</span>
+      </div>
+    </button>
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
+        <span>INR</span>
+      </div>
+    </button>
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
+        <span>BRL</span>
+      </div>
+    </button>
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
+        <span>RUB</span>
+      </div>
+    </button>
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
+        <span>NGN</span>
+      </div>
+    </button>
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
+        <span>CNY</span>
+      </div>
+    </button>
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
+        <span>VND</span>
+      </div>
+    </button>
+  </mat-menu>
 </mat-toolbar>
