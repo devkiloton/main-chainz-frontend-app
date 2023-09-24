@@ -5,7 +5,7 @@ import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BitcoinApiClientService {
   private readonly _httpClient = inject(HttpClient);
@@ -13,6 +13,6 @@ export class BitcoinApiClientService {
   public wallets = {
     getOneWallet: (data: { id: string }): Observable<BitcoinWallet> => {
       return this._httpClient.get<BitcoinWallet>(`${environment.bitcoinApiUrl}/wallets/${data.id}`);
-    }
-  }
+    },
+  };
 }

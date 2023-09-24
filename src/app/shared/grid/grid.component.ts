@@ -1,6 +1,6 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { AsyncPipe, NgFor } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject,Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,12 +14,11 @@ import type { GridTile } from 'src/app/types/grid-tile';
   imports: [MatGridListModule, MatRippleModule, MatIconModule, MatRippleModule, AsyncPipe, NgFor],
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GridComponent {
   @Input({ required: true }) public gridData: Array<GridTile> = [];
-  @Input() public onlyColumn: boolean = false;
-
+  @Input() public onlyColumn = false;
 
   private readonly _router = inject(Router);
   private readonly _breakpointObserver = inject(BreakpointObserver);

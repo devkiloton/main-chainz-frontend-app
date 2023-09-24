@@ -1,10 +1,10 @@
-:host{
-    @apply flex flex-col justify-center items-center;
-    @apply h-full;
+:host {
+  @apply flex flex-col justify-center items-center;
+  @apply h-full;
 
-    .wallet-input {
-        @apply w-[45%];
-        @apply min-w-[320px];
-        @apply mt-6;
-    }
+  .wallet-input {
+    @apply w-[45%];
+    @apply min-w-[320px];
+    @apply mt-6;
+  }
 }

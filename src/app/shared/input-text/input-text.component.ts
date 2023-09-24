@@ -1,6 +1,15 @@
 import { AsyncPipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, DestroyRef, EventEmitter, forwardRef, inject, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  DestroyRef,
+  EventEmitter,
+  forwardRef,
+  inject,
+  Input,
+  Output,
+} from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   type ControlValueAccessor,
@@ -22,7 +31,16 @@ import { UniqueIdService } from 'src/app/services/unique-id/unique-id.service';
   templateUrl: './input-text.component.html',
   styleUrls: ['./input-text.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatFormFieldModule, MatInputModule, MatIconModule, AsyncPipe, MatRippleModule, ReactiveFormsModule, NgIf, AccessiblePressDirective],
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    AsyncPipe,
+    MatRippleModule,
+    ReactiveFormsModule,
+    NgIf,
+    AccessiblePressDirective,
+  ],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

@@ -1,6 +1,6 @@
 export type ChipOption = {
-    currencyName: string;
-    iconUrl: string;
-    isAvailable: boolean;
-    isDefault: boolean;
-}
+  currencyName: string;
+  iconUrl: string;
+  isAvailable: boolean;
+  isDefault: boolean;
+};

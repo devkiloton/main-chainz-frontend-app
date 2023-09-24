@@ -16,25 +16,39 @@ import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 
 @Component({
   standalone: true,
-  imports: [InputTextComponent, GridComponent, MatChipsModule, MatIconModule, NgFor, NgIf, AsyncPipe, JsonPipe, ReactiveFormsModule, ChipIconListComponent, WalletCardComponent],
+  imports: [
+    InputTextComponent,
+    GridComponent,
+    MatChipsModule,
+    MatIconModule,
+    NgFor,
+    NgIf,
+    AsyncPipe,
+    JsonPipe,
+    ReactiveFormsModule,
+    ChipIconListComponent,
+    WalletCardComponent,
+  ],
   templateUrl: './check-wallet.component.html',
   styleUrls: ['./check-wallet.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class CheckWalletComponent {
   private readonly _bitcoinApiClientService = inject(BitcoinApiClientService);
-  private readonly _fb = inject(NonNullableFormBuilder)
+  private readonly _fb = inject(NonNullableFormBuilder);
 
   public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles;
   public readonly allCurrenciesChipOptions = allCurrenciesChipOptions;
   public readonly walletAddressControl = this._fb.control('', [Validators.required]);
 
-  private readonly _wallet$ = new BehaviorSubject<BitcoinWallet & WalletIdentifiers | null>(null);
+  private readonly _wallet$ = new BehaviorSubject<(BitcoinWallet & WalletIdentifiers) | null>(null);
   public readonly wallet$ = this._wallet$.asObservable();
 
   public async checkBitcoinWallet(): Promise<void> {
-    const data = await firstValueFrom(this._bitcoinApiClientService.wallets.getOneWallet({ id: this.walletAddressControl.value }));
-    this._wallet$.next({ ...data, code: "BTC", name: "bitcoin" });
+    const data = await firstValueFrom(
+      this._bitcoinApiClientService.wallets.getOneWallet({ id: this.walletAddressControl.value }),
+    );
+    this._wallet$.next({ ...data, code: 'BTC', name: 'bitcoin' });
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   }
 }

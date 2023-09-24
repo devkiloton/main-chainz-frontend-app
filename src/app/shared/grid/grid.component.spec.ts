@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { GridComponent } from './grid.component';
 
 describe('GridComponent', () => {
-  let component: GridComponent;
-  let fixture: ComponentFixture<GridComponent>;
+  let component: GridComponent | null = null;
+  let fixture: ComponentFixture<GridComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [GridComponent]
+      imports: [GridComponent],
     });
     fixture = TestBed.createComponent(GridComponent);
     component = fixture.componentInstance;

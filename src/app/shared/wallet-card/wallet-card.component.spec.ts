@@ -1,18 +1,18 @@
-import type { ComponentFixture} from '@angular/core/testing';
+import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import type { WalletIdentifiers } from 'src/app/constants/wallet-indentifiers';
 import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 import { WalletCardComponent } from './wallet-card.component';
 
 const mocks: BitcoinWallet & WalletIdentifiers = {
-  address: "bc1qlpj4hm7ujrhtnv73exxvjl74ncnc3ncjxm6cdl",
+  address: 'bc1qlpj4hm7ujrhtnv73exxvjl74ncnc3ncjxm6cdl',
   balance: 2206844,
   confirmedBalance: 2206844,
   transactionsReference: [],
   unconfirmedBalance: 0,
   code: 'BTC',
-  name: 'bitcoin'
-}
+  name: 'bitcoin',
+};
 
 describe('WalletCardComponent', () => {
   let component: WalletCardComponent | null = null;
@@ -20,7 +20,7 @@ describe('WalletCardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [WalletCardComponent]
+      imports: [WalletCardComponent],
     });
     fixture = TestBed.createComponent(WalletCardComponent);
     component = fixture.componentInstance;

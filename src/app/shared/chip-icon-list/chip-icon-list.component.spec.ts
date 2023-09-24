@@ -1,4 +1,4 @@
-import type { ComponentFixture} from '@angular/core/testing';
+import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import { ChipIconListComponent } from './chip-icon-list.component';
 
@@ -8,7 +8,7 @@ describe('ChipIconListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ChipIconListComponent]
+      imports: [ChipIconListComponent],
     });
     fixture = TestBed.createComponent(ChipIconListComponent);
     component = fixture.componentInstance;

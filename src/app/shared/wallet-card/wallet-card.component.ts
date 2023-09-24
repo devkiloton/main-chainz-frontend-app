@@ -9,10 +9,8 @@ import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
   imports: [MatCardModule],
   templateUrl: './wallet-card.component.html',
   styleUrls: ['./wallet-card.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WalletCardComponent {
-
-  @Input({required: true}) public wallet!: BitcoinWallet & WalletIdentifiers;
-
+  @Input({ required: true }) public wallet!: BitcoinWallet & WalletIdentifiers;
 }

@@ -1,1 +1,1 @@
-export type WalletIdentifiers = { code: string, name: string };
+export type WalletIdentifiers = { code: string; name: string };
