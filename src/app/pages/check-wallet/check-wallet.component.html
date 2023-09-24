@@ -1,5 +1,5 @@
 <div class="flex justify-between w-full">
-  <div class="h-screen w-full flex justify-center items-center flex-col">
+  <div style="min-height: calc(100vh - 64px)" class="w-full flex justify-center items-center flex-col">
     <span class="font-bold text-6xl text-white">Check wallet</span>
     <app-chip-icon-list [chipOptions]="allCurrenciesChipOptions"></app-chip-icon-list>
     <app-input-text
@@ -15,9 +15,7 @@
       label="Type here the wallet address..."
       i18n-name
       name="Wallet address input."></app-input-text>
-    <div>
-      {{ wallet$ | async | json }}
-    </div>
+    <app-wallet-card *ngIf="wallet$ | async as wallet" [wallet]="wallet"></app-wallet-card>
   </div>
   <div class="w-[300px] pt-6 flex flex-col gap-y-1">
     <span class="text-white font-semibold text-2xl">Other services</span>

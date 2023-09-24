@@ -1,4 +1,4 @@
-import { AsyncPipe, JsonPipe, NgFor } from '@angular/common';
+import { AsyncPipe, JsonPipe, NgFor, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatChipsModule } from '@angular/material/chips';
@@ -10,11 +10,12 @@ import { bitcoinServicesGridTiles } from 'src/app/constants/bitcoin-services-gri
 import { ChipIconListComponent } from 'src/app/shared/chip-icon-list/chip-icon-list.component';
 import { GridComponent } from 'src/app/shared/grid/grid.component';
 import { InputTextComponent } from 'src/app/shared/input-text/input-text.component';
+import { WalletCardComponent } from 'src/app/shared/wallet-card/wallet-card.component';
 import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 
 @Component({
   standalone: true,
-  imports: [InputTextComponent, GridComponent, MatChipsModule, MatIconModule, NgFor, AsyncPipe, JsonPipe, ReactiveFormsModule, ChipIconListComponent],
+  imports: [InputTextComponent, GridComponent, MatChipsModule, MatIconModule, NgFor, NgIf, AsyncPipe, JsonPipe, ReactiveFormsModule, ChipIconListComponent, WalletCardComponent],
   templateUrl: './check-wallet.component.html',
   styleUrls: ['./check-wallet.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
