@@ -1,14 +1,14 @@
 <div class="flex justify-between w-full">
   <div style="min-height: calc(100vh - 64px)" class="w-full flex justify-center items-center flex-col">
-    <span class="font-bold text-6xl text-white">Check wallet</span>
+    <span class="font-bold text-6xl text-white" i18n>Check wallet</span>
     <app-chip-icon-list [chipOptions]="allCurrenciesChipOptions"></app-chip-icon-list>
     <app-input-text
       class="wallet-input"
       type="text"
       i18n-placeholder
       [formControl]="walletAddressControl"
-      (pressInputButton)="checkWallet()"
-      (keydown.enter)="checkWallet()"
+      (pressInputButton)="checkBitcoinWallet()"
+      (keydown.enter)="checkBitcoinWallet()"
       icon="search"
       placeholder="Ex. tb4ql8agn3j3xdu7h406v48v5cvj40glkgz09uja00"
       i18n-label
@@ -18,7 +18,7 @@
     <app-wallet-card *ngIf="wallet$ | async as wallet" [wallet]="wallet"></app-wallet-card>
   </div>
   <div class="w-[300px] pt-6 flex flex-col gap-y-1">
-    <span class="text-white font-semibold text-2xl">Other services</span>
+    <span class="text-white font-semibold text-2xl" i18n>Other services</span>
     <mat-chip-listbox aria-label="Dog selection">
       <mat-chip-option selectable="false" *ngFor="let chip of bitcoinServicesGridTiles">
         <div class="flex items-center justify-center gap-x-1">
