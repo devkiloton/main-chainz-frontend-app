@@ -1,4 +1,7 @@
 :host {
+
+  
+
   .app-logo {
     @apply w-[135px] h-[41px];
   }
@@ -19,4 +22,8 @@
   .mat-chip {
     background-color: var(--mat-toolbar-container-background-color);
   }
+}
+
+.flag {
+  transform: scale(0.65);
 }

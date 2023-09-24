@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <button i18n-aria-label aria-label="Button to go to the home page.">
+  <button i18n-aria-label aria-label="Button to go to the home page." routerLink="/">
     <img i18n-alt alt="Central Hash logo." class="app-logo" src="assets/images/black-logo.svg" />
   </button>
   <mat-chip-listbox class="ml-3" i18n-aria-label aria-label="Menu options.">
@@ -11,6 +11,27 @@
     <mat-chip-option selectable="false" class="mat-chip"><span>Blog </span> </mat-chip-option> -->
   </mat-chip-listbox>
   <span class="spacer"></span>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    class="example-icon"
+    aria-label="Example icon-button with share icon">
+    <mat-icon>translate</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('en-US')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/usa.webp" alt="United States flag." class="flag" />
+        <span>English - US</span>
+      </div>
+    </button>
+    <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+      <div class="flex items-center gap-x-2">
+        <img src="assets/images/flags/brazil.webp" alt="Brasil flag." class="flag" />
+        <span>Portuguese - BR</span>
+      </div>
+    </button>
+  </mat-menu>
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>share</mat-icon>
   </button>
