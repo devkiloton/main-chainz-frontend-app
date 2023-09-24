@@ -1,6 +1,7 @@
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import type { WalletIdentifiers } from 'src/app/constants/wallet-indentifiers';
+import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
 import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 import { WalletCardComponent } from './wallet-card.component';
 
@@ -21,8 +22,35 @@ describe('WalletCardComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [WalletCardComponent],
+      providers: [
+        {
+          provide: LocalStorageService,
+          useValue: {
+            getDefaultCurrency: 'USD',
+            getCurrenciesPriceUSD: {
+              prices: [
+                {
+                  code: 'btc',
+                  priceUSD: 1,
+                }
+              ],
+              date: new Date(),
+            },
+            getFiatCurrenciesPriceUSD: {
+              prices: [
+                {
+                  code: 'usd',
+                  priceUSD: 1,
+                }
+              ],
+              date: new Date(),
+            }
+          }
+        }
+      ],
     });
     fixture = TestBed.createComponent(WalletCardComponent);
+    TestBed.inject(LocalStorageService)
     component = fixture.componentInstance;
   });
 
