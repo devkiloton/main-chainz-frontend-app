@@ -4,7 +4,7 @@
     [selected]="option.isDefault"
     [disabled]="!option.isAvailable"
     (appAccessiblePress)="onChipClick(option)">
-    <img matChipAvatar class="chip-icons" [src]="option.iconUrl" i18n-alt alt="Bitcoin icon." />
+    <img matChipAvatar class="chip-icons" [src]="option.iconUrl" i18n-alt [alt]="option.currencyName + 'icon'" />
     {{ option.currencyName }}
   </mat-chip-option>
 </mat-chip-listbox>

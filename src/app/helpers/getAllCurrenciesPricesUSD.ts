@@ -13,6 +13,7 @@ export const getAllCurrenciesPricesUSD = async (): Promise<{
   const response = await fetch(environment.currenciesApiUrl);
   const data = (await response.json()) as Promise<CurrenciesApiResponse>;
   const postData = await data;
+  // #TODO refactor this later
   const fiatCurrenciesPriceUSD = Object.entries(postData.usd)
     .filter(
       value =>

@@ -6,12 +6,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import type { GridTile } from 'src/app/types/grid-tile';
 
 @Component({
   selector: 'app-grid',
   standalone: true,
-  imports: [MatGridListModule, MatRippleModule, MatIconModule, MatRippleModule, AsyncPipe, NgFor],
+  imports: [MatGridListModule, MatRippleModule, MatIconModule, MatRippleModule, AsyncPipe, NgFor, AccessiblePressDirective],
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

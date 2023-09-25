@@ -5,6 +5,7 @@
     [formControl]="inputControl"
     (blur)="touched()"
     matInput
+    (keydown.enter)="onPressInputButton()"
     [placeholder]="placeholder"
     [attr.type]="type"
     [attr.id]="id"
@@ -14,6 +15,10 @@
     (appAccessiblePress)="onPressInputButton()"
     matRipple
     tabindex="0"
+    aria-hidden="false"
+    role="button"
+    aria-label="Button to search for the wallet address."
+    aria-roledescription="button"
     *ngIf="!!icon"
     class="cursor-pointer rounded-full"
     matSuffix

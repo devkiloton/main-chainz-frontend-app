@@ -17,16 +17,22 @@
       name="Wallet address input."></app-input-text>
     <app-wallet-card *ngIf="wallet$ | async as wallet" [wallet]="wallet"></app-wallet-card>
     <div *ngIf="!!!(wallet$ | async)" class="flex flex-col items-center justify-center gap-x-1">
-      <mat-icon class="icon-data" aria-hidden="false" aria-label="Example home icon">query_stats</mat-icon>
+      <mat-icon class="icon-data" aria-hidden="false" i18n-aria-label aria-label="Analysis icon">query_stats</mat-icon>
       <span class="text-white">Find data in the blockchain</span>
     </div>
   </div>
   <div class="other-services">
     <span class="text-white font-semibold text-2xl text-center" i18n>Other services</span>
     <mat-chip-listbox i18n-aria-label aria-label="Other services">
-      <mat-chip-option selectable="false" *ngFor="let chip of bitcoinServicesGridTiles">
+      <mat-chip-option
+        i18n-aria-label
+        [aria-label]="chip.text + ' service'"
+        selectable="false"
+        *ngFor="let chip of bitcoinServicesGridTiles">
         <div class="flex items-center justify-center gap-x-1">
-          <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon">{{ chip.icon }}</mat-icon>
+          <mat-icon class="icon" aria-hidden="false" i18n-aria-label aria-label="Icon representing the service.">{{
+            chip.icon
+          }}</mat-icon>
           <span>{{ chip.text }}</span>
         </div>
       </mat-chip-option>
