@@ -18,11 +18,12 @@ import type { GridTile } from 'src/app/types/grid-tile';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GridComponent {
+  private readonly _router = inject(Router);
+  private readonly _breakpointObserver = inject(BreakpointObserver);
+
   @Input({ required: true }) public gridData: Array<GridTile> = [];
   @Input() public onlyColumn = false;
 
-  private readonly _router = inject(Router);
-  private readonly _breakpointObserver = inject(BreakpointObserver);
 
   public readonly isHandset$ = this._breakpointObserver.observe(['(min-width: 768px)', '(min-width: 1024px)']).pipe(
     map(result => {
