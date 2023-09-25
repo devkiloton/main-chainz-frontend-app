@@ -1,6 +1,15 @@
 import { AsyncPipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, DestroyRef, forwardRef, inject, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  DestroyRef,
+  EventEmitter,
+  forwardRef,
+  inject,
+  Input,
+  Output,
+} from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   type ControlValueAccessor,
@@ -8,10 +17,12 @@ import {
   NonNullableFormBuilder,
   ReactiveFormsModule,
 } from '@angular/forms';
+import { MatRippleModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { BehaviorSubject, map, shareReplay, startWith, Subject } from 'rxjs';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import { UniqueIdService } from 'src/app/services/unique-id/unique-id.service';
 
 @Component({
@@ -20,7 +31,16 @@ import { UniqueIdService } from 'src/app/services/unique-id/unique-id.service';
   templateUrl: './input-text.component.html',
   styleUrls: ['./input-text.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatFormFieldModule, MatInputModule, MatIconModule, AsyncPipe, ReactiveFormsModule, NgIf],
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    AsyncPipe,
+    MatRippleModule,
+    ReactiveFormsModule,
+    NgIf,
+    AccessiblePressDirective,
+  ],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -46,6 +66,7 @@ export class InputTextComponent implements ControlValueAccessor, OnInit {
   public readonly name$ = this._name$.pipe(shareReplay(1));
 
   // Properties
+  @Output() public readonly pressInputButton = new EventEmitter<void>();
   @Input({ required: true })
   public label = '';
 
@@ -57,6 +78,9 @@ export class InputTextComponent implements ControlValueAccessor, OnInit {
 
   @Input()
   public hint = '';
+
+  @Input()
+  public placeholder = '';
 
   /**
    * Icons provided by Material Design.
@@ -74,6 +98,10 @@ export class InputTextComponent implements ControlValueAccessor, OnInit {
     this.inputControl.valueChanges
       .pipe(takeUntilDestroyed(this._destroyRef))
       .subscribe(value => this.writeValue(value));
+  }
+
+  public onPressInputButton(): void {
+    this.pressInputButton.emit();
   }
 
   // ControlValueAccessor Implementation

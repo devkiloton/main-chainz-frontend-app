@@ -11,7 +11,7 @@ body {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  @apply min-w-[100%] bg-gray-900;
+  @apply min-h-full min-w-[100%] bg-gray-900;
 }
 
 // Typography
@@ -109,9 +109,9 @@ body {
   box-sizing: border-box;
 }
 
-button:focus {
-  outline: 2px solid rgb(164, 0, 205) !important;
-}
+// button:focus {
+//   outline: 2px solid rgb(164, 0, 205) !important;
+// }
 
 /* Angular Material & Tailwind conflicts */
 
@@ -125,4 +125,14 @@ button:focus {
 
 .mdc-button__label {
   @apply px-4;
+}
+
+.mdc-evolution-chip-set__chips {
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .mdc-evolution-chip-set__chips {
+    justify-content: start;
+  }
 }

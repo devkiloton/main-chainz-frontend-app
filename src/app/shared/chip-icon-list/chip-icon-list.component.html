@@ -1,0 +1,10 @@
+<mat-chip-listbox class="chips" aria-label="Cryptocurrency selection">
+  <mat-chip-option
+    *ngFor="let option of chipOptions"
+    [selected]="option.isDefault"
+    [disabled]="!option.isAvailable"
+    (appAccessiblePress)="onChipClick(option)">
+    <img matChipAvatar class="chip-icons" [src]="option.iconUrl" i18n-alt [alt]="option.currencyName + 'icon'" />
+    {{ option.currencyName }}
+  </mat-chip-option>
+</mat-chip-listbox>

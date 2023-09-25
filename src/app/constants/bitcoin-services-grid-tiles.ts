@@ -1,0 +1,58 @@
+import type { GridTile } from '../types/grid-tile';
+
+export const bitcoinServicesGridTiles: Array<GridTile> = [
+  {
+    text: $localize`Check wallet` as string,
+    cols: 1,
+    rows: 1,
+    color: '#673ab7',
+    icon: 'manage_search',
+    route: 'check-wallet',
+    isActive: true,
+  },
+  {
+    text: $localize`Check transaction history` as string,
+    cols: 1,
+    rows: 1,
+    color: '#673ab7',
+    icon: 'receipt',
+    route: 'check-transaction-history',
+    isActive: true,
+  },
+  {
+    text: $localize`Create wallet` as string,
+    cols: 1,
+    rows: 1,
+    color: '#673ab7',
+    icon: 'account_balance_wallet',
+    route: 'create-wallet',
+    isActive: null,
+  },
+  {
+    text: $localize`Create transfer` as string,
+    cols: 1,
+    rows: 1,
+    color: '#673ab7',
+    icon: 'sync_alt',
+    route: 'create-transfer',
+    isActive: null,
+  },
+  {
+    text: $localize`Check transaction fee` as string,
+    cols: 1,
+    rows: 1,
+    color: '#673ab7',
+    icon: 'local_gas_station',
+    route: 'check-transaction-fee',
+    isActive: null,
+  },
+  {
+    text: $localize`Check transfer` as string,
+    cols: 1,
+    rows: 1,
+    color: '#673ab7',
+    icon: 'done_all',
+    route: 'check-transfer',
+    isActive: null,
+  },
+];

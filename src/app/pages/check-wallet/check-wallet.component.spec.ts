@@ -1,5 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import CheckWalletComponent from './check-wallet.component';
 
 describe('CheckWalletComponent', () => {
@@ -8,7 +10,7 @@ describe('CheckWalletComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CheckWalletComponent],
+      imports: [CheckWalletComponent, HttpClientTestingModule, BrowserAnimationsModule],
     });
     fixture = TestBed.createComponent(CheckWalletComponent);
     component = fixture.componentInstance;
