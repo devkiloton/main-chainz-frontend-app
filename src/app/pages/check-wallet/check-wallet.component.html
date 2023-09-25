@@ -28,6 +28,7 @@
         i18n-aria-label
         [aria-label]="chip.text + ' service'"
         selectable="false"
+        [disabled]="!chip.isActive"
         *ngFor="let chip of bitcoinServicesGridTiles">
         <div class="flex items-center justify-center gap-x-1">
           <mat-icon class="icon" aria-hidden="false" i18n-aria-label aria-label="Icon representing the service.">{{
