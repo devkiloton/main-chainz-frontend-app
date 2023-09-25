@@ -12,7 +12,15 @@ import type { GridTile } from 'src/app/types/grid-tile';
 @Component({
   selector: 'app-grid',
   standalone: true,
-  imports: [MatGridListModule, MatRippleModule, MatIconModule, MatRippleModule, AsyncPipe, NgFor, AccessiblePressDirective],
+  imports: [
+    MatGridListModule,
+    MatRippleModule,
+    MatIconModule,
+    MatRippleModule,
+    AsyncPipe,
+    NgFor,
+    AccessiblePressDirective,
+  ],
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -23,7 +31,6 @@ export class GridComponent {
 
   @Input({ required: true }) public gridData: Array<GridTile> = [];
   @Input() public onlyColumn = false;
-
 
   public readonly isHandset$ = this._breakpointObserver.observe(['(min-width: 768px)', '(min-width: 1024px)']).pipe(
     map(result => {
