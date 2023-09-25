@@ -17,7 +17,7 @@ export const bitcoinServicesGridTiles: Array<GridTile> = [
     color: '#673ab7',
     icon: 'receipt',
     route: 'check-transaction-history',
-    isActive: true,
+    isActive: null,
   },
   {
     text: $localize`Create wallet` as string,
