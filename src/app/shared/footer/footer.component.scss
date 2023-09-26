@@ -1,5 +1,5 @@
 :host{
-    @apply bg-slate-950;
-    @apply h-[400px];
+    background-color: var(--mat-toolbar-container-background-color);
+    @apply mt-6;
     @apply p-8;
 }
