@@ -1,7 +1,18 @@
-<mat-toolbar class="flex items-center justify-center">
+<mat-toolbar class="flex items-center justify-center shadow-skim" color="primary">
   <div class="px-3 w-full flex justify-between">
     <button i18n-aria-label aria-label="Button to go to the home page." routerLink="/">
-      <img i18n-alt alt="Central Hash logo." class="app-logo" src="assets/images/white-logo.svg" />
+      <img
+        *ngIf="getTheme() === 'dark-mode'"
+        i18n-alt
+        alt="Central Hash logo."
+        class="app-logo"
+        src="assets/images/white-logo.svg" />
+      <img
+        *ngIf="getTheme() === 'light-mode'"
+        i18n-alt
+        alt="Central Hash logo."
+        class="app-logo"
+        src="assets/images/black-logo.svg" />
     </button>
     <mat-chip-listbox class="ml-3" i18n-aria-label aria-label="Menu options.">
       <!-- <mat-chip-option selectable="false" class="mat-chip"><span>Buy crypto</span> </mat-chip-option>
@@ -14,8 +25,23 @@
       <mat-chip-option selectable="false" class="mat-chip"><span>About us </span> </mat-chip-option> -->
     </mat-chip-listbox>
     <span class="spacer"></span>
-    <button mat-icon-button class="example-icon" i18n-aria-label aria-label="Change the web site theming.">
+    <button
+      mat-icon-button
+      *ngIf="getTheme() === 'dark-mode'"
+      (appAccessiblePress)="changeTheme('light-mode')"
+      class="example-icon"
+      i18n-aria-label
+      aria-label="Change the web site theming.">
       <mat-icon>dark_mode</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      *ngIf="getTheme() === 'light-mode'"
+      (appAccessiblePress)="changeTheme('dark-mode')"
+      class="example-icon"
+      i18n-aria-label
+      aria-label="Change the web site theming.">
+      <mat-icon>light_mode</mat-icon>
     </button>
     <button
       mat-icon-button
