@@ -1,6 +1,6 @@
 <div class="container">
   <div class="input-presentation">
-    <span class="font-bold text-6xl text-white text-center" i18n>Check wallet</span>
+    <span class="font-bold text-6xl text-center" i18n>Check wallet</span>
     <app-chip-icon-list [chipOptions]="allCurrenciesChipOptions"></app-chip-icon-list>
     <app-input-text
       class="wallet-input"
@@ -16,18 +16,27 @@
       i18n-name
       name="Wallet address input."></app-input-text>
     <app-wallet-card *ngIf="wallet$ | async as wallet" [wallet]="wallet"></app-wallet-card>
-    <div *ngIf="!!!(wallet$ | async)" class="flex flex-col items-center justify-center gap-x-1">
+    <div
+      *ngIf="!!!(wallet$ | async) && !!!(walletError$ | async)"
+      class="flex flex-col items-center justify-center gap-x-1">
       <mat-icon class="icon-data" aria-hidden="false" i18n-aria-label aria-label="Analysis icon">query_stats</mat-icon>
-      <span class="text-white">Find data in the blockchain</span>
+      <span>Find a wallet in the blockchain</span>
+    </div>
+    <div *ngIf="walletError$ | async" class="flex flex-col items-center justify-center gap-x-1">
+      <mat-icon class="icon-data" aria-hidden="false" i18n-aria-label aria-label="Analysis icon">search_off</mat-icon>
+      <span>Wallet not found</span>
     </div>
   </div>
   <div class="other-services">
-    <span class="text-white font-semibold text-2xl text-center" i18n>Other services</span>
+    <span class="font-semibold text-2xl text-center" i18n>Other services</span>
     <mat-chip-listbox i18n-aria-label aria-label="Other services">
       <mat-chip-option
+        class="mat-chip"
+        highlighted="true"
         i18n-aria-label
         [aria-label]="chip.text + ' service'"
         selectable="false"
+        color="accent"
         [disabled]="!chip.isActive"
         *ngFor="let chip of bitcoinServicesGridTiles">
         <div class="flex items-center justify-center gap-x-1">
