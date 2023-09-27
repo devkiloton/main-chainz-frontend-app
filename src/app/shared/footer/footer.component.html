@@ -1,1 +1,2 @@
-<img i18n-alt alt="Central hash logo" src="assets/images/white-logo.svg" />
+<img *ngIf="(theme$ | async) === 'dark-mode'" i18n-alt alt="Central hash logo" src="assets/images/white-logo.svg" />
+<img *ngIf="(theme$ | async) === 'light-mode'" i18n-alt alt="Central hash logo" src="assets/images/black-logo.svg" />
