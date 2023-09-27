@@ -64,4 +64,12 @@ export class LocalStorageService {
     // To implement http request to get all fiat currencies price in USD
     return {} as unknown as { prices: Array<{ code: Currencies; priceUSD: number }>; date: Date };
   }
+
+  public set setDefaultTheme(theme: 'dark-mode' | 'light-mode') {
+    localStorage.setItem('theme', theme);
+  }
+
+  public get getDefaultTheme(): 'dark-mode' | 'light-mode' {
+    return (localStorage.getItem('theme') as 'dark-mode' | 'light-mode' | null) ?? 'light-mode';
+  }
 }
