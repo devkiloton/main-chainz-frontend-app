@@ -207,12 +207,10 @@ export class ParticleBgComponent {
   };
 
   public particlesLoaded(_container: Container): void {
-    console.log('é true fml', _container);
     this._loaded$.next(true);
   }
 
   public async particlesInit(engine: Engine): Promise<void> {
-    console.log(engine);
     await loadSlim(engine);
   }
 }
