@@ -71,38 +71,38 @@
         </context-group>
       </trans-unit>
       <trans-unit id="322477026935471468" datatype="html">
-        <source>Verificar histórico de transação</source>
+        <source>Verificar transações</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7757652357017200733" datatype="html">
         <source>Criar carteira</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5095810357015793342" datatype="html">
         <source>Criar transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8709682396535512886" datatype="html">
-        <source>Verificar taxa de transação</source>
+        <source>Verificar taxa de transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6719429095355215912" datatype="html">
         <source>Verificar transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3404983853244960848" datatype="html">
@@ -126,138 +126,192 @@
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1725094926102860975" datatype="html">
-        <source>Icone de análise</source>
+      <trans-unit id="7536890657300313016" datatype="html">
+        <source>Icone de pesquisa</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1609474093650044651" datatype="html">
+        <source>Encontre uma carteira na blockchain</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6042393782919769952" datatype="html">
+        <source>Icone de falha de busca</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1744517053975977026" datatype="html">
+        <source>Carteira não encontrada</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8043916825107547948" datatype="html">
         <source>Outros serviços</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1929245797262539865" datatype="html">
-        <source>Icone representando serviços.</source>
+        <source>Icone representando o serviço.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3679725423691555662" datatype="html">
+        <source>Uma ferramenta de pesquisa em blockchain</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6902968760689535546" datatype="html">
+        <source>Logo do Central hash</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
+          <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3448324243745505890" datatype="html">
         <source>Botão para ir para home page.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">2</context>
+          <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4114200202781656348" datatype="html">
         <source>Logo do Central Hash.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5094207302133053833" datatype="html">
         <source>Menu de opções.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2313691775041321810" datatype="html">
+        <source>Altere o tema do site</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="56023197195175773" datatype="html">
         <source>Altere a lingua do web site.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3775383209003375667" datatype="html">
         <source>Bandeira dos Estados Unidos.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">57</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="226777112940898586" datatype="html">
         <source>Bandeira do Brasil.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="594840641396778644" datatype="html">
         <source>Altere a moeda usada para converter preços.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4397208842598322712" datatype="html">
         <source>Bandeira da União Europeia.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7345533008555761445" datatype="html">
         <source>Bandeira indiana.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4437977600385055593" datatype="html">
         <source>Bandeira brasileira.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="573332460788264666" datatype="html">
         <source>Bandeira russa.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3774704555156061370" datatype="html">
         <source>Bandeira nigeriana.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="534926465068452742" datatype="html">
         <source>Bandeira chinesa.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8035623846708742370" datatype="html">
         <source>Bandeira vietnamita.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">89</context>
+          <context context-type="linenumber">121</context>
         </context-group>
       </trans-unit>
       <trans-unit id="285878914090793550" datatype="html">
         <source>Bandeira ucraniana.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">127</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6767315089642655383" datatype="html">
