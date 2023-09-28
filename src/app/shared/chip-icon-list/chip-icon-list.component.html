@@ -3,6 +3,7 @@
     *ngFor="let option of chipOptions"
     [selected]="option.isDefault"
     [disabled]="!option.isAvailable"
+    color="accent"
     (appAccessiblePress)="onChipClick(option)">
     <img matChipAvatar class="chip-icons" [src]="option.iconUrl" i18n-alt [alt]="option.currencyName + 'icon'" />
     {{ option.currencyName }}

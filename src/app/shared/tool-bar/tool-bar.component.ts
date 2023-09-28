@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -9,6 +9,7 @@ import { Router, RouterModule } from '@angular/router';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
 import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
+import { ThemesService } from 'src/app/services/themes/themes.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -23,6 +24,7 @@ import { environment } from 'src/environments/environment';
     MatChipsModule,
     MatMenuModule,
     AccessiblePressDirective,
+    NgIf,
   ],
   templateUrl: './tool-bar.component.html',
   styleUrls: ['./tool-bar.component.scss'],
@@ -31,6 +33,7 @@ import { environment } from 'src/environments/environment';
 export class ToolBarComponent {
   private readonly _router = inject(Router);
   private readonly _localStorageService = inject(LocalStorageService);
+  private readonly _themesService = inject(ThemesService);
 
   public readonly fiatCurrencies = FiatCurrencies;
 
@@ -42,5 +45,13 @@ export class ToolBarComponent {
 
   public changeDefaultCurrency(currency: FiatCurrencies): void {
     this._localStorageService.setDefaultCurrency = currency;
+  }
+
+  public changeTheme(theme: 'dark-mode' | 'light-mode'): void {
+    this._themesService.setTheme = theme;
+  }
+
+  public getTheme(): 'dark-mode' | 'light-mode' {
+    return this._themesService.getTheme();
   }
 }

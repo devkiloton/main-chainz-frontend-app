@@ -37,18 +37,24 @@ export default class CheckWalletComponent {
   private readonly _bitcoinApiClientService = inject(BitcoinApiClientService);
   private readonly _fb = inject(NonNullableFormBuilder);
 
-  public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles;
+  public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles.filter(tile => tile.text !== 'Check wallet');
   public readonly allCurrenciesChipOptions = allCurrenciesChipOptions;
   public readonly walletAddressControl = this._fb.control('', [Validators.required]);
 
   private readonly _wallet$ = new BehaviorSubject<(BitcoinWallet & WalletIdentifiers) | null>(null);
   public readonly wallet$ = this._wallet$.asObservable();
+  private readonly _walletError$ = new BehaviorSubject<boolean>(false);
+  public readonly walletError$ = this._walletError$.asObservable();
 
   public async checkBitcoinWallet(): Promise<void> {
-    const data = await firstValueFrom(
-      this._bitcoinApiClientService.wallets.getOneWallet({ id: this.walletAddressControl.value }),
-    );
-    this._wallet$.next({ ...data, code: 'BTC', name: 'bitcoin' });
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    try {
+      const data = await firstValueFrom(
+        this._bitcoinApiClientService.wallets.getOneWallet({ id: this.walletAddressControl.value }),
+      );
+      this._walletError$.next(false);
+      this._wallet$.next({ ...data, code: 'BTC', name: 'bitcoin' });
+    } catch {
+      this._walletError$.next(true);
+    }
   }
 }

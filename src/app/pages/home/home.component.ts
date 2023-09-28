@@ -6,13 +6,14 @@ import { allCurrenciesChipOptions } from 'src/app/constants/all-currencies-chip-
 import { bitcoinServicesGridTiles } from 'src/app/constants/bitcoin-services-grid-tiles';
 import { ChipIconListComponent } from 'src/app/shared/chip-icon-list/chip-icon-list.component';
 import { GridComponent } from 'src/app/shared/grid/grid.component';
+import { ParticleBgComponent } from './components/particle-bg/particle-bg.component';
 
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatIconModule, MatChipsModule, NgFor, GridComponent, ChipIconListComponent],
+  imports: [MatIconModule, MatChipsModule, NgFor, GridComponent, ChipIconListComponent, ParticleBgComponent],
 })
 export default class HomeComponent {
   public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles;

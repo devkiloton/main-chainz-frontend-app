@@ -16,9 +16,15 @@
     @apply self-center;
     @apply w-16 h-16;
     font-size: 4rem;
-    @apply text-slate-100;
+    // #TODO: is this needed?
+    color: var(--mat-stepper-header-icon-foreground-color);
   }
   .grid-layout-custom {
     width: calc((25% - 0.75px) * 3 + 2px);
   }
+}
+
+span {
+  // #TODO: is this needed?
+  color: var(--mat-stepper-header-icon-foreground-color);
 }
