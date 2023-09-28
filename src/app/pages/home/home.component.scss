@@ -1,4 +1,12 @@
 :host {
   @apply flex justify-center items-center flex-col gap-y-[24px];
   @apply h-full w-full;
+
+  .animation {
+    @apply relative h-[480px] w-screen;
+  }
+  .text {
+    @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-center;
+    @apply min-[480px]:text-6xl text-6xl;
+  }
 }
