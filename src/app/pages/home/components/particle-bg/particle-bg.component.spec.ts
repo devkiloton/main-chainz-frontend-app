@@ -1,4 +1,4 @@
-import type { ComponentFixture} from '@angular/core/testing';
+import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import { ParticleBgComponent } from './particle-bg.component';
 
@@ -8,7 +8,7 @@ describe('ParticleBgComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ParticleBgComponent]
+      imports: [ParticleBgComponent],
     });
     fixture = TestBed.createComponent(ParticleBgComponent);
     component = fixture.componentInstance;

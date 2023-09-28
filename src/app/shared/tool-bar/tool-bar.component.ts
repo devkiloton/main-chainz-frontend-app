@@ -24,7 +24,7 @@ import { environment } from 'src/environments/environment';
     MatChipsModule,
     MatMenuModule,
     AccessiblePressDirective,
-    NgIf
+    NgIf,
   ],
   templateUrl: './tool-bar.component.html',
   styleUrls: ['./tool-bar.component.scss'],

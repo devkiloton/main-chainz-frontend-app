@@ -37,7 +37,7 @@ export default class CheckWalletComponent {
   private readonly _bitcoinApiClientService = inject(BitcoinApiClientService);
   private readonly _fb = inject(NonNullableFormBuilder);
 
-  public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles.filter((tile) => tile.text !== 'Check wallet') ;
+  public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles.filter(tile => tile.text !== 'Check wallet');
   public readonly allCurrenciesChipOptions = allCurrenciesChipOptions;
   public readonly walletAddressControl = this._fb.control('', [Validators.required]);
 
@@ -47,7 +47,6 @@ export default class CheckWalletComponent {
   public readonly walletError$ = this._walletError$.asObservable();
 
   public async checkBitcoinWallet(): Promise<void> {
-
     try {
       const data = await firstValueFrom(
         this._bitcoinApiClientService.wallets.getOneWallet({ id: this.walletAddressControl.value }),

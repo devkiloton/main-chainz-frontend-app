@@ -4,16 +4,8 @@ import { Component, inject } from '@angular/core';
 import { NgParticlesModule } from 'ng-particles';
 import { BehaviorSubject } from 'rxjs';
 import { ThemesService } from 'src/app/services/themes/themes.service';
-import type {
-  Container,
-  Engine
-} from "tsparticles-engine";
-import {
-  ClickMode,
-  HoverMode,
-  MoveDirection,
-  OutMode,
-} from "tsparticles-engine";
+import type { Container, Engine } from 'tsparticles-engine';
+import { ClickMode, HoverMode, MoveDirection, OutMode } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim';
 
 @Component({
@@ -26,26 +18,26 @@ import { loadSlim } from 'tsparticles-slim';
 export class ParticleBgComponent {
   private readonly _themesService = inject(ThemesService);
 
-  public readonly theme$ = this._themesService.theme$
+  public readonly theme$ = this._themesService.theme$;
   private readonly _loaded$ = new BehaviorSubject<boolean>(false);
   public readonly loaded$ = this._loaded$.asObservable();
 
-  public idlight = "tsparticlesLight";
-  public idDark = "tsparticlesDark";
+  public idlight = 'tsparticlesLight';
+  public idDark = 'tsparticlesDark';
 
   /* or the classic JavaScript object */
   public particlesOptionsLight = {
     background: {
       color: {
-        value: "transparent",
+        value: 'transparent',
       },
     },
     fullScreen: {
       enable: true,
-      zIndex: -1
+      zIndex: -1,
     },
     style: {
-      position: 'absolute'
+      position: 'absolute',
     },
     duration: 0,
     fpsLimit: 90,
@@ -61,8 +53,8 @@ export class ParticleBgComponent {
           parallax: {
             enable: true,
             smooth: 10,
-            force: 60
-        }
+            force: 60,
+          },
         },
         resize: true,
       },
@@ -79,16 +71,16 @@ export class ParticleBgComponent {
           links: {
             opacity: 0.5,
           },
-          radius: 80
+          radius: 80,
         },
       },
     },
     particles: {
       color: {
-        value: "#212121",
+        value: '#212121',
       },
       links: {
-        color: "#212121",
+        color: '#212121',
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -115,28 +107,27 @@ export class ParticleBgComponent {
         value: 0.5,
       },
       shape: {
-        type: "circle",
+        type: 'circle',
       },
       size: {
         value: { min: 1, max: 5 },
       },
     },
     detectRetina: true,
-
   };
 
   public particlesOptionsDark = {
     background: {
       color: {
-        value: "transparent",
+        value: 'transparent',
       },
     },
     fullScreen: {
       enable: true,
-      zIndex: -1
+      zIndex: -1,
     },
     style: {
-      position: 'absolute'
+      position: 'absolute',
     },
     duration: 0,
     fpsLimit: 90,
@@ -152,8 +143,8 @@ export class ParticleBgComponent {
           parallax: {
             enable: true,
             smooth: 10,
-            force: 60
-        }
+            force: 60,
+          },
         },
         resize: true,
       },
@@ -170,16 +161,16 @@ export class ParticleBgComponent {
           links: {
             opacity: 0.5,
           },
-          radius: 80
+          radius: 80,
         },
       },
     },
     particles: {
       color: {
-        value: "#ffffff",
+        value: '#ffffff',
       },
       links: {
-        color: "#ffffff",
+        color: '#ffffff',
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -206,18 +197,17 @@ export class ParticleBgComponent {
         value: 0.5,
       },
       shape: {
-        type: "circle",
+        type: 'circle',
       },
       size: {
         value: { min: 1, max: 5 },
       },
     },
     detectRetina: true,
-
   };
 
   public particlesLoaded(_container: Container): void {
-    console.log("é true fml",_container);
+    console.log('é true fml', _container);
     this._loaded$.next(true);
   }
 
