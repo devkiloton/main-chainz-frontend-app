@@ -1,0 +1,14 @@
+<div class="relative h-full w-full">
+  <ng-particles
+    *ngIf="(theme$ | async) === 'dark-mode'"
+    [id]="idDark"
+    [options]="particlesOptionsDark"
+    [particlesInit]="particlesInit"
+    (particlesLoaded)="particlesLoaded($event)"></ng-particles>
+  <ng-particles
+    *ngIf="(theme$ | async) !== 'dark-mode'"
+    [id]="idlight"
+    [options]="particlesOptionsLight"
+    [particlesInit]="particlesInit"
+    (particlesLoaded)="particlesLoaded($event)"></ng-particles>
+</div>
