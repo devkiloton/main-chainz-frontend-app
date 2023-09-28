@@ -19,12 +19,14 @@
     <div
       *ngIf="!!!(wallet$ | async) && !!!(walletError$ | async)"
       class="flex flex-col items-center justify-center gap-x-1">
-      <mat-icon class="icon-data" aria-hidden="false" i18n-aria-label aria-label="Analysis icon">query_stats</mat-icon>
-      <span>Find a wallet in the blockchain</span>
+      <mat-icon class="icon-data" aria-hidden="false" i18n-aria-label aria-label="Query icon">query_stats</mat-icon>
+      <span i18n>Find a wallet in the blockchain</span>
     </div>
     <div *ngIf="walletError$ | async" class="flex flex-col items-center justify-center gap-x-1">
-      <mat-icon class="icon-data" aria-hidden="false" i18n-aria-label aria-label="Analysis icon">search_off</mat-icon>
-      <span>Wallet not found</span>
+      <mat-icon class="icon-data" aria-hidden="false" i18n-aria-label aria-label="Query failed icon"
+        >search_off</mat-icon
+      >
+      <span i18n>Wallet not found</span>
     </div>
   </div>
   <div class="other-services">
