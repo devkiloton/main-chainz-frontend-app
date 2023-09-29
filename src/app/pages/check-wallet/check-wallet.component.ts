@@ -11,6 +11,7 @@ import type { WalletIdentifiers } from 'src/app/constants/wallet-indentifiers';
 import { ChipIconListComponent } from 'src/app/shared/chip-icon-list/chip-icon-list.component';
 import { GridComponent } from 'src/app/shared/grid/grid.component';
 import { InputTextComponent } from 'src/app/shared/input-text/input-text.component';
+import { LineChartComponent } from 'src/app/shared/line-chart/line-chart.component';
 import { WalletCardComponent } from 'src/app/shared/wallet-card/wallet-card.component';
 import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 
@@ -27,6 +28,7 @@ import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
     JsonPipe,
     ReactiveFormsModule,
     ChipIconListComponent,
+    LineChartComponent,
     WalletCardComponent,
   ],
   templateUrl: './check-wallet.component.html',
