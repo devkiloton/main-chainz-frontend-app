@@ -21,7 +21,7 @@ export class ThemesService {
     this._localStorageService.setDefaultTheme = theme;
   }
 
-  public getTheme(): 'dark-mode' | 'light-mode' {
+  public get getTheme(): 'dark-mode' | 'light-mode' {
     return this._document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
   }
 }
