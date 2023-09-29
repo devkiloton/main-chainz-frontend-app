@@ -56,4 +56,22 @@ export const bitcoinServicesGridTiles: Array<GridTile> = [
     route: 'check-transfer',
     isActive: null,
   },
+  {
+    text: $localize`Fear & greed` as string,
+    cols: 1,
+    rows: 1,
+    color: 'var(--mat-stepper-header-selected-state-icon-background-color)',
+    icon: 'visibility',
+    route: 'check-transfer',
+    isActive: null,
+  },
+  {
+    text: $localize`Swap simulator` as string,
+    cols: 1,
+    rows: 1,
+    color: 'var(--mat-stepper-header-selected-state-icon-background-color)',
+    icon: 'swap_horiz',
+    route: 'check-transfer',
+    isActive: null,
+  },
 ];
