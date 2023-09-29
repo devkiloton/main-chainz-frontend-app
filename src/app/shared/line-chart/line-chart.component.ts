@@ -1,5 +1,5 @@
 import type { OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject,Input } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import type { ChartConfiguration, ChartDataset} from 'chart.js/auto';
 import { Chart } from 'chart.js/auto';
@@ -22,6 +22,8 @@ export class LineChartComponent implements OnInit {
   private readonly _destroyRef = inject(DestroyRef);
 
   public chart!: Chart;
+
+  @Input({ required: true }) public currencyCode!: string;
 
   public ngOnInit(): void {
     const chartConfig: ChartConfiguration<'line'> = {

@@ -21,7 +21,7 @@
 }
 
 .other-services {
-  @apply w-full flex flex-col gap-y-1 items-start;
+  @apply w-full flex flex-col gap-y-1 items-center min-[768px]:items-start;
 }
 
 .icon-data {

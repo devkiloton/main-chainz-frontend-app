@@ -1,2 +1,8 @@
-<h1>Bitcoin activity in the last 7 days</h1>
-<canvas id="canvas">{{ chart }}</canvas>
+<h1 i18n>{{ currencyCode }} activity in the last 7 days</h1>
+<canvas
+  tabindex="0"
+  aria-roledescription="canvas"
+  [ariaLabel]="'Chart showing up the activity in the last 7 days of ' + currencyCode"
+  id="canvas"
+  >{{ chart }}</canvas
+>
