@@ -1,4 +1,6 @@
 :host {
+  @apply sticky top-0 w-screen z-10;
+
   .app-logo {
     @apply w-[135px] h-[41px];
   }
