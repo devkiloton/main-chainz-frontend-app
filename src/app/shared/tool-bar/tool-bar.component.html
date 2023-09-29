@@ -2,13 +2,13 @@
   <div class="px-3 w-full flex justify-between">
     <button i18n-aria-label aria-label="Button to go to the home page." routerLink="/">
       <img
-        *ngIf="getTheme() === 'dark-mode'"
+        *ngIf="(theme$ | async) === 'dark-mode'"
         i18n-alt
         alt="Central Hash logo."
         class="app-logo"
         src="assets/images/white-logo.svg" />
       <img
-        *ngIf="getTheme() === 'light-mode'"
+        *ngIf="(theme$ | async) === 'light-mode'"
         i18n-alt
         alt="Central Hash logo."
         class="app-logo"
@@ -27,7 +27,7 @@
     <span class="spacer"></span>
     <button
       mat-icon-button
-      *ngIf="getTheme() === 'dark-mode'"
+      *ngIf="(theme$ | async) === 'dark-mode'"
       (appAccessiblePress)="changeTheme('light-mode')"
       class="example-icon"
       i18n-aria-label
@@ -36,7 +36,7 @@
     </button>
     <button
       mat-icon-button
-      *ngIf="getTheme() === 'light-mode'"
+      *ngIf="(theme$ | async) === 'light-mode'"
       (appAccessiblePress)="changeTheme('dark-mode')"
       class="example-icon"
       i18n-aria-label
