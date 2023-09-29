@@ -1,0 +1,9 @@
+:host{
+    @apply w-full;
+    @apply h-[384px]  w-full;
+
+    h1 {
+        @apply text-3xl font-bold;
+        @apply my-4;
+    }
+}
