@@ -1,11 +1,11 @@
-import { inject,Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import type { Currencies } from 'src/app/enums/currencies';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AllCurrenciesService {
   private readonly _localStorageService = inject(LocalStorageService);
@@ -17,7 +17,7 @@ export class AllCurrenciesService {
 
   public fiatCurrenciesPriceUSD$ = this._fiatCurrenciesPriceUSD$.asObservable();
 
-  private readonly _currenciesPriceUSD$ = new BehaviorSubject < {
+  private readonly _currenciesPriceUSD$ = new BehaviorSubject<{
     prices: Array<{ code: Currencies; priceUSD: number }>;
     date: Date;
   }>({ prices: [], date: new Date() });
@@ -28,13 +28,12 @@ export class AllCurrenciesService {
 
   public defaultCurrency$ = this._defaultCurrency$.asObservable();
 
-
   public set setDefaultCurrency(currency: FiatCurrencies) {
     this._localStorageService.setDefaultCurrency = currency;
   }
 
   public get getDefaultCurrency(): FiatCurrencies {
-    return this._localStorageService.getDefaultCurrency
+    return this._localStorageService.getDefaultCurrency;
   }
 
   public set setFiatCurrenciesPriceUSD(data: {
@@ -50,8 +49,8 @@ export class AllCurrenciesService {
   }
 
   public get getFiatCurrenciesPriceUSD(): { prices: Array<{ code: FiatCurrencies; priceUSD: number }>; date: Date } {
-    const fiatCurrenciesPriceUSD = this._localStorageService.getFiatCurrenciesPriceUSD
-      return fiatCurrenciesPriceUSD;
+    const fiatCurrenciesPriceUSD = this._localStorageService.getFiatCurrenciesPriceUSD;
+    return fiatCurrenciesPriceUSD;
   }
 
   public set setCurrenciesPriceUSD(data: { prices: Array<{ code: Currencies; priceUSD: number }>; date: Date }) {

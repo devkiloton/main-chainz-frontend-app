@@ -4,7 +4,7 @@ import { Locales } from 'src/app/enums/locales';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LocalesService {
   private readonly _localStorageService = inject(LocalStorageService);
