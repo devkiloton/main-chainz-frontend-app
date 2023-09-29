@@ -14,11 +14,14 @@
 }
 
 .input-presentation {
-  @apply w-full flex justify-start items-center flex-col;
+  @apply w-full flex justify-start items-center flex-col gap-y-5;
+  .chart {
+    @apply self-start mb-20;
+  }
 }
 
 .other-services {
-  @apply w-full flex flex-col gap-y-1 items-center;
+  @apply w-full flex flex-col gap-y-1 items-start;
 }
 
 .icon-data {
