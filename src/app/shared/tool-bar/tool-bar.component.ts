@@ -1,4 +1,4 @@
-import { DOCUMENT, NgIf } from '@angular/common';
+import { AsyncPipe, DOCUMENT, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -8,7 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterModule } from '@angular/router';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
-import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
+import { AllCurrenciesService } from 'src/app/services/all-currencies/all-currencies.service';
 import { ThemesService } from 'src/app/services/themes/themes.service';
 import { environment } from 'src/environments/environment';
 
@@ -25,6 +25,7 @@ import { environment } from 'src/environments/environment';
     MatMenuModule,
     AccessiblePressDirective,
     NgIf,
+    AsyncPipe
   ],
   templateUrl: './tool-bar.component.html',
   styleUrls: ['./tool-bar.component.scss'],
@@ -32,10 +33,12 @@ import { environment } from 'src/environments/environment';
 })
 export class ToolBarComponent {
   private readonly _router = inject(Router);
-  private readonly _localStorageService = inject(LocalStorageService);
+  private readonly _allCurrenciesService = inject(AllCurrenciesService);
   private readonly _themesService = inject(ThemesService);
 
   public readonly fiatCurrencies = FiatCurrencies;
+
+  public readonly theme$ = this._themesService.theme$;
 
   constructor(@Inject(DOCUMENT) private readonly _document: Document) {}
 
@@ -44,14 +47,10 @@ export class ToolBarComponent {
   }
 
   public changeDefaultCurrency(currency: FiatCurrencies): void {
-    this._localStorageService.setDefaultCurrency = currency;
+    this._allCurrenciesService.setDefaultCurrency = currency;
   }
 
   public changeTheme(theme: 'dark-mode' | 'light-mode'): void {
     this._themesService.setTheme = theme;
-  }
-
-  public getTheme(): 'dark-mode' | 'light-mode' {
-    return this._themesService.getTheme();
   }
 }
