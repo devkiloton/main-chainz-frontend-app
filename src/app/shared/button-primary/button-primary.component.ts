@@ -26,6 +26,9 @@ export class ButtonPrimaryComponent {
   public type = '';
 
   @Input()
+  public color = 'primary';
+
+  @Input()
   public set disabled(isDisabled: boolean) {
     this._isDisabled$.next(isDisabled);
   }
