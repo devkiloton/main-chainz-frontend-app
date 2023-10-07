@@ -1,4 +1,7 @@
-<mat-toolbar class="flex items-center justify-center shadow-skim" color="primary">
+<mat-toolbar
+  *ngIf="isDesktop$ | async; else mobileBlock"
+  class="flex items-center justify-center shadow-skim"
+  color="primary">
   <div class="px-3 w-full flex justify-between items-center gap-x-1">
     <button i18n-aria-label aria-label="Button to go to the home page." routerLink="/">
       <img
@@ -152,7 +155,51 @@
         </div>
       </button>
     </mat-menu>
-    <button mat-flat-button color="primary" i18n-aria-label aria-label="Change the web site theme.">Sign-in</button>
-    <button mat-flat-button color="accent" i18n-aria-label aria-label="Change the web site theme.">Sign-up</button>
+    <button
+      routerLink="/sign-in"
+      mat-flat-button
+      color="primary"
+      i18n-aria-label
+      aria-label="Change the web site theme.">
+      Sign-in
+    </button>
+    <button
+      routerLink="/sign-up"
+      mat-flat-button
+      color="accent"
+      i18n-aria-label
+      aria-label="Change the web site theme.">
+      Sign-up
+    </button>
   </div>
 </mat-toolbar>
+<ng-template #mobileBlock>
+  <!-- #TODO: put the drawer inside a component to be used in the app component -->
+  <mat-toolbar class="flex items-center justify-center shadow-skim" color="primary">
+    <div class="w-full flex justify-between items-center gap-x-1">
+      <button
+        mat-icon-button
+        (click)="drawer.toggle()"
+        (appAccessiblePress)="changeDrowerState()"
+        class="example-icon"
+        i18n-aria-label
+        aria-label="Change the web site theming.">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-drawer-container
+        [hasBackdrop]="true"
+        [class]="(drawerState$ | async) ? 'open-container' : 'closed-container'"
+        (backdropClick)="changeDrowerState()"
+        autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+          <p>Auto-resizing sidenav</p>
+          <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        </mat-drawer>
+      </mat-drawer-container>
+      <span class="spacer"></span>
+      <button mat-flat-button color="accent" i18n-aria-label aria-label="Change the web site theme.">
+        Get started
+      </button>
+    </div>
+  </mat-toolbar>
+</ng-template>
