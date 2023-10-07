@@ -16,6 +16,18 @@ const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component'),
   },
   {
+    title: $localize`Central Hash | Sign in` as string,
+    path: 'sign-in',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/sign-in/sign-in.component'),
+  },
+  {
+    title: $localize`Central Hash | Sign up` as string,
+    path: 'sign-up',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/sign-up/sign-up.component'),
+  },
+  {
     title: $localize`Central Hash | Create wallet` as string,
     path: 'create-wallet',
     pathMatch: 'full',
