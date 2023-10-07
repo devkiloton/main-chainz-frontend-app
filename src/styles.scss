@@ -145,3 +145,7 @@ body {
     justify-content: start;
   }
 }
+
+.mdc-button .mdc-button__label {
+  padding: 0 !important;
+}

@@ -1,5 +1,5 @@
 <mat-toolbar class="flex items-center justify-center shadow-skim" color="primary">
-  <div class="px-3 w-full flex justify-between">
+  <div class="px-3 w-full flex justify-between items-center gap-x-1">
     <button i18n-aria-label aria-label="Button to go to the home page." routerLink="/">
       <img
         *ngIf="(theme$ | async) === 'dark-mode'"
@@ -14,16 +14,39 @@
         class="app-logo"
         src="assets/images/black-logo.svg" />
     </button>
-    <mat-chip-listbox class="ml-3" i18n-aria-label aria-label="Menu options.">
-      <!-- <mat-chip-option selectable="false" class="mat-chip"><span>Buy crypto</span> </mat-chip-option>
-      <mat-chip-option selectable="false" class="mat-chip"><span>Buy/sell anonymously</span> </mat-chip-option>
-      <mat-chip-option selectable="false" class="mat-chip"><span>Marketplace</span> </mat-chip-option>
-      <mat-chip-option selectable="false" class="mat-chip"><span>Investments</span> </mat-chip-option>
-      <mat-chip-option selectable="false" class="mat-chip"><span>Mining </span> </mat-chip-option>
-      <mat-chip-option selectable="false" class="mat-chip"><span>Crowdfunding </span> </mat-chip-option>
-      <mat-chip-option selectable="false" class="mat-chip"><span>Blog </span> </mat-chip-option>
-      <mat-chip-option selectable="false" class="mat-chip"><span>About us </span> </mat-chip-option> -->
-    </mat-chip-listbox>
+    <button mat-flat-button color="primary">Buy crypto</button>
+    <button [matMenuTriggerFor]="tradeAnon" mat-flat-button color="primary">
+      <div class="flex items-center justify-center">Trade anonymous<mat-icon>expand_more</mat-icon></div>
+    </button>
+    <mat-menu #tradeAnon="matMenu">
+      <button mat-menu-item>
+        <div class="flex items-center justify-center"><mat-icon>group</mat-icon>P2P pure</div>
+      </button>
+      <button mat-menu-item>
+        <div class="flex items-center justify-center"><mat-icon>diversity_3</mat-icon>P2P with guarantee</div>
+      </button>
+      <button mat-menu-item>
+        <div class="flex items-center justify-center"><mat-icon>lock</mat-icon>Buy without KYC</div>
+      </button>
+      <button mat-menu-item>
+        <div class="flex items-center justify-center"><mat-icon>air</mat-icon>Ghost account</div>
+      </button>
+    </mat-menu>
+    <button mat-flat-button color="primary">Crowdfunding</button>
+    <button [matMenuTriggerFor]="aboutUsMenu" mat-flat-button color="primary">
+      <div class="flex items-center justify-center">About us<mat-icon>expand_more</mat-icon></div>
+    </button>
+    <mat-menu #aboutUsMenu="matMenu">
+      <button mat-menu-item>
+        <div class="flex items-center justify-center"><mat-icon>question_mark</mat-icon>Who we are</div>
+      </button>
+      <button mat-menu-item>
+        <div class="flex items-center justify-center"><mat-icon>public</mat-icon>Our mission</div>
+      </button>
+      <button mat-menu-item>
+        <div class="flex items-center justify-center"><mat-icon>description</mat-icon>Blog</div>
+      </button>
+    </mat-menu>
     <span class="spacer"></span>
     <button
       mat-icon-button
@@ -129,5 +152,7 @@
         </div>
       </button>
     </mat-menu>
+    <button mat-flat-button color="primary" i18n-aria-label aria-label="Change the web site theme.">Sign-in</button>
+    <button mat-flat-button color="accent" i18n-aria-label aria-label="Change the web site theme.">Sign-up</button>
   </div>
 </mat-toolbar>
