@@ -1,0 +1,48 @@
+<mat-card class="form-card">
+  <mat-tab-group color="accent">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">person</mat-icon>
+        Personal account
+      </ng-template>
+      <div class="p-4 flex items-center justify-center flex-col">
+        <span class="my-3">Create an account in a few steps</span>
+        <form [formGroup]="signUpForm">
+          <app-input-text
+            [formControl]="signUpForm.controls.name"
+            label="Name or nickname"
+            name="Name or nickname input"
+            type="text"></app-input-text>
+          <app-input-text
+            [formControl]="signUpForm.controls.email"
+            label="Email"
+            name="Email input"
+            type="text"></app-input-text>
+          <app-input-text
+            [formControl]="signUpForm.controls.password"
+            label="Password"
+            name="Password input"
+            type="text"></app-input-text>
+          <mat-checkbox [formControl]="signUpForm.controls.termsAndConditions" class="my-3">
+            <p class="text-xs leading-4">
+              By creating an account, I agree to Central Hash's Terms of Service and Privacy Policy.
+            </p>
+          </mat-checkbox>
+          <div class="flex justify-end">
+            <app-button-primary type="text" label="Sign up button" title="Sign up" color="accent"
+              ><mat-icon>arrow_forward</mat-icon></app-button-primary
+            >
+          </div>
+        </form>
+      </div>
+    </mat-tab>
+    <mat-tab disabled="true">
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">air</mat-icon>
+        Ghost account
+      </ng-template>
+
+      Content 3
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
