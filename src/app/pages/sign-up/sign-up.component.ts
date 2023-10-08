@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ReactiveFormsModule } from '@angular/forms';
 import { UserEntity } from 'projects/central-hash-api-client/src/public-api';
 import { ParticleBgComponent } from 'src/app/shared/particle-bg/particle-bg.component';
 import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.component';
@@ -12,32 +13,23 @@ import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.comp
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class SignUpComponent {
-  public readonly userEntity = inject(UserEntity);
-  private readonly _formBuilder = inject(NonNullableFormBuilder);
-
-  public readonly createUserInfo = this._formBuilder.control<{
-    name: string;
-    email: string;
-    password: string;
-    termsAndConditions: boolean;
-  }>({
-    name: '',
-    email: '',
-    password: '',
-    termsAndConditions: false,
-  });
+  private readonly _userEntity = inject(UserEntity);
+  private readonly _destroyRef = inject(DestroyRef);
 
   public createUser(data: { name: string; email: string; password: string; termsAndConditions: boolean }): void {
     const { name, email, password, termsAndConditions } = data;
     if (termsAndConditions) {
-      this.userEntity.create({ name, email, password }).subscribe({
-        next: value => {
-          console.log(value);
-        },
-        error: error => {
-          console.error(error);
-        },
-      });
+      this._userEntity
+        .create({ name, email, password })
+        .pipe(takeUntilDestroyed(this._destroyRef))
+        .subscribe({
+          next: value => {
+            console.log(value);
+          },
+          error: error => {
+            console.error(error);
+          },
+        });
     }
   }
 }
