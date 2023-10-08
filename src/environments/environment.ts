@@ -6,4 +6,5 @@ export const environment: Environment = {
   currenciesApiUrl: 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json',
   bitcoinApiUrl: 'http://localhost:3333',
   appHostUrl: 'http://localhost:4000',
+  centralHashApiUrl: 'http://localhost:3000',
 };
