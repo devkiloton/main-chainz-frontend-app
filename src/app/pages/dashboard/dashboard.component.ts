@@ -1,11 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AsyncPipe, JsonPipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { UserEntity } from 'projects/central-hash-api-client/src/public-api';
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [JsonPipe, AsyncPipe],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DashboardComponent {}
+export default class DashboardComponent {
+  private readonly _userEntity = inject(UserEntity);
+
+  public readonly user$ = this._userEntity.find();
+}
