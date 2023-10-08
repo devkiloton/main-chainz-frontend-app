@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { UserEntity } from 'projects/central-hash-api-client/src/public-api';
+import { ParticleBgComponent } from 'src/app/shared/particle-bg/particle-bg.component';
 import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.component';
 
 @Component({
   standalone: true,
-  imports: [SignUpFormComponent, ReactiveFormsModule],
+  imports: [SignUpFormComponent, ReactiveFormsModule, ParticleBgComponent],
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,0 +1,33 @@
+:host{
+    @apply flex justify-between items-center;
+    .animation {
+        @apply relative w-screen;
+        height: calc(100vh - 64px);
+        width: 55vw;
+      }
+      .text {
+        @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%];
+      }
+
+      .panel {
+        @apply flex flex-col justify-start items-start;
+        @apply px-6 pt-12 pb-6;
+        @apply rounded-lg my-5 mr-5;
+        @apply shadow-lifted;
+        @apply text-7xl font-bold;
+        background-color: var(--mat-toolbar-container-background-color);
+        height: calc(100vh - 100px);
+        width: 45vw;
+      }
+
+      .stripes {
+        @apply rounded-lg;
+        background: repeating-linear-gradient(
+  -45deg,
+  var(--mat-toolbar-container-text-color),
+  var(--mat-toolbar-container-text-color) 20px,
+  rgba(0, 0, 0, 0) 20px,
+  rgba(0, 0, 0, 0) 40px
+),
+      }
+}

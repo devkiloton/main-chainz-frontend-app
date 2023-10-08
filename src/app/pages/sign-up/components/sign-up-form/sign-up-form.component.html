@@ -1,4 +1,4 @@
-<mat-card class="form-card">
+<mat-card class="form-card" appearance="outlined">
   <mat-tab-group color="accent">
     <mat-tab>
       <ng-template mat-tab-label>
@@ -23,12 +23,17 @@
             label="Password"
             name="Password input"
             type="text"></app-input-text>
-          <mat-checkbox [formControl]="signUpForm.controls.termsAndConditions" class="my-3">
+          <mat-checkbox [formControl]="signUpForm.controls.termsAndConditions" class="mb-3">
             <p class="text-xs leading-4">
               By creating an account, I agree to Central Hash's Terms of Service and Privacy Policy.
             </p>
           </mat-checkbox>
-          <div class="flex justify-end">
+          <div class="flex justify-between">
+            <app-button-secondary
+              routerLink="/sign-in"
+              title="Already registered?"
+              label="Already have an account button"
+              type="button"></app-button-secondary>
             <app-button-primary type="text" label="Sign up button" title="Sign up" color="accent"
               ><mat-icon>arrow_forward</mat-icon></app-button-primary
             >
