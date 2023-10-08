@@ -72,6 +72,7 @@ export class ToolBarComponent {
       return;
     }
 
+    // #TODO: Remove this timeout when the bug is fixed
     setTimeout(() => {
       this._drawerState$.next(!this._drawerState$.value);
     }, 150);
