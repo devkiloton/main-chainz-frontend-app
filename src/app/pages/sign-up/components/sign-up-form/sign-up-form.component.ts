@@ -194,6 +194,9 @@ export class SignUpFormComponent implements ControlValueAccessor, OnInit {
   private _onChange = (_value: { name: string; email: string; password: string; termsAndConditions: boolean }): void =>
     void 0;
 
+  private _onTouched = (_value: { name: string; email: string; password: string; termsAndConditions: boolean }): void =>
+    void 0;
+
   public writeValue(value: { name: string; email: string; password: string; termsAndConditions: boolean }): void {
     this._onChange(value);
   }
@@ -204,5 +207,7 @@ export class SignUpFormComponent implements ControlValueAccessor, OnInit {
     this._onChange = fn;
   }
 
-  public registerOnTouched(_fn: (_value: string) => void): void {}
+  public registerOnTouched(fn: (_value: string) => void): void {
+    this._onTouched = fn;
+  }
 }

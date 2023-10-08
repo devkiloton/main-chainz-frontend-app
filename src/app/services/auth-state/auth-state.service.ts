@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import * as jwt_decode from 'jwt-decode';
+import type { JWT } from 'src/app/types/jwt';
 import { LocalStorageService } from '../local-storage/local-storage.service';
-import { JWT } from 'src/app/types/jwt';
 
 @Injectable({
   providedIn: 'root',

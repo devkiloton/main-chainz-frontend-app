@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { CanActivateFn } from '@angular/router';
-
+import type { CanActivateFn } from '@angular/router';
 import { authorizationGuard } from './authorization.guard';
 
 describe('authorizationGuard', () => {

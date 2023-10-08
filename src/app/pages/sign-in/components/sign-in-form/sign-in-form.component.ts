@@ -158,6 +158,8 @@ export class SignInFormComponent implements ControlValueAccessor, OnInit {
   // ControlValueAccessor Implementation
   private _onChange = (_value: { email: string; password: string }): void => void 0;
 
+  private _onTouched = (_value: { email: string; password: string }): void => void 0;
+
   public writeValue(value: { email: string; password: string }): void {
     this._onChange(value);
   }
@@ -166,5 +168,7 @@ export class SignInFormComponent implements ControlValueAccessor, OnInit {
     this._onChange = fn;
   }
 
-  public registerOnTouched(_fn: (_value: string) => void): void {}
+  public registerOnTouched(_fn: (_value: string) => void): void {
+    this._onTouched = _fn;
+  }
 }

@@ -1,10 +1,10 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { AlertCardComponent } from './alert-card.component';
 
 describe('AlertCardComponent', () => {
-  let component: AlertCardComponent;
-  let fixture: ComponentFixture<AlertCardComponent>;
+  let component: AlertCardComponent | null = null;
+  let fixture: ComponentFixture<AlertCardComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({

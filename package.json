@@ -13,7 +13,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --no-progress",
     "test:dev": "ng test --watch=false",
-    "lint": "ng lint",
+    "lint": "ng lint --fix",
     "prettier": "npx prettier --write .",
     "format": "npm run prettier && npm run lint",
     "dev:ssr": "ng run angular-app:serve-ssr",

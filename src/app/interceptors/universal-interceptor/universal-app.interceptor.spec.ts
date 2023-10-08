@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { UniversalAppInterceptor } from './universal-app.interceptor';
 
 describe('UniversalAppInterceptor', () => {

@@ -3,7 +3,7 @@ import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { skip } from 'rxjs';
-import { ButtonPrimaryComponent } from './button-primary.component';
+import { ButtonPrimaryComponent } from '../button-primary/button-primary.component';
 
 describe('ButtonPrimaryComponent', () => {
   let component: ButtonPrimaryComponent | null = null;
@@ -76,7 +76,7 @@ describe('ButtonPrimaryComponent', () => {
     fixture.detectChanges();
 
     component.isDisabled$.pipe(skip(1)).subscribe(isDisabled => {
-      expect(isDisabled).toEqual(null);
+      expect(isDisabled).toBeNull();
       done();
     });
 
