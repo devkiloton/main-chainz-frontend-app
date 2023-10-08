@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import type { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { authorizationGuard } from './guards/authorization-guard/authorization.guard';
 
 const routes: Routes = [
   {
@@ -14,6 +15,13 @@ const routes: Routes = [
     path: 'home',
     pathMatch: 'full',
     loadComponent: () => import('./pages/home/home.component'),
+  },
+  {
+    title: $localize`Central Hash | Dashboard` as string,
+    path: 'dashboard',
+    pathMatch: 'full',
+    canActivate: [authorizationGuard],
+    loadComponent: () => import('./pages/dashboard/dashboard.component'),
   },
   {
     title: $localize`Central Hash | Sign in` as string,
