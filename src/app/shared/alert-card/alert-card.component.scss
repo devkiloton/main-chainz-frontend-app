@@ -1,0 +1,14 @@
+:host {
+    @apply w-full h-9;
+    @apply font-normal text-sm;
+    @apply flex justify-start items-center gap-2;
+    @apply px-3;
+
+/* From https://css.glass */
+background: rgba(255, 10, 0, 0.33);
+border-radius: 4px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.3px);
+-webkit-backdrop-filter: blur(4.3px);
+border: 1px solid rgba(255, 10, 0, 0.31);
+}
