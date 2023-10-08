@@ -1,7 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { map, startWith, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-button-primary',
@@ -34,11 +34,8 @@ export class ButtonPrimaryComponent {
   }
 
   // Reactive properties
-  public _isDisabled$ = new Subject<boolean>();
-  public isDisabled$ = this._isDisabled$.asObservable().pipe(
-    map(value => (value ? true : null)),
-    startWith(null),
-  );
+  public _isDisabled$ = new BehaviorSubject<boolean>(false);
+  public isDisabled$ = this._isDisabled$.asObservable();
 
   /**
    * Emits the click or Tab/Space key down event to the parent component.

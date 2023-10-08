@@ -2,7 +2,7 @@
   [attr.aria-label]="label"
   [color]="color"
   [attr.type]="type"
-  [attr.disabled]="isDisabled$ | async"
+  [disabled]="isDisabled$ | async"
   (click)="click($event)"
   (keydown.enter)="click($event)"
   (keydown.space)="($event)"
