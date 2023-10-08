@@ -6,6 +6,11 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "paths": {
+      "central-hash-api-client": [
+        "dist/central-hash-api-client"
+      ]
+    },
     "alwaysStrict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
