@@ -5,7 +5,8 @@
 
 .form-card {
     max-width: 400px;
-    width: 90%;
+    width: 90vw;
+    @apply shadow-lifted;
   }
   
 .example-tab-icon {
