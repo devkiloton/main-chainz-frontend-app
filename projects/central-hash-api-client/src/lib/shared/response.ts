@@ -1,4 +1,5 @@
 export type Response<T> = {
   message: string;
-  data?: T;
+  // in the delete operations or sensible data update, the data is undefined
+  data: T;
 };

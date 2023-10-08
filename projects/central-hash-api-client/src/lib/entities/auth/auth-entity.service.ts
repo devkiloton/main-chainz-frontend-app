@@ -12,7 +12,7 @@ export class AuthEntity {
   private readonly API = environment.centralHashApiUrl;
   private readonly _httpClient = inject(HttpClient);
 
-  public signin(data: AuthModel): Observable<Response<object>> {
-    return this._httpClient.post<Response<object>>(`${this.API}/auth/sign-in`, data);
+  public signin(data: AuthModel): Observable<Response<{ access_token: string }>> {
+    return this._httpClient.post<Response<{ access_token: string }>>(`${this.API}/auth/sign-in`, data);
   }
 }
