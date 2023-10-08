@@ -1,8 +1,5 @@
-<mat-toolbar
-  *ngIf="isDesktop$ | async; else mobileBlock"
-  class="flex items-center justify-center shadow-skim"
-  color="primary">
-  <div class="px-3 w-full flex justify-between items-center gap-x-1">
+<mat-toolbar *ngIf="isDesktop$ | async; else mobileBlock" class="toolbar" color="primary">
+  <div class="desktop-container">
     <button i18n-aria-label aria-label="Button to go to the home page." routerLink="/">
       <img
         *ngIf="(theme$ | async) === 'dark-mode'"
@@ -17,37 +14,37 @@
         class="app-logo"
         src="assets/images/black-logo.svg" />
     </button>
-    <button mat-flat-button color="primary">Buy crypto</button>
+    <button mat-flat-button color="primary" i18n>Buy crypto</button>
     <button [matMenuTriggerFor]="tradeAnon" mat-flat-button color="primary">
-      <div class="flex items-center justify-center">Trade anonymous<mat-icon>expand_more</mat-icon></div>
+      <div class="flex-centered" i18n>Trade anonymous<mat-icon>expand_more</mat-icon></div>
     </button>
     <mat-menu #tradeAnon="matMenu">
       <button mat-menu-item>
-        <div class="flex items-center justify-center"><mat-icon>group</mat-icon>P2P pure</div>
+        <div class="flex-centered" i18n><mat-icon>group</mat-icon>P2P pure</div>
       </button>
       <button mat-menu-item>
-        <div class="flex items-center justify-center"><mat-icon>diversity_3</mat-icon>P2P with guarantee</div>
+        <div class="flex-centered" i18n><mat-icon>diversity_3</mat-icon>P2P with guarantee</div>
       </button>
       <button mat-menu-item>
-        <div class="flex items-center justify-center"><mat-icon>lock</mat-icon>Buy without KYC</div>
+        <div class="flex-centered" i18n><mat-icon>lock</mat-icon>Buy without KYC</div>
       </button>
       <button mat-menu-item>
-        <div class="flex items-center justify-center"><mat-icon>air</mat-icon>Ghost account</div>
+        <div class="flex-centered" i18n><mat-icon>air</mat-icon>Ghost account</div>
       </button>
     </mat-menu>
-    <button mat-flat-button color="primary">Crowdfunding</button>
+    <button mat-flat-button color="primary" i18n>Crowdfunding</button>
     <button [matMenuTriggerFor]="aboutUsMenu" mat-flat-button color="primary">
-      <div class="flex items-center justify-center">About us<mat-icon>expand_more</mat-icon></div>
+      <div class="flex-centered" i18n>About us<mat-icon>expand_more</mat-icon></div>
     </button>
     <mat-menu #aboutUsMenu="matMenu">
       <button mat-menu-item>
-        <div class="flex items-center justify-center"><mat-icon>question_mark</mat-icon>Who we are</div>
+        <div class="flex-centered" i18n><mat-icon>question_mark</mat-icon>Who we are</div>
       </button>
       <button mat-menu-item>
-        <div class="flex items-center justify-center"><mat-icon>public</mat-icon>Our mission</div>
+        <div class="flex-centered" i18n><mat-icon>public</mat-icon>Our mission</div>
       </button>
       <button mat-menu-item>
-        <div class="flex items-center justify-center"><mat-icon>description</mat-icon>Blog</div>
+        <div class="flex-centered" i18n><mat-icon>description</mat-icon>Blog</div>
       </button>
     </mat-menu>
     <span class="spacer"></span>
@@ -55,24 +52,21 @@
       mat-icon-button
       *ngIf="(theme$ | async) === 'dark-mode'"
       (appAccessiblePress)="changeTheme('light-mode')"
-      class="example-icon"
       i18n-aria-label
-      aria-label="Change the web site theming.">
+      aria-label="Change the web site theming light mode.">
       <mat-icon>dark_mode</mat-icon>
     </button>
     <button
       mat-icon-button
       *ngIf="(theme$ | async) === 'light-mode'"
       (appAccessiblePress)="changeTheme('dark-mode')"
-      class="example-icon"
       i18n-aria-label
-      aria-label="Change the web site theming.">
+      aria-label="Change the web site theming to dark mode.">
       <mat-icon>light_mode</mat-icon>
     </button>
     <button
       mat-icon-button
       [matMenuTriggerFor]="menuLanguages"
-      class="example-icon"
       i18n-aria-label
       aria-label="Change the web site language.">
       <mat-icon>translate</mat-icon>
@@ -94,7 +88,6 @@
     <button
       mat-icon-button
       [matMenuTriggerFor]="menuCurrencies"
-      class="example-icon"
       i18n-aria-label
       aria-label="Change the currency used to convert prices.">
       <mat-icon>attach_money</mat-icon>
@@ -155,35 +148,20 @@
         </div>
       </button>
     </mat-menu>
-    <button
-      routerLink="/sign-in"
-      mat-flat-button
-      color="primary"
-      i18n-aria-label
-      aria-label="Change the web site theme.">
-      Sign-in
-    </button>
-    <button
-      routerLink="/sign-up"
-      mat-flat-button
-      color="accent"
-      i18n-aria-label
-      aria-label="Change the web site theme.">
-      Sign-up
-    </button>
+    <button routerLink="/sign-in" mat-flat-button color="primary" i18n>Sign in</button>
+    <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
   </div>
 </mat-toolbar>
 <ng-template #mobileBlock>
   <!-- #TODO: put the drawer inside a component to be used in the app component -->
-  <mat-toolbar class="flex items-center justify-center shadow-skim" color="primary">
+  <mat-toolbar class="flex-centered shadow-skim" color="primary">
     <div class="w-full flex justify-between items-center gap-x-1">
       <button
         mat-icon-button
         (click)="drawer.toggle()"
         (appAccessiblePress)="changeDrowerState()"
-        class="example-icon"
         i18n-aria-label
-        aria-label="Change the web site theming.">
+        aria-label="Open side menu">
         <mat-icon>menu</mat-icon>
       </button>
       <mat-drawer-container
@@ -191,20 +169,12 @@
         [class]="(drawerState$ | async) ? 'open-container' : 'closed-container'"
         (backdropClick)="changeDrowerState()"
         autosize>
-        <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-drawer #drawer mode="side">
           <p>Auto-resizing sidenav</p>
-          <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
         </mat-drawer>
       </mat-drawer-container>
       <span class="spacer"></span>
-      <button
-        routerLink="/sign-up"
-        mat-flat-button
-        color="accent"
-        i18n-aria-label
-        aria-label="Change the web site theme.">
-        Sign up
-      </button>
+      <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
     </div>
   </mat-toolbar>
 </ng-template>
