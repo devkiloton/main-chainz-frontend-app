@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
+import { RouterModule } from '@angular/router';
 import { ButtonPrimaryComponent } from 'src/app/shared/button-primary/button-primary.component';
 import { ButtonSecondaryComponent } from 'src/app/shared/button-secondary/button-secondary.component';
 import { InputTextComponent } from 'src/app/shared/input-text/input-text.component';
@@ -33,6 +34,7 @@ import { InputTextComponent } from 'src/app/shared/input-text/input-text.compone
     InputTextComponent,
     ButtonPrimaryComponent,
     ButtonSecondaryComponent,
+    RouterModule,
     MatIconModule,
     ReactiveFormsModule,
     JsonPipe,
