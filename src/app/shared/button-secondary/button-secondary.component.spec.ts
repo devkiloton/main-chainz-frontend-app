@@ -3,17 +3,17 @@ import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { skip } from 'rxjs';
-import { ButtonPrimaryComponent } from '../button-primary/button-primary.component';
+import { ButtonSecondaryComponent } from './button-secondary.component';
 
-describe('ButtonPrimaryComponent', () => {
-  let component: ButtonPrimaryComponent | null = null;
-  let fixture: ComponentFixture<ButtonPrimaryComponent> | null = null;
+describe('ButtonSecondaryComponent', () => {
+  let component: ButtonSecondaryComponent | null = null;
+  let fixture: ComponentFixture<ButtonSecondaryComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ButtonPrimaryComponent, BrowserAnimationsModule],
+      imports: [ButtonSecondaryComponent, BrowserAnimationsModule],
     });
-    fixture = TestBed.createComponent(ButtonPrimaryComponent);
+    fixture = TestBed.createComponent(ButtonSecondaryComponent);
     component = fixture.componentInstance;
   });
 
@@ -83,7 +83,7 @@ describe('ButtonPrimaryComponent', () => {
     component.disabled = false;
   });
 
-  it(`(DOM) #${ButtonPrimaryComponent.prototype.click.name} should trigger (@Output() clicked) event when button clicked`, () => {
+  it(`(DOM) #${ButtonSecondaryComponent.prototype.click.name} should trigger (@Output() clicked) event when button clicked`, () => {
     if (!component || !fixture) {
       return;
     }
