@@ -98,7 +98,7 @@ export class SignInFormComponent implements OnInit {
       this._message$.next('Type a valid email and password');
       return;
     }
-    if (this.signInForm.controls.email.hasError('email')) {
+    if (this.signInForm.controls.email.hasError('email') || this.signInForm.controls.email.hasError('required')) {
       this._cardState$.next('alert-card');
       this._message$.next('Type a valid email');
       return;
