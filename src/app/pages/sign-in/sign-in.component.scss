@@ -22,8 +22,24 @@
 
       .stripes {
         @apply rounded-lg;
-        background: rgb(0,0,0);
-        background: linear-gradient(347deg, var(--mat-toolbar-container-text-color) 1%, var(--mat-toolbar-container-background-color) 100%);
-        
+        background: linear-gradient(-45deg, var(--mat-toolbar-container-text-color), #6e6e6e, var(--mat-toolbar-container-text-color), #d7d7d7);
+	background-size: 300% 200%;
+        animation: gradient 10s ease-in-out infinite;
       }
+
+      @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+            opacity: .30;
+        }
+        50% {
+            background-position: 100% 50%;
+            opacity: 1;
+        }
+        100% {
+            background-position: 0% 50%;
+            opacity: .30;
+        }
+    }
+    
 }
