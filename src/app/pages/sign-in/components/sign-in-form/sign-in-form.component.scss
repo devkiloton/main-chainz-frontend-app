@@ -1,0 +1,15 @@
+:host{
+    @apply flex justify-center items-center flex-col gap-y-[24px];
+    height: calc(100vh - 210px);
+}
+
+.form-card {
+    max-width: 400px;
+    width: 90vw;
+    @apply shadow-lifted;
+  }
+  
+.example-tab-icon {
+    margin-right: 8px;
+}
+  

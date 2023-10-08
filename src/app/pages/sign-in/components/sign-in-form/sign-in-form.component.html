@@ -1,0 +1,43 @@
+<mat-card class="form-card" appearance="outlined">
+  <mat-tab-group color="accent">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">person</mat-icon>
+        Personal
+      </ng-template>
+      <div class="p-4 flex items-center justify-center flex-col">
+        <span class="my-3">Welcome back</span>
+        <form [formGroup]="signInForm" (ngSubmit)="send()">
+          <app-input-text
+            [formControl]="signInForm.controls.email"
+            label="Email"
+            name="Email input"
+            type="text"></app-input-text>
+          <app-input-text
+            [formControl]="signInForm.controls.password"
+            label="Password"
+            name="Password input"
+            type="text"></app-input-text>
+          <div class="flex justify-between">
+            <app-button-secondary
+              routerLink="/sign-up"
+              title="Not registered?"
+              label="Not registered button"
+              type="button"></app-button-secondary>
+            <app-button-primary type="text" label="Sign in button" title="Sign in" color="accent"
+              ><mat-icon>arrow_forward</mat-icon></app-button-primary
+            >
+          </div>
+        </form>
+      </div>
+    </mat-tab>
+    <mat-tab disabled="true">
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">air</mat-icon>
+        Ghost
+      </ng-template>
+
+      Content 3
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
