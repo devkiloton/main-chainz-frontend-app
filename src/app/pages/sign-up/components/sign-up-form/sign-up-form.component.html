@@ -1,3 +1,4 @@
+<app-alert-card [class]="cardState$ | async" [message]="(message$ | async) ?? ''"></app-alert-card>
 <mat-card class="form-card" appearance="outlined">
   <mat-tab-group color="accent">
     <mat-tab>
@@ -6,23 +7,53 @@
         Personal
       </ng-template>
       <div class="p-4 flex items-center justify-center flex-col">
-        <span class="my-3">Create an account in a few steps</span>
+        <span class="mb-3">Create an account in a few steps</span>
         <form [formGroup]="signUpForm" (ngSubmit)="send()">
-          <app-input-text
-            [formControl]="signUpForm.controls.name"
-            label="Name or nickname"
-            name="Name or nickname input"
-            type="text"></app-input-text>
-          <app-input-text
-            [formControl]="signUpForm.controls.email"
-            label="Email"
-            name="Email input"
-            type="text"></app-input-text>
-          <app-input-text
-            [formControl]="signUpForm.controls.password"
-            label="Password"
-            name="Password input"
-            type="text"></app-input-text>
+          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+            <mat-label aria-hidden="true">Name or nickname</mat-label>
+            <input
+              aria-label="Name or nickname"
+              [formControl]="signUpForm.controls.name"
+              matInput
+              required
+              placeholder="John Doe"
+              type="text"
+              name="Name or nickname" />
+            <mat-error>{{ nameErrorMessage$ | async }}</mat-error>
+          </mat-form-field>
+          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+            <mat-label aria-hidden="true">Email</mat-label>
+            <input
+              aria-label="Email"
+              [formControl]="signUpForm.controls.email"
+              matInput
+              required
+              placeholder="john@mail.com"
+              type="email"
+              name="Email" />
+            <mat-error>{{ emailErrorMessage$ | async }}</mat-error>
+          </mat-form-field>
+          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+            <mat-label aria-hidden="true">Password</mat-label>
+            <input
+              aria-label="Password"
+              [formControl]="signUpForm.controls.password"
+              matInput
+              required
+              placeholder="Type your password"
+              [type]="hide ? 'password' : 'text'"
+              type="password"
+              name="Password" />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <mat-error>{{ passwordErrorMessage$ | async }}</mat-error>
+          </mat-form-field>
           <mat-checkbox [formControl]="signUpForm.controls.termsAndConditions" class="mb-3">
             <p class="text-xs leading-4">
               By creating an account, I agree to Central Hash's Terms of Service and Privacy Policy.
