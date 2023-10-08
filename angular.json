@@ -184,6 +184,39 @@
           "defaultConfiguration": "production"
         }
       }
+    },
+    "central-hash-api-client": {
+      "projectType": "library",
+      "root": "projects/central-hash-api-client",
+      "sourceRoot": "projects/central-hash-api-client/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/central-hash-api-client/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/central-hash-api-client/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/central-hash-api-client/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/central-hash-api-client/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
