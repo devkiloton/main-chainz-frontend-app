@@ -1,1 +1,22 @@
-<p>sign-in works!</p>
+<div class="panel">
+  <div class="relative">
+    <p>Privacy</p>
+  </div>
+  <div class="relative">
+    <p>Security</p>
+  </div>
+  <div class="relative">
+    <p>Reliability</p>
+  </div>
+  <div class="relative">
+    <p>Anonymity</p>
+  </div>
+  <p class="text-2xl text-gray-700 my-3 font-normal">
+    Your journey to find a platform with these criterias has finished, welcome to Central Hash.
+  </p>
+  <div class="h-full w-full stripes"></div>
+</div>
+<div class="animation">
+  <app-particle-bg></app-particle-bg>
+  <app-sign-in-form class="text" (sendEvent)="signIn($event)"></app-sign-in-form>
+</div>
