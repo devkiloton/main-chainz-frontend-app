@@ -72,4 +72,16 @@ export class LocalStorageService {
   public get getDefaultTheme(): 'dark-mode' | 'light-mode' {
     return (localStorage.getItem('theme') as 'dark-mode' | 'light-mode' | null) ?? 'light-mode';
   }
+
+  public set setAuthToken(value: string) {
+    localStorage.setItem('auth_token', value);
+  }
+
+  public get getAuthToken(): string | null {
+    return localStorage.getItem('auth_token');
+  }
+
+  public removeAuthToken(): void {
+    localStorage.removeItem('auth_token');
+  }
 }
