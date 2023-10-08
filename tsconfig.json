@@ -7,9 +7,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "paths": {
-      "central-hash-api-client": [
-        "dist/central-hash-api-client"
-      ]
+      "central-hash-api-client": ["dist/central-hash-api-client"]
     },
     "alwaysStrict": true,
     "noImplicitAny": true,

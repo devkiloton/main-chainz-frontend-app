@@ -1,31 +1,29 @@
-:host{
-    @apply flex justify-center items-center flex-col gap-y-[24px];
-    @apply relative;
+:host {
+  @apply flex justify-center items-center flex-col gap-y-[24px];
+  @apply relative;
 
+  .alert-card {
+    @apply shadow-lifted;
+    max-width: 400px;
+    width: 90vw;
+    @apply absolute;
+    top: -50px;
+    transition: top 0.2s ease-in-out;
+  }
 
-    .alert-card {
-        @apply shadow-lifted;
-        max-width: 400px;
-        width: 90vw;
-        @apply absolute;
-        top: -50px;
-        transition: top 0.2s ease-in-out;
-    }
-    
-    .alert-card-hidden {
-        @apply absolute;
-        top: 0;
-        transition: top 0.2s ease-in-out;
-    }
+  .alert-card-hidden {
+    @apply absolute;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+  }
 }
 
 .form-card {
-    max-width: 400px;
-    width: 90vw;
-    @apply shadow-lifted;
-  }
-  
-.example-tab-icon {
-    margin-right: 8px;
+  max-width: 400px;
+  width: 90vw;
+  @apply shadow-lifted;
 }
-  
+
+.example-tab-icon {
+  margin-right: 8px;
+}

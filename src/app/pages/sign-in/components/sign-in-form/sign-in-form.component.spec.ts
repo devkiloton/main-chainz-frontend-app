@@ -8,7 +8,7 @@ describe('SignUpFormComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [SignUpFormComponent]
+      imports: [SignUpFormComponent],
     });
     fixture = TestBed.createComponent(SignUpFormComponent);
     component = fixture.componentInstance;

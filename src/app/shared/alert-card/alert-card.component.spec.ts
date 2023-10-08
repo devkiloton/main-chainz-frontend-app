@@ -8,7 +8,7 @@ describe('AlertCardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AlertCardComponent]
+      imports: [AlertCardComponent],
     });
     fixture = TestBed.createComponent(AlertCardComponent);
     component = fixture.componentInstance;
