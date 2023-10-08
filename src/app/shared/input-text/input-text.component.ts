@@ -89,6 +89,15 @@ export class InputTextComponent implements ControlValueAccessor, OnInit {
   @Input()
   public icon = '';
 
+  @Input()
+  public errorCondition = false;
+
+  @Input()
+  public errorMessage = '';
+
+  @Input()
+  public isRequired = false;
+
   public readonly id = this._uniqueIdService.generateUniqueIdWithPrefix('app-input-text');
 
   public readonly inputControl = this._nonNullableFormBuilder.control('');
