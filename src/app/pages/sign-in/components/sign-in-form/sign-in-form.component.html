@@ -1,3 +1,4 @@
+<app-alert-card [class]="cardState$ | async" [message]="(message$ | async) ?? ''"></app-alert-card>
 <mat-card class="form-card" appearance="outlined">
   <mat-tab-group color="accent">
     <mat-tab>
@@ -6,18 +7,41 @@
         Personal
       </ng-template>
       <div class="p-4 flex items-center justify-center flex-col">
-        <span class="my-3">Welcome back</span>
+        <span class="mb-3">Welcome back</span>
         <form [formGroup]="signInForm" (ngSubmit)="send()">
-          <app-input-text
-            [formControl]="signInForm.controls.email"
-            label="Email"
-            name="Email input"
-            type="text"></app-input-text>
-          <app-input-text
-            [formControl]="signInForm.controls.password"
-            label="Password"
-            name="Password input"
-            type="text"></app-input-text>
+          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+            <mat-label aria-hidden="true">Email</mat-label>
+            <input
+              aria-label="Email"
+              [formControl]="signInForm.controls.email"
+              matInput
+              required
+              placeholder="john@mail.com"
+              type="email"
+              name="Email" />
+            <mat-error>{{ emailErrorMessage$ | async }}</mat-error>
+          </mat-form-field>
+          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+            <mat-label aria-hidden="true">Password</mat-label>
+            <input
+              aria-label="Password"
+              [formControl]="signInForm.controls.password"
+              matInput
+              required
+              placeholder="Type your password"
+              [type]="hide ? 'password' : 'text'"
+              type="password"
+              name="Password" />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <mat-error>{{ passwordErrorMessage$ | async }}</mat-error>
+          </mat-form-field>
           <div class="flex justify-between">
             <app-button-secondary
               routerLink="/sign-up"
