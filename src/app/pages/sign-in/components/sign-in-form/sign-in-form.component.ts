@@ -1,18 +1,8 @@
-import { AsyncPipe, JsonPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import type { OnInit } from '@angular/core';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  DestroyRef,
-  EventEmitter,
-  forwardRef,
-  inject,
-  Input,
-  Output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, EventEmitter, inject, Input, Output } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import type { ControlValueAccessor } from '@angular/forms';
-import { NG_VALUE_ACCESSOR, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -25,7 +15,6 @@ import { BehaviorSubject, map } from 'rxjs';
 import { AlertCardComponent } from 'src/app/shared/alert-card/alert-card.component';
 import { ButtonPrimaryComponent } from 'src/app/shared/button-primary/button-primary.component';
 import { ButtonSecondaryComponent } from 'src/app/shared/button-secondary/button-secondary.component';
-import { InputTextComponent } from 'src/app/shared/input-text/input-text.component';
 
 @Component({
   selector: 'app-sign-in-form',
@@ -39,28 +28,19 @@ import { InputTextComponent } from 'src/app/shared/input-text/input-text.compone
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    InputTextComponent,
     ButtonPrimaryComponent,
     ButtonSecondaryComponent,
     RouterModule,
     MatIconModule,
     ReactiveFormsModule,
-    JsonPipe,
     AsyncPipe,
     AlertCardComponent,
   ],
   templateUrl: './sign-in-form.component.html',
   styleUrls: ['./sign-in-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => SignInFormComponent),
-      multi: true,
-    },
-  ],
 })
-export class SignInFormComponent implements ControlValueAccessor, OnInit {
+export class SignInFormComponent implements OnInit {
   private readonly _formBuilder = inject(NonNullableFormBuilder);
   private readonly _destroyRef = inject(DestroyRef);
 
@@ -104,8 +84,6 @@ export class SignInFormComponent implements ControlValueAccessor, OnInit {
 
   public ngOnInit(): void {
     this.signInForm.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(() => {
-      const formValue = this.signInForm.getRawValue();
-      this.writeValue(formValue);
       this._cardState$.next('alert-card-hidden');
     });
   }
@@ -153,22 +131,5 @@ export class SignInFormComponent implements ControlValueAccessor, OnInit {
     }
 
     return '';
-  }
-
-  // ControlValueAccessor Implementation
-  private _onChange = (_value: { email: string; password: string }): void => void 0;
-
-  private _onTouched = (_value: { email: string; password: string }): void => void 0;
-
-  public writeValue(value: { email: string; password: string }): void {
-    this._onChange(value);
-  }
-
-  public registerOnChange(fn: (_value: { email: string; password: string }) => void): void {
-    this._onChange = fn;
-  }
-
-  public registerOnTouched(_fn: (_value: string) => void): void {
-    this._onTouched = _fn;
   }
 }
