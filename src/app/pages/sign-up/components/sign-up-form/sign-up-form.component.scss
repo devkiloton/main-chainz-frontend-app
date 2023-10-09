@@ -1,0 +1,29 @@
+:host {
+  @apply flex justify-center items-center flex-col gap-y-[24px];
+  @apply relative;
+
+  .alert-card {
+    @apply shadow-lifted;
+    @apply max-w-[400px];
+    @apply w-[90vw];
+    @apply absolute;
+    @apply top-[-50px];
+    transition: top 0.2s ease-in-out;
+  }
+
+  .alert-card-hidden {
+    @apply absolute;
+    @apply top-0;
+    transition: top 0.2s ease-in-out;
+  }
+}
+
+.form-card {
+  @apply max-w-[400px];
+  @apply w-[90vw];
+  @apply shadow-lifted;
+}
+
+.example-tab-icon {
+  @apply mr-2;
+}

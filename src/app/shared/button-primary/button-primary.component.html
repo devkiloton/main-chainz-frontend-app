@@ -1,11 +1,14 @@
 <button
   [attr.aria-label]="label"
+  [color]="color"
   [attr.type]="type"
-  [attr.disabled]="isDisabled$ | async"
+  [disabled]="isDisabled$ | async"
   (click)="click($event)"
   (keydown.enter)="click($event)"
   (keydown.space)="($event)"
-  mat-raised-button
-  color="primary">
-  {{ title }}
+  mat-flat-button>
+  <div class="flex items-center justify-center gap-x-2">
+    {{ title }}
+    <ng-content></ng-content>
+  </div>
 </button>

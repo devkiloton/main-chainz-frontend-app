@@ -62,7 +62,7 @@ describe('ButtonPrimaryComponent', () => {
     fixture.detectChanges();
 
     component.isDisabled$.pipe(skip(1)).subscribe(isDisabled => {
-      expect(isDisabled).toEqual(true);
+      expect(isDisabled).toBeTrue();
       done();
     });
 
@@ -76,7 +76,7 @@ describe('ButtonPrimaryComponent', () => {
     fixture.detectChanges();
 
     component.isDisabled$.pipe(skip(1)).subscribe(isDisabled => {
-      expect(isDisabled).toEqual(null);
+      expect(isDisabled).toBeFalse();
       done();
     });
 

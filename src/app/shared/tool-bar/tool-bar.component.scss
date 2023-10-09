@@ -1,4 +1,13 @@
 :host {
+  @apply sticky top-0 z-50;
+
+  .toolbar {
+    @apply flex items-center justify-center shadow-skim;
+    .desktop-container {
+      @apply px-3 w-full flex justify-between items-center gap-x-1;
+    }
+  }
+
   .app-logo {
     @apply w-[135px] h-[41px];
   }
@@ -21,6 +30,30 @@
   }
 }
 
+.flex-centered {
+  @apply flex items-center justify-center;
+}
+
 .flag {
   transform: scale(0.65);
+}
+
+.open-container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.closed-container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: transparent;
 }

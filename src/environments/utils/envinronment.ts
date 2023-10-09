@@ -5,4 +5,5 @@ export type Environment = {
   currenciesApiUrl: string;
   bitcoinApiUrl: string;
   appHostUrl: string;
+  centralHashApiUrl: string;
 };

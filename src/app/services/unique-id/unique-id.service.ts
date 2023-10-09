@@ -16,7 +16,7 @@ export class UniqueIdService {
    */
   private readonly _validId = /^[A-Za-z]+[\w\-:.]*$/;
 
-  public generateUniqueIdWithPrefix(prefix: string): string | Error {
+  public generateUniqueIdWithPrefix(prefix: string): string {
     const isPrefixValid = Boolean(prefix) && this._validId.test(prefix);
     const uniqueId = this._generateUniqueId;
     this._numberOfGeneratedIds += 1;

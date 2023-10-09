@@ -1,9 +1,10 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UniversalAppInterceptor } from './interceptors/universal-interceptor/universal-app.interceptor';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ToolBarComponent } from './shared/tool-bar/tool-bar.component';
 
@@ -17,7 +18,7 @@ import { ToolBarComponent } from './shared/tool-bar/tool-bar.component';
     ToolBarComponent,
     FooterComponent,
   ],
-  providers: [provideClientHydration()],
+  providers: [provideClientHydration(), { provide: HTTP_INTERCEPTORS, useClass: UniversalAppInterceptor, multi: true }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

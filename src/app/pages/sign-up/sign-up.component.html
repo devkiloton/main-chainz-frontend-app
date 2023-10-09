@@ -1,0 +1,17 @@
+<div class="animation">
+  <app-particle-bg></app-particle-bg>
+  <app-sign-up-form
+    class="sign-up-form"
+    (sendEvent)="this.createUser($event)"
+    [asyncError]="(asyncError$ | async) ?? 0"></app-sign-up-form>
+</div>
+<div class="panel" tabindex="0">
+  <p i18n>Privacy</p>
+  <p i18n>Security</p>
+  <p i18n>Reliability</p>
+  <p i18n>Anonymity</p>
+  <p class="description" i18n>
+    Your journey to find a platform with these criterias has finished, welcome to Central Hash.
+  </p>
+  <div class="stripes"></div>
+</div>

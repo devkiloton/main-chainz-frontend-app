@@ -3,7 +3,8 @@
   @apply h-full w-full;
 
   .animation {
-    @apply relative h-[480px] w-screen;
+    @apply relative w-screen;
+    height: calc(100vh - 64px);
   }
   .text {
     @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-center;

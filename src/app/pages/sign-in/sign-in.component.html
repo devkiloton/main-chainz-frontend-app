@@ -1,0 +1,15 @@
+<div class="panel" tabindex="0">
+  <p i18n>Power</p>
+  <p i18n>Freedom</p>
+  <p i18n>Defense</p>
+  <p i18n>Autonomy</p>
+  <p class="description" i18n>That's what Bitcoin is about, and that's what we are about.</p>
+  <div class="stripes"></div>
+</div>
+<div class="animation">
+  <app-particle-bg></app-particle-bg>
+  <app-sign-in-form
+    class="sign-in-form"
+    (sendEvent)="signIn($event)"
+    [asyncError]="(asyncError$ | async) ?? 0"></app-sign-in-form>
+</div>
