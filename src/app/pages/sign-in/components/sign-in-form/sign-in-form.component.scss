@@ -4,26 +4,26 @@
 
   .alert-card {
     @apply shadow-lifted;
-    max-width: 400px;
-    width: 90vw;
+    @apply max-w-[400px];
+    @apply w-[90vw];
     @apply absolute;
-    top: -50px;
+    @apply top-[-50px];
     transition: top 0.2s ease-in-out;
   }
 
   .alert-card-hidden {
     @apply absolute;
-    top: 0;
+    @apply top-0;
     transition: top 0.2s ease-in-out;
   }
 }
 
 .form-card {
-  max-width: 400px;
-  width: 90vw;
+  @apply max-w-[400px];
+  @apply w-[90vw];
   @apply shadow-lifted;
 }
 
 .example-tab-icon {
-  margin-right: 8px;
+  @apply mr-2;
 }

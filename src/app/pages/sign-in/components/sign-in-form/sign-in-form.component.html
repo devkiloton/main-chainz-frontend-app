@@ -4,39 +4,42 @@
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon class="example-tab-icon">person</mat-icon>
-        Personal
+        <span i18n>Personal</span>
       </ng-template>
       <div class="p-4 flex items-center justify-center flex-col">
-        <span class="mb-3">Welcome back</span>
+        <span class="mb-3" i18n>Welcome back</span>
         <form [formGroup]="signInForm" (ngSubmit)="send()">
           <mat-form-field color="accent" class="w-full" hideRequiredMarker>
-            <mat-label aria-hidden="true">Email</mat-label>
+            <mat-label aria-hidden="true" i18n>Email</mat-label>
             <input
-              aria-label="Email"
               [formControl]="signInForm.controls.email"
               matInput
               required
-              placeholder="john@mail.com"
+              i18n-placeholder
+              placeholder="Type your email"
               type="email"
+              i18n-name
               name="Email" />
             <mat-error>{{ emailErrorMessage$ | async }}</mat-error>
           </mat-form-field>
           <mat-form-field color="accent" class="w-full" hideRequiredMarker>
-            <mat-label aria-hidden="true">Password</mat-label>
+            <mat-label aria-hidden="true" i18n>Password</mat-label>
             <input
-              aria-label="Password"
               [formControl]="signInForm.controls.password"
               matInput
               required
+              i18n-placeholder
               placeholder="Type your password"
               [type]="hide ? 'password' : 'text'"
               type="password"
+              i18n-name
               name="Password" />
             <button
               mat-icon-button
               matSuffix
               (click)="hide = !hide"
-              [attr.aria-label]="'Hide password'"
+              i18n-aria-label
+              aria-label="Hide password"
               [attr.aria-pressed]="hide">
               <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
             </button>
@@ -45,7 +48,9 @@
           <div class="flex justify-between">
             <app-button-secondary
               routerLink="/sign-up"
+              i18n-title
               title="Not registered?"
+              i18n-label
               label="Not registered button"
               type="button"></app-button-secondary>
             <app-button-primary type="text" label="Sign in button" title="Sign in" color="accent"
@@ -58,7 +63,7 @@
     <mat-tab disabled="true">
       <ng-template mat-tab-label>
         <mat-icon class="example-tab-icon">air</mat-icon>
-        Ghost
+        <span i18n>Ghost</span>
       </ng-template>
 
       Content 3

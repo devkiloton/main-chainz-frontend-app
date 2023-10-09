@@ -12,6 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule } from '@angular/router';
 import { BehaviorSubject, map } from 'rxjs';
+import { cardAlert } from 'src/app/constants/sign-in/card-alert';
+import { formFieldMessages } from 'src/app/constants/sign-in/form-field-messages';
 import { AlertCardComponent } from 'src/app/shared/alert-card/alert-card.component';
 import { ButtonPrimaryComponent } from 'src/app/shared/button-primary/button-primary.component';
 import { ButtonSecondaryComponent } from 'src/app/shared/button-secondary/button-secondary.component';
@@ -61,11 +63,11 @@ export class SignInFormComponent implements OnInit {
   public set asyncError(code: number) {
     if (String(code).startsWith('4')) {
       this._cardState$.next('alert-card');
-      this._message$.next('Wrong email or password');
+      this._message$.next(cardAlert.invalidData);
     }
     if (String(code).startsWith('5')) {
       this._cardState$.next('alert-card');
-      this._message$.next('We are having problems, try again later');
+      this._message$.next(cardAlert.problems);
     }
   }
 
@@ -95,17 +97,17 @@ export class SignInFormComponent implements OnInit {
     }
     if (this.signInForm.controls.email.hasError('required') && this.signInForm.controls.password.hasError('required')) {
       this._cardState$.next('alert-card');
-      this._message$.next('Type a valid email and password');
+      this._message$.next(cardAlert.generalError);
       return;
     }
     if (this.signInForm.controls.email.hasError('email') || this.signInForm.controls.email.hasError('required')) {
       this._cardState$.next('alert-card');
-      this._message$.next('Type a valid email');
+      this._message$.next(cardAlert.requiredEmail);
       return;
     }
     if (this.signInForm.controls.password.hasError('required')) {
       this._cardState$.next('alert-card');
-      this._message$.next('Type a valid password');
+      this._message$.next(cardAlert.requiredPassword);
     }
   }
 
@@ -119,15 +121,15 @@ export class SignInFormComponent implements OnInit {
 
   public getEmailErrorMessage(): string {
     if (this.signInForm.controls.email.hasError('required')) {
-      return 'You must enter a value';
+      return formFieldMessages.requiredEmail;
     }
 
-    return this.signInForm.controls.email.hasError('email') ? 'Not a valid email' : '';
+    return this.signInForm.controls.email.hasError('email') ? formFieldMessages.invalidEmail : '';
   }
 
   public getPasswordErrorMessage(): string {
     if (this.signInForm.controls.password.hasError('required')) {
-      return 'You must enter a value';
+      return formFieldMessages.requiredPassword;
     }
 
     return '';

@@ -1,25 +1,15 @@
-<div class="panel">
-  <div class="relative">
-    <p>Privacy</p>
-  </div>
-  <div class="relative">
-    <p>Security</p>
-  </div>
-  <div class="relative">
-    <p>Reliability</p>
-  </div>
-  <div class="relative">
-    <p>Anonymity</p>
-  </div>
-  <p class="text-2xl text-gray-700 my-3 font-normal">
-    Your journey to find a platform with these criterias has finished, welcome to Central Hash.
-  </p>
-  <div class="h-full w-full stripes"></div>
+<div class="panel" tabindex="0">
+  <p i18n>Power</p>
+  <p i18n>Freedom</p>
+  <p i18n>Defense</p>
+  <p i18n>Autonomy</p>
+  <p class="description" i18n>That's what Bitcoin is about, and that's what we are about.</p>
+  <div class="stripes"></div>
 </div>
 <div class="animation">
   <app-particle-bg></app-particle-bg>
   <app-sign-in-form
-    class="text"
+    class="sign-in-form"
     (sendEvent)="signIn($event)"
     [asyncError]="(asyncError$ | async) ?? 0"></app-sign-in-form>
 </div>
