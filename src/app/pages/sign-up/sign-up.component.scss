@@ -5,8 +5,9 @@
     @apply w-[55vw];
     height: calc(100vh - 64px);
   }
-  .text {
-    @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%];
+  .sign-up-form {
+    @apply font-bold;
+    @apply absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%];
   }
 
   .panel {
