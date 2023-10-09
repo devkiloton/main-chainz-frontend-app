@@ -1,5 +1,6 @@
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ToolBarComponent } from './tool-bar.component';
 
@@ -9,7 +10,7 @@ describe('ToolBarComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ToolBarComponent, RouterTestingModule],
+      imports: [ToolBarComponent, RouterTestingModule, BrowserAnimationsModule],
     });
     fixture = TestBed.createComponent(ToolBarComponent);
     component = fixture.componentInstance;
