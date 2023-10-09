@@ -5,7 +5,7 @@
     (sendEvent)="this.createUser($event)"
     [asyncError]="(asyncError$ | async) ?? 0"></app-sign-up-form>
 </div>
-<div class="panel" tabindex="0">
+<div class="panel" tabindex="0" *ngIf="isHandset$ | async">
   <p i18n>Privacy</p>
   <p i18n>Security</p>
   <p i18n>Reliability</p>
