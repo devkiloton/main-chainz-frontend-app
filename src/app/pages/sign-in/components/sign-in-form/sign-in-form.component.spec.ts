@@ -1,16 +1,18 @@
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
-import { SignUpFormComponent } from 'src/app/pages/sign-up/components/sign-up-form/sign-up-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SignInFormComponent } from './sign-in-form.component';
 
-describe('SignUpFormComponent', () => {
-  let component: SignUpFormComponent | null = null;
-  let fixture: ComponentFixture<SignUpFormComponent> | null = null;
+describe('SignInFormComponent', () => {
+  let component: SignInFormComponent | null = null;
+  let fixture: ComponentFixture<SignInFormComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [SignUpFormComponent],
+      imports: [SignInFormComponent, RouterTestingModule, BrowserAnimationsModule],
     });
-    fixture = TestBed.createComponent(SignUpFormComponent);
+    fixture = TestBed.createComponent(SignInFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
