@@ -5,21 +5,13 @@
     (sendEvent)="this.createUser($event)"
     [asyncError]="(asyncError$ | async) ?? 0"></app-sign-up-form>
 </div>
-<div class="panel">
-  <div class="relative">
-    <p>Privacy</p>
-  </div>
-  <div class="relative">
-    <p>Security</p>
-  </div>
-  <div class="relative">
-    <p>Reliability</p>
-  </div>
-  <div class="relative">
-    <p>Anonymity</p>
-  </div>
-  <p class="text-2xl text-gray-700 my-3 font-normal">
+<div class="panel" tabindex="0">
+  <p i18n>Privacy</p>
+  <p i18n>Security</p>
+  <p i18n>Reliability</p>
+  <p i18n>Anonymity</p>
+  <p class="description" i18n>
     Your journey to find a platform with these criterias has finished, welcome to Central Hash.
   </p>
-  <div class="h-full w-full stripes"></div>
+  <div class="stripes"></div>
 </div>
