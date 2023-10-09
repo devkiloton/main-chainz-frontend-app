@@ -3,69 +3,75 @@
   <mat-tab-group color="accent">
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon class="example-tab-icon">person</mat-icon>
-        Personal
+        <mat-icon>person</mat-icon>
+        <span i18n>Personal</span>
       </ng-template>
       <div class="p-4 flex items-center justify-center flex-col">
-        <span class="mb-3">Create an account in a few steps</span>
+        <span class="mb-3" i18n>Create an account in a few steps</span>
         <form [formGroup]="signUpForm" (ngSubmit)="send()">
           <mat-form-field color="accent" class="w-full" hideRequiredMarker>
-            <mat-label aria-hidden="true">Name or nickname</mat-label>
+            <mat-label aria-hidden="true" i18n>Name or nickname</mat-label>
             <input
-              aria-label="Name or nickname"
               [formControl]="signUpForm.controls.name"
               matInput
               required
-              placeholder="John Doe"
+              i18n-placeholder
+              placeholder="Type your name or nickname"
               type="text"
+              i18n-name
               name="Name or nickname" />
             <mat-error>{{ nameErrorMessage$ | async }}</mat-error>
           </mat-form-field>
           <mat-form-field color="accent" class="w-full" hideRequiredMarker>
-            <mat-label aria-hidden="true">Email</mat-label>
+            <mat-label aria-hidden="true" i18n>Email</mat-label>
             <input
-              aria-label="Email"
               [formControl]="signUpForm.controls.email"
               matInput
               required
-              placeholder="john@mail.com"
+              i18n-placeholder
+              placeholder="Type your email"
               type="email"
+              i18n-name
               name="Email" />
             <mat-error>{{ emailErrorMessage$ | async }}</mat-error>
           </mat-form-field>
           <mat-form-field color="accent" class="w-full" hideRequiredMarker>
-            <mat-label aria-hidden="true">Password</mat-label>
+            <mat-label aria-hidden="true" i18n>Password</mat-label>
             <input
-              aria-label="Password"
               [formControl]="signUpForm.controls.password"
               matInput
               required
+              i18n-placeholder
               placeholder="Type your password"
               [type]="hide ? 'password' : 'text'"
               type="password"
+              i18n-name
               name="Password" />
             <button
               mat-icon-button
               matSuffix
               (click)="hide = !hide"
-              [attr.aria-label]="'Hide password'"
+              i18n-aria-label
+              aria-label="'Hide password'"
               [attr.aria-pressed]="hide">
               <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
             </button>
             <mat-error>{{ passwordErrorMessage$ | async }}</mat-error>
           </mat-form-field>
           <mat-checkbox [formControl]="signUpForm.controls.termsAndConditions" class="my-5">
-            <p class="text-xs leading-4">
+            <p class="text-xs leading-4" i18n>
               By creating an account, I agree to Central Hash's Terms of Service and Privacy Policy.
             </p>
           </mat-checkbox>
           <div class="flex justify-between">
             <app-button-secondary
               routerLink="/sign-in"
+              i18n-title
               title="Already registered?"
+              i18n-label
               label="Already have an account button"
               type="button"></app-button-secondary>
-            <app-button-primary type="text" label="Sign up button" title="Sign up" color="accent"
+            <app-button-primary type="text" i18n-label label="Sign up button" i18n-title title="Sign up" color="accent"
               ><mat-icon>arrow_forward</mat-icon></app-button-primary
             >
           </div>
@@ -74,10 +80,9 @@
     </mat-tab>
     <mat-tab disabled="true">
       <ng-template mat-tab-label>
-        <mat-icon class="example-tab-icon">air</mat-icon>
-        Ghost
+        <mat-icon>air</mat-icon>
+        <span i18n>Ghost</span>
       </ng-template>
-
       Content 3
     </mat-tab>
   </mat-tab-group>
