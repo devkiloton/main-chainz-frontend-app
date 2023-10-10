@@ -35,37 +35,19 @@ jobs:
   # Etapa de teste
   test:
     runs-on: ubuntu-latest
-    name: test
-    container: node:16.20
-    # Variáveis de ambiente
-    env:
-      CI: 'true'
-      CHROME_BIN: '/usr/bin/google-chrome-stable'
-    # Definição das variáveis de ambiente
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          persist-credentials: false
-      # Instalar dependências
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
       - run: npm ci
-      # Instalar o Chrome
-      - run: apt-get update && apt-get install -y wget gnupg ca-certificates
-      - run: wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
-      - run: echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
-      - run: apt-get update && apt-get install -y google-chrome-stable
-      # Configurar usuário personalizado para o Chrome
-      - run: groupadd -r chrome && useradd -r -g chrome -G audio,video chrome
-      - run: mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
-      # Executar os testes com o Karma
-      - run: npm run test
-  test_async:
-    runs-on: ubuntu-latest
-    name: test async
-    steps:
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: v1-npm-deps-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: v1-npm-deps-
+      - run: npm test
   # Definição das políticas de teste de cobertura
