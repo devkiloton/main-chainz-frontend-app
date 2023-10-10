@@ -11,7 +11,7 @@
     "i18n": "ng extract-i18n --output-path src/i18n --out-file content.xlf",
     "build": "npm run build:ssr",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --no-progress",
+    "test": "ng test --no-watch --no-progress",
     "test:dev": "ng test --watch=false",
     "lint": "ng lint --fix",
     "prettier": "npx prettier --write .",
