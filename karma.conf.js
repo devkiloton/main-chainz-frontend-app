@@ -38,7 +38,7 @@ module.exports = function (config) {
         lines: 95,
       },
     },
-    browsers: ['ChromeHeadlessCI'],
+    browsers: ['ChromeHeadlessCI', 'Chrome'],
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
