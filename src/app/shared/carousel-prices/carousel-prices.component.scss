@@ -1,0 +1,32 @@
+:host{
+    @apply w-full;
+
+    .currencies {
+        @apply overflow-hidden;
+        @apply bg-red-600;
+        @apply flex max-h-8;
+
+        .currencies-slide {
+            @apply flex items-stretch justify-stretch gap-x-4;
+            
+            animation: slide 25s linear infinite;
+        }
+
+        &:hover {
+            .currencies-slide {
+                animation-play-state: paused;
+            }
+        }
+
+    }
+
+
+    @keyframes slide {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}
