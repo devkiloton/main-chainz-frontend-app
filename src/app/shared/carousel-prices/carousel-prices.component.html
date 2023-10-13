@@ -1,15 +1,18 @@
 <div class="currencies">
   <div class="currencies-slide">
     <app-preview-currency
+      *ngFor="let currency of currencies | async"
       [baseFiatCurrency]="'USD'"
-      [name]="'Bitcoin'"
-      [price]="26.493.97"
-      [priceChange24h]="15.4"></app-preview-currency>
-    <app-preview-currency
-      [baseFiatCurrency]="'USD'"
-      [name]="'Ethereum'"
-      [price]="8.493.97"
-      [priceChange24h]="-15.4"></app-preview-currency>
+      [name]="currency.name"
+      [price]="currency.price"
+      [priceChange24h]="currency.priceChange24h"></app-preview-currency>
   </div>
-  <div class="currencies-slide"></div>
+  <div class="currencies-slide">
+    <app-preview-currency
+      *ngFor="let currency of currencies | async"
+      [baseFiatCurrency]="'USD'"
+      [name]="currency.name"
+      [price]="currency.price"
+      [priceChange24h]="currency.priceChange24h"></app-preview-currency>
+  </div>
 </div>
