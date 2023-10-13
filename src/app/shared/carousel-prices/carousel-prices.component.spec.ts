@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import { CarouselPricesComponent } from './carousel-prices.component';
@@ -8,7 +9,7 @@ describe('CarouselPricesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CarouselPricesComponent],
+      imports: [CarouselPricesComponent, HttpClientTestingModule],
     });
     fixture = TestBed.createComponent(CarouselPricesComponent);
     component = fixture.componentInstance;
