@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { CarouselPricesComponent } from './carousel-prices.component';
 
 describe('CarouselPricesComponent', () => {
-  let component: CarouselPricesComponent;
-  let fixture: ComponentFixture<CarouselPricesComponent>;
+  let component: CarouselPricesComponent | null = null;
+  let fixture: ComponentFixture<CarouselPricesComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CarouselPricesComponent]
+      imports: [CarouselPricesComponent],
     });
     fixture = TestBed.createComponent(CarouselPricesComponent);
     component = fixture.componentInstance;
