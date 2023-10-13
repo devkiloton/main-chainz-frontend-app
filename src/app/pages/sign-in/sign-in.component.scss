@@ -3,7 +3,7 @@
   .animation {
     @apply relative w-screen;
     @apply w-full min-[1024px]:w-[55vw];
-    height: calc(100vh - 64px);
+    height: calc(100vh - 99px);
   }
   .sign-in-form {
     @apply font-bold;
@@ -18,7 +18,7 @@
     @apply text-7xl font-bold;
     @apply w-[45vw];
     background-color: var(--mat-toolbar-container-background-color);
-    height: calc(100vh - 100px);
+    height: calc(100vh - 147px);
 
     .description {
       @apply text-2xl text-gray-700  font-normal;

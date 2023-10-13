@@ -3,6 +3,7 @@ import { AsyncPipe, DOCUMENT, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -27,6 +28,7 @@ import { environment } from 'src/environments/environment';
     MatChipsModule,
     MatMenuModule,
     MatSidenavModule,
+    MatDividerModule,
     RouterModule,
     AccessiblePressDirective,
     NgIf,

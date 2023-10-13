@@ -1,0 +1,5 @@
+<span class="text-caption normal-case font-semibold whitespace-nowrap">{{ name }}/{{ baseFiatCurrency }}</span>
+<span class="text-caption">{{ (price | currency) === '$0.00' ? price : (price | currency) }}</span>
+<div class="text-caption price-change" [class]="priceChange24hStatus">
+  <mat-icon>{{ priceChange24hIcon }}</mat-icon> <span>{{ priceChange24hAbs }}%</span>
+</div>

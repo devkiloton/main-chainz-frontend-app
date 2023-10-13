@@ -1,0 +1,22 @@
+:host {
+  @apply flex gap-x-2;
+
+  .price-change {
+    @apply flex items-center justify-center gap-x-[2px];
+    @apply rounded-sm px-1;
+
+    mat-icon {
+      @apply text-base;
+      @apply h-4 w-4;
+      @apply flex items-center justify-center;
+    }
+  }
+
+  .bull {
+    @apply bg-green-500;
+  }
+
+  .bear {
+    @apply bg-red-500;
+  }
+}

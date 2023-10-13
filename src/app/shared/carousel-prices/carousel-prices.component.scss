@@ -1,0 +1,31 @@
+:host {
+  @apply w-full;
+  @apply py-2;
+  @apply sticky top-0 z-50;
+  background-color: var(--mat-toolbar-container-background-color);
+  .currencies {
+    @apply overflow-hidden;
+    @apply flex;
+
+    .currencies-slide {
+      @apply flex  gap-x-6;
+
+      animation: slide 80s linear infinite;
+    }
+
+    &:hover {
+      .currencies-slide {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
