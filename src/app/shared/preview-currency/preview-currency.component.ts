@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { CurrencyPipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-preview-currency',
   standalone: true,
-  imports: [NgIf, MatIconModule],
+  imports: [NgIf, MatIconModule, CurrencyPipe],
   templateUrl: './preview-currency.component.html',
   styleUrls: ['./preview-currency.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

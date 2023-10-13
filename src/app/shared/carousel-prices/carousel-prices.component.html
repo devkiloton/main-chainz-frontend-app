@@ -1,5 +1,5 @@
 <div class="currencies">
-  <div class="currencies-slide">
+  <div class="currencies-slide mx-2">
     <app-preview-currency
       *ngFor="let currency of currencies | async"
       [baseFiatCurrency]="'USD'"
@@ -7,7 +7,7 @@
       [price]="currency.price"
       [priceChange24h]="currency.priceChange24h"></app-preview-currency>
   </div>
-  <div class="currencies-slide">
+  <div class="currencies-slide mx-2">
     <app-preview-currency
       *ngFor="let currency of currencies | async"
       [baseFiatCurrency]="'USD'"
