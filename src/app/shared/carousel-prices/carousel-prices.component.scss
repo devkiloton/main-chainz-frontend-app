@@ -1,15 +1,15 @@
 :host{
     @apply w-full;
-
+    @apply py-1;
+    background-color: var(--mat-toolbar-container-background-color);
     .currencies {
         @apply overflow-hidden;
-        @apply bg-red-600;
-        @apply flex max-h-8;
-
+        @apply flex;
+        
         .currencies-slide {
-            @apply flex items-stretch justify-stretch gap-x-4;
+            @apply flex  gap-x-4;
             
-            animation: slide 40s linear infinite;
+            animation: slide 50s linear infinite;
         }
 
         &:hover {
