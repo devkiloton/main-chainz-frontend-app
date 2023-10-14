@@ -1,6 +1,9 @@
-<div class="animation">
+<section class="animation">
   <app-particle-bg></app-particle-bg>
   <p class="text" i18n>Decrypt an alternative reality with Central Hash</p>
-</div>
+</section>
+<section class="prices">
+  <app-table-prices *ngIf="currenciesBroadCast$ | async as currencies" [currencies]="currencies"></app-table-prices>
+</section>
 <!-- <app-chip-icon-list [chipOptions]="allCurrenciesChipOptions"></app-chip-icon-list>
 <app-grid [gridData]="bitcoinServicesGridTiles"></app-grid> -->

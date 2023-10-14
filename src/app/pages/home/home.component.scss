@@ -1,11 +1,18 @@
 :host {
-  @apply flex justify-center items-center flex-col gap-y-[24px];
+  @apply flex justify-center items-center flex-col;
   @apply h-full w-full;
 
   .animation {
     @apply relative w-screen;
     height: calc(100vh - 99px);
   }
+
+  .prices {
+    @apply w-full;
+    height: calc(100vh - 99px);
+    @apply flex items-center;
+  }
+  
   .text {
     @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-center;
     @apply min-[480px]:text-6xl text-6xl;
