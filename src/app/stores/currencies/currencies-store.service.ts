@@ -1,5 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Inject, inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { CurrenciesService } from 'projects/central-hash-api-client/src/lib/entities/currencies/currencies.service';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { Observable } from 'rxjs';
@@ -19,10 +18,8 @@ export class CurrenciesStoreService implements GetOnlyOps<Currency> {
 
   public readonly broadCast$ = this._state$;
 
-  constructor(@Inject(PLATFORM_ID) private readonly _platformId: object) {
-    if (isPlatformBrowser(this._platformId)) {
-      this._currencies.broadCast(this.TIME_TO_BROADCAST_UPDATE).subscribe(currencies => this._state$.next(currencies));
-    }
+  constructor() {
+    this._currencies.broadCast(this.TIME_TO_BROADCAST_UPDATE).subscribe(currencies => this._state$.next(currencies));
   }
 
   public get findAll(): Observable<Array<Currency>> {
