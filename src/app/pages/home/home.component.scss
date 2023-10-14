@@ -12,9 +12,39 @@
     height: calc(100vh - 99px);
     @apply flex items-center;
   }
+
+  .questions {
+    @apply w-full;
+    height: calc(100vh - 99px);
+    @apply flex items-center;
+    @apply px-4;
+  }
+
+  .questions-header {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @apply text-lg;
+  }
+
+  .icon-inverted {
+    @apply transform rotate-180;
+    @apply justify-start items-center
+  }
   
   .text {
     @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-center;
     @apply min-[480px]:text-6xl text-6xl;
+  }
+}
+
+.mat-expansion-panel-header-description {
+  @apply flex-grow-0;
+}
+
+@media screen and (min-width: 1024px) {
+  :host {
+    .questions {
+      @apply px-20;
+    }
   }
 }

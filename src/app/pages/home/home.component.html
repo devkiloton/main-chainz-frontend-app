@@ -5,5 +5,23 @@
 <section class="prices">
   <app-table-prices *ngIf="currenciesBroadCast$ | async as currencies" [currencies]="currencies"></app-table-prices>
 </section>
+<section class="questions">
+  <mat-accordion class="w-full rounded-md">
+    <mat-expansion-panel
+      class="mat-elevation-z2"
+      *ngFor="let questionAndAnswer of questionsAndAnswers; index as index"
+      (opened)="toggleArrow(index)"
+      (closed)="toggleArrow(-1)"
+      [expanded]="index === 0"
+      hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="questions-header">
+          {{ questionAndAnswer.title }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ questionAndAnswer.answer }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
 <!-- <app-chip-icon-list [chipOptions]="allCurrenciesChipOptions"></app-chip-icon-list>
 <app-grid [gridData]="bitcoinServicesGridTiles"></app-grid> -->

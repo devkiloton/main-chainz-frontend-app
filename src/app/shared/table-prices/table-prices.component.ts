@@ -1,12 +1,14 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { AsyncPipe, CurrencyPipe } from '@angular/common';
 import type { AfterViewInit, OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input, ViewChild } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
+import { of, switchMap } from 'rxjs';
 
 export type UserData = {
   id: string;
@@ -32,13 +34,25 @@ export type UserData = {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TablePricesComponent implements OnInit, AfterViewInit {
-  public displayedColumns: Array<string> = ['name', 'id', 'price', 'marketCap', 'priceChange24h'];
-  public dataSource!: MatTableDataSource<Currency>;
+  private readonly _breakPointObserver = inject(BreakpointObserver);
+
   @Input()
   public currencies!: Array<Currency>;
 
   @ViewChild(MatPaginator) public paginator!: MatPaginator;
   @ViewChild(MatSort) public sort!: MatSort;
+
+  public displayedColumns: Array<string> = ['name', 'id', 'price', 'marketCap', 'priceChange24h'];
+  public dataSource!: MatTableDataSource<Currency>;
+
+  public columns$ = this._breakPointObserver.observe(['(max-width: 768px)']).pipe(
+    switchMap(result => {
+      if (result.matches) {
+        return of(['name', 'price', 'priceChange24h']);
+      }
+      return of(['name', 'id', 'price', 'marketCap', 'priceChange24h']);
+    }),
+  );
 
   public ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.currencies);
