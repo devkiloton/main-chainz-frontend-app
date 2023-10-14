@@ -11,13 +11,23 @@
     @apply w-full;
     height: calc(100vh - 99px);
     @apply flex items-center;
+    @apply relative;
+
+    .buy-cards {
+      @apply flex justify-center items-center w-full px-4 gap-x-6;
+      @apply flex-wrap;
+      @apply absolute;
+      max-height:164px;
+      overflow: hidden;
+      top: -100px;
+    }
   }
 
   .questions {
     @apply w-full;
     height: calc(100vh - 99px);
     @apply flex items-center;
-    @apply px-4;
+    @apply px-4 min-[1024px]:px-20;
   }
 
   .questions-header {
@@ -41,10 +51,3 @@
   @apply flex-grow-0;
 }
 
-@media screen and (min-width: 1024px) {
-  :host {
-    .questions {
-      @apply px-20;
-    }
-  }
-}

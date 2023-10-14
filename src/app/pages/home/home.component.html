@@ -3,6 +3,12 @@
   <p class="text" i18n>Decrypt an alternative reality with Central Hash</p>
 </section>
 <section class="prices">
+  <div class="buy-cards">
+    <app-card-buy></app-card-buy>
+    <app-card-buy></app-card-buy>
+    <app-card-buy></app-card-buy>
+    <app-card-buy></app-card-buy>
+  </div>
   <app-table-prices *ngIf="currenciesBroadCast$ | async as currencies" [currencies]="currencies"></app-table-prices>
 </section>
 <section class="questions">

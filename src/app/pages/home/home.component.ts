@@ -12,6 +12,7 @@ import { GridComponent } from 'src/app/shared/grid/grid.component';
 import { TablePricesComponent } from 'src/app/shared/table-prices/table-prices.component';
 import { CurrenciesStoreService } from 'src/app/stores';
 import { ParticleBgComponent } from '../../shared/particle-bg/particle-bg.component';
+import { CardBuyComponent } from './components/card-buy/card-buy.component';
 
 @Component({
   templateUrl: './home.component.html',
@@ -29,6 +30,7 @@ import { ParticleBgComponent } from '../../shared/particle-bg/particle-bg.compon
     TablePricesComponent,
     AsyncPipe,
     NgIf,
+    CardBuyComponent,
   ],
 })
 export default class HomeComponent {
