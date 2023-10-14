@@ -1,10 +1,10 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import type { WalletIdentifiers } from 'src/app/constants/wallet-indentifiers';
 import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
 import type { BitcoinWallet } from 'src/app/types/bitcoin-walet';
 import { WalletCardComponent } from './wallet-card.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 const mocks: BitcoinWallet & WalletIdentifiers = {
   address: 'bc1qlpj4hm7ujrhtnv73exxvjl74ncnc3ncjxm6cdl',
