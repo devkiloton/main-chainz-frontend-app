@@ -2,7 +2,8 @@
   @apply w-full;
   @apply py-2;
   @apply sticky top-0 z-50;
-  background-color: var(--mat-toolbar-container-background-color);
+  background-color: var(--mat-toolbar-container-text-color);
+  color: var(--mat-toolbar-container-background-color);
   .currencies {
     @apply overflow-hidden;
     @apply flex;

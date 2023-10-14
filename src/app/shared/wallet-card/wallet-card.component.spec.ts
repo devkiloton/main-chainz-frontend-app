@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 import type { WalletIdentifiers } from 'src/app/constants/wallet-indentifiers';
@@ -21,7 +22,7 @@ describe('WalletCardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [WalletCardComponent],
+      imports: [WalletCardComponent, HttpClientTestingModule],
       providers: [
         {
           provide: LocalStorageService,

@@ -1,7 +1,7 @@
-<div class="currencies">
+<div class="currencies" *ngIf="currenciesBroadCast$ | async as currenciesBroadCast">
   <div class="currencies-slide mx-2">
     <app-preview-currency
-      *ngFor="let currency of currencies | async"
+      *ngFor="let currency of currenciesBroadCast"
       [baseFiatCurrency]="'USD'"
       [name]="currency.name"
       [price]="currency.price"
@@ -9,7 +9,7 @@
   </div>
   <div class="currencies-slide mx-2">
     <app-preview-currency
-      *ngFor="let currency of currencies | async"
+      *ngFor="let currency of currenciesBroadCast"
       [baseFiatCurrency]="'USD'"
       [name]="currency.name"
       [price]="currency.price"
