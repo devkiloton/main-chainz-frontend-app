@@ -14,10 +14,11 @@
     @apply relative;
 
     .buy-cards {
-      @apply flex justify-center items-center w-full px-4 gap-x-6;
+      @apply flex justify-center items-center w-full px-4 gap-x-6 gap-y-44;
       @apply flex-wrap;
       @apply absolute;
-      max-height:164px;
+      @apply pb-10;
+      max-height:210px;
       overflow: hidden;
       top: -100px;
     }
