@@ -3,32 +3,35 @@ import { CurrenciesService } from 'projects/central-hash-api-client/src/lib/enti
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { Observable } from 'rxjs';
 import { map, Subject } from 'rxjs';
+import type { GetOnlyOps } from '../models/get-only-ops';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CurrenciesStoreService {
+export class CurrenciesStoreService implements GetOnlyOps<Currency> {
   private readonly _currencies = inject(CurrenciesService);
 
-  private readonly _currencies$ = new Subject<Array<Currency>>();
-  public readonly currencies$ = this._currencies$.asObservable();
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  private readonly TIME_TO_BROADCAST_UPDATE = 30000;
 
-  public readonly currenciesBroadCast$ = this._currencies$;
+  private readonly _state$ = new Subject<Array<Currency>>();
+
+  public readonly broadCast$ = this._state$;
 
   constructor() {
-    this._currencies.boradCast(30000).subscribe(currencies => this._currencies$.next(currencies));
+    this._currencies.broadCast(this.TIME_TO_BROADCAST_UPDATE).subscribe(currencies => this._state$.next(currencies));
   }
 
   public get findAll(): Observable<Array<Currency>> {
-    return this._currencies$.asObservable();
+    return this._state$.asObservable();
   }
 
-  public findAllAsync(): Observable<Array<Currency>> {
+  public get findAllAsync(): Observable<Array<Currency>> {
     return this._currencies.findAll();
   }
 
   public findOne(id: string): Observable<Currency | null> {
-    return this._currencies$.pipe(map(currencies => currencies.find(currency => currency.id === id) ?? null));
+    return this._state$.pipe(map(currencies => currencies.find(currency => currency.id === id) ?? null));
   }
 
   public findOneAsync(id: string): Observable<Currency | null> {

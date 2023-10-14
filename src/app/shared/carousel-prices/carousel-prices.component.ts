@@ -14,5 +14,5 @@ import { PreviewCurrencyComponent } from '../preview-currency/preview-currency.c
 })
 export class CarouselPricesComponent {
   private readonly _currenciesStore = inject(CurrenciesStoreService);
-  public readonly currenciesBroadCast$ = this._currenciesStore.currenciesBroadCast$;
+  public readonly currenciesBroadCast$ = this._currenciesStore.broadCast$;
 }

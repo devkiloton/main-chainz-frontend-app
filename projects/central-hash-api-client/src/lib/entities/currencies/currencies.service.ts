@@ -24,7 +24,7 @@ export class CurrenciesService {
    *
    * REASON: seriously danger of memory leaks
    */
-  public boradCast(time = 10000): Observable<Array<Currency>> {
+  public broadCast(time = 10000): Observable<Array<Currency>> {
     return timer(0, time).pipe(
       switchMap(() => from(fetch(`${this.API}/currencies`)).pipe(switchMap(response => response.json()))),
     );
