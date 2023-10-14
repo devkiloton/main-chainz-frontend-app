@@ -35,35 +35,4 @@ export class AllCurrenciesService {
   public get getDefaultCurrency(): FiatCurrencies {
     return this._localStorageService.getDefaultCurrency;
   }
-
-  public set setFiatCurrenciesPriceUSD(data: {
-    prices: Array<{ code: FiatCurrencies; priceUSD: number }>;
-    date: Date;
-  }) {
-    this._fiatCurrenciesPriceUSD$.next(data);
-    this._localStorageService.setFiatCurrenciesPriceUSD = data;
-  }
-
-  public deleteAllFiatCurrenciesPriceUSD(): void {
-    this._localStorageService.deleteAllFiatCurrenciesPriceUSD();
-  }
-
-  public get getFiatCurrenciesPriceUSD(): { prices: Array<{ code: FiatCurrencies; priceUSD: number }>; date: Date } {
-    const fiatCurrenciesPriceUSD = this._localStorageService.getFiatCurrenciesPriceUSD;
-    return fiatCurrenciesPriceUSD;
-  }
-
-  public set setCurrenciesPriceUSD(data: { prices: Array<{ code: Currencies; priceUSD: number }>; date: Date }) {
-    this._currenciesPriceUSD$.next(data);
-    this._localStorageService.setCurrenciesPriceUSD = data;
-  }
-
-  public deleteAllCurrenciesPriceUSD(): void {
-    this._localStorageService.deleteAllCurrenciesPriceUSD();
-  }
-
-  public get getCurrenciesPriceUSD(): { prices: Array<{ code: Currencies; priceUSD: number }>; date: Date } {
-    const currenciesPriceUSD = this._localStorageService.getCurrenciesPriceUSD;
-    return currenciesPriceUSD;
-  }
 }
