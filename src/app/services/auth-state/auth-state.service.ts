@@ -1,4 +1,5 @@
-import { inject, Injectable } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, inject, Injectable, PLATFORM_ID } from '@angular/core';
 import * as jwt_decode from 'jwt-decode';
 import type { JWT } from 'src/app/types/jwt';
 import { LocalStorageService } from '../local-storage/local-storage.service';
@@ -8,20 +9,32 @@ import { LocalStorageService } from '../local-storage/local-storage.service';
 })
 export class AuthStateService {
   private readonly _localStorage = inject(LocalStorageService);
+  constructor(@Inject(PLATFORM_ID) private readonly _platformId: object) {}
 
   public set(value: string): void {
-    this._localStorage.setAuthToken = value;
+    if (isPlatformBrowser(this._platformId)) {
+      this._localStorage.setAuthToken = value;
+    }
   }
 
   public get(): string | null {
+    if (!isPlatformBrowser(this._platformId)) {
+      return null;
+    }
     return this._localStorage.getAuthToken;
   }
 
   public remove(): void {
+    if (!isPlatformBrowser(this._platformId)) {
+      return;
+    }
     localStorage.removeItem('auth_token');
   }
 
   public getDecodedToken(): JWT | null {
+    if (!isPlatformBrowser(this._platformId)) {
+      return null;
+    }
     const token = this.get();
     if (token !== null) {
       return jwt_decode.default(token);
@@ -31,6 +44,9 @@ export class AuthStateService {
   }
 
   public isTokenExpired(): boolean {
+    if (!isPlatformBrowser(this._platformId)) {
+      return true;
+    }
     const decodedToken = this.getDecodedToken();
     if (decodedToken !== null) {
       return decodedToken.exp < Date.now() / 1000;
