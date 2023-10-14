@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
-import { Observable, from, switchMap, timer } from 'rxjs';
+import { Inject, Injectable, PLATFORM_ID, inject } from '@angular/core';
+import { Observable, switchMap, timer } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Currency } from '../../models/currencies/currency';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +11,8 @@ import { Currency } from '../../models/currencies/currency';
 export class CurrenciesService {
   private readonly API = environment.centralHashApiUrl;
   private readonly _httpClient = inject(HttpClient);
+
+  constructor(@Inject(PLATFORM_ID) private readonly _platformId: Object) {} // eslint-disable-line @typescript-eslint/naming-convention
 
   public findAll(): Observable<Array<Currency>> {
     return this._httpClient.get<Array<Currency>>(`${this.API}/currencies`);
@@ -25,8 +28,9 @@ export class CurrenciesService {
    * REASON: seriously danger of memory leaks
    */
   public broadCast(time = 10000): Observable<Array<Currency>> {
-    return timer(0, time).pipe(
-      switchMap(() => from(fetch(`${this.API}/currencies`)).pipe(switchMap(response => response.json()))),
-    );
+    if (isPlatformBrowser(this._platformId)) {
+      return timer(0, time).pipe(switchMap(() => fetch(this.API + '/currencies').then(value => value.json())));
+    }
+    return this.findAll();
   }
 }
