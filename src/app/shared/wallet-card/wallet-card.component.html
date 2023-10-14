@@ -3,7 +3,9 @@
     <mat-card-title-group>
       <mat-card-title> {{ wallet.code }} {{ wallet.balance / 100000000 }}</mat-card-title>
       <mat-card-subtitle>
-        {{ (wallet.balance / 100000000) * currencyPrice | currency: defaultCurrency }}</mat-card-subtitle
+        {{
+          (wallet.balance / 100000000) * ((currencyPrice() | async) ?? 0) | currency: defaultCurrency
+        }}</mat-card-subtitle
       >
       <img mat-card-sm-image i18n-alt alt="{{ wallet.name }} icon" [src]="'assets/images/' + wallet.name + '.svg'" />
     </mat-card-title-group>
