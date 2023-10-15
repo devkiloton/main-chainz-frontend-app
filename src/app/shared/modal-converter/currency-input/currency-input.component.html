@@ -26,7 +26,7 @@
   </button>
   <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #currenciesMenu="matMenu">
     <button (appAccessiblePress)="setSelection(option.id)" mat-menu-item *ngFor="let option of finalColletion()">
-      <div class="btn-option">
+      <div [class]="isFiatCollection ? 'btn-option-fiat' : 'btn-option'">
         <img
           [src]="
             'assets/images/' + (isFiatCollection ? 'flags/' : '') + option.id + (isFiatCollection ? '.webp' : '.svg')
