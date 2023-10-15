@@ -1,0 +1,40 @@
+<mat-form-field class="input-opts" color="accent">
+  <input #inpt matInput type="number" i18n-placeholder placeholder="Type your amount" />
+  <button
+    matRipple
+    matRippleColor="#ffffff40"
+    (click)="inpt.disabled = true"
+    class="change-currency symbol"
+    matSuffix
+    mat-icon-button
+    i18n-aria-label
+    aria-label="Select your crypto currency"
+    [matMenuTriggerFor]="currenciesMenu">
+    <div class="flex items-center gap-x-2 px-2">
+      <img
+        [src]="
+          'assets/images/' +
+          (isFiatCollection ? 'flags/' : '') +
+          (selectedCurrencyCode$ | async) +
+          (isFiatCollection ? '.webp' : '.svg')
+        "
+        i18n-alt
+        alt="Brazilian flag" />
+      <span class="font-medium">{{ selectedCurrencyCode$ | async }}</span>
+    </div>
+    <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #currenciesMenu="matMenu">
+    <button (appAccessiblePress)="setSelection(option.id)" mat-menu-item *ngFor="let option of finalColletion()">
+      <div class="btn-option">
+        <img
+          [src]="
+            'assets/images/' + (isFiatCollection ? 'flags/' : '') + option.id + (isFiatCollection ? '.webp' : '.svg')
+          "
+          i18n-alt
+          [alt]="isCurrency(option) ? option.name : option.id + ' icon'" />
+        <span>{{ isCurrency(option) ? option.name : option.id }}</span>
+      </div>
+    </button>
+  </mat-menu>
+</mat-form-field>

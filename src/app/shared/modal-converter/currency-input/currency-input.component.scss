@@ -1,0 +1,52 @@
+:host {
+
+    .change-currency {
+        @apply w-28 h-10;
+        @apply flex justify-between items-center;
+        @apply rounded-[4px];
+        @apply cursor-pointer;
+        @apply font-sans;
+        color: var(--mat-toolbar-container-background-color);
+        background-color: var(--mat-toolbar-container-text-color);
+        @apply mr-2;
+
+        img{
+            @apply w-6;
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    .input-opts {
+        font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.00625rem;
+    @apply min-[768px]:text-xl;
+    @apply min-[768px]:leading-relaxed;
+    @apply w-full;
+    @apply font-mono;
+    }
+
+    .symbol {
+        font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.00625rem;
+    @apply min-[768px]:text-base;
+    @apply min-[768px]:w-32;;
+    }
+
+    
+}
+
+.btn-option {
+    @apply flex flex-row items-start gap-x-2 w-full;
+
+    img{
+        @apply h-6;
+    }
+}
