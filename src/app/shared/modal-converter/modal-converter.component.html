@@ -1,0 +1,55 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<form class="example-form">
+  <mat-form-field class="w-full text-headline5 font-mono" color="accent">
+    <input #inpt matInput type="number" placeholder="Type your amount" />
+    <button
+      (click)="inpt.disabled = true"
+      class="change-currency z-50"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      [matMenuTriggerFor]="currenciesMenu">
+      <div class="flex items-center gap-x-2 px-2">
+        <img src="assets/images/bitcoin.svg" alt="Brazilian flag" />
+        <span class="font-medium text-xl">BTC</span>
+      </div>
+      <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
+    </button>
+    <!-- #TODO: decouple that to be a cva -->
+    <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #currenciesMenu="matMenu">
+      <button mat-menu-item *ngFor="let option of allCurrencies">
+        <div class="btn-option">
+          <img src="/assets/images/bitcoin.svg" alt="btc" />
+          <span>{{ option.name }}</span>
+        </div>
+      </button>
+    </mat-menu>
+  </mat-form-field>
+  <mat-form-field class="w-full text-headline5 font-mono" color="accent">
+    <input #inpt matInput type="number" placeholder="Type your amount" />
+    <button
+      (click)="inpt.disabled = true"
+      class="change-currency z-50"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      [matMenuTriggerFor]="fiatMenu">
+      <div class="flex items-center gap-x-2 px-2">
+        <img src="/assets/images/flags/usa.webp" alt="Brazilian flag" />
+        <span class="font-medium text-xl">USD</span>
+      </div>
+      <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
+    </button>
+    <!-- #TODO: decouple that to be a cva -->
+    <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #fiatMenu="matMenu">
+      <button mat-menu-item *ngFor="let option of fiatCurrencies">
+        <div class="btn-option">
+          <img src="/assets/images/bitcoin.svg" alt="btc" />
+          <span>{{ option.id }}</span>
+        </div>
+      </button>
+    </mat-menu>
+  </mat-form-field>
+  <app-button-primary type="submit" color="accent" title="Buy" label="Buy"></app-button-primary>
+</form>

@@ -1,0 +1,38 @@
+:host {
+    @apply rounded-md;
+    @apply p-6 ;
+    @apply flex flex-col gap-y-2;
+    background-color: var(--mat-toolbar-container-background-color);
+    @apply w-full max-w-md;
+
+    .change-currency {
+        @apply w-32 h-10;
+        @apply flex justify-between items-center;
+        @apply rounded-[4px];
+        @apply cursor-pointer;
+        @apply font-sans;
+        color: var(--mat-toolbar-container-background-color);
+        background-color: var(--mat-toolbar-container-text-color);
+        @apply mr-2;
+
+        img{
+            @apply w-6;
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+      
+}
+.btn-option {
+    @apply flex flex-row items-start gap-x-2 w-full;
+
+    img{
+        @apply w-6;
+    }
+}
