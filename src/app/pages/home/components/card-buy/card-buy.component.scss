@@ -1,7 +1,7 @@
 .container {
     @apply rounded-md;
     @apply p-4;
-    @apply w-[200px];
+    @apply w-[240px];
     @apply flex flex-col gap-y-2;
     background-color: var(--mat-toolbar-container-text-color);
     color: var(--mat-toolbar-container-background-color);
