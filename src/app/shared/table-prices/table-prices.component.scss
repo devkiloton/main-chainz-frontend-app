@@ -1,16 +1,9 @@
 :host {
-  @apply m-auto;
   @apply flex-1;
-  @apply px-4;
 
   table, th, td { border-radius: 5px; }
   table {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-}
-@media screen and (min-width: 1024px) {
-    :host{
-        @apply px-20;
-    }
 }

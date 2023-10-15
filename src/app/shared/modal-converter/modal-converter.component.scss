@@ -31,8 +31,17 @@
         font-weight: 500;
     font-size: 0.875rem;
     letter-spacing: 0.00625rem;
+    @apply min-[768px]:text-xl;
+    @apply min-[768px]:leading-relaxed;
     }
 
+    .symbol {
+        font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.00625rem;
+    @apply min-[768px]:text-base;
+    @apply min-[768px]:w-32;;
+    }
       
 }
 .btn-option {
@@ -43,17 +52,3 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    .input-opts {
-        font-weight: 400;
-    font-size: 1.5rem;
-    letter-spacing: 0;
-    line-height: 1.6;
-    }
-
-    .change-currency {
-        @apply text-base;
-        @apply w-32;
-    }
-}
-    
