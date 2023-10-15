@@ -1,6 +1,8 @@
 import { AsyncPipe, NgFor } from '@angular/common';
-import type { OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, forwardRef, inject, Input } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import type { ControlValueAccessor } from '@angular/forms';
+import { NG_VALUE_ACCESSOR, NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,7 +10,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
-import { BehaviorSubject } from 'rxjs';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 
 @Component({
@@ -23,26 +24,43 @@ import { AccessiblePressDirective } from 'src/app/directives/accessible-press.di
     NgFor,
     AsyncPipe,
     AccessiblePressDirective,
+    ReactiveFormsModule,
+  ],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => CurrencyInputComponent),
+      multi: true,
+    },
   ],
   templateUrl: './currency-input.component.html',
   styleUrls: ['./currency-input.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CurrencyInputComponent implements OnInit {
-  private readonly _selectedCurrencyCode$ = new BehaviorSubject<string>('');
-  public readonly selectedCurrencyCode$ = this._selectedCurrencyCode$.asObservable();
+export class CurrencyInputComponent implements ControlValueAccessor {
+  private readonly _fb = inject(NonNullableFormBuilder);
+  private readonly _destroyRef = inject(DestroyRef);
+
+  public readonly form = this._fb.group({
+    id: '',
+    amount: 0,
+  });
 
   @Input({ required: true })
   public currencies!: Array<Currency | FiatCurrency>;
 
   @Input({ required: true })
-  public defaultCurrencyCode!: string;
+  public set defaultCurrencyCode(id: string) {
+    console.log('id', id);
+    this.form.controls.id.setValue(id);
+  }
 
   @Input({ required: true })
   public isFiatCollection!: boolean;
 
-  public ngOnInit(): void {
-    this._selectedCurrencyCode$.next(this.defaultCurrencyCode);
+  @Input()
+  public set initialAmount(amount: number) {
+    this.form.controls.amount.setValue(amount);
   }
 
   // Custom type guard
@@ -70,6 +88,38 @@ export class CurrencyInputComponent implements OnInit {
   }
 
   public setSelection(currencyCode: string): void {
-    this._selectedCurrencyCode$.next(currencyCode);
+    this.form.controls.id.setValue(currencyCode);
+  }
+
+  // * CVA
+  public writeValue(
+    obj: Partial<{
+      id: string;
+      amount: number;
+    }>,
+  ): void {
+    this.form.patchValue(obj);
+  }
+
+  public registerOnChange(
+    fn: (
+      arg: Partial<{
+        id: string;
+        amount: number;
+      }>,
+    ) => void,
+  ): void {
+    this.form.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(fn);
+  }
+
+  public registerOnTouched(
+    fn: (
+      arg: Partial<{
+        id: string;
+        amount: number;
+      }>,
+    ) => void,
+  ): void {
+    this.form.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(fn);
   }
 }

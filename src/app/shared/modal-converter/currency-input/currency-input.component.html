@@ -1,5 +1,11 @@
 <mat-form-field class="input-opts" color="accent">
-  <input #inpt matInput type="number" i18n-placeholder placeholder="Type your amount" />
+  <input
+    [formControl]="form.controls.amount"
+    #inpt
+    matInput
+    type="number"
+    i18n-placeholder
+    placeholder="Type your amount" />
   <button
     matRipple
     matRippleColor="#ffffff40"
@@ -15,12 +21,12 @@
         [src]="
           'assets/images/' +
           (isFiatCollection ? 'flags/' : '') +
-          (selectedCurrencyCode$ | async) +
+          (form.value.id ?? defaultCurrencyCode) +
           (isFiatCollection ? '.webp' : '.svg')
         "
         i18n-alt
-        alt="Brazilian flag" />
-      <span class="font-medium">{{ selectedCurrencyCode$ | async }}</span>
+        [alt]="form.controls.id.value + ' country flag image'" />
+      <span class="font-medium">{{ form.controls.id.value }}</span>
     </div>
     <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
   </button>
