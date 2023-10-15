@@ -1,59 +1,11 @@
-<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
-<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 <form class="example-form">
-  <mat-form-field class="w-full input-opts font-mono" color="accent">
-    <input #inpt matInput type="number" placeholder="Type your amount" />
-    <button
-      matRipple
-      matRippleColor="#ffffff40"
-      (click)="inpt.disabled = true"
-      class="change-currency symbol"
-      matSuffix
-      mat-icon-button
-      aria-label="Clear"
-      [matMenuTriggerFor]="currenciesMenu">
-      <div class="flex items-center gap-x-2 px-2">
-        <img src="assets/images/BTC.svg" alt="Brazilian flag" />
-        <span class="font-medium">BTC</span>
-      </div>
-      <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
-    </button>
-    <!-- #TODO: decouple that to be a cva -->
-    <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #currenciesMenu="matMenu">
-      <button mat-menu-item *ngFor="let option of allCurrencies">
-        <div class="btn-option">
-          <img src="/assets/images/BTC.svg" alt="btc" />
-          <span>{{ option.name }}</span>
-        </div>
-      </button>
-    </mat-menu>
-  </mat-form-field>
-  <mat-form-field class="w-full input-opts font-mono" color="accent">
-    <input #inpt matInput type="number" placeholder="Type your amount" />
-    <button
-      matRipple
-      matRippleColor="#ffffff40"
-      (click)="inpt.disabled = true"
-      class="change-currency symbol"
-      matSuffix
-      mat-icon-button
-      aria-label="Clear"
-      [matMenuTriggerFor]="fiatMenu">
-      <div class="flex items-center gap-x-2 px-2">
-        <img src="/assets/images/flags/usa.webp" alt="Brazilian flag" />
-        <span class="font-medium">USD</span>
-      </div>
-      <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
-    </button>
-    <!-- #TODO: decouple that to be a cva -->
-    <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #fiatMenu="matMenu">
-      <button mat-menu-item *ngFor="let option of fiatCurrencies">
-        <div class="btn-option">
-          <img src="/assets/images/BTC.svg" alt="btc" />
-          <span>{{ option.id }}</span>
-        </div>
-      </button>
-    </mat-menu>
-  </mat-form-field>
-  <app-button-primary type="submit" color="accent" title="Buy" label="Buy"></app-button-primary>
+  <app-currency-input
+    [currencies]="allCurrencies"
+    [isFiatCollection]="false"
+    defaultCurrencyCode="BTC"></app-currency-input>
+  <app-currency-input
+    [currencies]="fiatCurrencies"
+    [isFiatCollection]="true"
+    defaultCurrencyCode="USD"></app-currency-input>
+  <app-button-primary type="submit" color="accent" i18n-title title="Buy" i18n-label label="Buy"></app-button-primary>
 </form>
