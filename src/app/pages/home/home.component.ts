@@ -3,12 +3,15 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
-import { BehaviorSubject } from 'rxjs';
+import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
+import type { Observable } from 'rxjs';
+import { BehaviorSubject, of, switchMap } from 'rxjs';
 import { allCurrenciesChipOptions } from 'src/app/constants/all-currencies-chip-options';
 import { bitcoinServicesGridTiles } from 'src/app/constants/bitcoin-services-grid-tiles';
 import { questionsAndAnswers } from 'src/app/constants/home/questions-and-answers';
 import { ChipIconListComponent } from 'src/app/shared/chip-icon-list/chip-icon-list.component';
 import { GridComponent } from 'src/app/shared/grid/grid.component';
+import { ModalConverterComponent } from 'src/app/shared/modal-converter/modal-converter.component';
 import { TablePricesComponent } from 'src/app/shared/table-prices/table-prices.component';
 import { CurrenciesStoreService } from 'src/app/stores';
 import { ParticleBgComponent } from '../../shared/particle-bg/particle-bg.component';
@@ -31,6 +34,7 @@ import { CardBuyComponent } from './components/card-buy/card-buy.component';
     AsyncPipe,
     NgIf,
     CardBuyComponent,
+    ModalConverterComponent,
   ],
 })
 export default class HomeComponent {
@@ -38,7 +42,9 @@ export default class HomeComponent {
 
   private readonly _arrowInverted = new BehaviorSubject<number>(0);
   public readonly arrowInverted$ = this._arrowInverted.asObservable();
-  public readonly currenciesBroadCast$ = this._currencies.broadCast$.asObservable();
+  public readonly currenciesBroadCast$: Observable<Array<Currency> | null> = this._currencies.broadCast$.pipe(
+    switchMap(currencies => (currencies.length > 0 ? of(currencies) : of(null))),
+  );
 
   public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles;
   public readonly allCurrenciesChipOptions = allCurrenciesChipOptions;

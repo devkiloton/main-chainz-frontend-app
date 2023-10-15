@@ -17,10 +17,10 @@
       @apply flex justify-center items-center w-full px-4 gap-x-6 gap-y-44;
       @apply flex-wrap;
       @apply absolute;
-      @apply pb-10;
-      max-height:210px;
+      @apply pb-16 pt-6;
+      max-height:250px;
       overflow: hidden;
-      top: -100px;
+      top: -120px;
     }
   }
 
@@ -42,9 +42,10 @@
     @apply justify-start items-center
   }
   
-  .text {
-    @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-center;
-    @apply min-[480px]:text-6xl text-6xl;
+  .over-animation {
+    @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-left;
+    @apply w-full p-32;
+    @apply flex justify-between items-center;
   }
 }
 
