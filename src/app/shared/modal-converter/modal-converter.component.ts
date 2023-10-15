@@ -1,6 +1,7 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatRippleModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -30,6 +31,7 @@ export type State = {
     AsyncPipe,
     ButtonPrimaryComponent,
     ReactiveFormsModule,
+    MatRippleModule,
   ],
   templateUrl: './modal-converter.component.html',
   styleUrls: ['./modal-converter.component.scss'],
