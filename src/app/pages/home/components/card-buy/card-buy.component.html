@@ -1,13 +1,21 @@
 <div class="container mat-elevation-z16">
-  <div class="flex justify-stretch gap-x-2">
-    <div class="flex flex-col items-baseline gap-x-2 w-full">
-      <span class="text-lg font-semibold">Bitcoin</span>
-      <span class="text-lg text-gray-700">BTC</span>
+  <div class="logo-and-text">
+    <div class="texts">
+      <span class="currency-name">{{ currencyName }}</span>
+      <span class="currency-code">{{ currencyCode }}</span>
     </div>
-    <img alt="image" src="/assets/images/bitcoin.svg" />
+    <img i18n-alt [alt]="currencyName + ' logo'" [src]="'/assets/images/' + currencyCode + '.svg'" />
   </div>
-  <div class="font-mono flex gap-x-2"><span>26,569.920</span><span class="text-green-500">+2.3%</span></div>
+  <div class="prices">
+    <span>{{ price | currency }}</span
+    ><span [class]="priceChange24hStatus">{{ priceChange24h }}%</span>
+  </div>
   <div class="w-full">
-    <app-button-primary label="Buy" title="Buy" type="button"></app-button-primary>
+    <app-button-primary
+      i18n-label
+      [label]="'Buy ' + currencyName"
+      i18n-title
+      [title]="'Buy ' + currencyCode"
+      type="button"></app-button-primary>
   </div>
 </div>

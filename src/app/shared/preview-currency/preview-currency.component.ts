@@ -31,6 +31,9 @@ export class PreviewCurrencyComponent implements OnInit {
   }
 
   public get priceChange24hStatus(): string {
+    if (this.priceChange24h === 0) {
+      return 'neutral';
+    }
     return this.priceChange24h > 0 ? 'bull' : 'bear';
   }
 

@@ -5,7 +5,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { Observable } from 'rxjs';
-import { BehaviorSubject, of, switchMap } from 'rxjs';
+import { BehaviorSubject, map, of, switchMap } from 'rxjs';
 import { allCurrenciesChipOptions } from 'src/app/constants/all-currencies-chip-options';
 import { bitcoinServicesGridTiles } from 'src/app/constants/bitcoin-services-grid-tiles';
 import { questionsAndAnswers } from 'src/app/constants/home/questions-and-answers';
@@ -16,6 +16,7 @@ import { TablePricesComponent } from 'src/app/shared/table-prices/table-prices.c
 import { CurrenciesStoreService } from 'src/app/stores';
 import { ParticleBgComponent } from '../../shared/particle-bg/particle-bg.component';
 import { CardBuyComponent } from './components/card-buy/card-buy.component';
+import { supportedCurrencies } from 'src/app/constants/supported-currencies';
 
 @Component({
   templateUrl: './home.component.html',
@@ -44,6 +45,13 @@ export default class HomeComponent {
   public readonly arrowInverted$ = this._arrowInverted.asObservable();
   public readonly currenciesBroadCast$: Observable<Array<Currency> | null> = this._currencies.broadCast$.pipe(
     switchMap(currencies => (currencies.length > 0 ? of(currencies) : of(null))),
+  );
+
+  public supportedCurrencies$ = this._currencies.broadCast$.pipe(
+    map(currencies => {
+      const currenciesCard = currencies.filter(currency => supportedCurrencies.includes(currency.id));
+      return currenciesCard;
+    }),
   );
 
   public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles;

@@ -4,6 +4,8 @@
   <mat-form-field class="w-full input-opts font-mono" color="accent">
     <input #inpt matInput type="number" placeholder="Type your amount" />
     <button
+      matRipple
+      matRippleColor="#ffffff40"
       (click)="inpt.disabled = true"
       class="change-currency symbol"
       matSuffix
@@ -11,7 +13,7 @@
       aria-label="Clear"
       [matMenuTriggerFor]="currenciesMenu">
       <div class="flex items-center gap-x-2 px-2">
-        <img src="assets/images/bitcoin.svg" alt="Brazilian flag" />
+        <img src="assets/images/BTC.svg" alt="Brazilian flag" />
         <span class="font-medium">BTC</span>
       </div>
       <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
@@ -20,7 +22,7 @@
     <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #currenciesMenu="matMenu">
       <button mat-menu-item *ngFor="let option of allCurrencies">
         <div class="btn-option">
-          <img src="/assets/images/bitcoin.svg" alt="btc" />
+          <img src="/assets/images/BTC.svg" alt="btc" />
           <span>{{ option.name }}</span>
         </div>
       </button>
@@ -29,6 +31,8 @@
   <mat-form-field class="w-full input-opts font-mono" color="accent">
     <input #inpt matInput type="number" placeholder="Type your amount" />
     <button
+      matRipple
+      matRippleColor="#ffffff40"
       (click)="inpt.disabled = true"
       class="change-currency symbol"
       matSuffix
@@ -45,7 +49,7 @@
     <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #fiatMenu="matMenu">
       <button mat-menu-item *ngFor="let option of fiatCurrencies">
         <div class="btn-option">
-          <img src="/assets/images/bitcoin.svg" alt="btc" />
+          <img src="/assets/images/BTC.svg" alt="btc" />
           <span>{{ option.id }}</span>
         </div>
       </button>
