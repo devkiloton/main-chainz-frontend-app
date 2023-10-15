@@ -4,11 +4,12 @@ import type { AfterViewInit, OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, inject, Input, ViewChild } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import { of, switchMap } from 'rxjs';
+import { getPaginatorIntl } from 'src/app/helpers/paginator-intl';
 
 export type UserData = {
   id: string;
@@ -28,6 +29,12 @@ export type UserData = {
     MatInputModule,
     AsyncPipe,
     CurrencyPipe,
+  ],
+  providers: [
+    {
+      provide: MatPaginatorIntl,
+      useValue: getPaginatorIntl(),
+    },
   ],
   templateUrl: './table-prices.component.html',
   styleUrls: ['./table-prices.component.scss'],
