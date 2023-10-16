@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { ModalConverterComponent } from './modal-converter.component';
 
 describe('ModalConverterComponent', () => {
-  let component: ModalConverterComponen | null = null;
+  let component: ModalConverterComponent | null = null;
   let fixture: ComponentFixture<ModalConverterComponent> | null = null;
 
   beforeEach(() => {
