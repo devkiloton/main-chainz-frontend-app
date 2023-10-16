@@ -1,6 +1,7 @@
 import { AsyncPipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormsModule, NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -12,7 +13,6 @@ import { AllCurrenciesService } from 'src/app/services/all-currencies/all-curren
 import { CurrenciesStoreService, FiatCurrenciesStoreService } from 'src/app/stores';
 import { ButtonPrimaryComponent } from '../button-primary/button-primary.component';
 import { CurrencyInputComponent } from './currency-input/currency-input.component';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 export type State = {
   flag: string;
