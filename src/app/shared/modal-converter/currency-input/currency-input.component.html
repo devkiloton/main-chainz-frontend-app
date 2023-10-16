@@ -18,6 +18,7 @@
     [matMenuTriggerFor]="currenciesMenu">
     <div class="flex items-center gap-x-2 px-2">
       <img
+        [class.h-6]="!isFiatCollection"
         [src]="
           'assets/images/' +
           (isFiatCollection ? 'flags/' : '') +
@@ -39,7 +40,7 @@
           "
           i18n-alt
           [alt]="isCurrency(option) ? option.name : option.id + ' icon'" />
-        <span>{{ isCurrency(option) ? option.name : option.id }}</span>
+        <span>{{ isCurrency(option) ? option.name : option.symbol + ' | ' + option.id }}</span>
       </div>
     </button>
   </mat-menu>

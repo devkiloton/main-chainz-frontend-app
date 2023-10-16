@@ -1,8 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { FiatCurrenciesService } from 'projects/central-hash-api-client/src/lib/entities/fiat-currencies/fiat-currencies.service';
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
-import { BehaviorSubject, type Observable } from 'rxjs';
+import { BehaviorSubject, map, type Observable } from 'rxjs';
 import type { GetOnlyOps } from '../models/get-only-ops';
+import { supportedFiats } from 'src/app/constants/supported-fiats';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,15 @@ export class FiatCurrenciesStoreService implements GetOnlyOps<FiatCurrency> {
   public readonly broadCast$ = this._state$;
 
   constructor() {
-    this._currencies.broadCast(this.TIME_TO_BROADCAST_UPDATE).subscribe(currencies => this._state$.next(currencies));
+    this._currencies
+      .broadCast(this.TIME_TO_BROADCAST_UPDATE)
+      .pipe(
+        map(value => {
+          const mutatedValue = value.filter(currency => supportedFiats.includes(currency.id));
+          return mutatedValue;
+        }),
+      )
+      .subscribe(currencies => this._state$.next(currencies));
   }
 
   public get findAll(): Array<FiatCurrency> {
@@ -26,7 +35,12 @@ export class FiatCurrenciesStoreService implements GetOnlyOps<FiatCurrency> {
   }
 
   public get findAllAsync(): Observable<Array<FiatCurrency>> {
-    return this._currencies.findAll();
+    return this._currencies.findAll().pipe(
+      map(value => {
+        const mutatedValue = value.filter(currency => supportedFiats.includes(currency.id));
+        return mutatedValue;
+      }),
+    );
   }
 
   public findOne(id: string): FiatCurrency | null {
