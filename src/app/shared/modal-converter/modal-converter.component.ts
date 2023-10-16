@@ -48,7 +48,7 @@ export class ModalConverterComponent implements OnInit {
       amount: 0,
     },
     fiatCurrency: {
-      // #TODO: Check how effective $localize`USD` is in SSR
+      // #TODO: remove localstorage on production bc ssr
       id: localStorage.getItem('currency') ?? ($localize`USD` as string),
       amount: 0,
     },
