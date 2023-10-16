@@ -4,11 +4,10 @@
   table,
   th,
   td {
-    border-radius: 5px;
+    @apply rounded-[5px];
   }
   table {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    @apply border-b-0;
   }
 
   .name-row {
@@ -24,5 +23,9 @@
       @apply h-6;
       @apply rounded-full;
     }
+  }
+
+  .no-data-text {
+    @apply text-xl p-4;
   }
 }
