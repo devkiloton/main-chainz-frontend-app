@@ -35,7 +35,7 @@
 
   .questions {
     @apply w-full;
-    height: calc(100vh - 99px);
+    min-height: calc(100vh - 99px);
     @apply flex items-center flex-col gap-y-8;
     @apply px-4 min-[1024px]:px-20;
 
