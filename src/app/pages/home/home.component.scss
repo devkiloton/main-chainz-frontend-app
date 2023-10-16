@@ -7,11 +7,14 @@
     height: calc(100vh - 99px);
   }
 
-  .markets {
-    @apply flex flex-col gap-y-8 w-full mt-16;
-    @apply px-4 min-[1024px]:px-20;
-    span {
-      @apply text-2xl min-[768px]:text-5xl self-start font-bold;
+  .over-animation {
+    @apply font-bold absolute top-[40%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-left;
+    @apply w-full min-[1024px]:p-32 p-4;
+    @apply flex justify-between items-center flex-col gap-5;
+    @apply min-[1024px]:flex-row;
+
+    div > p {
+      @apply min-[768px]:text-5xl min-[1024px]:text-6xl text-4xl text-center min-[1024px]:text-left;
     }
   }
 
@@ -26,9 +29,17 @@
       @apply flex-wrap;
       @apply absolute;
       @apply pb-16 pt-6;
-      max-height: 250px;
-      overflow: hidden;
-      top: -120px;
+      @apply overflow-hidden;
+      @apply max-h-[250px];
+      @apply top-[-120px];
+    }
+  }
+
+  .markets {
+    @apply flex flex-col gap-y-8 w-full mt-16;
+    @apply px-4 min-[1024px]:px-20;
+    span {
+      @apply text-2xl min-[768px]:text-5xl self-start font-bold;
     }
   }
 
@@ -44,25 +55,13 @@
   }
 
   .questions-header {
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @apply truncate;
     @apply text-lg;
   }
 
   .icon-inverted {
     @apply transform rotate-180;
     @apply justify-start items-center;
-  }
-
-  .over-animation {
-    @apply font-bold absolute top-[40%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-left;
-    @apply w-full min-[1024px]:p-32 p-4;
-    @apply flex justify-between items-center flex-col gap-5;
-    @apply min-[1024px]:flex-row;
-
-    div > p {
-      @apply min-[768px]:text-5xl min-[1024px]:text-6xl text-4xl text-center min-[1024px]:text-left;
-    }
   }
 }
 
