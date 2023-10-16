@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { CardBuyComponent } from './card-buy.component';
 
 describe('CardBuyComponent', () => {
-  let component: CardBuyComponent;
-  let fixture: ComponentFixture<CardBuyComponent>;
+  let component: CardBuyComponent | null = null;
+  let fixture: ComponentFixture<CardBuyComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CardBuyComponent]
+      imports: [CardBuyComponent],
     });
     fixture = TestBed.createComponent(CardBuyComponent);
     component = fixture.componentInstance;

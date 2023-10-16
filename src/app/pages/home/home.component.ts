@@ -9,6 +9,7 @@ import { BehaviorSubject, map, of, switchMap } from 'rxjs';
 import { allCurrenciesChipOptions } from 'src/app/constants/all-currencies-chip-options';
 import { bitcoinServicesGridTiles } from 'src/app/constants/bitcoin-services-grid-tiles';
 import { questionsAndAnswers } from 'src/app/constants/home/questions-and-answers';
+import { supportedCurrencies } from 'src/app/constants/supported-currencies';
 import { ChipIconListComponent } from 'src/app/shared/chip-icon-list/chip-icon-list.component';
 import { GridComponent } from 'src/app/shared/grid/grid.component';
 import { ModalConverterComponent } from 'src/app/shared/modal-converter/modal-converter.component';
@@ -16,7 +17,6 @@ import { TablePricesComponent } from 'src/app/shared/table-prices/table-prices.c
 import { CurrenciesStoreService } from 'src/app/stores';
 import { ParticleBgComponent } from '../../shared/particle-bg/particle-bg.component';
 import { CardBuyComponent } from './components/card-buy/card-buy.component';
-import { supportedCurrencies } from 'src/app/constants/supported-currencies';
 
 @Component({
   templateUrl: './home.component.html',

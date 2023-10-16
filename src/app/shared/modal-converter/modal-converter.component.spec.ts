@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { ModalConverterComponent } from './modal-converter.component';
 
 describe('ModalConverterComponent', () => {
-  let component: ModalConverterComponent;
-  let fixture: ComponentFixture<ModalConverterComponent>;
+  let component: ModalConverterComponen | null = null;
+  let fixture: ComponentFixture<ModalConverterComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ModalConverterComponent]
+      imports: [ModalConverterComponent],
     });
     fixture = TestBed.createComponent(ModalConverterComponent);
     component = fixture.componentInstance;

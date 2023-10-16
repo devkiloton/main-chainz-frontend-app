@@ -12,7 +12,6 @@
     @apply px-4 min-[1024px]:px-20;
     span {
       @apply text-2xl min-[768px]:text-5xl self-start font-bold;
-
     }
   }
 
@@ -27,7 +26,7 @@
       @apply flex-wrap;
       @apply absolute;
       @apply pb-16 pt-6;
-      max-height:250px;
+      max-height: 250px;
       overflow: hidden;
       top: -120px;
     }
@@ -44,7 +43,6 @@
     }
   }
 
-
   .questions-header {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -53,9 +51,9 @@
 
   .icon-inverted {
     @apply transform rotate-180;
-    @apply justify-start items-center
+    @apply justify-start items-center;
   }
-  
+
   .over-animation {
     @apply font-bold absolute top-[40%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-left;
     @apply w-full min-[1024px]:p-32 p-4;
@@ -71,4 +69,3 @@
 .mat-expansion-panel-header-description {
   @apply flex-grow-0;
 }
-

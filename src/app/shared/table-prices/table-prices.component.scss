@@ -1,7 +1,11 @@
 :host {
   @apply flex-1;
 
-  table, th, td { border-radius: 5px; }
+  table,
+  th,
+  td {
+    border-radius: 5px;
+  }
   table {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -16,9 +20,9 @@
     @apply rounded-xl;
 
     img {
-        @apply w-6;
-        @apply h-6;
-        @apply rounded-full;
+      @apply w-6;
+      @apply h-6;
+      @apply rounded-full;
     }
   }
 }
