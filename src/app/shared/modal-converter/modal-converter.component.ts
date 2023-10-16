@@ -9,6 +9,8 @@ import type { Currency } from 'projects/central-hash-api-client/src/lib/models/c
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { firstValueFrom } from 'rxjs';
 import { supportedCurrencies } from 'src/app/constants/supported-currencies';
+import { getCurrencyAmountFromFiat } from 'src/app/helpers/get-currency-amount-from-fiat';
+import { getFiatAmountFromCurrency } from 'src/app/helpers/get-fiat-amount-from-currency';
 import { AllCurrenciesService } from 'src/app/services/all-currencies/all-currencies.service';
 import { CurrenciesStoreService, FiatCurrenciesStoreService } from 'src/app/stores';
 import { ButtonPrimaryComponent } from '../button-primary/button-primary.component';
@@ -57,11 +59,22 @@ export class ModalConverterComponent implements OnInit {
   });
 
   public async ngOnInit(): Promise<void> {
+    // Fetching assets that will be used in the first conversion
     const defaultCurrency = this._allCurrencies.getDefaultCurrency as string;
     const fiat = await firstValueFrom(this._fiatCurrenciesStore.findOneAsync(defaultCurrency));
     const btc = await firstValueFrom(this._currenciesStore.findOneAsync('BTC'));
-    const btcPriceDefaultCurrency = (btc?.price ?? 0) * (fiat?.rate ?? 0);
-    const hundredDefaultCurrencyInBtc = 100 / btcPriceDefaultCurrency;
+
+    // Calculate 100 default currency in BTC when app starts
+    const hundredDefaultCurrencyInBtc = getCurrencyAmountFromFiat({
+      fiatRate: fiat?.rate ?? 0,
+      currencyPrice: btc?.price ?? 0,
+      amount: 100,
+    });
+
+    // Controls used when value changes
+    const currencyControl = this.form.controls.currency;
+    const fiatCurrencyControl = this.form.controls.fiatCurrency;
+
     this.form.setValue({
       currency: {
         id: 'BTC',
@@ -74,30 +87,40 @@ export class ModalConverterComponent implements OnInit {
     });
 
     this.form.controls.currency.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(value => {
-      const currencyControl = this.form.controls.currency;
-      const fiatCurrencyControl = this.form.controls.fiatCurrency;
+      // Fetching data that maybe was updated
       const fiatCurrency = this._fiatCurrenciesStore.findOne(fiatCurrencyControl.value.id);
       const currency = this._currenciesStore.findOne(currencyControl.value.id);
-      const fiatCurrencyValue = value.amount * (fiatCurrency?.rate ?? 0) * (currency?.price ?? 0);
+      // Covert the inputed amount of the currency in the selected fiat currency amount
+      const fiatCurrencyAmount = getFiatAmountFromCurrency({
+        fiatRate: fiatCurrency?.rate ?? 0,
+        currencyPrice: currency?.price ?? 0,
+        amount: value.amount,
+      });
+      // Update the fiat currency control
       fiatCurrencyControl.setValue(
         {
           id: fiatCurrency?.id ?? fiatCurrencyControl.value.id,
-          amount: Number(fiatCurrencyValue.toFixed(2)),
+          amount: Number(fiatCurrencyAmount.toFixed(2)),
         },
         { emitEvent: false },
       );
     });
 
     this.form.controls.fiatCurrency.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(value => {
-      const currencyControl = this.form.controls.currency;
-      const fiatCurrencyControl = this.form.controls.fiatCurrency;
+      // Fetching data that maybe was updated
       const fiatCurrency = this._fiatCurrenciesStore.findOne(fiatCurrencyControl.value.id);
       const currency = this._currenciesStore.findOne(currencyControl.value.id);
-      const currencyValue = value.amount / (fiatCurrency?.rate ?? 0) / (currency?.price ?? 0);
+      // Covert the inputed amount of the fiat currency in the selected currency amount
+      const currencyAmount = getCurrencyAmountFromFiat({
+        fiatRate: fiatCurrency?.rate ?? 0,
+        currencyPrice: currency?.price ?? 0,
+        amount: value.amount,
+      });
+      // Update the currency control
       currencyControl.setValue(
         {
           id: currency?.id ?? currencyControl.value.id,
-          amount: Number(currencyValue.toPrecision(8)),
+          amount: Number(currencyAmount.toPrecision(8)),
         },
         { emitEvent: false },
       );
