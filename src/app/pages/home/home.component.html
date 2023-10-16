@@ -19,12 +19,12 @@
       [priceChange24h]="currency.priceChange24h"></app-card-buy>
   </div>
   <div class="markets">
-    <span>Take a look in the markets</span>
+    <span i18n>Take a look in the markets</span>
     <app-table-prices *ngIf="currenciesBroadCast$ | async as currencies" [currencies]="currencies"></app-table-prices>
   </div>
 </section>
 <section class="questions">
-  <span>Frequent questions</span>
+  <span i18n>Frequent questions</span>
   <mat-accordion class="w-full rounded-md">
     <mat-expansion-panel
       class="mat-elevation-z2"
