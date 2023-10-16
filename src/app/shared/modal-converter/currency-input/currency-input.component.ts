@@ -51,7 +51,6 @@ export class CurrencyInputComponent implements ControlValueAccessor {
 
   @Input({ required: true })
   public set defaultCurrencyCode(id: string) {
-    console.log('id', id);
     this.form.controls.id.setValue(id);
   }
 
@@ -98,7 +97,7 @@ export class CurrencyInputComponent implements ControlValueAccessor {
       amount: number;
     }>,
   ): void {
-    this.form.patchValue(obj);
+    this.form.patchValue(obj, { emitEvent: false });
   }
 
   public registerOnChange(
