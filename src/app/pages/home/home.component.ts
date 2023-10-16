@@ -5,7 +5,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { Observable } from 'rxjs';
-import { BehaviorSubject, map, of, switchMap } from 'rxjs';
+import { map, of, switchMap } from 'rxjs';
 import { allCurrenciesChipOptions } from 'src/app/constants/all-currencies-chip-options';
 import { bitcoinServicesGridTiles } from 'src/app/constants/bitcoin-services-grid-tiles';
 import { questionsAndAnswers } from 'src/app/constants/home/questions-and-answers';
@@ -40,9 +40,6 @@ import { CardBuyComponent } from './components/card-buy/card-buy.component';
 })
 export default class HomeComponent {
   private readonly _currencies = inject(CurrenciesStoreService);
-
-  private readonly _arrowInverted = new BehaviorSubject<number>(0);
-  public readonly arrowInverted$ = this._arrowInverted.asObservable();
   public readonly currenciesBroadCast$: Observable<Array<Currency> | null> = this._currencies.broadCast$.pipe(
     switchMap(currencies => (currencies.length > 0 ? of(currencies) : of(null))),
   );
@@ -58,8 +55,4 @@ export default class HomeComponent {
   public readonly allCurrenciesChipOptions = allCurrenciesChipOptions;
 
   public readonly questionsAndAnswers = questionsAndAnswers;
-
-  public toggleArrow(index: number): void {
-    this._arrowInverted.next(index);
-  }
 }

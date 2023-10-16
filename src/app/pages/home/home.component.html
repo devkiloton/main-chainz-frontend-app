@@ -27,8 +27,6 @@
     <mat-expansion-panel
       class="mat-elevation-z2"
       *ngFor="let questionAndAnswer of questionsAndAnswers; index as index"
-      (opened)="toggleArrow(index)"
-      (closed)="toggleArrow(-1)"
       [expanded]="index === 0"
       hideToggle>
       <mat-expansion-panel-header>
