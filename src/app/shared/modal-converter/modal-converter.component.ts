@@ -1,6 +1,6 @@
 import { AsyncPipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { FormsModule, NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -12,6 +12,7 @@ import { AllCurrenciesService } from 'src/app/services/all-currencies/all-curren
 import { CurrenciesStoreService, FiatCurrenciesStoreService } from 'src/app/stores';
 import { ButtonPrimaryComponent } from '../button-primary/button-primary.component';
 import { CurrencyInputComponent } from './currency-input/currency-input.component';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 export type State = {
   flag: string;
@@ -41,6 +42,7 @@ export class ModalConverterComponent implements OnInit {
   private readonly _fiatCurrenciesStore = inject(FiatCurrenciesStoreService);
   private readonly _fb = inject(NonNullableFormBuilder);
   private readonly _allCurrencies = inject(AllCurrenciesService);
+  private readonly _destroyRef = inject(DestroyRef);
 
   public readonly form = this._fb.group({
     currency: {
@@ -71,7 +73,7 @@ export class ModalConverterComponent implements OnInit {
       },
     });
 
-    this.form.controls.currency.valueChanges.subscribe(value => {
+    this.form.controls.currency.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(value => {
       const currencyControl = this.form.controls.currency;
       const fiatCurrencyControl = this.form.controls.fiatCurrency;
       const fiatCurrency = this._fiatCurrenciesStore.findOne(fiatCurrencyControl.value.id);
@@ -86,7 +88,7 @@ export class ModalConverterComponent implements OnInit {
       );
     });
 
-    this.form.controls.fiatCurrency.valueChanges.subscribe(value => {
+    this.form.controls.fiatCurrency.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(value => {
       const currencyControl = this.form.controls.currency;
       const fiatCurrencyControl = this.form.controls.fiatCurrency;
       const fiatCurrency = this._fiatCurrenciesStore.findOne(fiatCurrencyControl.value.id);
