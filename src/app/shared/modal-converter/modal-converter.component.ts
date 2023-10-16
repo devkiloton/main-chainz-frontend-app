@@ -63,7 +63,7 @@ export class ModalConverterComponent implements OnInit {
     this.form.setValue({
       currency: {
         id: 'BTC',
-        amount: hundredDefaultCurrencyInBtc,
+        amount: Number(hundredDefaultCurrencyInBtc.toFixed(8)),
       },
       fiatCurrency: {
         id: defaultCurrency,
@@ -80,7 +80,7 @@ export class ModalConverterComponent implements OnInit {
       fiatCurrencyControl.setValue(
         {
           id: fiatCurrency?.id ?? fiatCurrencyControl.value.id,
-          amount: fiatCurrencyValue,
+          amount: Number(fiatCurrencyValue.toFixed(2)),
         },
         { emitEvent: false },
       );
@@ -95,7 +95,7 @@ export class ModalConverterComponent implements OnInit {
       currencyControl.setValue(
         {
           id: currency?.id ?? currencyControl.value.id,
-          amount: currencyValue,
+          amount: Number(currencyValue.toPrecision(8)),
         },
         { emitEvent: false },
       );
