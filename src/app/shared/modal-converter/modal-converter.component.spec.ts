@@ -1,5 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalConverterComponent } from './modal-converter.component';
 
 describe('ModalConverterComponent', () => {
@@ -8,7 +10,7 @@ describe('ModalConverterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ModalConverterComponent],
+      imports: [ModalConverterComponent, HttpClientTestingModule, BrowserAnimationsModule],
     });
     fixture = TestBed.createComponent(ModalConverterComponent);
     component = fixture.componentInstance;

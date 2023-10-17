@@ -1,5 +1,6 @@
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CurrencyInputComponent } from './currency-input.component';
 
 describe('CurrencyInputComponent', () => {
@@ -8,7 +9,7 @@ describe('CurrencyInputComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CurrencyInputComponent],
+      imports: [CurrencyInputComponent, BrowserAnimationsModule],
     });
     fixture = TestBed.createComponent(CurrencyInputComponent);
     component = fixture.componentInstance;
