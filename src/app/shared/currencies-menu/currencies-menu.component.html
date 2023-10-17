@@ -1,0 +1,13 @@
+<mat-menu (closed)="emitCloseMenu()" class="w-[250px] max-h-52" #currenciesMenu="matMenu">
+  <button (appAccessiblePress)="setItem = option.id" mat-menu-item *ngFor="let option of collection">
+    <div [class]="isFiatCollection ? 'btn-option-fiat' : 'btn-option'">
+      <img
+        [src]="
+          'assets/images/' + (isFiatCollection ? 'flags/' : '') + option.id + (isFiatCollection ? '.webp' : '.svg')
+        "
+        i18n-alt
+        [alt]="isCurrency(option) ? option.name : option.id + ' icon'" />
+      <span>{{ isCurrency(option) ? option.name : option.symbol + ' | ' + option.id }}</span>
+    </div>
+  </button>
+</mat-menu>
