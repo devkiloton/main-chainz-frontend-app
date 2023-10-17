@@ -15,7 +15,7 @@
     mat-icon-button
     i18n-aria-label
     aria-label="Select your crypto currency"
-    [matMenuTriggerFor]="currenciesMenu">
+    [matMenuTriggerFor]="menuCurrencies.matMenu">
     <div class="flex items-center gap-x-2 px-2">
       <img
         [class.h-6]="!isFiatCollection"
@@ -31,17 +31,10 @@
     </div>
     <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
   </button>
-  <mat-menu (closed)="inpt.disabled = false" class="w-[250px] max-h-52" #currenciesMenu="matMenu">
-    <button (appAccessiblePress)="setSelection(option.id)" mat-menu-item *ngFor="let option of finalColletion()">
-      <div [class]="isFiatCollection ? 'btn-option-fiat' : 'btn-option'">
-        <img
-          [src]="
-            'assets/images/' + (isFiatCollection ? 'flags/' : '') + option.id + (isFiatCollection ? '.webp' : '.svg')
-          "
-          i18n-alt
-          [alt]="isCurrency(option) ? option.name : option.id + ' icon'" />
-        <span>{{ isCurrency(option) ? option.name : option.symbol + ' | ' + option.id }}</span>
-      </div>
-    </button>
-  </mat-menu>
+  <app-currencies-menu
+    (itemSelected)="setSelection($event)"
+    #menuCurrencies
+    (menuClosed)="inpt.disabled = false"
+    [isFiatCollection]="isFiatCollection"
+    [collection]="currencies"></app-currencies-menu>
 </mat-form-field>

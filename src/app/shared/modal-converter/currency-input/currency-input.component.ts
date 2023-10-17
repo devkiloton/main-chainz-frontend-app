@@ -11,6 +11,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { isCurrency } from 'src/app/type-guards/is-currency';
+import { isFiatCurrency } from 'src/app/type-guards/is-fiat-currency';
+import { CurrenciesMenuComponent } from '../../currencies-menu/currencies-menu.component';
 
 @Component({
   selector: 'app-currency-input',
@@ -25,6 +28,7 @@ import { AccessiblePressDirective } from 'src/app/directives/accessible-press.di
     AsyncPipe,
     AccessiblePressDirective,
     ReactiveFormsModule,
+    CurrenciesMenuComponent,
   ],
   providers: [
     {
@@ -62,21 +66,12 @@ export class CurrencyInputComponent implements ControlValueAccessor {
     this.form.controls.amount.setValue(amount);
   }
 
-  // Custom type guard
-  public isCurrency(item: Currency | FiatCurrency): item is Currency {
-    return 'name' in item; // specific property of Currency
-  }
-
-  public isFiatCurrency(item: Currency | FiatCurrency): item is FiatCurrency {
-    return 'symbol' in item; // specific property of FiatCurrency
-  }
-
   public get allCurrencies(): Array<Currency> {
-    return this.currencies.filter(this.isCurrency);
+    return this.currencies.filter(isCurrency);
   }
 
   public get allFiatCurrencies(): Array<FiatCurrency> {
-    return this.currencies.filter(this.isFiatCurrency);
+    return this.currencies.filter(isFiatCurrency);
   }
 
   public finalColletion(): Array<Currency | FiatCurrency> {
