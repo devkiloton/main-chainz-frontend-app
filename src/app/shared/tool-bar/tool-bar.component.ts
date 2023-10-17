@@ -9,17 +9,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterModule } from '@angular/router';
+import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
+import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { BehaviorSubject, map } from 'rxjs';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
 import { AllCurrenciesService } from 'src/app/services/all-currencies/all-currencies.service';
 import { ThemesService } from 'src/app/services/themes/themes.service';
+import { FiatCurrenciesStoreService } from 'src/app/stores';
+import { isFiatCurrency } from 'src/app/type-guards/is-fiat-currency';
 import { environment } from 'src/environments/environment';
 import { CurrenciesMenuComponent } from '../currencies-menu/currencies-menu.component';
-import { FiatCurrenciesStoreService } from 'src/app/stores';
-import { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
-import { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
-import { isFiatCurrency } from 'src/app/type-guards/is-fiat-currency';
 
 @Component({
   selector: 'app-tool-bar',
