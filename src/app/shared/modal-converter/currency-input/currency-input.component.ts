@@ -1,6 +1,5 @@
 import { AsyncPipe, NgFor } from '@angular/common';
-import { ChangeDetectionStrategy, Component, DestroyRef, forwardRef, inject, Input } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ChangeDetectionStrategy, Component, forwardRef, inject, Input } from '@angular/core';
 import type { ControlValueAccessor } from '@angular/forms';
 import { NG_VALUE_ACCESSOR, NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
@@ -11,10 +10,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 import { isCurrency } from 'src/app/type-guards/is-currency';
 import { isFiatCurrency } from 'src/app/type-guards/is-fiat-currency';
 import { CurrenciesMenuComponent } from '../../currencies-menu/currencies-menu.component';
-import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 
 @Component({
   selector: 'app-currency-input',
@@ -44,7 +43,6 @@ import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-represen
 })
 export class CurrencyInputComponent implements ControlValueAccessor {
   private readonly _fb = inject(NonNullableFormBuilder);
-  private readonly _destroyRef = inject(DestroyRef);
   public readonly getCurrencyRepresentation = getCurrencyRepresentation;
 
   public readonly form = this._fb.group({
@@ -105,7 +103,8 @@ export class CurrencyInputComponent implements ControlValueAccessor {
       }>,
     ) => void,
   ): void {
-    this.form.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(fn);
+    // Not sure, but I think angular will unsubscribe that
+    this.form.valueChanges.subscribe(fn);
   }
 
   public registerOnTouched(
@@ -116,6 +115,7 @@ export class CurrencyInputComponent implements ControlValueAccessor {
       }>,
     ) => void,
   ): void {
-    this.form.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(fn);
+    // Not sure, but I think angular will unsubscribe that
+    this.form.valueChanges.subscribe(fn);
   }
 }

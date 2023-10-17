@@ -1,5 +1,6 @@
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TablePricesComponent } from './table-prices.component';
 
 describe('TablePricesComponent', () => {
@@ -8,7 +9,7 @@ describe('TablePricesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [TablePricesComponent],
+      imports: [TablePricesComponent, BrowserAnimationsModule],
     });
     fixture = TestBed.createComponent(TablePricesComponent);
     component = fixture.componentInstance;

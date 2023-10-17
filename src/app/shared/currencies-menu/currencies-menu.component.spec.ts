@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { CurrenciesMenuComponent } from './currencies-menu.component';
 
 describe('CurrenciesMenuComponent', () => {
-  let component: CurrenciesMenuComponent;
-  let fixture: ComponentFixture<CurrenciesMenuComponent>;
+  let component: CurrenciesMenuComponent | null = null;
+  let fixture: ComponentFixture<CurrenciesMenuComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CurrenciesMenuComponent]
+      imports: [CurrenciesMenuComponent],
     });
     fixture = TestBed.createComponent(CurrenciesMenuComponent);
     component = fixture.componentInstance;
