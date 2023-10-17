@@ -14,6 +14,7 @@ import { AccessiblePressDirective } from 'src/app/directives/accessible-press.di
 import { isCurrency } from 'src/app/type-guards/is-currency';
 import { isFiatCurrency } from 'src/app/type-guards/is-fiat-currency';
 import { CurrenciesMenuComponent } from '../../currencies-menu/currencies-menu.component';
+import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 
 @Component({
   selector: 'app-currency-input',
@@ -44,6 +45,7 @@ import { CurrenciesMenuComponent } from '../../currencies-menu/currencies-menu.c
 export class CurrencyInputComponent implements ControlValueAccessor {
   private readonly _fb = inject(NonNullableFormBuilder);
   private readonly _destroyRef = inject(DestroyRef);
+  public readonly getCurrencyRepresentation = getCurrencyRepresentation;
 
   public readonly form = this._fb.group({
     id: '',

@@ -9,6 +9,7 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import { of, switchMap } from 'rxjs';
+import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 import { getPaginatorIntl } from 'src/app/helpers/paginator-intl';
 
 export type UserData = {
@@ -42,6 +43,7 @@ export type UserData = {
 })
 export class TablePricesComponent implements OnInit, AfterViewInit {
   private readonly _breakPointObserver = inject(BreakpointObserver);
+  public readonly getCurrencyRepresentation = getCurrencyRepresentation;
 
   @Input()
   public currencies!: Array<Currency>;

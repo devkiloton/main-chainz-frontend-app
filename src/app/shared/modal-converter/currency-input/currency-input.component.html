@@ -19,14 +19,9 @@
     <div class="flex items-center gap-x-2 px-2">
       <img
         [class.h-6]="!isFiatCollection"
-        [src]="
-          'assets/images/' +
-          (isFiatCollection ? 'flags/' : '') +
-          (form.value.id ?? defaultCurrencyCode) +
-          (isFiatCollection ? '.webp' : '.svg')
-        "
+        [src]="getCurrencyRepresentation({ asset: form.controls.id.value, isFiat: isFiatCollection })"
         i18n-alt
-        [alt]="form.controls.id.value + ' country flag image'" />
+        [alt]="'Image representing ' + form.controls.id.value" />
       <span class="font-medium">{{ form.controls.id.value }}</span>
     </div>
     <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>

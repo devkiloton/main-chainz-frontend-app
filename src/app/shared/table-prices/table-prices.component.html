@@ -18,9 +18,10 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header i18n>Currency</th>
       <td mat-cell *matCellDef="let row">
         <div class="name-row">
-          <img [src]="'/assets/images/' + row.id + '.svg'" i18n-alt [alt]="row.name + 'logo'" /><span>{{
-            row.name
-          }}</span>
+          <img
+            [src]="getCurrencyRepresentation({ asset: row.id, isFiat: false })"
+            i18n-alt
+            [alt]="row.name + 'logo'" /><span>{{ row.name }}</span>
         </div>
       </td>
     </ng-container>

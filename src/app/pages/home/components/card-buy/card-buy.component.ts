@@ -1,5 +1,6 @@
 import { CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 import { ButtonPrimaryComponent } from 'src/app/shared/button-primary/button-primary.component';
 
 @Component({
@@ -11,6 +12,7 @@ import { ButtonPrimaryComponent } from 'src/app/shared/button-primary/button-pri
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardBuyComponent {
+  public readonly getCurrencyRepresentation = getCurrencyRepresentation;
   @Input({ required: true })
   public currencyCode!: string;
 
