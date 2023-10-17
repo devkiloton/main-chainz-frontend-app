@@ -23,7 +23,7 @@ export class CurrenciesMenuComponent {
   public readonly menuClosed = new EventEmitter<void>();
 
   @Output()
-  public readonly itemSelected = new EventEmitter<string>();
+  public readonly itemSelected = new EventEmitter<FiatCurrency | Currency>();
 
   @ViewChild(MatMenu)
   public matMenu!: MatMenu;
@@ -38,7 +38,7 @@ export class CurrenciesMenuComponent {
     this.menuClosed.emit();
   }
 
-  public set setItem(value: string) {
+  public set setItem(value: FiatCurrency | Currency) {
     this.itemSelected.next(value);
   }
 }

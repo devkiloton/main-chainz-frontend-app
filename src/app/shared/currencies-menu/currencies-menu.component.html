@@ -1,5 +1,5 @@
 <mat-menu (closed)="emitCloseMenu()" class="w-[250px] max-h-52" #currenciesMenu="matMenu">
-  <button (appAccessiblePress)="setItem = option.id" mat-menu-item *ngFor="let option of collection">
+  <button (appAccessiblePress)="setItem = option" mat-menu-item *ngFor="let option of collection">
     <div [class]="isFiatCollection ? 'btn-option-fiat' : 'btn-option'">
       <img
         [src]="

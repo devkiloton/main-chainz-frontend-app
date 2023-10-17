@@ -81,8 +81,8 @@ export class CurrencyInputComponent implements ControlValueAccessor {
     return this.allCurrencies;
   }
 
-  public setSelection(currencyCode: string): void {
-    this.form.controls.id.setValue(currencyCode);
+  public setSelection(asset: Currency | FiatCurrency): void {
+    this.form.controls.id.setValue(asset.id);
   }
 
   // * CVA
