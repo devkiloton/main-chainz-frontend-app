@@ -1,4 +1,8 @@
 :host {
+  @apply text-sm;
+  @apply font-medium;
+  @apply tracking-[0.00625rem];
+
   .change-currency {
     @apply w-28 h-10;
     @apply flex justify-between items-center;
@@ -22,9 +26,6 @@
   }
 
   .input-opts {
-    font-weight: 500;
-    font-size: 0.875rem;
-    letter-spacing: 0.00625rem;
     @apply min-[768px]:text-xl;
     @apply min-[768px]:leading-relaxed;
     @apply w-full;
@@ -32,9 +33,6 @@
   }
 
   .symbol {
-    font-weight: 500;
-    font-size: 0.875rem;
-    letter-spacing: 0.00625rem;
     @apply min-[768px]:text-base;
     @apply min-[768px]:w-32;
   }
