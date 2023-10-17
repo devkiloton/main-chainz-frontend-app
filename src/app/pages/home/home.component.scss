@@ -1,13 +1,70 @@
 :host {
-  @apply flex justify-center items-center flex-col gap-y-[24px];
+  @apply flex justify-center items-center flex-col;
   @apply h-full w-full;
 
   .animation {
     @apply relative w-screen;
     height: calc(100vh - 99px);
   }
-  .text {
-    @apply font-bold absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-center;
-    @apply min-[480px]:text-6xl text-6xl;
+
+  .over-animation {
+    @apply font-bold absolute top-[40%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-left;
+    @apply w-full min-[1024px]:p-32 p-4;
+    @apply flex justify-between items-center flex-col gap-5;
+    @apply min-[1024px]:flex-row;
+
+    div > p {
+      @apply min-[768px]:text-5xl min-[1024px]:text-6xl text-4xl text-center min-[1024px]:text-left;
+    }
   }
+
+  .prices {
+    @apply w-full;
+    height: calc(100vh - 99px);
+    @apply flex items-center;
+    @apply relative;
+
+    .buy-cards {
+      @apply flex justify-center items-center w-full px-4 gap-x-6 gap-y-44;
+      @apply flex-wrap;
+      @apply absolute;
+      @apply pb-16 pt-6;
+      @apply overflow-hidden;
+      @apply max-h-[250px];
+      @apply top-[-120px];
+    }
+  }
+
+  .markets {
+    @apply flex flex-col gap-y-8 w-full mt-16;
+    @apply px-4 min-[1024px]:px-20;
+    span {
+      @apply text-2xl min-[768px]:text-5xl self-start font-bold;
+    }
+  }
+
+  .questions {
+    @apply w-full;
+    min-height: calc(100vh - 99px);
+    @apply flex items-center flex-col gap-y-8;
+    @apply px-4 min-[1024px]:px-20;
+
+    span {
+      @apply text-2xl min-[768px]:text-5xl self-start font-bold;
+    }
+  }
+
+  .questions-header {
+    @apply truncate;
+    @apply text-lg;
+  }
+
+  .icon-inverted {
+    @apply transform rotate-180;
+    @apply justify-start items-center;
+  }
+}
+
+.mat-expansion-panel-header-description {
+  @apply flex-grow-0;
 }

@@ -2,7 +2,6 @@ import { AsyncPipe, CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { isNil } from 'lodash-es';
-import { firstValueFrom, map } from 'rxjs';
 import type { WalletIdentifiers } from 'src/app/constants/wallet-indentifiers';
 import { AllCurrenciesService } from 'src/app/services/all-currencies/all-currencies.service';
 import { CurrenciesStoreService, FiatCurrenciesStoreService } from 'src/app/stores';
@@ -28,14 +27,10 @@ export class WalletCardComponent {
   }
 
   public async currencyPrice(): Promise<number> {
-    const currencyPrice = await firstValueFrom(
-      this._currency.findOne(this.wallet.code).pipe(map(curr => curr?.price ?? 0)),
-    );
+    const currencyPrice = this._currency.findOne(this.wallet.code)?.price ?? 0;
 
     // #TODO add error handling
-    const fiatPrice = await firstValueFrom(
-      this._fiatCurrencies.findOne(this.defaultCurrency).pipe(map(fiat => (fiat?.rate ?? 0) * currencyPrice)),
-    );
+    const fiatPrice = (this._fiatCurrencies.findOne(this.defaultCurrency)?.rate ?? 0) * currencyPrice;
 
     if (!isNil(fiatPrice)) {
       return fiatPrice;

@@ -9,12 +9,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterModule } from '@angular/router';
+import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
+import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { BehaviorSubject, map } from 'rxjs';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
 import { AllCurrenciesService } from 'src/app/services/all-currencies/all-currencies.service';
 import { ThemesService } from 'src/app/services/themes/themes.service';
+import { FiatCurrenciesStoreService } from 'src/app/stores';
+import { isFiatCurrency } from 'src/app/type-guards/is-fiat-currency';
 import { environment } from 'src/environments/environment';
+import { CurrenciesMenuComponent } from '../currencies-menu/currencies-menu.component';
 
 @Component({
   selector: 'app-tool-bar',
@@ -33,6 +38,7 @@ import { environment } from 'src/environments/environment';
     AccessiblePressDirective,
     NgIf,
     AsyncPipe,
+    CurrenciesMenuComponent,
   ],
   templateUrl: './tool-bar.component.html',
   styleUrls: ['./tool-bar.component.scss'],
@@ -43,6 +49,7 @@ export class ToolBarComponent {
   private readonly _allCurrenciesService = inject(AllCurrenciesService);
   private readonly _themesService = inject(ThemesService);
   private readonly _breakpointObserver = inject(BreakpointObserver);
+  private readonly _fiatCurrenciesStore = inject(FiatCurrenciesStoreService);
 
   public showFiller = false;
   public readonly fiatCurrencies = FiatCurrencies;
@@ -60,8 +67,10 @@ export class ToolBarComponent {
     this._document.location.href = `${environment.appHostUrl}/${locale}${this._router.routerState.snapshot.url}`;
   }
 
-  public changeDefaultCurrency(currency: FiatCurrencies): void {
-    this._allCurrenciesService.setDefaultCurrency = currency;
+  public changeDefaultCurrency(currency: FiatCurrency | Currency): void {
+    if (isFiatCurrency(currency)) {
+      this._allCurrenciesService.setDefaultCurrency = currency;
+    }
   }
 
   public changeTheme(theme: 'dark-mode' | 'light-mode'): void {
@@ -78,5 +87,9 @@ export class ToolBarComponent {
     setTimeout(() => {
       this._drawerState$.next(!this._drawerState$.value);
     }, 150);
+  }
+
+  public get allFiatCurrencies(): Array<FiatCurrency> {
+    return this._fiatCurrenciesStore.findAll;
   }
 }

@@ -1,0 +1,35 @@
+<mat-form-field class="input-opts" color="accent">
+  <input
+    [formControl]="form.controls.amount"
+    #inpt
+    matInput
+    type="number"
+    i18n-placeholder
+    placeholder="Type your amount" />
+  <button
+    matRipple
+    matRippleColor="#ffffff40"
+    (click)="inpt.disabled = true"
+    class="change-currency symbol"
+    matSuffix
+    mat-icon-button
+    i18n-aria-label
+    aria-label="Select your crypto currency"
+    [matMenuTriggerFor]="menuCurrencies.matMenu">
+    <div class="flex items-center gap-x-2 px-2">
+      <img
+        [class.h-6]="!isFiatCollection"
+        [src]="getCurrencyRepresentation({ asset: form.controls.id.value, isFiat: isFiatCollection })"
+        i18n-alt
+        [alt]="'Image representing ' + form.controls.id.value" />
+      <span class="font-medium">{{ form.controls.id.value }}</span>
+    </div>
+    <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
+  </button>
+  <app-currencies-menu
+    (itemSelected)="setSelection($event)"
+    #menuCurrencies
+    (menuClosed)="inpt.disabled = false"
+    [isFiatCollection]="isFiatCollection"
+    [collection]="currencies"></app-currencies-menu>
+</mat-form-field>

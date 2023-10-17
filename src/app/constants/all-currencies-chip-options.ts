@@ -3,19 +3,19 @@ import type { ChipOption } from '../types/chip-option';
 export const allCurrenciesChipOptions: Array<ChipOption> = [
   {
     currencyName: 'Bitcoin',
-    iconUrl: 'assets/images/bitcoin.svg',
+    iconUrl: 'assets/images/BTC.svg',
     isAvailable: true,
     isDefault: true,
   },
   {
     currencyName: 'Ethereum',
-    iconUrl: 'assets/images/ethereum.svg',
+    iconUrl: 'assets/images/ETH.svg',
     isAvailable: false,
     isDefault: false,
   },
   {
     currencyName: 'Monero',
-    iconUrl: 'assets/images/monero.svg',
+    iconUrl: 'assets/images/XMR.svg',
     isAvailable: false,
     isDefault: false,
   },

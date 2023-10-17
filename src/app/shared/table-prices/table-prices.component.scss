@@ -1,0 +1,31 @@
+:host {
+  @apply flex-1;
+
+  table,
+  th,
+  td {
+    @apply rounded-[5px];
+  }
+  table {
+    @apply border-b-0;
+  }
+
+  .name-row {
+    @apply flex items-center justify-start gap-x-2;
+    @apply px-2;
+    @apply text-center;
+    @apply font-medium;
+    @apply text-sm;
+    @apply rounded-xl;
+
+    img {
+      @apply w-6;
+      @apply h-6;
+      @apply rounded-full;
+    }
+  }
+
+  .no-data-text {
+    @apply text-xl p-4;
+  }
+}

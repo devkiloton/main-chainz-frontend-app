@@ -1,0 +1,13 @@
+<form class="example-form">
+  <app-currency-input
+    [formControl]="form.controls.fiatCurrency"
+    [currencies]="fiatCurrencies"
+    [isFiatCollection]="true"
+    [defaultCurrencyCode]="form.controls.fiatCurrency.value.id"></app-currency-input>
+  <app-currency-input
+    [formControl]="form.controls.currency"
+    [currencies]="allCurrencies"
+    [isFiatCollection]="false"
+    defaultCurrencyCode="BTC"></app-currency-input>
+  <app-button-primary type="submit" color="accent" i18n-title title="Buy" i18n-label label="Buy"></app-button-primary>
+</form>

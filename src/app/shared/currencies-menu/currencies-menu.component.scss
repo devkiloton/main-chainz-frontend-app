@@ -1,0 +1,15 @@
+.btn-option {
+  @apply flex flex-row items-start gap-x-2 w-full;
+
+  img {
+    @apply h-6 w-6;
+  }
+}
+
+.btn-option-fiat {
+  @apply flex flex-row items-center gap-x-2 w-full;
+
+  img {
+    @apply h-4;
+  }
+}

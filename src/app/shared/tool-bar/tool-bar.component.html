@@ -74,80 +74,29 @@
     <mat-menu #menuLanguages="matMenu">
       <button mat-menu-item (appAccessiblePress)="changeLocaleServer('en-US')">
         <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/usa.webp" i18n-alt alt="United States flag." class="flag" />
+          <img src="assets/images/flags/USD.webp" i18n-alt alt="United States flag." class="flag" />
           <span>English (USA)</span>
         </div>
       </button>
       <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
         <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/brazil.webp" i18n-alt alt="Brazil flag." class="flag" />
+          <img src="assets/images/flags/BRL.webp" i18n-alt alt="Brazil flag." class="flag" />
           <span>Português (Brasil)</span>
         </div>
       </button>
     </mat-menu>
     <button
       mat-icon-button
-      [matMenuTriggerFor]="menuCurrencies"
+      [matMenuTriggerFor]="menu.matMenu"
       i18n-aria-label
       aria-label="Change the currency used to convert prices.">
       <mat-icon>attach_money</mat-icon>
     </button>
-    <mat-menu #menuCurrencies="matMenu">
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.usd)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/usa.webp" i18n-alt alt="United States flag." class="flag" />
-          <span>USD</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.eur)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/eu.webp" i18n-alt alt="European Union flag." class="flag" />
-          <span>EUR</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.inr)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/india.webp" i18n-alt alt="Indian flag." class="flag" />
-          <span>INR</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.brl)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/brazil.webp" i18n-alt alt="Brazilian flag." class="flag" />
-          <span>BRL</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.rub)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/russia.webp" i18n-alt alt="Russian flag." class="flag" />
-          <span>RUB</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.ngn)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/nigeria.webp" i18n-alt alt="Nigerian flag." class="flag" />
-          <span>NGN</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.cny)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/china.webp" i18n-alt alt="Chinese flag." class="flag" />
-          <span>CNY</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.vnd)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/vietnam.webp" i18n-alt alt="Vietnam flag." class="flag" />
-          <span>VND</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeDefaultCurrency(fiatCurrencies.uah)">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/ukraine.webp" i18n-alt alt="Ukranian flag." class="flag" />
-          <span>UAH</span>
-        </div>
-      </button>
-    </mat-menu>
+    <app-currencies-menu
+      #menu
+      [isFiatCollection]="true"
+      [collection]="allFiatCurrencies"
+      (itemSelected)="changeDefaultCurrency($event)"></app-currencies-menu>
     <button routerLink="/sign-in" mat-flat-button color="primary" i18n>Sign in</button>
     <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
   </div>

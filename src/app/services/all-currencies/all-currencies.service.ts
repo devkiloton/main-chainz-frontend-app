@@ -1,5 +1,8 @@
 import { inject, Injectable } from '@angular/core';
+import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
+import { isNotNil } from 'ramda';
 import { BehaviorSubject } from 'rxjs';
+import { supportedFiats } from 'src/app/constants/supported-fiats';
 import type { Currencies } from 'src/app/enums/currencies';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
 import { LocalStorageService } from '../local-storage/local-storage.service';
@@ -28,8 +31,11 @@ export class AllCurrenciesService {
 
   public defaultCurrency$ = this._defaultCurrency$.asObservable();
 
-  public set setDefaultCurrency(currency: FiatCurrencies) {
-    this._localStorageService.setDefaultCurrency = currency;
+  public set setDefaultCurrency(currency: FiatCurrency) {
+    const currencyCode = supportedFiats.find(fiat => fiat === currency.id);
+    if (isNotNil(currencyCode)) {
+      this._localStorageService.setDefaultCurrency = currency.id as FiatCurrencies;
+    }
   }
 
   public get getDefaultCurrency(): FiatCurrencies {

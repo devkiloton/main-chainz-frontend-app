@@ -1,0 +1,7 @@
+:host {
+  @apply rounded-md;
+  @apply p-6;
+  @apply flex flex-col gap-y-2;
+  background-color: var(--mat-toolbar-container-background-color);
+  @apply w-full max-w-md;
+}
