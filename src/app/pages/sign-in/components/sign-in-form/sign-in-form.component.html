@@ -47,11 +47,10 @@
           </mat-form-field>
           <div class="flex justify-between">
             <app-button-secondary
-              routerLink="/sign-up"
               i18n-title
-              title="Not registered?"
+              title="Forgot password?"
               i18n-label
-              label="Not registered button"
+              label="Forgot password button"
               type="button"></app-button-secondary>
 
             <div>
@@ -79,3 +78,11 @@
     </mat-tab>
   </mat-tab-group>
 </mat-card>
+<app-button-secondary
+  routerLink="/sign-up"
+  i18n-title
+  title="Not registered yet?"
+  i18n-label
+  label="Sign up button"
+  class="mt-4"
+  type="button"></app-button-secondary>
