@@ -1,11 +1,11 @@
 import { inject, Injectable } from '@angular/core';
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
+import { isNotNil } from 'ramda';
 import { BehaviorSubject } from 'rxjs';
+import { supportedFiats } from 'src/app/constants/supported-fiats';
 import type { Currencies } from 'src/app/enums/currencies';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
 import { LocalStorageService } from '../local-storage/local-storage.service';
-import { supportedFiats } from 'src/app/constants/supported-fiats';
-import { isNotNil } from 'ramda';
 
 @Injectable({
   providedIn: 'root',
