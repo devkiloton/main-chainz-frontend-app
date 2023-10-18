@@ -20,6 +20,7 @@ body {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
+  letter-spacing: -0.02rem;
   @apply min-h-full min-w-[100%];
 }
 
@@ -151,7 +152,6 @@ body {
 }
 
 .cdk-overlay-pane{
-  width: 100% !important;
-  max-width: 450px !important;
+  max-width: 100% !important;
   @apply px-2
 }
