@@ -100,6 +100,7 @@ export class SignInFormComponent implements OnInit {
     this._dialog.open(DialogChangePasswordComponent, {
       enterAnimationDuration,
       exitAnimationDuration,
+      width: '450px',
     });
   }
 
