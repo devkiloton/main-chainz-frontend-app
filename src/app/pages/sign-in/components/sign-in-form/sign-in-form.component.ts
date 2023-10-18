@@ -6,6 +6,7 @@ import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -14,9 +15,11 @@ import { RouterModule } from '@angular/router';
 import { BehaviorSubject, map } from 'rxjs';
 import { cardAlert } from 'src/app/constants/sign-in/card-alert';
 import { formFieldMessages } from 'src/app/constants/sign-in/form-field-messages';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import { AlertCardComponent } from 'src/app/shared/alert-card/alert-card.component';
 import { ButtonPrimaryComponent } from 'src/app/shared/button-primary/button-primary.component';
 import { ButtonSecondaryComponent } from 'src/app/shared/button-secondary/button-secondary.component';
+import { DialogChangePasswordComponent } from 'src/app/shared/dialog-change-password/dialog-change-password.component';
 
 @Component({
   selector: 'app-sign-in-form',
@@ -37,6 +40,8 @@ import { ButtonSecondaryComponent } from 'src/app/shared/button-secondary/button
     ReactiveFormsModule,
     AsyncPipe,
     AlertCardComponent,
+    AccessiblePressDirective,
+    MatDialogModule,
   ],
   templateUrl: './sign-in-form.component.html',
   styleUrls: ['./sign-in-form.component.scss'],
@@ -45,6 +50,7 @@ import { ButtonSecondaryComponent } from 'src/app/shared/button-secondary/button
 export class SignInFormComponent implements OnInit {
   private readonly _formBuilder = inject(NonNullableFormBuilder);
   private readonly _destroyRef = inject(DestroyRef);
+  private readonly _dialog = inject(MatDialog);
 
   public hide = true;
 
@@ -87,6 +93,13 @@ export class SignInFormComponent implements OnInit {
   public ngOnInit(): void {
     this.signInForm.valueChanges.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(() => {
       this._cardState$.next('alert-card-hidden');
+    });
+  }
+
+  public openChangePasswordDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this._dialog.open(DialogChangePasswordComponent, {
+      enterAnimationDuration,
+      exitAnimationDuration,
     });
   }
 

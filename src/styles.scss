@@ -149,3 +149,9 @@ body {
 .mdc-button .mdc-button__label {
   padding: 0 !important;
 }
+
+.cdk-overlay-pane{
+  width: 100% !important;
+  max-width: 450px !important;
+  @apply px-2
+}

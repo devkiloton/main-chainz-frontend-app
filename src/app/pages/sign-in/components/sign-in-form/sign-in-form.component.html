@@ -48,6 +48,7 @@
           </mat-form-field>
           <div class="flex justify-between">
             <app-button-secondary
+              (appAccessiblePress)="openChangePasswordDialog('150ms', '150ms')"
               i18n-title
               title="Forgot password?"
               i18n-label
