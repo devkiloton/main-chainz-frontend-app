@@ -1,4 +1,1 @@
-export type Auth = {
-  email: string;
-  password: string;
-};
+export type Auth = { access_token: string; refresh_token: string };
