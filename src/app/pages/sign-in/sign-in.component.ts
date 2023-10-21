@@ -33,11 +33,11 @@ export default class SignInComponent {
   public signIn(data: { email: string; password: string }): void {
     const { email, password } = data;
     this._authEntity
-      .signin({ email, password })
+      .signIn({ email, password })
       .pipe(takeUntilDestroyed(this._destroyRef))
       .subscribe({
-        next: value => {
-          this._authState.set(value.data.access_token);
+        next: tokens => {
+          this._authState.set(tokens);
           this._router.navigate(['/dashboard']);
         },
         error: error => {

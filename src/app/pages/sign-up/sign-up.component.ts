@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserEntity } from 'projects/central-hash-api-client/src/public-api';
+import { AuthEntity } from 'projects/central-hash-api-client/src/public-api';
 import { BehaviorSubject, map } from 'rxjs';
 import { AuthStateService } from 'src/app/services/auth-state/auth-state.service';
 import { ParticleBgComponent } from 'src/app/shared/particle-bg/particle-bg.component';
@@ -19,7 +19,7 @@ import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.comp
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class SignUpComponent {
-  private readonly _userEntity = inject(UserEntity);
+  private readonly _authEntity = inject(AuthEntity);
   private readonly _destroyRef = inject(DestroyRef);
   private readonly _authState = inject(AuthStateService);
   private readonly _router = inject(Router);
@@ -33,12 +33,13 @@ export default class SignUpComponent {
   public createUser(data: { name: string; email: string; password: string; termsAndConditions: boolean }): void {
     const { name, email, password, termsAndConditions } = data;
     if (termsAndConditions) {
-      this._userEntity
-        .create({ name, email, password })
+      this._authEntity
+        .signUp({ name, email, password })
         .pipe(takeUntilDestroyed(this._destroyRef))
         .subscribe({
-          next: value => {
-            this._authState.set(value.data.access_token);
+          next: tokens => {
+            const { access_token, refresh_token } = tokens;
+            this._authState.set({ access_token, refresh_token });
             this._router.navigate(['/dashboard']);
           },
           error: error => {
