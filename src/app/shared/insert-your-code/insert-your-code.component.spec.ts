@@ -1,5 +1,6 @@
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InsertYourCodeComponent } from './insert-your-code.component';
 
 describe('InsertYourCodeComponent', () => {
@@ -8,7 +9,7 @@ describe('InsertYourCodeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [InsertYourCodeComponent],
+      imports: [InsertYourCodeComponent, BrowserAnimationsModule],
     });
     fixture = TestBed.createComponent(InsertYourCodeComponent);
     component = fixture.componentInstance;
