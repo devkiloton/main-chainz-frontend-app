@@ -59,6 +59,15 @@
       <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>api</mat-icon>API</div>
       </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon>hub</mat-icon>Affiliate</div>
+      </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon>gavel</mat-icon>Terms of use</div>
+      </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon>policy</mat-icon>Privacy policy</div>
+      </button>
     </mat-menu>
 
     <span class="spacer"></span>
@@ -145,8 +154,8 @@
         [class]="(drawerState$ | async) ? 'open-container' : 'closed-container'"
         (backdropClick)="changeDrowerState()"
         autosize>
-        <mat-drawer #drawer mode="side">
-          <p>Auto-resizing sidenav</p>
+        <mat-drawer class="p-3" #drawer mode="side">
+          <app-tree></app-tree>
         </mat-drawer>
       </mat-drawer-container>
 

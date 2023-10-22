@@ -48,7 +48,7 @@
 .open-container {
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: 56px;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -58,7 +58,7 @@
 .closed-container {
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: 56px;
   left: 0;
   width: 0;
   height: 0;

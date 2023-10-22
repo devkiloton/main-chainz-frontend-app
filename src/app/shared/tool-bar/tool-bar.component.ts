@@ -20,6 +20,7 @@ import { FiatCurrenciesStoreService } from 'src/app/stores';
 import { isFiatCurrency } from 'src/app/type-guards/is-fiat-currency';
 import { environment } from 'src/environments/environment';
 import { CurrenciesMenuComponent } from '../currencies-menu/currencies-menu.component';
+import { TreeComponent } from './components/tree/tree.component';
 
 @Component({
   selector: 'app-tool-bar',
@@ -39,6 +40,7 @@ import { CurrenciesMenuComponent } from '../currencies-menu/currencies-menu.comp
     NgIf,
     AsyncPipe,
     CurrenciesMenuComponent,
+    TreeComponent,
   ],
   templateUrl: './tool-bar.component.html',
   styleUrls: ['./tool-bar.component.scss'],
