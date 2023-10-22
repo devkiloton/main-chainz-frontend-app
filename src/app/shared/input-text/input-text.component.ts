@@ -18,7 +18,8 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
-import { MatFormFieldAppearance, MatFormFieldModule } from '@angular/material/form-field';
+import type { MatFormFieldAppearance } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { BehaviorSubject, map, shareReplay, startWith, Subject } from 'rxjs';

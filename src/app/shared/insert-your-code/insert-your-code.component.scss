@@ -1,48 +1,47 @@
 :host {
-    @apply flex justify-center items-center flex-col;
-    @apply relative;
-  
-    .alert-card {
-      @apply shadow-lifted;
-      @apply max-w-[400px];
-      @apply w-[90vw];
-      @apply absolute;
-      @apply top-[-50px];
-      transition: top 0.2s ease-in-out;
-    }
-  
-    .alert-card-hidden {
-      @apply absolute;
-      @apply top-0;
-      transition: top 0.2s ease-in-out;
-    }
-  }
-  
-  .form-card {
+  @apply flex justify-center items-center flex-col;
+  @apply relative;
+
+  .alert-card {
+    @apply shadow-lifted;
     @apply max-w-[400px];
     @apply w-[90vw];
-    @apply shadow-lifted;
-  }
-  
-  .header {
-    @apply text-lg;
-    @apply font-semibold;
-    @apply leading-5;
-    @apply text-center;
-    @apply pb-2 pt-6 max-w-[75%] m-auto;
-  }
-  
-  .description {
-    @apply text-sm;
-    @apply leading-4;
-    @apply text-center;
-    @apply font-normal;
-    @apply py-4;
-    @apply max-w-[80%];
-    @apply m-auto;
+    @apply absolute;
+    @apply top-[-50px];
+    transition: top 0.2s ease-in-out;
   }
 
-  .example-tab-icon {
-    @apply mr-2;
+  .alert-card-hidden {
+    @apply absolute;
+    @apply top-0;
+    transition: top 0.2s ease-in-out;
   }
-  
+}
+
+.form-card {
+  @apply max-w-[400px];
+  @apply w-[90vw];
+  @apply shadow-lifted;
+}
+
+.header {
+  @apply text-lg;
+  @apply font-semibold;
+  @apply leading-5;
+  @apply text-center;
+  @apply pb-2 pt-6 max-w-[75%] m-auto;
+}
+
+.description {
+  @apply text-sm;
+  @apply leading-4;
+  @apply text-center;
+  @apply font-normal;
+  @apply py-4;
+  @apply max-w-[80%];
+  @apply m-auto;
+}
+
+.example-tab-icon {
+  @apply mr-2;
+}
