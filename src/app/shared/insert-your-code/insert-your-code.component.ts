@@ -75,7 +75,7 @@ export class InsertYourCodeComponent implements OnInit {
   public readonly message$ = this._message$.asObservable();
 
   public readonly passwordErrorMessage$ = this.codeForm.controls.code.statusChanges.pipe(
-    map(() => this.getPasswordErrorMessage()),
+    map(() => this.getCodeErrorMessage()),
   );
 
   public ngOnInit(): void {
@@ -107,9 +107,9 @@ export class InsertYourCodeComponent implements OnInit {
     }
   }
 
-  public getPasswordErrorMessage(): string {
+  public getCodeErrorMessage(): string {
     if (this.codeForm.controls.code.hasError('required')) {
-      return 'You must enter a value';
+      return $localize`You must enter a value` as string;
     }
 
     return '';
