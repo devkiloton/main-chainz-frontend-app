@@ -10,13 +10,15 @@
   <app-particle-bg></app-particle-bg>
   <app-sign-in-form
     class="forms"
+    @fader
     *ngIf="(showCodeInput$ | async) === false"
     (sendEvent)="signIn($event)"
     [asyncError]="(asyncError$ | async) ?? 0"></app-sign-in-form>
   <app-insert-your-code
+    class="forms"
+    *ngIf="showCodeInput$ | async"
+    @fader
     (sendEvent)="confirmCodeSignIn({ code: $event.code })"
     (returnEvent)="returnToSignIn()"
-    [asyncError]="(asyncError$ | async) ?? 0"
-    class="forms"
-    *ngIf="showCodeInput$ | async"></app-insert-your-code>
+    [asyncError]="(asyncError$ | async) ?? 0"></app-insert-your-code>
 </div>

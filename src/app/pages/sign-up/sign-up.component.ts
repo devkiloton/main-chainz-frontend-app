@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthEntity } from 'projects/central-hash-api-client/src/public-api';
 import { BehaviorSubject, firstValueFrom, map } from 'rxjs';
+import { fader } from 'src/app/animations/fader';
 import { AuthStateService } from 'src/app/services/auth-state/auth-state.service';
 import { InsertYourCodeComponent } from 'src/app/shared/insert-your-code/insert-your-code.component';
 import { ParticleBgComponent } from 'src/app/shared/particle-bg/particle-bg.component';
@@ -16,6 +17,7 @@ import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.comp
   imports: [SignUpFormComponent, InsertYourCodeComponent, ReactiveFormsModule, ParticleBgComponent, AsyncPipe, NgIf],
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss'],
+  animations: [fader],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class SignUpComponent {
