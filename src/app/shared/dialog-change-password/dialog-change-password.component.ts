@@ -1,4 +1,5 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
+import type { HttpErrorResponse } from '@angular/common/http';
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -150,8 +151,9 @@ export class DialogChangePasswordComponent implements OnInit {
     try {
       await firstValueFrom(this._authEntity.resetPassword({ email, code, password }));
       stepper._stepper.next();
-    } catch (error: any) {
-      this.setAsyncError(error.status);
+    } catch (error) {
+      const { status } = error as HttpErrorResponse;
+      this.setAsyncError(status);
     }
   }
 
@@ -164,14 +166,15 @@ export class DialogChangePasswordComponent implements OnInit {
     try {
       await firstValueFrom(this._authEntity.verifyResetPassword({ email, code }));
       stepper._stepper.next();
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (error: any) {
-      this.setAsyncError(error.status);
+    } catch (error) {
+      const { status } = error as HttpErrorResponse;
+      this.setAsyncError(status);
     }
   }
 
   public async defineSubmit(data: { label: string; stepper: MatStep }): Promise<void> {
     const { label, stepper } = data;
+    this.setAsyncError(0);
     switch (label) {
       case 'Email':
         this.sendEmail();
