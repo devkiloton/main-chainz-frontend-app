@@ -1,6 +1,6 @@
 <app-alert-card [class]="cardState$ | async" [message]="(message$ | async) ?? ''"></app-alert-card>
 <mat-card class="form-card" appearance="outlined">
-  <div class="p-4 pt-0 flex items-center justify-center flex-col">
+  <div class="content">
     <p class="header">Insert the code</p>
     <p class="description">We have sent you a code to your email address. Please insert it below.</p>
     <form class="w-full" [formGroup]="codeForm" (ngSubmit)="send()">

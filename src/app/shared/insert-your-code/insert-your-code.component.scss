@@ -22,6 +22,12 @@
   @apply max-w-[400px];
   @apply w-[90vw];
   @apply shadow-lifted;
+  
+  .content {
+    @apply p-4;
+    @apply  pt-0;
+    @apply flex items-center justify-center flex-col;
+  }
 }
 
 .header {
