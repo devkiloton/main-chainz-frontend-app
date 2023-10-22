@@ -16,6 +16,13 @@
     flex: 1 1 auto;
   }
 
+  .spacer-left {
+    width: 100%;
+  }
+  .spacer-right {
+    width: calc(100% - 16px)
+  }
+
   span {
     @apply uppercase;
     @apply font-bold;

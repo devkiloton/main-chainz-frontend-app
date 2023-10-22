@@ -114,6 +114,18 @@
         aria-label="Open side menu">
         <mat-icon>menu</mat-icon>
       </button>
+      <span class="spacer-left"></span>
+
+      <img
+        *ngIf="(theme$ | async) === 'light-mode'"
+        class="h-10"
+        src="/assets/images/symbol-black.svg"
+        alt="Central Hash symbol" />
+      <img
+        *ngIf="(theme$ | async) === 'dark-mode'"
+        class="h-10"
+        src="/assets/images/symbol-white.svg"
+        alt="Central Hash symbol" />
       <mat-drawer-container
         [hasBackdrop]="true"
         [class]="(drawerState$ | async) ? 'open-container' : 'closed-container'"
@@ -123,7 +135,8 @@
           <p>Auto-resizing sidenav</p>
         </mat-drawer>
       </mat-drawer-container>
-      <span class="spacer"></span>
+
+      <span class="spacer-right"></span>
       <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
     </div>
   </mat-toolbar>
