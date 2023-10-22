@@ -6,8 +6,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import type { MatStep } from '@angular/material/stepper';
 import { MatStepperModule } from '@angular/material/stepper';
+import { AuthEntity } from 'projects/central-hash-api-client/src/public-api';
+import { isNil } from 'ramda';
+import { firstValueFrom } from 'rxjs';
 import { dialogueSteps } from 'src/app/constants/sign-in/forgot-password-dialogue-steps';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
 import { InputTextComponent } from '../input-text/input-text.component';
 
 @Component({
@@ -24,12 +29,14 @@ import { InputTextComponent } from '../input-text/input-text.component';
     MatFormFieldModule,
     MatInputModule,
     NgFor,
+    AccessiblePressDirective,
   ],
   templateUrl: './dialog-change-password.component.html',
   styleUrls: ['./dialog-change-password.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DialogChangePasswordComponent {
+  private readonly _authEntity = inject(AuthEntity);
   private readonly _fb = inject(NonNullableFormBuilder);
   public isLinear = true;
   public emailFormGroup = this._fb.group({
@@ -41,7 +48,7 @@ export class DialogChangePasswordComponent {
   });
 
   public newPasswordFormGroup = this._fb.group({
-    newPassword: ['', Validators.required],
+    password: ['', Validators.required],
   });
 
   public readonly steps = [
@@ -69,7 +76,7 @@ export class DialogChangePasswordComponent {
     },
     {
       formGroup: this.newPasswordFormGroup,
-      formControl: this.newPasswordFormGroup.controls.newPassword,
+      formControl: this.newPasswordFormGroup.controls.password,
       header: dialogueSteps.newPassword.header,
       description: dialogueSteps.newPassword.description,
       secondaryButtonText: dialogueSteps.newPassword.secondaryButtonText,
@@ -81,4 +88,51 @@ export class DialogChangePasswordComponent {
   ];
 
   constructor(public dialogRef: MatDialogRef<DialogChangePasswordComponent>) {}
+
+  public async sendEmail(): Promise<void> {
+    const { email } = this.emailFormGroup.value;
+    if (isNil(email) || this.emailFormGroup.invalid) {
+      return;
+    }
+    await firstValueFrom(this._authEntity.requestResetPassword({ email }));
+  }
+
+  public async resetPassword(): Promise<void> {
+    const { email } = this.emailFormGroup.value;
+    const { code } = this.codeFormGroup.value;
+    const { password } = this.newPasswordFormGroup.value;
+    if (isNil(email) || isNil(code) || isNil(password)) {
+      console.log('invalid');
+      return;
+    }
+    console.log({ email, code, password });
+    await firstValueFrom(this._authEntity.resetPassword({ email, code, password }));
+  }
+
+  public async verifyCode(): Promise<void> {
+    const { email } = this.emailFormGroup.value;
+    const { code } = this.codeFormGroup.value;
+    if (isNil(email) || isNil(code)) {
+      return;
+    }
+    await firstValueFrom(this._authEntity.verifyResetPassword({ email, code }));
+  }
+
+  public async defineSubmit(data: { label: string; stepper: MatStep }): Promise<void> {
+    const { label, stepper } = data;
+    switch (label) {
+      case 'Email':
+        this.sendEmail();
+        stepper._stepper.next();
+        break;
+      case 'Code':
+        await this.verifyCode();
+        stepper._stepper.next();
+        break;
+      case 'New password':
+        await this.resetPassword();
+        stepper._stepper.next();
+        break;
+    }
+  }
 }
