@@ -4,7 +4,7 @@
     class="forms"
     (sendEvent)="this.createUser($event)"
     [asyncError]="(asyncError$ | async) ?? 0"
-    *ngIf="!!!(showCodeInput$ | async)"></app-sign-up-form>
+    *ngIf="(showCodeInput$ | async) === false"></app-sign-up-form>
   <app-insert-your-code
     (sendEvent)="confirmCodeSignUp({ code: $event.code })"
     (returnEvent)="returnToSignUp()"

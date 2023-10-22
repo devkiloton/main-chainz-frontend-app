@@ -10,7 +10,7 @@
   <app-particle-bg></app-particle-bg>
   <app-sign-in-form
     class="forms"
-    *ngIf="!!!(showCodeInput$ | async)"
+    *ngIf="(showCodeInput$ | async) === false"
     (sendEvent)="signIn($event)"
     [asyncError]="(asyncError$ | async) ?? 0"></app-sign-in-form>
   <app-insert-your-code
