@@ -9,7 +9,7 @@
 <div class="animation">
   <app-particle-bg></app-particle-bg>
   <app-sign-in-form
-    class="sign-in-form"
+    class="forms"
     *ngIf="!!!(showCodeInput$ | async)"
     (sendEvent)="signIn($event)"
     [asyncError]="(asyncError$ | async) ?? 0"></app-sign-in-form>
@@ -17,6 +17,6 @@
     (sendEvent)="confirmCodeSignIn({ code: $event.code })"
     (returnEvent)="returnToSignIn()"
     [asyncError]="(asyncError$ | async) ?? 0"
-    class="sign-in-form"
+    class="forms"
     *ngIf="showCodeInput$ | async"></app-insert-your-code>
 </div>
