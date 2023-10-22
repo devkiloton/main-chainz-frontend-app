@@ -176,14 +176,14 @@ export class DialogChangePasswordComponent implements OnInit {
     const { label, stepper } = data;
     this.setAsyncError(0);
     switch (label) {
-      case 'Email':
+      case dialogueSteps.email.label:
         this.sendEmail();
         stepper._stepper.next();
         break;
-      case 'Code':
+      case dialogueSteps.code.label:
         await this.verifyCode(stepper);
         break;
-      case 'New password':
+      case dialogueSteps.newPassword.label:
         await this.resetPassword(stepper);
         break;
     }
@@ -191,14 +191,14 @@ export class DialogChangePasswordComponent implements OnInit {
 
   public errorMessages(label: string): string {
     switch (label) {
-      case 'Email':
+      case dialogueSteps.email.label:
         if (this.emailFormGroup.controls.email.hasError('required')) {
           return dialogErrors.requiredEmail;
         }
         return this.emailFormGroup.controls.email.hasError('email') ? dialogErrors.invalidEmail : '';
-      case 'Code':
+      case dialogueSteps.code.label:
         return this.codeFormGroup.controls.code.hasError('required') ? dialogErrors.requiredCode : '';
-      case 'New password':
+      case dialogueSteps.newPassword.label:
         if (this.newPasswordFormGroup.controls.password.hasError('required')) {
           return dialogErrors.requiredPassword;
         }
