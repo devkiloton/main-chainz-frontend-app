@@ -1,7 +1,8 @@
 export const dialogueSteps = {
   email: {
     header: $localize`What is your email address?` as string,
-    description: 'We`ll send an email containing a code to the email address associated with your account.',
+    description:
+      $localize`We will send an email containing a code to the email address associated with your account.` as string,
     secondaryButtonText: $localize`Cancel` as string,
     primaryButtonText: $localize`Send` as string,
     label: $localize`Email` as string,
