@@ -1,5 +1,4 @@
 import { Injectable, inject } from '@angular/core';
-import { CreateUser } from '../../models/user/create-user';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { User as UserModel } from '../../models/user/user';
@@ -15,9 +14,6 @@ export class UserEntity {
   private readonly API = environment.centralHashApiUrl;
   private readonly _httpClient = inject(HttpClient);
 
-  public create(data: CreateUser): Observable<Response<UserModel & { access_token: string }>> {
-    return this._httpClient.post<Response<UserModel & { access_token: string }>>(`${this.API}/user`, data);
-  }
   public find(): Observable<Response<UserModel>> {
     // Add the bearer token
     return this._httpClient.get<Response<UserModel>>(`${this.API}/user/me`);

@@ -18,6 +18,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
+import type { MatFormFieldAppearance } from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -97,6 +98,9 @@ export class InputTextComponent implements ControlValueAccessor, OnInit {
 
   @Input()
   public isRequired = false;
+
+  @Input()
+  public appearence: MatFormFieldAppearance = 'outline';
 
   public readonly id = this._uniqueIdService.generateUniqueIdWithPrefix('app-input-text');
 

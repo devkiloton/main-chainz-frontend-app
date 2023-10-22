@@ -30,15 +30,27 @@ export class LocalStorageService {
     return (localStorage.getItem('theme') as 'dark-mode' | 'light-mode' | null) ?? 'light-mode';
   }
 
-  public set setAuthToken(value: string) {
-    localStorage.setItem('auth_token', value);
+  public set setAccessToken(value: string) {
+    localStorage.setItem('access_token', value);
   }
 
-  public get getAuthToken(): string | null {
-    return localStorage.getItem('auth_token');
+  public get getAccessToken(): string | null {
+    return localStorage.getItem('access_token');
   }
 
-  public removeAuthToken(): void {
-    localStorage.removeItem('auth_token');
+  public removeAccessToken(): void {
+    localStorage.removeItem('access_token');
+  }
+
+  public set setRefreshToken(value: string) {
+    localStorage.setItem('refresh_token', value);
+  }
+
+  public get getRefreshToken(): string | null {
+    return localStorage.getItem('refresh_token');
+  }
+
+  public removeRefreshToken(): void {
+    localStorage.removeItem('refresh_token');
   }
 }

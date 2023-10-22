@@ -11,9 +11,10 @@ export class AuthStateService {
   private readonly _localStorage = inject(LocalStorageService);
   constructor(@Inject(PLATFORM_ID) private readonly _platformId: object) {}
 
-  public set(value: string): void {
+  public set(data: { access_token: string; refresh_token: string }): void {
     if (isPlatformBrowser(this._platformId)) {
-      this._localStorage.setAuthToken = value;
+      this._localStorage.setAccessToken = data.access_token;
+      this._localStorage.setRefreshToken = data.refresh_token;
     }
   }
 
@@ -21,7 +22,7 @@ export class AuthStateService {
     if (!isPlatformBrowser(this._platformId)) {
       return null;
     }
-    return this._localStorage.getAuthToken;
+    return this._localStorage.getAccessToken;
   }
 
   public remove(): void {

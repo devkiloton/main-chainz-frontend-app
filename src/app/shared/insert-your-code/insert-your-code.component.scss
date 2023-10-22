@@ -22,6 +22,30 @@
   @apply max-w-[400px];
   @apply w-[90vw];
   @apply shadow-lifted;
+
+  .content {
+    @apply p-4;
+    @apply pt-0;
+    @apply flex items-center justify-center flex-col;
+  }
+}
+
+.header {
+  @apply text-lg;
+  @apply font-semibold;
+  @apply leading-5;
+  @apply text-center;
+  @apply pb-2 pt-6 max-w-[75%] m-auto;
+}
+
+.description {
+  @apply text-sm;
+  @apply leading-4;
+  @apply text-center;
+  @apply font-normal;
+  @apply py-4;
+  @apply max-w-[80%];
+  @apply m-auto;
 }
 
 .example-tab-icon {

@@ -1,0 +1,42 @@
+<app-alert-card [class]="cardState$ | async" [message]="(message$ | async) ?? ''"></app-alert-card>
+<mat-card class="form-card" appearance="outlined">
+  <div class="content">
+    <p class="header" i18n>Insert the code</p>
+    <p class="description" i18n>We have sent you a code to your email address. Please insert it below.</p>
+    <form class="w-full" [formGroup]="codeForm" (ngSubmit)="send()">
+      <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+        <mat-label aria-hidden="true" i18n>Confirmation code</mat-label>
+        <input
+          class="w-full"
+          [formControl]="codeForm.controls.code"
+          matInput
+          required
+          i18n-placeholder
+          placeholder="Type your code"
+          type="text"
+          i18n-name
+          name="code" />
+        <mat-error>{{ passwordErrorMessage$ | async }}</mat-error>
+      </mat-form-field>
+      <div class="flex justify-between">
+        <app-button-secondary
+          (appAccessiblePress)="return()"
+          i18n-title
+          title="Cancel"
+          i18n-label
+          label="Cancel the sign in"
+          type="button"></app-button-secondary>
+
+        <div>
+          <app-button-primary
+            type="submit"
+            i18n-label
+            label="Submit code button"
+            i18n-title
+            title="Submit"
+            color="accent"></app-button-primary>
+        </div>
+      </div>
+    </form>
+  </div>
+</mat-card>

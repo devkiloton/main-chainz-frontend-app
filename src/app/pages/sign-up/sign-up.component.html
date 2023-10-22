@@ -1,9 +1,18 @@
 <div class="animation">
   <app-particle-bg></app-particle-bg>
   <app-sign-up-form
-    class="sign-up-form"
+    class="forms"
+    @fader
     (sendEvent)="this.createUser($event)"
-    [asyncError]="(asyncError$ | async) ?? 0"></app-sign-up-form>
+    [asyncError]="(asyncError$ | async) ?? 0"
+    *ngIf="(showCodeInput$ | async) === false"></app-sign-up-form>
+  <app-insert-your-code
+    class="forms"
+    @fader
+    (sendEvent)="confirmCodeSignUp({ code: $event.code })"
+    (returnEvent)="returnToSignUp()"
+    [asyncError]="(asyncError$ | async) ?? 0"
+    *ngIf="showCodeInput$ | async"></app-insert-your-code>
 </div>
 <div class="panel" tabindex="0" *ngIf="isHandset$ | async">
   <p i18n>Privacy</p>

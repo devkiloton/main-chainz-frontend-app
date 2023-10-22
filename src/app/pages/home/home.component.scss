@@ -50,7 +50,7 @@
     @apply px-4 min-[1024px]:px-20;
 
     span {
-      @apply text-2xl min-[768px]:text-5xl self-start font-bold;
+      @apply min-[768px]:text-5xl self-start font-bold;
     }
   }
 

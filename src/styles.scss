@@ -20,6 +20,7 @@ body {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
+  letter-spacing: -0.02rem;
   @apply min-h-full min-w-[100%];
 }
 
@@ -148,4 +149,13 @@ body {
 
 .mdc-button .mdc-button__label {
   padding: 0 !important;
+}
+
+.cdk-overlay-pane {
+  max-width: 100% !important;
+  @apply px-2;
+}
+.mat-horizontal-content-container {
+  padding: 16px !important;
+  padding-top: 0 !important;
 }
