@@ -149,18 +149,18 @@
         class="h-10"
         src="/assets/images/symbol-white.svg"
         alt="Central Hash symbol" />
-      <mat-drawer-container
-        [hasBackdrop]="true"
-        [class]="(drawerState$ | async) ? 'open-container' : 'closed-container'"
-        (backdropClick)="changeDrowerState()"
-        autosize>
-        <mat-drawer class="p-3" #drawer mode="side">
-          <app-tree></app-tree>
-        </mat-drawer>
-      </mat-drawer-container>
 
       <span class="spacer-right"></span>
       <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
     </div>
   </mat-toolbar>
+  <mat-drawer-container
+    [hasBackdrop]="true"
+    [class]="(drawerState$ | async) ? 'open-container' : 'closed-container'"
+    (backdropClick)="changeDrowerState()"
+    autosize>
+    <mat-drawer class="p-3" #drawer mode="side">
+      <app-tree></app-tree>
+    </mat-drawer>
+  </mat-drawer-container>
 </ng-template>
