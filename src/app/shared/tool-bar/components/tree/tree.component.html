@@ -1,4 +1,4 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
     <button matRipple class="button-node">
       <mat-icon class="big" [svgIcon]="node.isSvg ? node.icon : ''">{{ node.icon }}</mat-icon>
@@ -16,7 +16,7 @@
         </span>
       </button>
     </div>
-    <div [class.example-tree-invisible]="!treeControl.isExpanded(node)" role="group">
+    <div [class.tree-invisible]="!treeControl.isExpanded(node)" role="group">
       <ng-container matTreeNodeOutlet></ng-container>
     </div>
   </mat-nested-tree-node>
