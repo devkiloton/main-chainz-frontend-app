@@ -1,39 +1,31 @@
-
-.tree-invisible {
-    display: none;
-  }
+:host {
+  .tree-invisible {
+    @apply hidden;
+    }
+    
+    .tree ul,
+    .tree li {
+      @apply my-0;
+      @apply list-none;
+    }
+    
+    .tree .mat-nested-tree-node div[role=group] {
+      @apply pl-5;
+    }
+    
+    .tree div[role=group] > .mat-tree-node {
+      @apply pl-5;
+    }
+    
+    .big {
+      @apply w-6;
+      @apply h-6;
+      @apply text-2xl;
+    }
   
-  .tree ul,
-  .tree li {
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style-type: none;
-  }
-  
-  /*
-   * This padding sets alignment of the nested nodes.
-   */
-  .tree .mat-nested-tree-node div[role=group] {
-    padding-left: 20px;
-  }
-  
-  /*
-   * Padding for leaf nodes.
-   * Leaf nodes need to have padding so as to align with other non-leaf nodes
-   * under the same parent.
-   */
-  .tree div[role=group] > .mat-tree-node {
-    padding-left: 10px;
-  }
-  
-  .big {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 1.5rem;
-  }
-
-  .button-node {
-    @apply flex items-center justify-start gap-x-3;
-    @apply  w-full;
-    @apply rounded p-2;
-  }
+    .button-node {
+      @apply flex items-center justify-start gap-x-3;
+      @apply  w-full;
+      @apply rounded p-2;
+    }
+}
