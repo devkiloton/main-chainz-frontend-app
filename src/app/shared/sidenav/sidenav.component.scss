@@ -1,9 +1,4 @@
 :host {
-  .container {
-    @apply w-full;
-    @apply h-full;
-    @apply flex;
-  }
 
   .drawer {
     @apply h-screen;
@@ -20,7 +15,7 @@
   .mat-drawer-opened {
     @apply fixed;
     @apply top-[90px];
-    @apply px-[16px] py-[8px];
+    @apply px-[16px] pt-[8px];
     height: calc(100% - 90px);
   }
 
