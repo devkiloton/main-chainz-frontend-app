@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { TreeComponent } from './tree.component';
 
 describe('TreeComponent', () => {
-  let component: TreeComponent;
-  let fixture: ComponentFixture<TreeComponent>;
+  let component: TreeComponent | null = null;
+  let fixture: ComponentFixture<TreeComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [TreeComponent]
+      imports: [TreeComponent],
     });
     fixture = TestBed.createComponent(TreeComponent);
     component = fixture.componentInstance;
