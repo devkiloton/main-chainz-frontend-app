@@ -1,0 +1,33 @@
+.example-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .example-sidenav {
+    height: 100vh;
+
+    @apply flex flex-col justify-between 
+  }
+
+  .content {
+    flex: 1 1 auto;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .mat-drawer-opened{
+    position: fixed;
+    top: 90px;
+    padding: 8px 16px;
+    height: calc(100% - 90px);
+  }
+
+  .mat-sidenav {
+
+    height: calc(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }

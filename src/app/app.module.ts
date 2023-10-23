@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UniversalAppInterceptor } from './interceptors/universal-interceptor/universal-app.interceptor';
 import { CarouselPricesComponent } from './shared/carousel-prices/carousel-prices.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { ToolBarComponent } from './shared/tool-bar/tool-bar.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ToolBarComponent } from './shared/tool-bar/tool-bar.component';
     ToolBarComponent,
     FooterComponent,
     CarouselPricesComponent,
+    SidenavComponent,
   ],
   providers: [provideClientHydration(), { provide: HTTP_INTERCEPTORS, useClass: UniversalAppInterceptor, multi: true }],
   bootstrap: [AppComponent],
