@@ -1,0 +1,12 @@
+<button
+  mat-icon-button
+  [matMenuTriggerFor]="menu.matMenu"
+  i18n-aria-label
+  aria-label="Change the currency used to convert prices.">
+  <mat-icon>attach_money</mat-icon>
+</button>
+<app-currencies-menu
+  #menu
+  [isFiatCollection]="true"
+  [collection]="allFiatCurrencies"
+  (itemSelected)="changeDefaultCurrency($event)"></app-currencies-menu>
