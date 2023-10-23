@@ -10,6 +10,7 @@ type OptionNode = {
   name: string;
   children?: Array<OptionNode>;
   icon?: string;
+  isSvg?: boolean;
 };
 
 const TREE_DATA: Array<OptionNode> = [
@@ -24,6 +25,7 @@ const TREE_DATA: Array<OptionNode> = [
       { name: 'P2P with guarantee', icon: 'diversity_3' },
       { name: 'Buy without KYC', icon: 'lock' },
       { name: 'Ghost account', icon: 'air' },
+      { name: 'Tor and IPFS', icon: 'decentralized_protocols', isSvg: true },
     ],
   },
   {
