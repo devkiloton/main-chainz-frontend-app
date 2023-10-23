@@ -5,61 +5,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTreeModule, MatTreeNestedDataSource } from '@angular/material/tree';
 import { isNotNil } from 'ramda';
-
-type OptionNode = {
-  name: string;
-  children?: Array<OptionNode>;
-  icon?: string;
-  isSvg?: boolean;
-};
-
-const TREE_DATA: Array<OptionNode> = [
-  {
-    name: 'Buy crypto',
-    icon: 'shopping_cart',
-  },
-  {
-    name: 'Trade anonymously',
-    children: [
-      { name: 'P2P pure', icon: 'group' },
-      { name: 'P2P with guarantee', icon: 'diversity_3' },
-      { name: 'Buy without KYC', icon: 'lock' },
-      { name: 'Ghost account', icon: 'air' },
-      { name: 'Tor and IPFS', icon: 'decentralized_protocols', isSvg: true },
-    ],
-  },
-  {
-    name: 'About us',
-    children: [
-      { name: 'Who we are?', icon: 'question_mark' },
-      { name: 'Our mission', icon: 'public' },
-      { name: 'Blog', icon: 'description' },
-    ],
-  },
-  {
-    name: 'Support',
-    icon: 'support_agent',
-  },
-  {
-    name: 'Markets',
-    icon: 'show_chart',
-  },
-  {
-    name: 'Affiliate',
-    icon: 'hub',
-  },
-  {
-    name: 'API',
-    icon: 'api',
-  },
-  {
-    name: 'Legal',
-    children: [
-      { name: 'Terms of use', icon: 'gavel' },
-      { name: 'Privacy policy', icon: 'policy' },
-    ],
-  },
-];
+import { treeData } from 'src/app/constants/shared/tree-data';
+import type { OptionNode } from 'src/app/types/option-node';
 
 @Component({
   selector: 'app-tree',
@@ -74,7 +21,7 @@ export class TreeComponent {
   public dataSource = new MatTreeNestedDataSource<OptionNode>();
 
   constructor() {
-    this.dataSource.data = TREE_DATA;
+    this.dataSource.data = treeData;
   }
 
   public hasChild = (_number: number, node: OptionNode): boolean =>
