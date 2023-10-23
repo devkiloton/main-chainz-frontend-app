@@ -31,6 +31,9 @@
       <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>air</mat-icon>Ghost account</div>
       </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon svgIcon="decentralized_protocols"></mat-icon>Tor and IPFS</div>
+      </button>
     </mat-menu>
     <button [matMenuTriggerFor]="aboutUsMenu" mat-flat-button color="primary">
       <div class="flex-centered" i18n>About us<mat-icon>expand_more</mat-icon></div>
@@ -71,96 +74,33 @@
     </mat-menu>
 
     <span class="spacer"></span>
-    <button
-      mat-icon-button
-      *ngIf="(theme$ | async) === 'dark-mode'"
-      (appAccessiblePress)="changeTheme('light-mode')"
-      i18n-aria-label
-      aria-label="Change the web site theming light mode.">
-      <mat-icon>dark_mode</mat-icon>
-    </button>
-    <button
-      mat-icon-button
-      *ngIf="(theme$ | async) === 'light-mode'"
-      (appAccessiblePress)="changeTheme('dark-mode')"
-      i18n-aria-label
-      aria-label="Change the web site theming to dark mode.">
-      <mat-icon>light_mode</mat-icon>
-    </button>
-    <button
-      mat-icon-button
-      [matMenuTriggerFor]="menuLanguages"
-      i18n-aria-label
-      aria-label="Change the web site language.">
-      <mat-icon>translate</mat-icon>
-    </button>
-    <mat-menu #menuLanguages="matMenu">
-      <button mat-menu-item (appAccessiblePress)="changeLocaleServer('en-US')">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/USD.webp" i18n-alt alt="United States flag." class="flag" />
-          <span>English (USA)</span>
-        </div>
-      </button>
-      <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/BRL.webp" i18n-alt alt="Brazil flag." class="flag" />
-          <span>Português (Brasil)</span>
-        </div>
-      </button>
-    </mat-menu>
-    <button
-      mat-icon-button
-      [matMenuTriggerFor]="menu.matMenu"
-      i18n-aria-label
-      aria-label="Change the currency used to convert prices.">
-      <mat-icon>attach_money</mat-icon>
-    </button>
-    <app-currencies-menu
-      #menu
-      [isFiatCollection]="true"
-      [collection]="allFiatCurrencies"
-      (itemSelected)="changeDefaultCurrency($event)"></app-currencies-menu>
+    <app-button-change-theme></app-button-change-theme>
+    <app-change-locale-button></app-change-locale-button>
+    <app-button-change-currency></app-button-change-currency>
     <button routerLink="/sign-in" mat-flat-button color="primary" i18n>Sign in</button>
     <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
   </div>
 </mat-toolbar>
 <mat-divider></mat-divider>
+<!-- #TODO: put the drawer inside a component to be used in the app component -->
 <ng-template #mobileBlock>
-  <!-- #TODO: put the drawer inside a component to be used in the app component -->
   <mat-toolbar class="flex-centered shadow-skim" color="primary">
     <div class="w-full flex justify-between items-center gap-x-1">
-      <button
-        mat-icon-button
-        (click)="drawer.toggle()"
-        (appAccessiblePress)="changeDrowerState()"
-        i18n-aria-label
-        aria-label="Open side menu">
+      <button mat-icon-button (click)="toggleSideNav()" i18n-aria-label aria-label="Open side menu">
         <mat-icon>menu</mat-icon>
       </button>
       <span class="spacer-left"></span>
 
-      <img
-        *ngIf="(theme$ | async) === 'light-mode'"
-        class="h-10"
-        src="/assets/images/symbol-black.svg"
-        alt="Central Hash symbol" />
-      <img
-        *ngIf="(theme$ | async) === 'dark-mode'"
-        class="h-10"
-        src="/assets/images/symbol-white.svg"
-        alt="Central Hash symbol" />
+      <a class="w-20" routerLink="/home">
+        <img
+          *ngIf="(theme$ | async) === 'light-mode'"
+          src="/assets/images/symbol-black.svg"
+          alt="Central Hash symbol" />
+        <img *ngIf="(theme$ | async) === 'dark-mode'" src="/assets/images/symbol-white.svg" alt="Central Hash symbol" />
+      </a>
 
       <span class="spacer-right"></span>
       <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
     </div>
   </mat-toolbar>
-  <mat-drawer-container
-    [hasBackdrop]="true"
-    [class]="(drawerState$ | async) ? 'open-container' : 'closed-container'"
-    (backdropClick)="changeDrowerState()"
-    autosize>
-    <mat-drawer class="p-3" #drawer mode="side">
-      <app-tree></app-tree>
-    </mat-drawer>
-  </mat-drawer-container>
 </ng-template>
