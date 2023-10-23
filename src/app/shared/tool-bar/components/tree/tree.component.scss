@@ -31,3 +31,9 @@
     height: 1.5rem;
     font-size: 1.5rem;
   }
+
+  .button-node {
+    @apply flex items-center justify-start gap-x-3;
+    @apply  w-full;
+    @apply rounded p-2;
+  }
