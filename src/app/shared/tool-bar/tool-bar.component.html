@@ -16,114 +16,90 @@
     </button>
     <button mat-flat-button color="primary" i18n>Buy crypto</button>
     <button [matMenuTriggerFor]="tradeAnon" mat-flat-button color="primary">
-      <div class="flex-centered" i18n>Trade anonymous<mat-icon>expand_more</mat-icon></div>
+      <div class="flex-centered" i18n>Trade anonymously<mat-icon>expand_more</mat-icon></div>
     </button>
     <mat-menu #tradeAnon="matMenu">
-      <button mat-menu-item>
+      <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>group</mat-icon>P2P pure</div>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>diversity_3</mat-icon>P2P with guarantee</div>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>lock</mat-icon>Buy without KYC</div>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>air</mat-icon>Ghost account</div>
       </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon [svgIcon]="'decentralized_protocols'"></mat-icon>Tor and IPFS</div>
+      </button>
     </mat-menu>
-    <button mat-flat-button color="primary" i18n>Crowdfunding</button>
     <button [matMenuTriggerFor]="aboutUsMenu" mat-flat-button color="primary">
       <div class="flex-centered" i18n>About us<mat-icon>expand_more</mat-icon></div>
     </button>
     <mat-menu #aboutUsMenu="matMenu">
-      <button mat-menu-item>
+      <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>question_mark</mat-icon>Who we are</div>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>public</mat-icon>Our mission</div>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>description</mat-icon>Blog</div>
       </button>
     </mat-menu>
-    <span class="spacer"></span>
-    <button
-      mat-icon-button
-      *ngIf="(theme$ | async) === 'dark-mode'"
-      (appAccessiblePress)="changeTheme('light-mode')"
-      i18n-aria-label
-      aria-label="Change the web site theming light mode.">
-      <mat-icon>dark_mode</mat-icon>
+    <button [matMenuTriggerFor]="moreMenu" mat-flat-button color="primary">
+      <div class="flex-centered" i18n>More<mat-icon>expand_more</mat-icon></div>
     </button>
-    <button
-      mat-icon-button
-      *ngIf="(theme$ | async) === 'light-mode'"
-      (appAccessiblePress)="changeTheme('dark-mode')"
-      i18n-aria-label
-      aria-label="Change the web site theming to dark mode.">
-      <mat-icon>light_mode</mat-icon>
-    </button>
-    <button
-      mat-icon-button
-      [matMenuTriggerFor]="menuLanguages"
-      i18n-aria-label
-      aria-label="Change the web site language.">
-      <mat-icon>translate</mat-icon>
-    </button>
-    <mat-menu #menuLanguages="matMenu">
-      <button mat-menu-item (appAccessiblePress)="changeLocaleServer('en-US')">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/USD.webp" i18n-alt alt="United States flag." class="flag" />
-          <span>English (USA)</span>
-        </div>
+    <mat-menu #moreMenu="matMenu">
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon> support_agent</mat-icon>Support</div>
       </button>
-      <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
-        <div class="flex items-center gap-x-2">
-          <img src="assets/images/flags/BRL.webp" i18n-alt alt="Brazil flag." class="flag" />
-          <span>Português (Brasil)</span>
-        </div>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon>show_chart</mat-icon>Markets</div>
+      </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon>api</mat-icon>API</div>
+      </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon>hub</mat-icon>Affiliate</div>
+      </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon>gavel</mat-icon>Terms of use</div>
+      </button>
+      <button mat-menu-item disabled>
+        <div class="flex-centered" i18n><mat-icon>policy</mat-icon>Privacy policy</div>
       </button>
     </mat-menu>
-    <button
-      mat-icon-button
-      [matMenuTriggerFor]="menu.matMenu"
-      i18n-aria-label
-      aria-label="Change the currency used to convert prices.">
-      <mat-icon>attach_money</mat-icon>
-    </button>
-    <app-currencies-menu
-      #menu
-      [isFiatCollection]="true"
-      [collection]="allFiatCurrencies"
-      (itemSelected)="changeDefaultCurrency($event)"></app-currencies-menu>
+
+    <span class="spacer"></span>
+    <app-button-change-theme></app-button-change-theme>
+    <app-change-locale-button></app-change-locale-button>
+    <app-button-change-currency></app-button-change-currency>
     <button routerLink="/sign-in" mat-flat-button color="primary" i18n>Sign in</button>
     <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
   </div>
 </mat-toolbar>
 <mat-divider></mat-divider>
+<!-- #TODO: put the drawer inside a component to be used in the app component -->
 <ng-template #mobileBlock>
-  <!-- #TODO: put the drawer inside a component to be used in the app component -->
   <mat-toolbar class="flex-centered shadow-skim" color="primary">
     <div class="w-full flex justify-between items-center gap-x-1">
-      <button
-        mat-icon-button
-        (click)="drawer.toggle()"
-        (appAccessiblePress)="changeDrowerState()"
-        i18n-aria-label
-        aria-label="Open side menu">
+      <button mat-icon-button (click)="toggleSideNav()" i18n-aria-label aria-label="Open side menu">
         <mat-icon>menu</mat-icon>
       </button>
-      <mat-drawer-container
-        [hasBackdrop]="true"
-        [class]="(drawerState$ | async) ? 'open-container' : 'closed-container'"
-        (backdropClick)="changeDrowerState()"
-        autosize>
-        <mat-drawer #drawer mode="side">
-          <p>Auto-resizing sidenav</p>
-        </mat-drawer>
-      </mat-drawer-container>
-      <span class="spacer"></span>
+      <span class="spacer-left"></span>
+
+      <a class="w-20" routerLink="/home">
+        <img
+          *ngIf="(theme$ | async) === 'light-mode'"
+          src="/assets/images/symbol-black.svg"
+          alt="Central Hash symbol" />
+        <img *ngIf="(theme$ | async) === 'dark-mode'" src="/assets/images/symbol-white.svg" alt="Central Hash symbol" />
+      </a>
+
+      <span class="spacer-right"></span>
       <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
     </div>
   </mat-toolbar>

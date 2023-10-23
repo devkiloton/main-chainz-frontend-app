@@ -1,0 +1,16 @@
+<button
+  mat-icon-button
+  *ngIf="(theme$ | async) === 'dark-mode'"
+  (appAccessiblePress)="changeTheme('light-mode')"
+  i18n-aria-label
+  aria-label="Change the web site theming light mode.">
+  <mat-icon>dark_mode</mat-icon>
+</button>
+<button
+  mat-icon-button
+  *ngIf="(theme$ | async) === 'light-mode'"
+  (appAccessiblePress)="changeTheme('dark-mode')"
+  i18n-aria-label
+  aria-label="Change the web site theming to dark mode.">
+  <mat-icon>light_mode</mat-icon>
+</button>

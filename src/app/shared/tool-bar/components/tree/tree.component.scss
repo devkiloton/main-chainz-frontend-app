@@ -1,0 +1,31 @@
+:host {
+  .tree-invisible {
+    @apply hidden;
+  }
+
+  .tree ul,
+  .tree li {
+    @apply my-0;
+    @apply list-none;
+  }
+
+  .tree .mat-nested-tree-node div[role='group'] {
+    @apply pl-5;
+  }
+
+  .tree div[role='group'] > .mat-tree-node {
+    @apply pl-5;
+  }
+
+  .big {
+    @apply w-6;
+    @apply h-6;
+    @apply text-2xl;
+  }
+
+  .button-node {
+    @apply flex items-center justify-start gap-x-3;
+    @apply w-full;
+    @apply rounded p-2;
+  }
+}

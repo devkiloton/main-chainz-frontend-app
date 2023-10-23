@@ -1,4 +1,6 @@
 <app-carousel-prices></app-carousel-prices>
-<app-tool-bar></app-tool-bar>
-<router-outlet> </router-outlet>
-<app-footer></app-footer>
+<app-tool-bar (sideNavToggle)="sideNavRef.toggleDrawer()"></app-tool-bar>
+<app-sidenav #sideNavRef>
+  <router-outlet class="h-screen"></router-outlet>
+  <app-footer></app-footer>
+</app-sidenav>

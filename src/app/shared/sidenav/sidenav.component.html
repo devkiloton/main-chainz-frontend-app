@@ -1,0 +1,13 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="drawer" mode="over">
+    <div class="mat-sidenav">
+      <app-tree></app-tree>
+      <div>
+        <app-button-change-currency></app-button-change-currency>
+        <app-button-change-theme></app-button-change-theme>
+        <app-change-locale-button></app-change-locale-button>
+      </div>
+    </div>
+  </mat-drawer>
+  <ng-content></ng-content>
+</mat-drawer-container>

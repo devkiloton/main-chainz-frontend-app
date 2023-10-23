@@ -1,0 +1,23 @@
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+    <button matRipple class="button-node">
+      <mat-icon class="big" [svgIcon]="node.isSvg ? node.icon : ''">{{ node.icon }}</mat-icon>
+      <span>{{ node.name }}</span>
+    </button>
+  </mat-tree-node>
+  <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+    <div class="h-12 flex items-center">
+      <button matRipple matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name" class="button-node">
+        <mat-icon class="mat-icon-rtl-mirror big">
+          {{ treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right' }}
+        </mat-icon>
+        <span>
+          {{ node.name }}
+        </span>
+      </button>
+    </div>
+    <div [class.tree-invisible]="!treeControl.isExpanded(node)" role="group">
+      <ng-container matTreeNodeOutlet></ng-container>
+    </div>
+  </mat-nested-tree-node>
+</mat-tree>
