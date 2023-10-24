@@ -6,12 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { Observable } from 'rxjs';
 import { map, of, switchMap } from 'rxjs';
-import { allCurrenciesChipOptions } from 'src/app/constants/all-currencies-chip-options';
-import { bitcoinServicesGridTiles } from 'src/app/constants/bitcoin-services-grid-tiles';
 import { questionsAndAnswers } from 'src/app/constants/home/questions-and-answers';
 import { supportedCurrencies } from 'src/app/constants/supported-currencies';
-import { ChipIconListComponent } from 'src/app/shared/chip-icon-list/chip-icon-list.component';
-import { GridComponent } from 'src/app/shared/grid/grid.component';
 import { ModalConverterComponent } from 'src/app/shared/modal-converter/modal-converter.component';
 import { TablePricesComponent } from 'src/app/shared/table-prices/table-prices.component';
 import { CurrenciesStoreService } from 'src/app/stores';
@@ -28,8 +24,6 @@ import { CardBuyComponent } from './components/card-buy/card-buy.component';
     MatChipsModule,
     MatExpansionModule,
     NgFor,
-    GridComponent,
-    ChipIconListComponent,
     ParticleBgComponent,
     TablePricesComponent,
     AsyncPipe,
@@ -50,9 +44,6 @@ export default class HomeComponent {
       return currenciesCard;
     }),
   );
-
-  public readonly bitcoinServicesGridTiles = bitcoinServicesGridTiles;
-  public readonly allCurrenciesChipOptions = allCurrenciesChipOptions;
 
   public readonly questionsAndAnswers = questionsAndAnswers;
 }
