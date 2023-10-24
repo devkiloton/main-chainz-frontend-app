@@ -1,0 +1,31 @@
+<div
+  style="background-color: var(--mat-toolbar-container-background-color)"
+  class="flex flex-col gap-y-6 shadow-raised rounded-xl p-8">
+  <div class="flex flex-col items-center">
+    <span class="text-2xl font-medium text-gray-700">Central Hash support center</span>
+    <span class="text-6xl font-bold whitespace-nowrap mx-10">How can we help you?</span>
+  </div>
+  <app-input-text
+    name="Input to type your question"
+    label="What are you looking for?"
+    type="text"
+    icon="search"></app-input-text>
+</div>
+<div class="flex items-start justify-start p-3 gap-6 flex-nowrap w-full flex-col">
+  <div class="flex justify-between w-full gap-6">
+    <app-card-questions title="My account" icon="account_circle"></app-card-questions>
+    <app-card-questions title="Deposit and withdrawal" icon="payments"></app-card-questions>
+    <app-card-questions title="Security" icon="lock"></app-card-questions>
+    <app-card-questions title="Anonimity" icon="question_mark"></app-card-questions>
+    <app-card-questions title="P2P" icon="group"></app-card-questions>
+    <app-card-questions title="Policies" icon="policy"></app-card-questions>
+  </div>
+  <div class="flex justify-between w-full gap-6">
+    <app-card-questions title="Transfer crypto" icon="sync_alt"></app-card-questions>
+    <app-card-questions title="Contact" icon="call"></app-card-questions>
+    <app-card-questions title="Buy and sell" icon="currency_bitcoin"></app-card-questions>
+    <app-card-questions title="Getting started" icon="map"></app-card-questions>
+    <app-card-questions title="Trading" icon="rocket"></app-card-questions>
+    <app-card-questions title="Terms" icon="gavel"></app-card-questions>
+  </div>
+</div>
