@@ -19,8 +19,23 @@ const routes: Routes = [
   {
     title: $localize`Central Hash | Support` as string,
     path: 'support',
-    pathMatch: 'full',
-    loadComponent: () => import('./pages/support/support.component'),
+    children: [
+      {
+        title: $localize`Central Hash | Support` as string,
+        path: '',
+        loadComponent: () => import('./pages/support/support.component'),
+      },
+      {
+        title: $localize`Central Hash | Support` as string,
+        path: ':category',
+        loadComponent: () => import('./pages/support/children/category/category.component'),
+      },
+      {
+        title: $localize`Central Hash | Support` as string,
+        path: ':category/:article',
+        loadComponent: () => import('./pages/support/children/article/article.component'),
+      },
+    ],
   },
   {
     title: $localize`Central Hash | Dashboard` as string,
