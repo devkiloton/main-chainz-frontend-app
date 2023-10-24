@@ -17,6 +17,12 @@ const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component'),
   },
   {
+    title: $localize`Central Hash | Support` as string,
+    path: 'support',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/support/support.component'),
+  },
+  {
     title: $localize`Central Hash | Dashboard` as string,
     path: 'dashboard',
     pathMatch: 'full',
