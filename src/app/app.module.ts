@@ -2,6 +2,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MarkdownModule } from 'ngx-markdown';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UniversalAppInterceptor } from './interceptors/universal-interceptor/universal-app.interceptor';
@@ -17,6 +18,7 @@ import { ToolBarComponent } from './shared/tool-bar/tool-bar.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MarkdownModule.forRoot(),
     ToolBarComponent,
     FooterComponent,
     CarouselPricesComponent,
