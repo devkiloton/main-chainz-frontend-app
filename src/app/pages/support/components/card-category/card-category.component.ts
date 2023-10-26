@@ -3,14 +3,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-card-questions',
+  selector: 'app-card-category',
   standalone: true,
   imports: [MatIconModule, RouterModule],
-  templateUrl: './card-questions.component.html',
-  styleUrls: ['./card-questions.component.scss'],
+  templateUrl: './card-category.component.html',
+  styleUrls: ['./card-category.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardQuestionsComponent {
+export class CardCategoryComponent {
   @Input({ required: true })
   public title!: string;
 
