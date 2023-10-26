@@ -1,0 +1,5 @@
+.container{
+    @apply bg-slate-500;
+    @apply w-72;
+    min-height: calc(100vh - 98px);
+}
