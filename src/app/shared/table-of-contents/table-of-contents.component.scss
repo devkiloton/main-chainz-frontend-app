@@ -1,5 +1,19 @@
 .container{
-    @apply bg-slate-500;
-    @apply w-72;
-    min-height: calc(100vh - 98px);
+    @apply w-full;
+    @apply rounded-xl;
+    @apply p-3;
+    background-color: var(--mat-toolbar-container-background-color);
+    @apply border border-gray-500 border-solid;
+    @apply flex flex-col items-start gap-y-2;
+    
+
+    h1 {
+        @apply text-2xl;
+        @apply font-semibold;
+    }
+
+    button {
+        @apply whitespace-nowrap;
+        @apply rounded-md;
+    }
 }

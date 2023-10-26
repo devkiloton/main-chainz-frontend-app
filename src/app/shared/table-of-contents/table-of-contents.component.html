@@ -1,3 +1,12 @@
 <div class="container">
   <h1>{{ headerText }}</h1>
+  <button
+    mat-flat-button
+    color="primary"
+    *ngFor="let category of categories"
+    [routerLink]="'/support/' + category.id"
+    class="flex items-center gap-x-4">
+    <mat-icon>{{ category.icon }}</mat-icon>
+    {{ category.title }}
+  </button>
 </div>
