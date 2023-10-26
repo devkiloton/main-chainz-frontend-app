@@ -1,3 +1,10 @@
-<button [routerLink]="article.id" *ngFor="let article of articles$ | async">
-  {{ article.title }}
-</button>
+<app-table-of-contents
+  [categories]="categories"
+  headerText="Other categories"
+  class="mt-2 mr-3"></app-table-of-contents>
+<div class="w-full">
+  <app-card-questions
+    [title]="article.title"
+    [id]="article.id"
+    *ngFor="let article of articles$ | async"></app-card-questions>
+</div>
