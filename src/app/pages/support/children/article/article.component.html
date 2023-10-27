@@ -1,3 +1,4 @@
+<app-table-of-contents [contents]="(otherArticles$ | async) || []" headerText="Other articles"></app-table-of-contents>
 <div class="container" *ngIf="this.articles$ | async as article">
   <div class="metadata">
     <span>Updated at {{ article.updatedAt | date: 'shortDate' }}</span>
