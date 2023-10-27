@@ -18,5 +18,5 @@ export class TableOfContentsComponent {
   public headerText!: string;
 
   @Input({ required: true })
-  public categories!: Array<CategorySupport>;
+  public contents!: Array<CategorySupport>;
 }

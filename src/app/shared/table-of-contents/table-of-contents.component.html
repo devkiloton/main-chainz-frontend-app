@@ -3,10 +3,10 @@
   <button
     mat-flat-button
     color="primary"
-    *ngFor="let category of categories"
-    [routerLink]="'/support/' + category.id"
+    *ngFor="let content of contents"
+    [routerLink]="'/support/' + content.id"
     class="flex items-center gap-x-4">
-    <mat-icon>{{ category.icon }}</mat-icon>
-    {{ category.title }}
+    <mat-icon>{{ content.icon }}</mat-icon>
+    {{ content.title }}
   </button>
 </div>
