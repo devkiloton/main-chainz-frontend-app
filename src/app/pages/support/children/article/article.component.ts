@@ -5,7 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
-import { BehaviorSubject, Observable, firstValueFrom } from 'rxjs';
+import type { Observable } from 'rxjs';
+import { BehaviorSubject, firstValueFrom } from 'rxjs';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
 
 @Component({
