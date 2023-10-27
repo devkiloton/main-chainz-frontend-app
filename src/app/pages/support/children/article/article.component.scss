@@ -1,7 +1,13 @@
+.metadata{
+    @apply flex justify-between;
+    @apply w-full;
+    @apply max-w-xs min-[768px]:max-w-lg min-[1024px]:max-w-3xl
+}
 .container {
     @apply flex items-center flex-col justify-center w-screen;
     h1, h2, h3, h4 {
         font-weight: 600;
+        line-height: 1;
     }
     h1, h2, h3, h4, h5, p {
         margin-bottom: 0;
@@ -9,6 +15,7 @@
     }
     h1 {
         font-size: 48px;
+        margin: 0;
     }
     h2 {
         font-size: 36px;

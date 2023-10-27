@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, inject, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -9,7 +9,7 @@ import { BehaviorSubject, firstValueFrom } from 'rxjs';
 
 @Component({
   standalone: true,
-  imports: [MarkdownModule, AsyncPipe, NgIf],
+  imports: [MarkdownModule, AsyncPipe, NgIf, DatePipe],
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

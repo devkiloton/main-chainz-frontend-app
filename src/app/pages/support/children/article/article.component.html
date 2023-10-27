@@ -1,6 +1,8 @@
 <div class="container" *ngIf="this.articles$ | async as article">
-  <p>UPDATED AT: {{ article.updatedAt }}</p>
-  <p>VIEWS: {{ article.views }}</p>
+  <div class="metadata">
+    <span>Updated at {{ article.updatedAt | date: 'shortDate' }}</span>
+    <span>{{ article.views }} views</span>
+  </div>
   <div class="markdown">
     <markdown [src]="'data:file/md;base64, ' + article.base64"> </markdown>
   </div>
