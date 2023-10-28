@@ -15,4 +15,7 @@ export class CardQuestionsComponent {
 
   @Input({ required: true })
   public id!: string;
+
+  @Input({ required: true })
+  public category!: string;
 }
