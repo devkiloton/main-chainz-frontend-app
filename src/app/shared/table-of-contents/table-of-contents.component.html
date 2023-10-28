@@ -6,7 +6,7 @@
     *ngFor="let content of contents"
     [routerLink]="'/support/' + content.id"
     class="flex items-center gap-x-4">
-    <!-- <mat-icon>{{ content.icon }}</mat-icon> -->
+    <mat-icon *ngIf="iconCategorySupport(content) !== null">{{ iconCategorySupport(content) }}</mat-icon>
     {{ content.title }}
   </button>
 </div>
