@@ -37,7 +37,7 @@ export class TableOfContentsComponent {
     if (this.isCategorySupport(data)) {
       this._router.navigate([`/support/${data.id}`]);
     } else {
-      this._router.navigate([`/support/${data.sector}/${data.id}`]);
+      this._router.navigate([`/support/${data.category}/${data.id}`]);
     }
   }
 }
