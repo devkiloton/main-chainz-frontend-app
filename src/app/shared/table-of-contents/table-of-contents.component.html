@@ -1,6 +1,6 @@
 <div class="container">
   <h1>{{ headerText }}</h1>
-  <button mat-flat-button color="primary" *ngFor="let content of contents" [routerLink]="'/support/' + content.id">
+  <button mat-flat-button color="primary" *ngFor="let content of contents" (click)="defineRoute(content)">
     <mat-icon *ngIf="iconCategorySupport(content) !== null">{{ iconCategorySupport(content) }}</mat-icon>
     {{ content.title }}
   </button>

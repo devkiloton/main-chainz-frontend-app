@@ -2,10 +2,10 @@ import { AsyncPipe, NgFor } from '@angular/common';
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
-import { BehaviorSubject, switchMap } from 'rxjs';
+import { BehaviorSubject, catchError, switchMap } from 'rxjs';
 import { supportCategories } from 'src/app/constants/support/categories';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
 import { CardQuestionsComponent } from '../../components/card-questions/card-questions.component';
@@ -23,6 +23,7 @@ export default class CategoryComponent implements OnInit {
   private readonly _destroyRef = inject(DestroyRef);
   private readonly _articles$ = new BehaviorSubject<Array<Article>>([]);
   public readonly articles$ = this._articles$.asObservable();
+  private readonly _router = inject(Router);
 
   public categories = supportCategories;
 
@@ -31,8 +32,12 @@ export default class CategoryComponent implements OnInit {
       .pipe(
         switchMap(param => {
           const { category } = param;
-          const articles = this._articlesService.findCategory(category);
+          const articles = this._articlesService.findByCategory(category);
           return articles;
+        }),
+        catchError(() => {
+          this._router.navigate(['/not-found']);
+          return [];
         }),
         takeUntilDestroyed(this._destroyRef),
       )

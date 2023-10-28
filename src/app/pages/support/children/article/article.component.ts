@@ -1,11 +1,12 @@
 import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ActivatedRoute, Router } from '@angular/router';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
 import type { Observable } from 'rxjs';
-import { BehaviorSubject, firstValueFrom } from 'rxjs';
+import { BehaviorSubject, catchError, switchMap } from 'rxjs';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
 import { MarkdownConverterComponent } from '../../components/markdown-converter/markdown-converter.component';
 
@@ -19,19 +20,31 @@ import { MarkdownConverterComponent } from '../../components/markdown-converter/
 export default class ArticleComponent implements OnInit {
   private readonly _routeSnapshot = inject(ActivatedRoute);
   private readonly _articlesService = inject(ArticlesService);
+  private readonly _router = inject(Router);
+  private readonly _destroyRef = inject(DestroyRef);
   private readonly _article$ = new BehaviorSubject<Article>(new Object() as Article);
   public readonly articles$ = this._article$.asObservable();
 
   public async ngOnInit(): Promise<void> {
-    const params = (await firstValueFrom(this._routeSnapshot.params)) as { category: string; article: string };
-    const article = await firstValueFrom(this._articlesService.findOne(params.article));
-    this._article$.next(article);
+    this._routeSnapshot.params
+      .pipe(
+        switchMap(param => {
+          const { article } = param;
+          const articles = this._articlesService.findOne(article);
+          return articles;
+        }),
+        catchError(() => {
+          this._router.navigate(['/not-found']);
+          return [];
+        }),
+        takeUntilDestroyed(this._destroyRef),
+      )
+      .subscribe(articles => {
+        this._article$.next(articles);
+      });
   }
 
   public get otherArticles$(): Observable<Array<Article>> {
-    return this._articlesService.findSector({
-      category: this._article$.value.category,
-      sector: this._article$.value.sector,
-    });
+    return this._articlesService.findBySector(this._article$.value.sector);
   }
 }
