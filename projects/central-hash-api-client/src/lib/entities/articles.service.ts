@@ -22,7 +22,7 @@ export class ArticlesService {
   }
 
   public findMostViewed(): Observable<Array<Article>> {
-    return this._httpClient.get<Array<Article>>(`${this.API}/articles/most-viewed`);
+    return this._httpClient.get<Array<Article>>(`${this.API}/articles/trends/most-viewed`);
   }
 
   public findByCategory(category: Category): Observable<Array<Article>> {
