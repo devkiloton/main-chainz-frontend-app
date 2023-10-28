@@ -11,6 +11,7 @@ import type { Article } from 'projects/central-hash-api-client/src/lib/models/ar
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
 import type { Observable } from 'rxjs';
 import { BehaviorSubject, catchError, map, switchMap } from 'rxjs';
+import { BreadcrumbComponent } from 'src/app/shared/breadcrumb/breadcrumb.component';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
 import { MarkdownConverterComponent } from '../../components/markdown-converter/markdown-converter.component';
 
@@ -25,6 +26,7 @@ import { MarkdownConverterComponent } from '../../components/markdown-converter/
     MatDividerModule,
     MatIconModule,
     MatButtonModule,
+    BreadcrumbComponent,
   ],
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
