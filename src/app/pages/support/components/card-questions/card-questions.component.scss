@@ -17,10 +17,8 @@ button {
         @apply opacity-100;
         @apply scale-y-105;
     }
-}
-@media screen and (min-width: 1024px) {
-    button {
+
+    @screen lg {
         width: calc(50% - 16px);
     }
-    
 }
