@@ -1,1 +1,9 @@
 <app-header></app-header>
+<section class="min-[768px]:px-16 px-4">
+  <h1 class="min-[768px]:text-5xl text-2xl font-semibold mb-8">Frequent questions</h1>
+  <app-card-questions
+    [title]="article.title"
+    [id]="article.id"
+    [category]="article.category"
+    *ngFor="let article of articles$ | async"></app-card-questions>
+</section>
