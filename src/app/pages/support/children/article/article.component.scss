@@ -6,11 +6,24 @@
 .metadata{
     @apply flex justify-between;
     @apply w-full;
-    @apply max-w-xs min-[768px]:max-w-lg min-[1024px]:max-w-3xl
+    @apply max-w-xs min-[768px]:max-w-lg min-[1024px]:max-w-3xl;
+
+    span {
+        @apply flex items-center;
+        @apply text-sm;
+        @apply gap-x-1;
+    }
+
 }
 
 .container {
     @apply flex items-center min-[768px]:items-start flex-col justify-start w-full min-[768px]:w-fit;
     @apply gap-4;
+    .bottom {
+        @apply w-full;
+        @apply flex flex-col  items-center;
+        @apply gap-2;
+        @apply font-medium;
+    }
    
 }
