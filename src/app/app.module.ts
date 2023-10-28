@@ -10,6 +10,7 @@ import { CarouselPricesComponent } from './shared/carousel-prices/carousel-price
 import { FooterComponent } from './shared/footer/footer.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { ToolBarComponent } from './shared/tool-bar/tool-bar.component';
+import { ButtonContactComponent } from './shared/button-contact/button-contact.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { ToolBarComponent } from './shared/tool-bar/tool-bar.component';
     FooterComponent,
     CarouselPricesComponent,
     SidenavComponent,
+    ButtonContactComponent,
   ],
   providers: [provideClientHydration(), { provide: HTTP_INTERCEPTORS, useClass: UniversalAppInterceptor, multi: true }],
   bootstrap: [AppComponent],
