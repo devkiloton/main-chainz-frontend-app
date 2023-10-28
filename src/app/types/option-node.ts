@@ -3,4 +3,5 @@ export type OptionNode = {
   children?: Array<OptionNode>;
   icon?: string;
   isSvg?: boolean;
+  isDisabled: boolean;
 };
