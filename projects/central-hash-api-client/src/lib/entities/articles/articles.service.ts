@@ -1,10 +1,10 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Article } from '../models/articles/article';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Sector } from '../models/articles/enum/sector';
-import { Category } from '../models/articles/enum/category';
+import { Article } from '../../models/articles/article';
+import { Category } from '../../models/articles/enum/category';
+import { Sector } from '../../models/articles/enum/sector';
 
 @Injectable({
   providedIn: 'root',

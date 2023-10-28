@@ -1,6 +1,6 @@
 import { AsyncPipe, NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
+import { ArticlesService } from 'projects/central-hash-api-client/src/lib/entities/articles/articles.service';
 import { data } from 'src/app/constants/support/grid-tiles';
 import { GridComponent } from 'src/app/shared/grid/grid.component';
 import { CardQuestionsComponent } from './components/card-questions/card-questions.component';
