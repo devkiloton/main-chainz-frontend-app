@@ -17,7 +17,11 @@
 }
 
 .container {
-    @apply flex items-center min-[768px]:items-start flex-col justify-start w-full min-[768px]:w-fit;
+    @apply flex items-center  flex-col justify-start w-full;
+    @screen md {
+        @apply items-start;
+        @apply w-fit;
+    }
     @apply gap-4;
     .bottom {
         @apply w-full;
