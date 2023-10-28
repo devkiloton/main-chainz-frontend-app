@@ -1,21 +1,20 @@
 import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, inject, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MarkdownModule } from 'ngx-markdown';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
 import type { Observable } from 'rxjs';
 import { BehaviorSubject, firstValueFrom } from 'rxjs';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
+import { MarkdownConverterComponent } from '../../components/markdown-converter/markdown-converter.component';
 
 @Component({
   standalone: true,
-  imports: [MarkdownModule, AsyncPipe, NgIf, DatePipe, TableOfContentsComponent],
+  imports: [AsyncPipe, NgIf, DatePipe, TableOfContentsComponent, MarkdownConverterComponent],
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export default class ArticleComponent implements OnInit {
   private readonly _routeSnapshot = inject(ActivatedRoute);
