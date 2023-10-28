@@ -4,6 +4,7 @@ import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { REMOVE_HIFEN_AND_UNDERSCORE } from 'src/app/regex/remove-hifen-and-underscore';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -23,13 +24,13 @@ export class BreadcrumbComponent implements OnInit {
   public async ngOnInit(): Promise<void> {
     this._routeSnapshot.url.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(() => {
       const pathFromRoot = this._routeSnapshot.pathFromRoot
-        .map(v => v.snapshot.url.map(v => v.path).join('/'))
+        .map(obj => obj.snapshot.url.map(newObj => newObj.path).join('/'))
         .join('/')
         .split('/');
-      const breadcrumbPaths = pathFromRoot.map((v, i) => {
-        const path = pathFromRoot.slice(0, i + 1).join('/');
-        const name = v.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-        return { path, name: name === '' ? 'Home' : name };
+      const breadcrumbPaths = pathFromRoot.map((value, index) => {
+        const path = pathFromRoot.slice(0, index + 1).join('/');
+        const name = value.replace(REMOVE_HIFEN_AND_UNDERSCORE, ' ');
+        return { path, name: name === '' ? 'home' : name };
       });
       this._breadcrumbPaths$.next(breadcrumbPaths);
     });
