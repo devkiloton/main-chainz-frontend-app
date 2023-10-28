@@ -18,6 +18,7 @@ export const treeData: Array<OptionNode> = [
         icon: $localize`decentralized_protocols` as string,
         isSvg: true,
         isDisabled: false,
+        route: 'decentralized-protocols',
       },
     ],
     isDisabled: false,
@@ -35,6 +36,7 @@ export const treeData: Array<OptionNode> = [
     name: $localize`Support` as string,
     icon: $localize`support_agent` as string,
     isDisabled: false,
+    route: 'support',
   },
   {
     name: $localize`Markets` as string,

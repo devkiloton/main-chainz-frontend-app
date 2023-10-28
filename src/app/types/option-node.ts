@@ -1,7 +1,8 @@
 export type OptionNode = {
   name: string;
+  isDisabled: boolean;
   children?: Array<OptionNode>;
   icon?: string;
   isSvg?: boolean;
-  isDisabled: boolean;
+  route?: string;
 };
