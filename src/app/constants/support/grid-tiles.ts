@@ -2,7 +2,7 @@ import type { GridTile } from 'src/app/types/grid-tile';
 
 export const data: Array<GridTile> = [
   {
-    text: 'My account',
+    text: $localize`My account` as string,
     icon: 'account_circle',
     route: 'support/my-account',
     isActive: true,
@@ -10,7 +10,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Deposit and withdrawal',
+    text: $localize`Deposit and withdrawal` as string,
     icon: 'payments',
     route: 'support/deposit-and-withdrawal',
     isActive: true,
@@ -18,7 +18,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Security',
+    text: $localize`Security` as string,
     icon: 'lock',
     route: 'support/security',
     isActive: true,
@@ -26,7 +26,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Anonimity',
+    text: $localize`Anonimity` as string,
     icon: 'question_mark',
     route: 'support/anonimity',
     isActive: true,
@@ -34,7 +34,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'P2P',
+    text: $localize`P2P` as string,
     icon: 'group',
     route: 'support/p2p',
     isActive: true,
@@ -42,7 +42,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Policies',
+    text: $localize`Policies` as string,
     icon: 'policy',
     route: 'support/policies',
     isActive: true,
@@ -50,7 +50,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Transfer crypto',
+    text: $localize`Transfer crypto` as string,
     icon: 'sync_alt',
     route: 'support/transfer-crypto',
     isActive: true,
@@ -58,7 +58,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Contact',
+    text: $localize`Contact` as string,
     icon: 'call',
     route: 'support/contact',
     isActive: true,
@@ -66,7 +66,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Buy and sell',
+    text: $localize`Buy and sell` as string,
     icon: 'currency_bitcoin',
     route: 'support/buy-and-sell',
     isActive: true,
@@ -74,7 +74,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Getting started',
+    text: $localize`Getting started` as string,
     icon: 'map',
     route: 'support/getting-started',
     isActive: true,
@@ -82,7 +82,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Trading',
+    text: $localize`Trading` as string,
     icon: 'rocket',
     route: 'support/trading',
     isActive: true,
@@ -90,7 +90,7 @@ export const data: Array<GridTile> = [
     rows: 1,
   },
   {
-    text: 'Terms',
+    text: $localize`Terms` as string,
     icon: 'gavel',
     route: 'support/terms',
     isActive: true,
