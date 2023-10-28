@@ -57,8 +57,14 @@ const routes: Routes = [
     loadComponent: () => import('./pages/sign-up/sign-up.component'),
   },
   {
+    title: $localize`Central Hash | Not found` as string,
+    path: 'not-found',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/not-found/not-found.component'),
+  },
+  {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'not-found',
   },
 ];
 
