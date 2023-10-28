@@ -1,9 +1,12 @@
-<app-header></app-header>
-<section class="min-[768px]:px-16 px-4">
-  <h1 class="min-[768px]:text-5xl text-2xl font-semibold mb-8">Frequent questions</h1>
-  <app-card-questions
-    [title]="article.title"
-    [id]="article.id"
-    [category]="article.category"
-    *ngFor="let article of articles$ | async"></app-card-questions>
-</section>
+<div class="min-[768px]:px-20 py-8 p-4">
+  <app-header></app-header>
+  <app-grid class="my-8" [gridData]="data"></app-grid>
+  <section class="w-full">
+    <h1 class="min-[768px]:text-5xl text-2xl font-semibold mb-8">Frequent questions</h1>
+    <app-card-questions
+      [title]="article.title"
+      [id]="article.id"
+      [category]="article.category"
+      *ngFor="let article of articles$ | async"></app-card-questions>
+  </section>
+</div>
