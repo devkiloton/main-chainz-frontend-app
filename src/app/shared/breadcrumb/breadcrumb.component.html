@@ -1,4 +1,4 @@
 <div *ngFor="let path of breadcrumbPaths$ | async as breadcrumbPaths; index as index">
-  <button class="font-medium text-sm" [routerLink]="path.path">{{ path.name }}</button>
-  <span class="m-1 text-gray-700">{{ index === breadcrumbPaths.length - 1 ? '' : '/' }}</span>
+  <button class="route" [routerLink]="path.path">{{ path.name }}</button>
+  <span class="bar">{{ index === breadcrumbPaths.length - 1 ? '' : '/' }}</span>
 </div>

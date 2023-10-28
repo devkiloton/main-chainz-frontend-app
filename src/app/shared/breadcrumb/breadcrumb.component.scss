@@ -1,3 +1,13 @@
 :host {
-    @apply flex flex-wrap
+    @apply flex flex-wrap;
+
+    .route {
+        @apply font-medium;
+        @apply text-sm;
+    }
+
+    .bar {
+        @apply  text-gray-700;
+        @apply m-1;
+    }
 }
