@@ -8,5 +8,6 @@
   <app-card-questions
     [title]="article.title"
     [id]="article.id"
+    [category]="article.category"
     *ngFor="let article of articles$ | async"></app-card-questions>
 </div>
