@@ -1,3 +1,6 @@
+/**
+ * All categories of articles
+ */
 export enum Category {
   my_account = 'my-account',
   deposit_and_withdrawal = 'deposit-and-withdrawal',
