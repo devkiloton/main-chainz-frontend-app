@@ -1,5 +1,6 @@
 <div class="parent">
   <app-table-of-contents
+    *ngIf="isHandset$ | async"
     [contents]="(otherArticles$ | async) || []"
     headerText="Other articles"></app-table-of-contents>
   <div class="container" *ngIf="this.articles$ | async as article">

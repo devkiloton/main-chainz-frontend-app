@@ -1,18 +1,19 @@
-import { AsyncPipe, NgFor } from '@angular/common';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
-import { BehaviorSubject, catchError, switchMap } from 'rxjs';
+import { BehaviorSubject, catchError, map, switchMap } from 'rxjs';
 import { supportCategories } from 'src/app/constants/support/categories';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
 import { CardQuestionsComponent } from '../../components/card-questions/card-questions.component';
 
 @Component({
   standalone: true,
-  imports: [AsyncPipe, NgFor, CardQuestionsComponent, TableOfContentsComponent],
+  imports: [AsyncPipe, NgIf, NgFor, CardQuestionsComponent, TableOfContentsComponent],
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -24,6 +25,8 @@ export default class CategoryComponent implements OnInit {
   private readonly _articles$ = new BehaviorSubject<Array<Article>>([]);
   public readonly articles$ = this._articles$.asObservable();
   private readonly _router = inject(Router);
+  private readonly _observer = inject(BreakpointObserver);
+  public readonly isHandset$ = this._observer.observe('(min-width: 768px)').pipe(map(result => result.matches));
 
   public categories = supportCategories;
 

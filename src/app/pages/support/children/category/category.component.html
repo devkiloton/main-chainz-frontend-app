@@ -1,4 +1,8 @@
-<app-table-of-contents [contents]="categories" headerText="Other categories" class="mt-2 mr-3"></app-table-of-contents>
+<app-table-of-contents
+  *ngIf="isHandset$ | async"
+  [contents]="categories"
+  headerText="Other categories"
+  class="mt-2 mr-3"></app-table-of-contents>
 <div class="w-full">
   <app-card-questions
     [title]="article.title"

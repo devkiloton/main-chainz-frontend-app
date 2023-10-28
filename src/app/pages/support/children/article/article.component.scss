@@ -11,7 +11,7 @@
 }
 
 .container {
-    @apply flex items-start flex-col justify-start w-fit;
+    @apply flex items-center min-[768px]:items-start flex-col justify-start w-full min-[768px]:w-fit;
     @apply gap-4;
    
 }
