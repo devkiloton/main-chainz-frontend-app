@@ -1,11 +1,6 @@
 <div class="container">
   <h1>{{ headerText }}</h1>
-  <button
-    mat-flat-button
-    color="primary"
-    *ngFor="let content of contents"
-    [routerLink]="'/support/' + content.id"
-    class="flex items-center gap-x-4">
+  <button mat-flat-button color="primary" *ngFor="let content of contents" [routerLink]="'/support/' + content.id">
     <mat-icon *ngIf="iconCategorySupport(content) !== null">{{ iconCategorySupport(content) }}</mat-icon>
     {{ content.title }}
   </button>

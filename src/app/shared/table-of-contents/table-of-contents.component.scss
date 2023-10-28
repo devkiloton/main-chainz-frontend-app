@@ -1,6 +1,6 @@
 .container{
-    @apply w-full;
     @apply rounded-xl;
+    @apply w-[256px];
     @apply p-3;
     background-color: var(--mat-toolbar-container-background-color);
     @apply border border-gray-500 border-solid;
@@ -13,7 +13,14 @@
     }
 
     button {
-        @apply whitespace-nowrap;
         @apply rounded-md;
+        @apply text-start;
+        @apply font-medium;
+        @apply text-sm;
+        @apply w-full;
+        @apply py-2;
+        @apply px-3;
+        @apply h-max;
+        @apply justify-start
     }
 }
