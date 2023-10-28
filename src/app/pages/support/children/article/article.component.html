@@ -4,9 +4,19 @@
     headerText="Other articles"></app-table-of-contents>
   <div class="container" *ngIf="this.articles$ | async as article">
     <div class="metadata">
-      <span>Updated at {{ article.updatedAt | date: 'shortDate' }}</span>
-      <span>{{ article.views }} views</span>
+      <span class="flex items-center gap-x-1"
+        ><mat-icon>today</mat-icon> Updated at {{ article.updatedAt | date: 'shortDate' }}</span
+      >
+      <span class="flex items-center gap-x-1"><mat-icon>visibility</mat-icon> {{ article.views }} views</span>
     </div>
+    <mat-divider class="w-full"></mat-divider>
     <app-markdown-converter [src]="article.base64"></app-markdown-converter>
+    <mat-divider class="w-full"></mat-divider>
+    <div class="flex justify-center w-full">
+      <div class="flex flex-col font-medium items-center gap-2">
+        <span>Do you still have questions?</span>
+        <button mat-flat-button color="accent" routerLink="/support">Contact support</button>
+      </div>
+    </div>
   </div>
 </div>

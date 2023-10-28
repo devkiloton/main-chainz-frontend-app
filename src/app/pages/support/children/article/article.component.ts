@@ -2,6 +2,9 @@ import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
@@ -12,7 +15,16 @@ import { MarkdownConverterComponent } from '../../components/markdown-converter/
 
 @Component({
   standalone: true,
-  imports: [AsyncPipe, NgIf, DatePipe, TableOfContentsComponent, MarkdownConverterComponent],
+  imports: [
+    AsyncPipe,
+    NgIf,
+    DatePipe,
+    TableOfContentsComponent,
+    MarkdownConverterComponent,
+    MatDividerModule,
+    MatIconModule,
+    MatButtonModule,
+  ],
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
