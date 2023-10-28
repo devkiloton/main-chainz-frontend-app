@@ -1,7 +1,6 @@
 <h1 i18n>Page not found :(</h1>
-<h3 i18n>You will be redirected to the home page in {{ 10 - ((counter$ | async) ?? 0) }} seconds</h3>
-<img
-  i18n-alt
-  class="h-20 drop-shadow-2xl"
-  alt="Nyan cat running lost through the space"
-  src="assets/gif/nyan-cat.gif" />
+<h3 i18n>
+  You will be redirected to the home page in {{ 10 - ((counter$ | async) ?? 0) }}
+  {{ (counter$ | async)! >= 9 ? 'second' : 'seconds' }}
+</h3>
+<img i18n-alt alt="Nyan cat running lost through the space" src="assets/gif/nyan-cat.gif" />

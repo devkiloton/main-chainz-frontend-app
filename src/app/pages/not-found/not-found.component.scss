@@ -1,6 +1,7 @@
 :host {
     height: calc(100vh - 98px);
-    @apply flex flex-col items-center justify-center gap-3;
+    @apply flex flex-col items-center justify-center;
+    @apply gap-3;
 
     h1 {
         @apply text-5xl;
@@ -9,5 +10,10 @@
 
     h3 {
         @apply text-2xl;
+    }
+
+    img {
+        @apply h-20;
+        @apply drop-shadow-2xl
     }
 }
