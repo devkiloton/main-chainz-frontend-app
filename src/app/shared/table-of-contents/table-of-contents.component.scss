@@ -4,7 +4,8 @@
     @apply p-3;
     background-color: var(--mat-toolbar-container-background-color);
     @apply border border-gray-500 border-solid;
-    @apply flex flex-col items-start gap-y-2;
+    @apply flex flex-col items-start;
+    @apply  gap-y-2;
     
 
     h1 {
@@ -14,13 +15,11 @@
 
     button {
         @apply rounded-md;
-        @apply text-start;
+        @apply text-sm text-start;
         @apply font-medium;
-        @apply text-sm;
         @apply w-full;
-        @apply py-2;
-        @apply px-3;
+        @apply py-2 px-3;
         @apply h-max;
-        @apply justify-start
+        @apply justify-start;
     }
 }
