@@ -8,12 +8,13 @@ import type { Article } from 'projects/central-hash-api-client/src/lib/models/ar
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
 import { BehaviorSubject, catchError, map, switchMap } from 'rxjs';
 import { supportCategories } from 'src/app/constants/support/categories';
+import { BreadcrumbComponent } from 'src/app/shared/breadcrumb/breadcrumb.component';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
 import { CardQuestionsComponent } from '../../components/card-questions/card-questions.component';
 
 @Component({
   standalone: true,
-  imports: [AsyncPipe, NgIf, NgFor, CardQuestionsComponent, TableOfContentsComponent],
+  imports: [AsyncPipe, NgIf, NgFor, CardQuestionsComponent, TableOfContentsComponent, BreadcrumbComponent],
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
