@@ -11,11 +11,11 @@ function run() {
   const port = process.env.PORT || 4000;
 
   // Start up the Node server
-  const appPt = getTranslatedServer('pt');
+  const appPtBr = getTranslatedServer('pt-BR');
   const appEn = getTranslatedServer('en-US');
 
   const server = express();
-  server.use('/pt', appPt);
+  server.use('/pt-BR', appPtBr);
   server.use('/en-US', appEn);
   server.use('', appEn);
 
