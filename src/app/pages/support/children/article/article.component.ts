@@ -10,10 +10,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from 'projects/central-hash-api-client/src/lib/entities/articles/articles.service';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import type { Observable } from 'rxjs';
-import { BehaviorSubject, catchError, map, switchMap } from 'rxjs';
+import { BehaviorSubject, catchError, map, of, switchMap } from 'rxjs';
 import { BreadcrumbComponent } from 'src/app/shared/breadcrumb/breadcrumb.component';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
 import { MarkdownConverterComponent } from '../../components/markdown-converter/markdown-converter.component';
+import { isNil } from 'lodash-es';
 
 @Component({
   standalone: true,
@@ -61,7 +62,12 @@ export default class ArticleComponent implements OnInit {
       });
   }
 
-  public get otherArticles$(): Observable<Array<Article>> {
-    return this._articlesService.findBySector(this._article$.value.sector);
+  public get otherArticles$(): Observable<Array<Article> | null> {
+    const { category } = this._article$.value;
+
+    if (isNil(category)) {
+      return of(null);
+    }
+    return this._articlesService.findByCategory(category);
   }
 }

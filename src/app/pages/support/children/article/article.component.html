@@ -11,7 +11,7 @@
       <span i18n><mat-icon>visibility</mat-icon> {{ article.views }} views</span>
     </div>
     <mat-divider class="w-full"></mat-divider>
-    <app-markdown-converter [src]="article.base64"></app-markdown-converter>
+    <app-markdown-converter *ngIf="article.base64" [src]="article.base64"></app-markdown-converter>
     <mat-divider class="w-full"></mat-divider>
     <div class="bottom">
       <span i18n>Do you still have questions?</span>
