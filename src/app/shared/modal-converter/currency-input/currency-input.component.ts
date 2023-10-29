@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
-import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 import { isCurrency } from 'src/app/type-guards/is-currency';
 import { isFiatCurrency } from 'src/app/type-guards/is-fiat-currency';

@@ -8,7 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { BehaviorSubject, map } from 'rxjs';
-import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
 import { ThemesService } from 'src/app/services/themes/themes.service';
 import { ButtonChangeCurrencyComponent } from '../button-change-currency/button-change-currency.component';
