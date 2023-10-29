@@ -1,6 +1,6 @@
 <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-    <button matRipple class="button-node">
+    <button (click)="changeRoute(node.route)" [disabled]="node.isDisabled" matRipple class="button-node">
       <mat-icon class="big" [svgIcon]="node.isSvg ? node.icon : ''">{{ node.icon }}</mat-icon>
       <span>{{ node.name }}</span>
     </button>
