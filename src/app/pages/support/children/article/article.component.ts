@@ -7,14 +7,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ArticlesService } from 'projects/central-hash-api-client/src/lib/entities/articles/articles.service';
+import { isNil } from 'lodash-es';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import type { Observable } from 'rxjs';
 import { BehaviorSubject, catchError, map, of, switchMap } from 'rxjs';
 import { BreadcrumbComponent } from 'src/app/shared/breadcrumb/breadcrumb.component';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
+import { ArticlesStoreService } from 'src/app/stores/articles/articles-store.service';
 import { MarkdownConverterComponent } from '../../components/markdown-converter/markdown-converter.component';
-import { isNil } from 'lodash-es';
 
 @Component({
   standalone: true,
@@ -35,7 +35,7 @@ import { isNil } from 'lodash-es';
 })
 export default class ArticleComponent implements OnInit {
   private readonly _routeSnapshot = inject(ActivatedRoute);
-  private readonly _articlesService = inject(ArticlesService);
+  private readonly _articlesStoreService = inject(ArticlesStoreService);
   private readonly _router = inject(Router);
   private readonly _destroyRef = inject(DestroyRef);
   private readonly _article$ = new BehaviorSubject<Article>(new Object() as Article);
@@ -47,8 +47,9 @@ export default class ArticleComponent implements OnInit {
     this._routeSnapshot.params
       .pipe(
         switchMap(param => {
-          const { article } = param;
-          const articles = this._articlesService.findOne(article);
+          const { article, category } = param;
+          this._articlesStoreService.load(category);
+          const articles = this._articlesStoreService.findOne(article);
           return articles;
         }),
         catchError(() => {
@@ -68,6 +69,6 @@ export default class ArticleComponent implements OnInit {
     if (isNil(category)) {
       return of(null);
     }
-    return this._articlesService.findByCategory(category);
+    return this._articlesStoreService.findByCategory(category);
   }
 }
