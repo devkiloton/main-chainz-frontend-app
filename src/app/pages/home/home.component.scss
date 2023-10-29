@@ -4,7 +4,10 @@
 
   .animation {
     @apply relative w-screen;
-    height: calc(100vh - 99px);
+    height: calc(90vh - 99px);
+    @screen md {
+      height: calc(100vh - 99px);
+    }
   }
 
   .over-animation {
@@ -14,13 +17,13 @@
     @apply min-[1024px]:flex-row;
 
     div > p {
-      @apply min-[768px]:text-5xl min-[1024px]:text-6xl text-4xl text-center min-[1024px]:text-left;
+      @apply min-[768px]:text-3xl min-[1024px]:text-6xl text-xl leading-5 text-center min-[1024px]:text-left;
     }
   }
 
   .prices {
     @apply w-full;
-    height: calc(100vh - 99px);
+    @apply py-16;
     @apply flex items-center;
     @apply relative;
 
@@ -31,12 +34,12 @@
       @apply pb-16 pt-6;
       @apply overflow-hidden;
       @apply max-h-[250px];
-      @apply top-[-120px];
+      @apply top-[-150px];
     }
   }
 
   .markets {
-    @apply flex flex-col gap-y-8 w-full mt-16;
+    @apply flex flex-col gap-y-8 w-full ;
     @apply px-4 min-[1024px]:px-20;
     span {
       @apply text-2xl min-[768px]:text-5xl self-start font-bold;
@@ -45,7 +48,7 @@
 
   .questions {
     @apply w-full;
-    min-height: calc(100vh - 99px);
+    @apply py-16;
     @apply flex items-center flex-col gap-y-8;
     @apply px-4 min-[1024px]:px-20;
 

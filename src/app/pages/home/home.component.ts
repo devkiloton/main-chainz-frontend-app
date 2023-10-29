@@ -8,11 +8,14 @@ import type { Observable } from 'rxjs';
 import { map, of, switchMap } from 'rxjs';
 import { questionsAndAnswers } from 'src/app/constants/home/questions-and-answers';
 import { supportedCurrencies } from 'src/app/constants/supported-currencies';
+import { ShapeBehindDirective } from 'src/app/directives/shape-behind/shape-behind.directive';
 import { ModalConverterComponent } from 'src/app/shared/modal-converter/modal-converter.component';
 import { TablePricesComponent } from 'src/app/shared/table-prices/table-prices.component';
 import { CurrenciesStoreService } from 'src/app/stores';
 import { ParticleBgComponent } from '../../shared/particle-bg/particle-bg.component';
 import { CardBuyComponent } from './components/card-buy/card-buy.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { ThemesService } from 'src/app/services/themes/themes.service';
 
 @Component({
   templateUrl: './home.component.html',
@@ -30,9 +33,13 @@ import { CardBuyComponent } from './components/card-buy/card-buy.component';
     NgIf,
     CardBuyComponent,
     ModalConverterComponent,
+    ShapeBehindDirective,
+    MatDividerModule,
   ],
 })
 export default class HomeComponent {
+  private readonly _themes$ = inject(ThemesService);
+  public readonly theme$ = this._themes$.theme$;
   private readonly _currencies = inject(CurrenciesStoreService);
   public readonly currenciesBroadCast$: Observable<Array<Currency> | null> = this._currencies.broadCast$.pipe(
     switchMap(currencies => (currencies.length > 0 ? of(currencies) : of(null))),
