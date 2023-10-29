@@ -20,8 +20,9 @@ const routes: Routes = [
     title: $localize`Central Hash | Decentralized protocols` as string,
     path: 'decentralized-protocols',
     pathMatch: 'full',
-    loadComponent: () => import('./pages/decentralized-protocols/decentralized-protocols.component')
-},{
+    loadComponent: () => import('./pages/decentralized-protocols/decentralized-protocols.component'),
+  },
+  {
     title: $localize`Central Hash | Support` as string,
     path: 'support',
     children: [
