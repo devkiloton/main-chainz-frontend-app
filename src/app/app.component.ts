@@ -5,7 +5,8 @@ import { Component, Inject, inject, LOCALE_ID, PLATFORM_ID } from '@angular/core
 import { MatIconRegistry } from '@angular/material/icon';
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { DomSanitizer } from '@angular/platform-browser';
-import type { Locales } from './enums/locales';
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { Locales } from './enums/locales';
 import { getFiatAccordingLocale } from './helpers/get-fiat-according-locale';
 import { LocalStorageService } from './services/local-storage/local-storage.service';
 import { ThemesService } from './services/themes/themes.service';
