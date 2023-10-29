@@ -3,6 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ButtonContactComponent } from './shared/button-contact/button-contact.component';
 import { CarouselPricesComponent } from './shared/carousel-prices/carousel-prices.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
@@ -19,6 +20,7 @@ describe('AppComponent', () => {
         HttpClientTestingModule,
         SidenavComponent,
         BrowserAnimationsModule,
+        ButtonContactComponent,
       ],
       declarations: [AppComponent],
     }),

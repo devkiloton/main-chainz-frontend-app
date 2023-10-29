@@ -1,5 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import SupportComponent from './support.component';
 
 describe('SupportComponent', () => {
@@ -8,7 +10,7 @@ describe('SupportComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [SupportComponent],
+      imports: [SupportComponent, HttpClientTestingModule, BrowserAnimationsModule],
     });
     fixture = TestBed.createComponent(SupportComponent);
     component = fixture.componentInstance;

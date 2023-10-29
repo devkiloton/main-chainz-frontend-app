@@ -1,5 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
+import { MarkdownModule } from 'ngx-markdown';
 import { MarkdownConverterComponent } from './markdown-converter.component';
 
 describe('MarkdownConverterComponent', () => {
@@ -8,7 +10,7 @@ describe('MarkdownConverterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [MarkdownConverterComponent],
+      imports: [MarkdownConverterComponent, HttpClientTestingModule, MarkdownModule.forRoot()],
     });
     fixture = TestBed.createComponent(MarkdownConverterComponent);
     component = fixture.componentInstance;
