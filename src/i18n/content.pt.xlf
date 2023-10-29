@@ -4,56 +4,56 @@
   <file source-language="pt" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="175624764029194350" datatype="html">
-        <source>Central Hash</source>
+        <source>Main Chainz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7200801166640400616" datatype="html">
-        <source>Central Hash | Inicio</source>
+        <source>Main Chainz | Inicio</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1747126662927806548" datatype="html">
-        <source>Central Hash | Criar carteira</source>
+        <source>Main Chainz | Criar carteira</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9073462274412492633" datatype="html">
-        <source>Central Hash | Verificar carteira</source>
+        <source>Main Chainz | Verificar carteira</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6704896490811356993" datatype="html">
-        <source>Central Hash | Fazer transferência</source>
+        <source>Main Chainz | Fazer transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1214745977726045534" datatype="html">
-        <source>Central Hash | Verificar transferência</source>
+        <source>Main Chainz | Verificar transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4252027105627904167" datatype="html">
-        <source>Central Hash | Verificar taxa de transferência</source>
+        <source>Main Chainz | Verificar taxa de transferência</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5689410621135019134" datatype="html">
-        <source>Central Hash | Verificar histórico de transações</source>
+        <source>Main Chainz | Verificar histórico de transações</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">49</context>
@@ -180,7 +180,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="6902968760689535546" datatype="html">
-        <source>Logo do Central hash</source>
+        <source>Logo do Main Chainz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
           <context context-type="linenumber">2</context>
@@ -198,7 +198,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="4114200202781656348" datatype="html">
-        <source>Logo do Central Hash.</source>
+        <source>Logo do Main Chainz.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
           <context context-type="linenumber">7</context>

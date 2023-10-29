@@ -1,58 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="175624764029194350" datatype="html">
-        <source>Central Hash</source>
+        <source>Main Chainz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7200801166640400616" datatype="html">
-        <source>Central Hash | Home</source>
+        <source>Main Chainz | Home</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1747126662927806548" datatype="html">
-        <source>Central Hash | Create wallet</source>
+        <source>Main Chainz | Create wallet</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9073462274412492633" datatype="html">
-        <source>Central Hash | Check wallet</source>
+        <source>Main Chainz | Check wallet</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6704896490811356993" datatype="html">
-        <source>Central Hash | Create transfer</source>
+        <source>Main Chainz | Create transfer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1214745977726045534" datatype="html">
-        <source>Central Hash | Check transfer</source>
+        <source>Main Chainz | Check transfer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4252027105627904167" datatype="html">
-        <source>Central Hash | Check transaction fee</source>
+        <source>Main Chainz | Check transaction fee</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5689410621135019134" datatype="html">
-        <source>Central Hash | Check transaction history</source>
+        <source>Main Chainz | Check transaction history</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
           <context context-type="linenumber">49</context>
@@ -179,7 +180,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="6902968760689535546" datatype="html">
-        <source>Central hash logo</source>
+        <source>Main Chainz logo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
           <context context-type="linenumber">2</context>
@@ -197,7 +198,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="4114200202781656348" datatype="html">
-        <source>Central Hash logo.</source>
+        <source>Main Chainz logo.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
           <context context-type="linenumber">7</context>
@@ -314,28 +315,39 @@
         </context-group>
       </trans-unit>
       <trans-unit id="6767315089642655383" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{ wallet.name }}"/> icon</source>
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{ wallet.name }}"/>
+ icon</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/wallet-card/wallet-card.component.html</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3107457437187088438" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Wallet address:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <source>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>
+Wallet address:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/wallet-card/wallet-card.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1665996634803926072" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Unconfirmed balance:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <source>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>
+Unconfirmed balance:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/wallet-card/wallet-card.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4616850336492393172" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Total of transactions:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <source>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>
+Total of transactions:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/wallet-card/wallet-card.component.html</context>
           <context context-type="linenumber">23</context>
