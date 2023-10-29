@@ -17,7 +17,7 @@ import { BehaviorSubject, firstValueFrom, merge } from 'rxjs';
 import { cardAlert } from 'src/app/constants/sign-in/card-alert';
 import { dialogErrors } from 'src/app/constants/sign-in/forgot-password-dialogue-errors';
 import { dialogueSteps } from 'src/app/constants/sign-in/forgot-password-dialogue-steps';
-import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { strongPasswordValidator } from 'src/app/validators/strong-password.validator';
 import { AlertCardComponent } from '../alert-card/alert-card.component';
 import { InputTextComponent } from '../input-text/input-text.component';

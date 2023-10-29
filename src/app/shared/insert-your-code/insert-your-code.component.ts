@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { BehaviorSubject, map } from 'rxjs';
 import { cardAlert } from 'src/app/constants/sign-in/card-alert';
-import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { AlertCardComponent } from 'src/app/shared/alert-card/alert-card.component';
 import { ButtonPrimaryComponent } from 'src/app/shared/button-primary/button-primary.component';
 import { ButtonSecondaryComponent } from 'src/app/shared/button-secondary/button-secondary.component';
