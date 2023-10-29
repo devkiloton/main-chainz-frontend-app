@@ -13,24 +13,22 @@
   .over-animation {
     @apply font-bold;
     @apply absolute;
-    @apply transform translate-x-[-50%] translate-y-[-50%] ;
+    @apply transform translate-x-[-50%] translate-y-[-50%];
     @apply text-left;
-    @apply  top-[40%] left-[50%];
+    @apply top-[40%] left-[50%];
     @apply w-full p-4;
     @apply flex justify-between items-center flex-col gap-5;
     @screen lg {
       @apply flex-row;
       @apply justify-around;
       @apply p-32;
-      
     }
 
     div {
       @apply flex flex-col items-center justify-center;
       @screen lg {
-      @apply items-start;
-      @apply max-w-[300px];
-      
+        @apply items-start;
+        @apply max-w-[300px];
       }
     }
 
@@ -62,7 +60,7 @@
   }
 
   .markets {
-    @apply flex flex-col gap-y-8 w-full ;
+    @apply flex flex-col gap-y-8 w-full;
     @apply px-4 min-[1024px]:px-20;
     span {
       @apply font-bold;

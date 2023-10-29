@@ -1,6 +1,7 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
@@ -9,13 +10,12 @@ import { map, of, switchMap } from 'rxjs';
 import { questionsAndAnswers } from 'src/app/constants/home/questions-and-answers';
 import { supportedCurrencies } from 'src/app/constants/supported-currencies';
 import { ShapeBehindDirective } from 'src/app/directives/shape-behind/shape-behind.directive';
+import { ThemesService } from 'src/app/services/themes/themes.service';
 import { ModalConverterComponent } from 'src/app/shared/modal-converter/modal-converter.component';
 import { TablePricesComponent } from 'src/app/shared/table-prices/table-prices.component';
 import { CurrenciesStoreService } from 'src/app/stores';
 import { ParticleBgComponent } from '../../shared/particle-bg/particle-bg.component';
 import { CardBuyComponent } from './components/card-buy/card-buy.component';
-import { MatDividerModule } from '@angular/material/divider';
-import { ThemesService } from 'src/app/services/themes/themes.service';
 
 @Component({
   templateUrl: './home.component.html',
