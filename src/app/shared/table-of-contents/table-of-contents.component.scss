@@ -1,25 +1,24 @@
-.container{
-    @apply rounded-xl;
-    @apply w-[256px];
-    @apply p-3;
-    background-color: var(--mat-toolbar-container-background-color);
-    @apply border border-gray-500 border-solid;
-    @apply flex flex-col items-start;
-    @apply  gap-y-2;
-    
+.container {
+  @apply rounded-xl;
+  @apply w-[256px];
+  @apply p-3;
+  background-color: var(--mat-toolbar-container-background-color);
+  @apply border border-gray-500 border-solid;
+  @apply flex flex-col items-start;
+  @apply gap-y-2;
 
-    h1 {
-        @apply text-2xl;
-        @apply font-semibold;
-    }
+  h1 {
+    @apply text-2xl;
+    @apply font-semibold;
+  }
 
-    button {
-        @apply rounded-md;
-        @apply text-sm text-start;
-        @apply font-medium;
-        @apply w-full;
-        @apply py-2 px-3;
-        @apply h-max;
-        @apply justify-start;
-    }
+  button {
+    @apply rounded-md;
+    @apply text-sm text-start;
+    @apply font-medium;
+    @apply w-full;
+    @apply py-2 px-3;
+    @apply h-max;
+    @apply justify-start;
+  }
 }

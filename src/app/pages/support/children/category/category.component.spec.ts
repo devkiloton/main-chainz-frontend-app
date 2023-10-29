@@ -1,16 +1,16 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import CategoryComponent from './category.component';
 
-import { CategoriesComponent } from './categories.component';
-
-describe('CategoriesComponent', () => {
-  let component: CategoriesComponent;
-  let fixture: ComponentFixture<CategoriesComponent>;
+describe('CategoryComponent', () => {
+  let component: CategoryComponent | null = null;
+  let fixture: ComponentFixture<CategoryComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CategoriesComponent]
+      imports: [CategoryComponent],
     });
-    fixture = TestBed.createComponent(CategoriesComponent);
+    fixture = TestBed.createComponent(CategoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

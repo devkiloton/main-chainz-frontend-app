@@ -1,15 +1,14 @@
+:host {
+  @apply w-full;
+  @apply min-[768px]:px-20 py-8 px-4;
 
-    :host {
-        @apply w-full;
-        @apply min-[768px]:px-20 py-8 px-4;
+  section {
+    @apply min-[768px]:px-20 py-8 px-4;
+  }
 
-        section {
-           @apply min-[768px]:px-20 py-8 px-4
-        }
-
-        .title {
-            @apply min-[768px]:text-5xl text-2xl; 
-            @apply font-semibold;
-            @apply mb-8;
-        }
-    }
+  .title {
+    @apply min-[768px]:text-5xl text-2xl;
+    @apply font-semibold;
+    @apply mb-8;
+  }
+}

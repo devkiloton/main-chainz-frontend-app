@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { ButtonContactComponent } from './button-contact.component';
 
 describe('ButtonContactComponent', () => {
-  let component: ButtonContactComponent;
-  let fixture: ComponentFixture<ButtonContactComponent>;
+  let component: ButtonContactComponent | null = null;
+  let fixture: ComponentFixture<ButtonContactComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ButtonContactComponent]
+      imports: [ButtonContactComponent],
     });
     fixture = TestBed.createComponent(ButtonContactComponent);
     component = fixture.componentInstance;
