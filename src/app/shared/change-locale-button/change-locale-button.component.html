@@ -2,13 +2,13 @@
   <mat-icon>translate</mat-icon>
 </button>
 <mat-menu #menuLanguages="matMenu">
-  <button mat-menu-item (appAccessiblePress)="changeLocaleServer('en-US')">
+  <button mat-menu-item (appAccessiblePress)="changeLocaleServer(locales.en_us)">
     <div class="flex items-center gap-x-2">
       <img src="assets/images/flags/USD.webp" i18n-alt alt="United States flag." class="flag" />
       <span>English (USA)</span>
     </div>
   </button>
-  <button mat-menu-item (appAccessiblePress)="changeLocaleServer('pt')">
+  <button mat-menu-item (appAccessiblePress)="changeLocaleServer(locales.pt_br)">
     <div class="flex items-center gap-x-2">
       <img src="assets/images/flags/BRL.webp" i18n-alt alt="Brazil flag." class="flag" />
       <span>Português (Brasil)</span>

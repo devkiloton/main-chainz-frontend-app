@@ -1,0 +1,32 @@
+.parent {
+  @apply p-6;
+  @apply flex;
+  @apply gap-x-6;
+  min-height: calc(100vh - 99px);
+}
+.metadata {
+  @apply flex justify-between;
+  @apply w-full;
+  @apply max-w-xs min-[768px]:max-w-lg min-[1024px]:max-w-3xl;
+
+  span {
+    @apply flex items-center;
+    @apply text-sm;
+    @apply gap-x-1;
+  }
+}
+
+.container {
+  @apply flex items-center  flex-col justify-start w-full;
+  @screen md {
+    @apply items-start;
+    @apply w-fit;
+  }
+  @apply gap-4;
+  .bottom {
+    @apply w-full;
+    @apply flex flex-col  items-center;
+    @apply gap-2;
+    @apply font-medium;
+  }
+}
