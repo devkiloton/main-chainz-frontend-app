@@ -1,8 +1,8 @@
 import { AsyncPipe, NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { ArticlesService } from 'projects/central-hash-api-client/src/lib/entities/articles/articles.service';
 import { data } from 'src/app/constants/support/grid-tiles';
 import { GridComponent } from 'src/app/shared/grid/grid.component';
+import { ArticlesStoreService } from 'src/app/stores/articles/articles-store.service';
 import { CardQuestionsComponent } from './components/card-questions/card-questions.component';
 import { HeaderComponent } from './components/header/header.component';
 
@@ -14,9 +14,9 @@ import { HeaderComponent } from './components/header/header.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class SupportComponent {
-  private readonly _articlesService = inject(ArticlesService);
+  private readonly _articlesStoreService = inject(ArticlesStoreService);
 
   public data = data;
 
-  public readonly articles$ = this._articlesService.findMostViewed();
+  public readonly articles$ = this._articlesStoreService.findMostViewed();
 }

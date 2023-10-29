@@ -3,7 +3,8 @@ import { isNil } from 'lodash-es';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import type { Category } from 'projects/central-hash-api-client/src/lib/models/articles/enum/category';
 import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
-import { BehaviorSubject, firstValueFrom, Observable, of } from 'rxjs';
+import type { Observable } from 'rxjs';
+import { BehaviorSubject, firstValueFrom, of } from 'rxjs';
 
 export type ArticleStoreState = Array<Article>;
 
@@ -32,7 +33,7 @@ export class ArticlesStoreService {
     return of(article);
   }
 
-  public mostViewed(): Observable<Array<Article>> {
+  public findMostViewed(): Observable<Array<Article>> {
     const state = this._state$.getValue();
     if (!state.length) {
       return this._articlesService.findMostViewed();
@@ -48,7 +49,7 @@ export class ArticlesStoreService {
   public findByCategory(category: Category): Observable<Array<Article>> {
     const state = this._state$.getValue();
     const articles = state.filter(item => item.category === category);
-    if (!articles.length) {
+    if (articles.length < 10) {
       return this._articlesService.findByCategory(category);
     }
     return of(articles);

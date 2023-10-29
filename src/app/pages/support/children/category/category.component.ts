@@ -4,12 +4,12 @@ import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ArticlesService } from 'projects/central-hash-api-client/src/lib/entities/articles/articles.service';
 import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
 import { BehaviorSubject, catchError, map, switchMap } from 'rxjs';
 import { supportCategories } from 'src/app/constants/support/categories';
 import { BreadcrumbComponent } from 'src/app/shared/breadcrumb/breadcrumb.component';
 import { TableOfContentsComponent } from 'src/app/shared/table-of-contents/table-of-contents.component';
+import { ArticlesStoreService } from 'src/app/stores/articles/articles-store.service';
 import { CardQuestionsComponent } from '../../components/card-questions/card-questions.component';
 
 @Component({
@@ -21,7 +21,7 @@ import { CardQuestionsComponent } from '../../components/card-questions/card-que
 })
 export default class CategoryComponent implements OnInit {
   private readonly _routeSnapshot = inject(ActivatedRoute);
-  private readonly _articlesService = inject(ArticlesService);
+  private readonly _articlesStoreService = inject(ArticlesStoreService);
   private readonly _destroyRef = inject(DestroyRef);
   private readonly _articles$ = new BehaviorSubject<Array<Article>>([]);
   public readonly articles$ = this._articles$.asObservable();
@@ -36,7 +36,8 @@ export default class CategoryComponent implements OnInit {
       .pipe(
         switchMap(param => {
           const { category } = param;
-          const articles = this._articlesService.findByCategory(category);
+          this._articlesStoreService.load(category);
+          const articles = this._articlesStoreService.findByCategory(category);
           return articles;
         }),
         catchError(() => {
