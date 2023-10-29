@@ -1,75 +1,43 @@
 :host {
   @apply py-16;
+
+  h1 {
+    @apply text-5xl font-bold;
+    @apply text-start;
+  }
+
+  p {
+    @apply text-start;
+    @apply mt-5;
+    @apply max-w-3xl;
+  }
+
+  img {
+    @apply my-3;
+
+    @apply w-1/2;
+    @apply min-w-[100px];
+  }
+
   .section-one {
     @apply px-16 py-4;
     @apply flex items-center justify-start flex-col min-[768px]:flex-row;
     background-color: var(--mat-toolbar-container-background-color);
 
     min-height: calc(60vh - 98px);
-
-    h1 {
-      @apply text-5xl font-bold;
-      @apply text-start;
-    }
-
-    p {
-      @apply text-start;
-      @apply mt-5;
-      @apply max-w-3xl;
-    }
-
-    img {
-      @apply my-3;
-
-      @apply w-1/2;
-      @apply min-w-[100px];
-    }
   }
 
-  .section-two {
+  .img-right {
     @apply px-16 py-4;
     @apply flex items-center justify-start flex-col-reverse min-[768px]:flex-row;
 
     min-height: calc(60vh - 98px);
-
-    h1 {
-      @apply text-5xl font-bold;
-      @apply text-start;
-    }
-
-    p {
-      @apply text-start;
-      @apply mt-5;
-      @apply max-w-3xl;
-    }
-
-    img {
-      @apply my-3;
-      @apply w-1/2;
-      @apply min-w-[100px];
-    }
   }
 
-  .section-three {
+  .img-left {
     @apply px-16 py-4;
     @apply flex items-center justify-start flex-col min-[768px]:flex-row;
     @apply opacity-40;
     min-height: calc(60vh - 98px);
-
-    h1 {
-      @apply text-5xl font-bold;
-      @apply text-start;
-    }
-
-    p {
-      @apply text-start;
-      @apply mt-5;
-      @apply max-w-3xl;
-    }
-
-    img {
-      @apply w-1/2;
-      @apply min-w-[100px];
-    }
   }
 }
