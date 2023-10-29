@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { Locales } from 'src/app/enums/locales';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -17,6 +18,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ChangeLocaleButtonComponent {
   private readonly _router = inject(Router);
+  public readonly locales = Locales;
 
   constructor(@Inject(DOCUMENT) private readonly _document: Document) {}
 

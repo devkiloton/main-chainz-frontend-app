@@ -1,0 +1,27 @@
+:host {
+  @apply flex flex-col justify-between items-center;
+  @apply rounded-2xl;
+  @apply gap-16;
+
+  .container {
+    @apply flex flex-col gap-y-6;
+    @apply w-fit;
+    @apply shadow-raised;
+    @apply rounded-xl;
+    @apply min-[768px]:p-8 p-4;
+    background-color: var(--mat-toolbar-container-background-color);
+  }
+
+  .description {
+    @apply min-[768px]:text-2xl text-lg;
+    @apply font-medium;
+    @apply text-gray-700;
+  }
+
+  .title {
+    @apply min-[768px]:text-6xl text-2xl;
+    @apply font-bold;
+    @apply whitespace-nowrap;
+    @apply mx-10;
+  }
+}

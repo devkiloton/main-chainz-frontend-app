@@ -2,9 +2,11 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MarkdownModule } from 'ngx-markdown';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UniversalAppInterceptor } from './interceptors/universal-interceptor/universal-app.interceptor';
+import { ButtonContactComponent } from './shared/button-contact/button-contact.component';
 import { CarouselPricesComponent } from './shared/carousel-prices/carousel-prices.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
@@ -18,6 +20,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MarkdownModule.forRoot(),
     ToolBarComponent,
     FooterComponent,
     CarouselPricesComponent,
@@ -28,6 +31,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    ButtonContactComponent,
   ],
   providers: [provideClientHydration(), { provide: HTTP_INTERCEPTORS, useClass: UniversalAppInterceptor, multi: true }],
   bootstrap: [AppComponent],

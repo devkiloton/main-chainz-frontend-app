@@ -1,0 +1,13 @@
+<app-table-of-contents
+  *ngIf="isHandset$ | async"
+  [contents]="categories"
+  headerText="Other categories"
+  class="mr-4"></app-table-of-contents>
+<div class="w-full">
+  <app-breadcrumb class="ml-2"></app-breadcrumb>
+  <app-card-questions
+    [title]="article.title"
+    [id]="article.id"
+    [category]="article.category"
+    *ngFor="let article of articles$ | async"></app-card-questions>
+</div>

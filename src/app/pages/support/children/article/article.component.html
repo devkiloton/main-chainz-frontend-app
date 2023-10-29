@@ -1,0 +1,21 @@
+<div class="parent">
+  <app-table-of-contents
+    *ngIf="isHandset$ | async"
+    [contents]="(otherArticles$ | async) || []"
+    i18n-headerText
+    headerText="Other articles"></app-table-of-contents>
+  <div class="container" *ngIf="this.articles$ | async as article">
+    <app-breadcrumb></app-breadcrumb>
+    <div class="metadata">
+      <span i18n><mat-icon>today</mat-icon> Updated at {{ article.updatedAt | date: 'shortDate' }}</span>
+      <span i18n><mat-icon>visibility</mat-icon> {{ article.views }} views</span>
+    </div>
+    <mat-divider class="w-full"></mat-divider>
+    <app-markdown-converter *ngIf="article.base64" [src]="article.base64"></app-markdown-converter>
+    <mat-divider class="w-full"></mat-divider>
+    <div class="bottom">
+      <span i18n>Do you still have questions?</span>
+      <button mat-flat-button color="accent" routerLink="/support" i18n>Contact support</button>
+    </div>
+  </div>
+</div>

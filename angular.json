@@ -16,9 +16,9 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "pt": {
+          "pt-BR": {
             "translation": "src/i18n/content.pt.xlf",
-            "baseHref": "pt/"
+            "baseHref": "pt-BR/"
           }
         }
       },
@@ -38,7 +38,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": ["src/styles.scss"],
-            "scripts": [],
+            "scripts": ["node_modules/marked/marked.min.js"],
             "localize": true,
             "i18nMissingTranslation": "warning",
             "serviceWorker": true,
@@ -48,8 +48,8 @@
             "en-US": {
               "localize": ["en-US"]
             },
-            "pt": {
-              "localize": ["pt"]
+            "pt-BR": {
+              "localize": ["pt-BR"]
             },
             "production": {
               "budgets": [

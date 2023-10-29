@@ -61,10 +61,10 @@ export const app = (lang: string): express.Express => {
 const run = (): void => {
   const port = process.env['PORT'] ?? 4000;
 
-  const appPt = app('pt');
+  const appPt = app('pt-BR');
   const appEn = app('en-US');
   const server = express();
-  server.use('/pt', appPt);
+  server.use('/pt-BR', appPt);
   server.use('/en-US', appEn);
   server.use('', appPt);
   server.listen(port, () => {
