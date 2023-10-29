@@ -17,13 +17,13 @@ const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component'),
   },
   {
-    title: $localize`Central Hash | Decentralized protocols` as string,
+    title: $localize`Main Chainz | Decentralized protocols` as string,
     path: 'decentralized-protocols',
     pathMatch: 'full',
     loadComponent: () => import('./pages/decentralized-protocols/decentralized-protocols.component'),
   },
   {
-    title: $localize`Central Hash | Support` as string,
+    title: $localize`Main Chainz | Support` as string,
     path: 'support',
     children: [
       {
