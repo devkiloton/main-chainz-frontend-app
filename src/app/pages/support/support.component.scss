@@ -9,6 +9,7 @@
   .title {
     @apply min-[768px]:text-5xl text-2xl;
     @apply font-semibold;
+    @apply w-fit;
     @apply mb-8;
   }
 }
