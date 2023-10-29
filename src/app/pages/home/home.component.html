@@ -2,11 +2,24 @@
   <app-particle-bg></app-particle-bg>
   <div class="over-animation">
     <div>
-      <p class="slogan" i18n>Decrypt an<br />alternative reality <br />with Central Hash</p>
+      <p class="mb-2" i18n>Decrypt an alternative reality with</p>
+      <img
+        *ngIf="(theme$ | async) === 'dark-mode'"
+        i18n-alt
+        alt="Main Chainz logo."
+        class="w-72"
+        src="assets/images/white-logo.svg" />
+      <img
+        *ngIf="(theme$ | async) === 'light-mode'"
+        i18n-alt
+        alt="Main Chainz logo."
+        class="w-72"
+        src="assets/images/black-logo.svg" />
     </div>
     <app-modal-converter class="mat-elevation-z24"></app-modal-converter>
   </div>
 </section>
+<mat-divider class="w-full"></mat-divider>
 <section class="prices">
   <div class="buy-cards">
     <app-card-buy
@@ -17,12 +30,14 @@
       [priceChange24h]="currency.priceChange24h"></app-card-buy>
   </div>
   <div class="markets">
-    <span i18n>Take a look in the markets</span>
+    <span i18n appShapeBehind>Take a look in the markets</span>
     <app-table-prices *ngIf="currenciesBroadCast$ | async as currencies" [currencies]="currencies"></app-table-prices>
   </div>
 </section>
+<mat-divider class="w-full"></mat-divider>
+
 <section class="questions">
-  <span i18n>Frequent questions</span>
+  <span i18n appShapeBehind cl>Frequent questions</span>
   <mat-accordion class="w-full rounded-md">
     <mat-expansion-panel
       class="mat-elevation-z2"

@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
-import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { Locales } from 'src/app/enums/locales';
 import { environment } from 'src/environments/environment';
 

@@ -6,7 +6,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
-import { AccessiblePressDirective } from 'src/app/directives/accessible-press.directive';
+import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import type { GridTile } from 'src/app/types/grid-tile';
 
 @Component({

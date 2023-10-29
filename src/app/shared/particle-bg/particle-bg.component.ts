@@ -77,10 +77,10 @@ export class ParticleBgComponent {
     },
     particles: {
       color: {
-        value: '#212121',
+        value: '#651fff',
       },
       links: {
-        color: '#212121',
+        color: '#651fff',
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -167,10 +167,10 @@ export class ParticleBgComponent {
     },
     particles: {
       color: {
-        value: '#ffffff',
+        value: '#1de9b6',
       },
       links: {
-        color: '#ffffff',
+        color: '#1de9b6',
         distance: 150,
         enable: true,
         opacity: 0.5,

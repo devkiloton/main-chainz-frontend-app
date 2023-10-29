@@ -4,48 +4,74 @@
 
   .animation {
     @apply relative w-screen;
-    height: calc(100vh - 99px);
+    height: calc(90vh - 99px);
+    @screen md {
+      height: calc(100vh - 99px);
+    }
   }
 
   .over-animation {
-    @apply font-bold absolute top-[40%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-left;
-    @apply w-full min-[1024px]:p-32 p-4;
+    @apply font-bold;
+    @apply absolute;
+    @apply transform translate-x-[-50%] translate-y-[-50%];
+    @apply text-left;
+    @apply top-[40%] left-[50%];
+    @apply w-full p-4;
     @apply flex justify-between items-center flex-col gap-5;
-    @apply min-[1024px]:flex-row;
+    @screen lg {
+      @apply flex-row;
+      @apply justify-around;
+      @apply p-32;
+    }
+
+    div {
+      @apply flex flex-col items-center justify-center;
+      @screen lg {
+        @apply items-start;
+        @apply max-w-[300px];
+      }
+    }
 
     div > p {
-      @apply min-[768px]:text-5xl min-[1024px]:text-6xl text-4xl text-center min-[1024px]:text-left;
+      @apply text-xl leading-5;
+      @apply min-[768px]:text-3xl min-[1024px]:text-6xl;
+      @apply text-center min-[1024px]:text-left;
     }
   }
 
   .prices {
     @apply w-full;
-    height: calc(100vh - 99px);
+    @apply py-16;
     @apply flex items-center;
     @apply relative;
 
     .buy-cards {
-      @apply flex justify-center items-center w-full px-4 gap-x-6 gap-y-44;
+      @apply flex justify-center items-center;
+      @apply w-full;
+      @apply px-4;
+      @apply gap-x-6 gap-y-44;
       @apply flex-wrap;
       @apply absolute;
       @apply pb-16 pt-6;
       @apply overflow-hidden;
       @apply max-h-[250px];
-      @apply top-[-120px];
+      @apply top-[-150px];
     }
   }
 
   .markets {
-    @apply flex flex-col gap-y-8 w-full mt-16;
+    @apply flex flex-col gap-y-8 w-full;
     @apply px-4 min-[1024px]:px-20;
     span {
-      @apply text-2xl min-[768px]:text-5xl self-start font-bold;
+      @apply font-bold;
+      @apply text-2xl min-[768px]:text-5xl;
+      @apply self-start;
     }
   }
 
   .questions {
     @apply w-full;
-    min-height: calc(100vh - 99px);
+    @apply py-16;
     @apply flex items-center flex-col gap-y-8;
     @apply px-4 min-[1024px]:px-20;
 

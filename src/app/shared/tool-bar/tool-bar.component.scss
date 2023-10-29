@@ -9,7 +9,8 @@
   }
 
   .app-logo {
-    @apply w-[135px] h-[41px];
+    @apply w-[150px];
+    @apply mr-2;
   }
 
   .spacer {
@@ -34,6 +35,12 @@
   }
   .mat-chip {
     background-color: var(--mat-toolbar-container-background-color);
+  }
+
+  .icon-size {
+    font-size: 1rem;
+    height: 1rem;
+    width: 1rem;
   }
 }
 
