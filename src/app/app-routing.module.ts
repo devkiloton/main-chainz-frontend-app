@@ -17,7 +17,6 @@ const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component'),
   },
   {
-    title: $localize`Main Chainz | Support` as string,
     title: $localize`Central Hash | Decentralized protocols` as string,
     path: 'decentralized-protocols',
     pathMatch: 'full',
