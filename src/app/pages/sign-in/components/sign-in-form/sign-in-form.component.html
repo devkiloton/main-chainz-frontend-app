@@ -9,7 +9,7 @@
       <div class="p-4 flex items-center justify-center flex-col">
         <span class="mb-3" i18n>Welcome back</span>
         <form [formGroup]="signInForm" (ngSubmit)="send()">
-          <mat-form-field class="w-full" hideRequiredMarker>
+          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
             <mat-label aria-hidden="true" i18n>Email</mat-label>
             <input
               [formControl]="signInForm.controls.email"
@@ -22,7 +22,7 @@
               name="Email" />
             <mat-error>{{ emailErrorMessage$ | async }}</mat-error>
           </mat-form-field>
-          <mat-form-field class="w-full" hideRequiredMarker>
+          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
             <mat-label aria-hidden="true" i18n>Password</mat-label>
             <input
               [formControl]="signInForm.controls.password"
