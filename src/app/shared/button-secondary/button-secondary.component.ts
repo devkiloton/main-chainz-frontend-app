@@ -26,7 +26,7 @@ export class ButtonSecondaryComponent {
   public type = '';
 
   @Input()
-  public color = 'accent';
+  public color = 'primary';
 
   @Input()
   public set disabled(isDisabled: boolean) {

@@ -9,7 +9,7 @@
       <div class="p-4 flex items-center justify-center flex-col">
         <span class="mb-3" i18n>Create an account in a few steps</span>
         <form [formGroup]="signUpForm" (ngSubmit)="send()">
-          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+          <mat-form-field class="w-full" hideRequiredMarker>
             <mat-label aria-hidden="true" i18n>Name or nickname</mat-label>
             <input
               [formControl]="signUpForm.controls.name"
@@ -22,7 +22,7 @@
               name="Name or nickname" />
             <mat-error>{{ nameErrorMessage$ | async }}</mat-error>
           </mat-form-field>
-          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+          <mat-form-field class="w-full" hideRequiredMarker>
             <mat-label aria-hidden="true" i18n>Email</mat-label>
             <input
               [formControl]="signUpForm.controls.email"
@@ -35,7 +35,7 @@
               name="Email" />
             <mat-error>{{ emailErrorMessage$ | async }}</mat-error>
           </mat-form-field>
-          <mat-form-field color="accent" class="w-full" hideRequiredMarker>
+          <mat-form-field class="w-full" hideRequiredMarker>
             <mat-label aria-hidden="true" i18n>Password</mat-label>
             <input
               [formControl]="signUpForm.controls.password"
@@ -71,6 +71,7 @@
             <app-button-secondary
               routerLink="/sign-in"
               i18n-title
+              color="accent"
               title="Already registered?"
               i18n-label
               label="Already have an account button"

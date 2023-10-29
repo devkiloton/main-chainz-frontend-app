@@ -1,4 +1,4 @@
-<mat-toolbar *ngIf="isDesktop$ | async; else mobileBlock" class="toolbar" color="primary">
+<mat-toolbar *ngIf="isDesktop$ | async; else mobileBlock" class="toolbar">
   <div class="desktop-container">
     <button i18n-aria-label aria-label="Button to go to the home page." routerLink="/">
       <img
@@ -14,9 +14,9 @@
         class="app-logo"
         src="assets/images/black-logo.svg" />
     </button>
-    <button mat-flat-button color="primary" i18n>Buy crypto</button>
-    <button [matMenuTriggerFor]="tradeAnon" mat-flat-button color="primary">
-      <div class="flex-centered" i18n>Trade anonymously<mat-icon>expand_more</mat-icon></div>
+    <button mat-button i18n>Buy crypto</button>
+    <button [matMenuTriggerFor]="tradeAnon" mat-button>
+      <div class="flex-centered" i18n>Trade anonymously<mat-icon class="icon-size">expand_more</mat-icon></div>
     </button>
     <mat-menu #tradeAnon="matMenu">
       <button mat-menu-item disabled>
@@ -35,8 +35,8 @@
         <div class="flex-centered" i18n><mat-icon [svgIcon]="'decentralized_protocols'"></mat-icon>Tor and IPFS</div>
       </button>
     </mat-menu>
-    <button [matMenuTriggerFor]="aboutUsMenu" mat-flat-button color="primary">
-      <div class="flex-centered" i18n>About us<mat-icon>expand_more</mat-icon></div>
+    <button [matMenuTriggerFor]="aboutUsMenu" mat-button>
+      <div class="flex-centered" i18n>About us<mat-icon class="icon-size">expand_more</mat-icon></div>
     </button>
     <mat-menu #aboutUsMenu="matMenu">
       <button mat-menu-item disabled>
@@ -49,8 +49,8 @@
         <div class="flex-centered" i18n><mat-icon>description</mat-icon>Blog</div>
       </button>
     </mat-menu>
-    <button [matMenuTriggerFor]="moreMenu" mat-flat-button color="primary">
-      <div class="flex-centered" i18n>More<mat-icon>expand_more</mat-icon></div>
+    <button [matMenuTriggerFor]="moreMenu" mat-button>
+      <div class="flex-centered" i18n>More<mat-icon class="icon-size">expand_more</mat-icon></div>
     </button>
     <mat-menu #moreMenu="matMenu">
       <button mat-menu-item routerLink="/support">
@@ -77,14 +77,14 @@
     <app-button-change-theme></app-button-change-theme>
     <app-change-locale-button></app-change-locale-button>
     <app-button-change-currency></app-button-change-currency>
-    <button routerLink="/sign-in" mat-flat-button color="primary" i18n>Sign in</button>
+    <button routerLink="/sign-in" mat-button i18n>Sign in</button>
     <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
   </div>
 </mat-toolbar>
 <mat-divider></mat-divider>
 <!-- #TODO: put the drawer inside a component to be used in the app component -->
 <ng-template #mobileBlock>
-  <mat-toolbar class="flex-centered shadow-skim" color="primary">
+  <mat-toolbar class="flex-centered shadow-skim">
     <div class="w-full flex justify-between items-center gap-x-1">
       <button mat-icon-button (click)="toggleSideNav()" i18n-aria-label aria-label="Open side menu">
         <mat-icon>menu</mat-icon>

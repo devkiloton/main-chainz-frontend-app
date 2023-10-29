@@ -31,9 +31,9 @@
     @apply h-full w-full;
     background: linear-gradient(
       -45deg,
-      var(--mat-toolbar-container-text-color),
-      #6e6e6e,
-      var(--mat-toolbar-container-text-color),
+      #ff0000,
+      #4b3bff,
+      var(--mdc-checkbox-selected-focus-state-layer-color),
       #d7d7d7
     );
     background-size: 300% 200%;
@@ -43,15 +43,12 @@
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
-      opacity: 0.3;
     }
     50% {
       background-position: 100% 50%;
-      opacity: 1;
     }
     100% {
       background-position: 0% 50%;
-      opacity: 0.3;
     }
   }
 }

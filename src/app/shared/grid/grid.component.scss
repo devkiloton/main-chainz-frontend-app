@@ -6,7 +6,6 @@
     @apply cursor-pointer;
     @apply rounded-md;
     @apply transition-all;
-    @apply uppercase;
     @apply shadow-skim;
     background-color: var(--mat-toolbar-container-background-color);
     &:hover {
@@ -18,8 +17,6 @@
     @apply self-center;
     @apply w-10 h-10;
     font-size: 2.5rem;
-    // #TODO: is this needed?
-    color: var(--mat-stepper-header-icon-foreground-color);
     @apply mb-2;
   }
 
@@ -29,8 +26,6 @@
 }
 
 span {
-  // #TODO: is this needed?
-  color: var(--mat-stepper-header-icon-foreground-color);
   @apply text-center;
-  @apply font-bold;
+  @apply font-medium;
 }
