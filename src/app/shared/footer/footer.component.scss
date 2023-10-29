@@ -2,5 +2,7 @@
   // #TODO: is this needed?
   footer {
     @apply p-8;
+      
+      background-color: var(--mdc-checkbox-selected-focus-state-layer-color);
   }
 }

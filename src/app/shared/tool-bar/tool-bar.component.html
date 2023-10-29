@@ -4,13 +4,13 @@
       <img
         *ngIf="(theme$ | async) === 'dark-mode'"
         i18n-alt
-        alt="Central Hash logo."
+        alt="Main Chainz logo."
         class="app-logo"
         src="assets/images/white-logo.svg" />
       <img
         *ngIf="(theme$ | async) === 'light-mode'"
         i18n-alt
-        alt="Central Hash logo."
+        alt="Main Chainz logo."
         class="app-logo"
         src="assets/images/black-logo.svg" />
     </button>
@@ -84,23 +84,15 @@
 <mat-divider></mat-divider>
 <!-- #TODO: put the drawer inside a component to be used in the app component -->
 <ng-template #mobileBlock>
-  <mat-toolbar class="flex-centered shadow-skim">
-    <div class="w-full flex justify-between items-center gap-x-1">
-      <button mat-icon-button (click)="toggleSideNav()" i18n-aria-label aria-label="Open side menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span class="spacer-left"></span>
+  <mat-toolbar class="shadow-skim flex-centered">
+    <button mat-icon-button (click)="toggleSideNav()" i18n-aria-label aria-label="Open side menu">
+      <mat-icon>menu</mat-icon>
+    </button>
 
-      <a class="w-20" routerLink="/home">
-        <img
-          *ngIf="(theme$ | async) === 'light-mode'"
-          src="/assets/images/symbol-black.svg"
-          alt="Central Hash symbol" />
-        <img *ngIf="(theme$ | async) === 'dark-mode'" src="/assets/images/symbol-white.svg" alt="Central Hash symbol" />
-      </a>
-
-      <span class="spacer-right"></span>
-      <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
-    </div>
+    <a class="w-20 m-auto" routerLink="/home">
+      <img *ngIf="(theme$ | async) === 'light-mode'" src="/assets/images/black-logo.svg" alt="Main Chainz logo" />
+      <img *ngIf="(theme$ | async) === 'dark-mode'" src="/assets/images/white-logo.svg" alt="Main Chainz logo" />
+    </a>
+    <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
   </mat-toolbar>
 </ng-template>
