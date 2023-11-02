@@ -1,7 +1,7 @@
 <div class="container">
   <h1>{{ headerText }}</h1>
   <button mat-button *ngFor="let content of contents" (click)="defineRoute(content)">
-    <mat-icon *ngIf="iconCategorySupport(content) !== null">{{ iconCategorySupport(content) }}</mat-icon>
+    <mat-icon color="accent" *ngIf="iconCategorySupport(content) !== null">{{ iconCategorySupport(content) }}</mat-icon>
     {{ content.title }}
   </button>
 </div>
