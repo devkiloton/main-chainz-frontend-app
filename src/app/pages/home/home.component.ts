@@ -5,6 +5,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
+import { CurrenciesService } from 'projects/central-hash-api-client/src/public-api';
 import type { Observable } from 'rxjs';
 import { map, of, switchMap } from 'rxjs';
 import { questionsAndAnswers } from 'src/app/constants/home/questions-and-answers';
@@ -41,6 +42,7 @@ export default class HomeComponent {
   private readonly _themes$ = inject(ThemesService);
   public readonly theme$ = this._themes$.theme$;
   private readonly _currencies = inject(CurrenciesStoreService);
+  private readonly _currenciesClient = inject(CurrenciesService);
   public readonly currenciesBroadCast$: Observable<Array<Currency> | null> = this._currencies.broadCast$.pipe(
     switchMap(currencies => (currencies.length > 0 ? of(currencies) : of(null))),
   );
@@ -51,6 +53,8 @@ export default class HomeComponent {
       return currenciesCard;
     }),
   );
+
+  public readonly fearAndGreedIndex$ = this._currenciesClient.fearAndGreedIndex();
 
   public readonly questionsAndAnswers = questionsAndAnswers;
 }

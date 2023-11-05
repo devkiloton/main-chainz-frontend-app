@@ -37,6 +37,7 @@
 <mat-divider class="w-full"></mat-divider>
 <section class="fear-and-greed">
   <span i18n>Fear and greed index</span>
+  <span>{{ (fearAndGreedIndex$ | async)?.now?.value }}</span>
 </section>
 <mat-divider class="w-full"></mat-divider>
 <section class="questions">
