@@ -4,6 +4,7 @@ import { Observable, switchMap, timer } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Currency } from '../../models/currencies/currency';
 import { isPlatformBrowser } from '@angular/common';
+import { FearAndGreed } from '../../models/currencies/fear-and-greed';
 
 @Injectable({
   providedIn: 'root',
@@ -32,5 +33,9 @@ export class CurrenciesService {
       return timer(0, time).pipe(switchMap(() => fetch(this.API + '/currencies').then(value => value.json())));
     }
     return this.findAll();
+  }
+
+  public fearAndGreedIndex(): Observable<FearAndGreed> {
+    return this._httpClient.get<FearAndGreed>('https://api.coin-stats.com/v2/fear-greed');
   }
 }
