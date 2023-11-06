@@ -2,9 +2,10 @@
   @apply flex flex-col justify-between items-center;
   @apply gap-16;
   @apply py-20;
-  background-color: var(--mat-toolbar-container-background-color);
-
+  
   .container {
+    background-color: var(--mat-toolbar-container-background-color);
+
     @apply flex flex-col gap-y-6;
     @apply w-fit;
     @apply shadow-raised;
