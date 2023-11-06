@@ -35,9 +35,18 @@
   </div>
 </section>
 <mat-divider class="w-full"></mat-divider>
-<section class="fear-and-greed">
-  <span i18n>Fear and greed index</span>
-  <span>{{ (fearAndGreedIndex$ | async)?.now?.value }}</span>
+<section *ngIf="fearAndGreedIndex$ | async as fearAndGreed" class="fear-and-greed">
+  <span appShapeBehind i18n>Fear and greed index</span>
+  <p>
+    The Bitcoin Fear and Greed Index is a popular sentiment indicator used to gauge the prevailing sentiment and
+    emotions of market participants in the Bitcoin cryptocurrency market. It provides a numerical score that reflects
+    whether investors are currently feeling more fearful or greedy about the price of Bitcoin.
+  </p>
+  <div class="charts">
+    <app-radial-chart [value]="fearAndGreed.now.value" label="Now"></app-radial-chart>
+    <app-radial-chart [value]="fearAndGreed.yesterday.value" label="Yesterday"></app-radial-chart>
+    <app-radial-chart [value]="fearAndGreed.lastWeek.value" label="Last week"></app-radial-chart>
+  </div>
 </section>
 <mat-divider class="w-full"></mat-divider>
 <section class="questions">

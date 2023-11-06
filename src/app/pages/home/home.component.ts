@@ -17,6 +17,7 @@ import { TablePricesComponent } from 'src/app/shared/table-prices/table-prices.c
 import { CurrenciesStoreService } from 'src/app/stores';
 import { ParticleBgComponent } from '../../shared/particle-bg/particle-bg.component';
 import { CardBuyComponent } from './components/card-buy/card-buy.component';
+import { RadialChartComponent } from './components/radial-chart/radial-chart.component';
 
 @Component({
   templateUrl: './home.component.html',
@@ -36,6 +37,7 @@ import { CardBuyComponent } from './components/card-buy/card-buy.component';
     ModalConverterComponent,
     ShapeBehindDirective,
     MatDividerModule,
+    RadialChartComponent,
   ],
 })
 export default class HomeComponent {

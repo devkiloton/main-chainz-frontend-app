@@ -12,14 +12,28 @@
 
   .fear-and-greed {
     @apply w-full;
-    height: 50vh;
-    background-color: var(--mdc-checkbox-selected-focus-icon-color);
+    @apply px-4 min-[1024px]:px-20;
+    @apply py-16;
+
+    min-height: 50vh;
 
     span {
       @apply text-2xl min-[768px]:text-5xl;
       @apply font-bold;
       @apply text-center;
       @apply flex justify-start items-center;
+      @apply w-fit;
+    }
+
+    p {
+      @apply leading-5;
+      @apply mt-5;
+    }
+
+    .charts {
+      @apply flex justify-center; 
+      @apply gap-x-8;
+      @apply flex-wrap
     }
   }
 
