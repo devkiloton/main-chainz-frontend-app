@@ -1,15 +1,16 @@
 :host {
   @apply flex flex-col justify-between items-center;
-  @apply rounded-2xl;
   @apply gap-16;
+  @apply py-20;
 
   .container {
+    background-color: var(--mat-toolbar-container-background-color);
+
     @apply flex flex-col gap-y-6;
     @apply w-fit;
     @apply shadow-raised;
     @apply rounded-xl;
     @apply min-[768px]:p-8 p-4;
-    background-color: var(--mat-toolbar-container-background-color);
   }
 
   .description {

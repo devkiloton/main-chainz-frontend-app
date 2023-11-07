@@ -7,7 +7,7 @@
   }
 
   .bar {
-    @apply text-gray-700;
+    color: var(--mdc-checkbox-selected-focus-state-layer-color);
     @apply m-1;
   }
 }

@@ -1,5 +1,6 @@
 import { AsyncPipe, NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { MatDividerModule } from '@angular/material/divider';
 import { data } from 'src/app/constants/support/grid-tiles';
 import { ShapeBehindDirective } from 'src/app/directives/shape-behind/shape-behind.directive';
 import { GridComponent } from 'src/app/shared/grid/grid.component';
@@ -9,7 +10,15 @@ import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   standalone: true,
-  imports: [HeaderComponent, CardQuestionsComponent, NgFor, AsyncPipe, GridComponent, ShapeBehindDirective],
+  imports: [
+    HeaderComponent,
+    CardQuestionsComponent,
+    NgFor,
+    AsyncPipe,
+    GridComponent,
+    ShapeBehindDirective,
+    MatDividerModule,
+  ],
   templateUrl: './support.component.html',
   styleUrls: ['./support.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -7,12 +7,17 @@ export const treeData: Array<OptionNode> = [
     isDisabled: true,
   },
   {
-    name: $localize`Trade anonymously` as string,
+    name: $localize`Investments` as string,
+    icon: 'trending_up',
+    isDisabled: true,
+  },
+  {
+    name: $localize`Trade cryto` as string,
     children: [
       { name: $localize`P2P pure` as string, icon: 'group', isDisabled: true },
       { name: $localize`P2P with guarantee` as string, icon: 'diversity_3', isDisabled: true },
-      { name: $localize`Buy without KYC` as string, icon: 'lock', isDisabled: true },
-      { name: $localize`Ghost account` as string, icon: 'air', isDisabled: true },
+      // { name: $localize`Buy without KYC` as string, icon: 'lock', isDisabled: true },
+      // { name: $localize`Ghost account` as string, icon: 'air', isDisabled: true },
       {
         name: $localize`Tor and IPFS` as string,
         icon: 'decentralized_protocols',

@@ -6,7 +6,7 @@
     @apply cursor-pointer;
     @apply rounded-md;
     @apply transition-all;
-    @apply shadow-skim;
+    @apply shadow-lifted;
     background-color: var(--mat-toolbar-container-background-color);
     &:hover {
       @apply shadow-raised;
@@ -21,11 +21,10 @@
   }
 
   .grid-layout-custom {
-    width: calc((25% - 0.75px) * 3 + 2px);
+    width: 100%;
   }
 }
 
 span {
   @apply text-center;
-  @apply font-medium;
 }

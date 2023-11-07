@@ -159,3 +159,7 @@ body {
   padding: 16px !important;
   padding-top: 0 !important;
 }
+.mat-expansion-panel-header {
+  min-height: var(--mat-expansion-header-collapsed-state-height) !important;
+  height: auto !important;
+}

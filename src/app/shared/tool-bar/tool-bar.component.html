@@ -15,8 +15,9 @@
         src="assets/images/black-logo.svg" />
     </button>
     <button mat-button i18n>Buy crypto</button>
+    <button mat-button i18n>Investments</button>
     <button [matMenuTriggerFor]="tradeAnon" mat-button>
-      <div class="flex-centered" i18n>Trade anonymously<mat-icon class="icon-size">expand_more</mat-icon></div>
+      <div class="flex-centered" i18n>Trade crypto<mat-icon class="icon-size">expand_more</mat-icon></div>
     </button>
     <mat-menu #tradeAnon="matMenu">
       <button mat-menu-item disabled>
@@ -25,12 +26,12 @@
       <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>diversity_3</mat-icon>P2P with guarantee</div>
       </button>
-      <button mat-menu-item disabled>
+      <!-- <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>lock</mat-icon>Buy without KYC</div>
-      </button>
-      <button mat-menu-item disabled>
+      </button> -->
+      <!-- <button mat-menu-item disabled>
         <div class="flex-centered" i18n><mat-icon>air</mat-icon>Ghost account</div>
-      </button>
+      </button> -->
       <button mat-menu-item routerLink="/decentralized-protocols">
         <div class="flex-centered" i18n><mat-icon [svgIcon]="'decentralized_protocols'"></mat-icon>Tor and IPFS</div>
       </button>
