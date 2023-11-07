@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import type { OnInit} from '@angular/core';
+import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';
 import type {
   ApexChart,
