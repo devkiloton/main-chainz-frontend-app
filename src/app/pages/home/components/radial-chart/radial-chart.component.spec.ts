@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { RadialChartComponent } from './radial-chart.component';
 
 describe('RadialChartComponent', () => {
-  let component: RadialChartComponent;
-  let fixture: ComponentFixture<RadialChartComponent>;
+  let component: RadialChartComponent | null = null;
+  let fixture: ComponentFixture<RadialChartComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [RadialChartComponent]
+      imports: [RadialChartComponent],
     });
     fixture = TestBed.createComponent(RadialChartComponent);
     component = fixture.componentInstance;
