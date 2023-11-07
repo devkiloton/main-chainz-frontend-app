@@ -7,6 +7,11 @@ export const treeData: Array<OptionNode> = [
     isDisabled: true,
   },
   {
+    name: $localize`Investments` as string,
+    icon: 'trending_up',
+    isDisabled: true,
+  },
+  {
     name: $localize`Trade anonymously` as string,
     children: [
       { name: $localize`P2P pure` as string, icon: 'group', isDisabled: true },
