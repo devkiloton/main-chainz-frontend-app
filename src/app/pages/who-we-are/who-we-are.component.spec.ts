@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import type { ComponentFixture} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { WhoWeAreComponent } from './who-we-are.component';
 
 describe('WhoWeAreComponent', () => {
@@ -8,7 +8,7 @@ describe('WhoWeAreComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [WhoWeAreComponent]
+      imports: [WhoWeAreComponent],
     });
     fixture = TestBed.createComponent(WhoWeAreComponent);
     component = fixture.componentInstance;

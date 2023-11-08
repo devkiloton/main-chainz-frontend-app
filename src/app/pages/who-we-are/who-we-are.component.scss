@@ -1,19 +1,18 @@
 :host {
-    .container {
-        @apply py-4 px-4;
+  .container {
+    @apply py-4 px-4;
 
-        @screen md {
-            @apply py-8 px-16;
-        }
+    @screen md {
+      @apply py-8 px-16;
     }
-    .headers {
-        @apply  w-fit;
-        @apply font-bold text-2xl;
-        @apply mb-8;
-        
-        @screen md  {
-            @apply text-5xl ;
-        }
+  }
+  .headers {
+    @apply w-fit;
+    @apply font-bold text-2xl;
+    @apply mb-8;
+
+    @screen md {
+      @apply text-5xl;
     }
-    
+  }
 }
