@@ -1,0 +1,10 @@
+:host {
+    .container {
+        @apply py-4 px-16;
+    }
+    .headers {
+        @apply text-5xl font-bold;
+        @apply  w-fit;
+    }
+    
+}

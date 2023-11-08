@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ShapeBehindDirective } from 'src/app/directives/shape-behind/shape-behind.directive';
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [ShapeBehindDirective],
   templateUrl: './who-we-are.component.html',
   styleUrls: ['./who-we-are.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
