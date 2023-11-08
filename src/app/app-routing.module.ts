@@ -44,6 +44,12 @@ const routes: Routes = [
     ],
   },
   {
+    title: $localize`Main Chainz | Who we are?` as string,
+    path: 'who-we-are',
+    pathMatch: 'full',
+    loadComponent: () => import('./pages/who-we-are/who-we-are.component'),
+  },
+  {
     title: $localize`Main Chainz | Dashboard` as string,
     path: 'dashboard',
     pathMatch: 'full',

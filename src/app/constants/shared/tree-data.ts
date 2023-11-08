@@ -31,8 +31,7 @@ export const treeData: Array<OptionNode> = [
   {
     name: $localize`About us` as string,
     children: [
-      { name: $localize`Who we are?` as string, icon: 'que', isDisabled: true },
-      { name: $localize`Our mission` as string, icon: 'public', isDisabled: true },
+      { name: $localize`Who we are?` as string, icon: 'question_mark', isDisabled: false, route: 'who-we-are' },
       { name: $localize`Blog` as string, icon: 'description', isDisabled: true },
     ],
     isDisabled: false,
