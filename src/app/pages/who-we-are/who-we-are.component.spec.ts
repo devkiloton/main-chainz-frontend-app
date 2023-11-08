@@ -1,10 +1,10 @@
-import type { ComponentFixture} from '@angular/core/testing';
+import type { ComponentFixture } from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
-import { WhoWeAreComponent } from './who-we-are.component';
+import WhoWeAreComponent from './who-we-are.component';
 
 describe('WhoWeAreComponent', () => {
-  let component: WhoWeAreComponent;
-  let fixture: ComponentFixture<WhoWeAreComponent>;
+  let component: WhoWeAreComponent | null = null;
+  let fixture: ComponentFixture<WhoWeAreComponent> | null = null;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
