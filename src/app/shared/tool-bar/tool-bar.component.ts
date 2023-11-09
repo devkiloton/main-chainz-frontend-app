@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 import { BehaviorSubject, map } from 'rxjs';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
@@ -24,6 +25,7 @@ import { TreeComponent } from './components/tree/tree.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    ButtonModule,
     MatMenuModule,
     MatDividerModule,
     RouterModule,

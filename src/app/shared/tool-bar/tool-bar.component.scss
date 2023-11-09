@@ -5,8 +5,12 @@
     @apply flex items-center justify-center;
     .desktop-container {
       @apply px-3 w-full flex justify-between items-center gap-x-1;
+      button{
+        @apply bg-transparent;
+      }
     }
   }
+
 
   .app-logo {
     @apply w-[150px];
@@ -45,5 +49,5 @@
 }
 
 .flex-centered {
-  @apply flex items-center justify-center;
+  @apply flex items-center justify-between;
 }
