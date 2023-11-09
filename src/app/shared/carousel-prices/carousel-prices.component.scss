@@ -9,7 +9,7 @@
     @apply flex;
 
     .currencies-slide {
-      @apply flex  gap-x-6;
+      @apply flex text-xs gap-x-6;
 
       animation: slide 80s linear infinite;
     }
