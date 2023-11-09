@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { ButtonModule } from 'primeng/button';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { AllCurrenciesService } from 'src/app/services/all-currencies/all-currencies.service';
@@ -12,7 +11,7 @@ import { CurrenciesMenuComponent } from '../currencies-menu/currencies-menu.comp
 @Component({
   selector: 'app-button-change-currency',
   standalone: true,
-  imports: [MatMenuModule, MatIconModule, CurrenciesMenuComponent, MatButtonModule],
+  imports: [MatMenuModule, CurrenciesMenuComponent, ButtonModule],
   templateUrl: './button-change-currency.component.html',
   styleUrls: ['./button-change-currency.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,6 +1,4 @@
-<button mat-icon-button [matMenuTriggerFor]="menuLanguages" i18n-aria-label aria-label="Change the web site language.">
-  <mat-icon>translate</mat-icon>
-</button>
+<p-button [matMenuTriggerFor]="menuLanguages" icon="pi pi-language" [rounded]="true" [text]="true"></p-button>
 <mat-menu #menuLanguages="matMenu">
   <button mat-menu-item (appAccessiblePress)="changeLocaleServer(locales.en_us)">
     <div class="flex items-center gap-x-2">

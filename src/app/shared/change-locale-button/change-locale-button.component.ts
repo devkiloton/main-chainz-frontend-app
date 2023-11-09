@@ -1,9 +1,8 @@
 import { DOCUMENT } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { Locales } from 'src/app/enums/locales';
 import { environment } from 'src/environments/environment';
@@ -11,7 +10,7 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-change-locale-button',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatMenuModule, AccessiblePressDirective],
+  imports: [ButtonModule, MatMenuModule, AccessiblePressDirective],
   templateUrl: './change-locale-button.component.html',
   styleUrls: ['./change-locale-button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

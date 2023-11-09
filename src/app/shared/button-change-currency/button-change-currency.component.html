@@ -1,10 +1,4 @@
-<button
-  mat-icon-button
-  [matMenuTriggerFor]="menu.matMenu"
-  i18n-aria-label
-  aria-label="Change the currency used to convert prices.">
-  <mat-icon>attach_money</mat-icon>
-</button>
+<p-button [matMenuTriggerFor]="menu.matMenu" icon="pi pi-dollar" [rounded]="true" [text]="true"></p-button>
 <app-currencies-menu
   #menu
   [isFiatCollection]="true"

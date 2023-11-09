@@ -1,14 +1,12 @@
 import { AsyncPipe, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
+import { ButtonModule } from 'primeng/button';
 import { ThemesService } from 'src/app/services/themes/themes.service';
 
 @Component({
   selector: 'app-button-change-theme',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, NgIf, AsyncPipe, AccessiblePressDirective],
+  imports: [NgIf, AsyncPipe, ButtonModule],
   templateUrl: './button-change-theme.component.html',
   styleUrls: ['./button-change-theme.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
