@@ -6,7 +6,9 @@ import { AuthStateService } from 'src/app/services/auth-state/auth-state.service
 export const authorizationGuard: CanActivateFn = (_route, _state) => {
   const authState = inject(AuthStateService);
   const router = inject(Router);
-  if (isNil(authState.get())) {
+  const authToken = authState.get();
+  console.log('authToken', authToken);
+  if (isNil(authState)) {
     router.navigate(['/sign-in']);
     return false;
   }
