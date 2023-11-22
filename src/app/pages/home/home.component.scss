@@ -13,7 +13,7 @@
   .fear-and-greed {
     @apply w-full;
     @apply px-4 min-[1024px]:px-20;
-    @apply py-16;
+    @apply py-5;
 
     min-height: 50vh;
 
@@ -98,7 +98,7 @@
 
   .questions {
     @apply w-full;
-    @apply py-16;
+    @apply py-5;
     @apply flex items-center flex-col gap-y-8;
     @apply px-4 min-[1024px]:px-20;
 
@@ -108,7 +108,7 @@
   }
 
   .questions-header {
-    @apply text-lg;
+    @apply text-base;
   }
 
   .icon-inverted {
