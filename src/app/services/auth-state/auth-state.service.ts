@@ -25,6 +25,13 @@ export class AuthStateService {
     return this._localStorage.getAccessToken;
   }
 
+  public getRefreshToken(): string | null {
+    if (!isPlatformBrowser(this._platformId)) {
+      return null;
+    }
+    return this._localStorage.getRefreshToken;
+  }
+
   public remove(): void {
     if (!isPlatformBrowser(this._platformId)) {
       return;
