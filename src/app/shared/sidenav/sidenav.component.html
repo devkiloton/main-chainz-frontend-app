@@ -1,8 +1,11 @@
 <mat-drawer-container autosize>
-  <mat-drawer #drawer mode="over">
+  <mat-drawer
+    #drawer
+    [mode]="isAuthenticated() && (isDesktop$ | async) ? 'side' : 'over'"
+    [opened]="isDesktop$ | async">
     <div class="mat-sidenav">
       <app-tree></app-tree>
-      <div class="mb-2">
+      <div class="mb-2" *ngIf="(isDesktop$ | async) === false">
         <app-button-change-currency></app-button-change-currency>
         <app-button-change-theme></app-button-change-theme>
         <app-change-locale-button></app-change-locale-button>
