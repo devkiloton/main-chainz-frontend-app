@@ -3,5 +3,5 @@
 <app-sidenav #sideNavRef>
   <app-button-contact></app-button-contact>
   <router-outlet class="h-screen"></router-outlet>
-  <app-footer></app-footer>
+  <app-footer *ngIf="!isAuthenticated()"></app-footer>
 </app-sidenav>

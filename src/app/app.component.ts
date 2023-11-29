@@ -10,6 +10,7 @@ import { Locales } from './enums/locales';
 import { getFiatAccordingLocale } from './helpers/get-fiat-according-locale';
 import { LocalStorageService } from './services/local-storage/local-storage.service';
 import { ThemesService } from './services/themes/themes.service';
+import { AuthStoreService } from './stores/auth/auth-store.service';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,9 @@ import { ThemesService } from './services/themes/themes.service';
 export class AppComponent implements OnInit {
   private readonly _localStorageService = inject(LocalStorageService);
   private readonly _themesService = inject(ThemesService);
+  private readonly _authStore = inject(AuthStoreService);
+
+  public readonly isAuthenticated = this._authStore.isAuthenticated;
   constructor(
     @Inject(PLATFORM_ID) private readonly _platformId: object,
     @Inject(LOCALE_ID) private readonly _localeId: Locales,

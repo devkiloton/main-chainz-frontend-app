@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { isDevMode, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
@@ -32,6 +33,7 @@ import { ToolBarComponent } from './shared/tool-bar/tool-bar.component';
       registrationStrategy: 'registerWhenStable:30000',
     }),
     ButtonContactComponent,
+    NgIf,
   ],
   providers: [provideClientHydration(), { provide: HTTP_INTERCEPTORS, useClass: UniversalAppInterceptor, multi: true }],
   bootstrap: [AppComponent],
