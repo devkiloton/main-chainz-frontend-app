@@ -1,0 +1,36 @@
+.container-dashboard {
+  @apply w-full;
+@apply p-4;
+  .stats {
+    @apply w-full;
+    @apply flex;
+    @apply gap-x-4;
+    @apply py-4 px-8;
+    @apply rounded-2xl;
+
+    .stat {
+      @apply flex items-center gap-x-4;
+      @apply w-fit;
+
+      .mat-icon{
+        font-size: 36px;
+        height: 36px;
+        width: 36px;
+      }
+      .title {
+        @apply opacity-70;
+        @apply mb-4;
+      }
+      h2 {
+        @apply text-3xl;
+        @apply font-bold;
+      }
+
+      .button-group{
+        @apply flex gap-x-2;
+        @apply mt-4;
+      }
+    }
+    
+  }
+}

@@ -1,2 +1,38 @@
-<p>dashboard works!</p>
-{{ user$ | async | json }}
+<div class="container-dashboard">
+  <div class="stats" *ngIf="walletInformation$ | async as walletInformation">
+    <div class="stat">
+      <div>
+        <span class="title" i18n>Current crypto balance</span>
+        <h2>₿ {{ walletInformation.balance / 100000000 }}</h2>
+        <div class="button-group">
+          <button mat-flat-button color="accent" (click)="openDepositDialog('150ms', '150ms')">Deposit</button>
+          <button mat-stroked-button color="accent">Withdrawal</button>
+        </div>
+      </div>
+      <mat-icon class="mat-icon" matTooltip="The total amount of money that you have in your account." color="accent"
+        >info</mat-icon
+      >
+    </div>
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="stat opacity-80">
+      <div>
+        <span i18n>Current balance</span>
+        <h2>$ 0.00</h2>
+        <div class="button-group">
+          <button mat-flat-button color="accent" disabled>Add funds</button>
+          <button mat-stroked-button color="accent" disabled>Withdrawal</button>
+        </div>
+      </div>
+    </div>
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="stat opacity-80">
+      <div>
+        <span i18n>Invested</span>
+        <h2>₿ 0.00</h2>
+        <div class="button-group">
+          <button mat-flat-button disabled>Invest</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
