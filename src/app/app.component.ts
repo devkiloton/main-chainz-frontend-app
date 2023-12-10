@@ -31,8 +31,11 @@ export class AppComponent implements OnInit {
   ) {}
 
   public async ngOnInit(): Promise<void> {
+    const isDefaultCurrencyUSD = this._localStorageService.getDefaultCurrency === 'USD';
     if (isPlatformBrowser(this._platformId)) {
-      this._localStorageService.setDefaultCurrency = getFiatAccordingLocale(this._localeId);
+      this._localStorageService.setDefaultCurrency = isDefaultCurrencyUSD
+        ? getFiatAccordingLocale(this._localeId)
+        : this._localStorageService.getDefaultCurrency;
       this._themesService.setTheme = this._localStorageService.getDefaultTheme;
     }
     this._matIconRegistry.addSvgIcon(
