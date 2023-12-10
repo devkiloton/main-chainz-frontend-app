@@ -1,4 +1,7 @@
 :host {
+  .tree {
+    background-color: var(--mat-toolbar-container-background-color);
+  }
   .tree-invisible {
     @apply hidden;
   }
