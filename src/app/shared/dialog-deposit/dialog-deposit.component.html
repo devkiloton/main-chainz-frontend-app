@@ -1,0 +1,31 @@
+<p class="header">Deposit crypto</p>
+<p class="description">Deposit crypto to buy other cryptos.</p>
+<div>
+  <button
+    matRipple
+    matRippleColor="#ffffff40"
+    class="change-currency symbol"
+    matSuffix
+    mat-icon-button
+    i18n-aria-label
+    aria-label="Select your crypto currency"
+    [matMenuTriggerFor]="menuCurrencies.matMenu">
+    <div class="flex items-center gap-x-2 px-2">
+      <img
+        [src]="getCurrencyRepresentation({ asset: form.controls.id.value, isFiat: false })"
+        i18n-alt
+        [alt]="'Image representing ' + form.controls.id.value" />
+      <span class="font-medium">{{ form.controls.id.value }}</span>
+    </div>
+    <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
+  </button>
+  <img *ngIf="walletInformation" [src]="walletInformation.qrcode" alt="Wallet address as QR code" />
+  <app-currencies-menu
+    (itemSelected)="setSelection($event)"
+    #menuCurrencies
+    [isFiatCollection]="false"
+    [collection]="allCurrencies"></app-currencies-menu>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="accent" mat-dialog-close>Finish</button>
+</div>
