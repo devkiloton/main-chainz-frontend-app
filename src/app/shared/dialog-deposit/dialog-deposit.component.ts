@@ -62,9 +62,7 @@ export class DialogDepositComponent {
   constructor(
     public dialogRef: MatDialogRef<DialogDepositComponent>,
     @Inject(MAT_DIALOG_DATA) public walletInformation: PublicWallet,
-  ) {
-    console.log(walletInformation);
-  }
+  ) {}
 
   public get allCurrencies(): Array<Currency> {
     return this._currenciesStore.findAll.filter(currency => supportedCurrencies.includes(currency.id));
