@@ -1,5 +1,5 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Inject, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, inject, signal } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
@@ -18,6 +18,7 @@ import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/mode
 import { isNotNil } from 'ramda';
 import { BehaviorSubject, firstValueFrom } from 'rxjs';
 import { depositDialogTexts } from 'src/app/constants/dashboard/deposit-dialog-texts';
+import { withdrawalDialogTexts } from 'src/app/constants/dashboard/withdrawal-dialog-texts';
 import { supportedCurrencies } from 'src/app/constants/supported-currencies';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { Currencies } from 'src/app/enums/currencies';
@@ -69,8 +70,8 @@ export class DialogWithdrawalComponent {
   public readonly message$ = this._message$.asObservable();
   public readonly getCurrencyRepresentation = getCurrencyRepresentation;
   public readonly getCurrencyNameFromId = getCurrencyNameFromId;
+  public isConfirmed = signal(false);
   public isCopied = false;
-  public isConfirmed = false;
 
   public readonly form = this._fb.group({
     id: Currencies.btc,
@@ -109,8 +110,19 @@ export class DialogWithdrawalComponent {
           receiver: address,
           satoshis: Number(amount * 1000000000),
         }),
-      );
-      this.isConfirmed = true;
+      )
+        .then(() => {
+          this.isConfirmed.set(true);
+        })
+        .catch(error => {
+          if (String(error.status).startsWith('2')) {
+            this.isConfirmed.set(true);
+          } else {
+            this._snackBar.open(withdrawalDialogTexts.tooltip, '', {
+              duration: 3000,
+            });
+          }
+        });
     }
   }
 }

@@ -1,4 +1,4 @@
-<div *ngIf="!isConfirmed; else confirmedTransaction">
+<div *ngIf="!isConfirmed(); else confirmedTransaction">
   <div class="flex flex-col items-center justify-center w-full p-4 gap-2 relative">
     <p class="header">Deposit crypto</p>
     <p class="description">Select which cryptocurrency you want to withdrawal.</p>
