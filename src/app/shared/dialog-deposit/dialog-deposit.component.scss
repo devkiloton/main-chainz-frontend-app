@@ -3,19 +3,17 @@
     @apply font-semibold;
     @apply leading-5;
     @apply text-center;
-    @apply pb-2 pt-6 max-w-[75%] m-auto;
+    @apply max-w-[75%];
   }
   
   .description {
     @apply text-sm;
     @apply leading-4;
     @apply text-center;
-    @apply py-4;
     @apply max-w-[80%];
-    @apply m-auto;
   }
   .change-currency {
-    @apply w-28 h-10;
+    @apply w-fit h-10;
     @apply flex justify-between items-center;
     @apply rounded-[4px];
     @apply cursor-pointer;
@@ -23,14 +21,12 @@
     color: var(--mat-toolbar-container-background-color);
     background-color: var(--mat-toolbar-container-text-color);
     @apply mr-2;
+    @apply min-[768px]:text-base;
+    @apply min-[768px]:w-fit;
 
     img {
       @apply w-6;
     }
-  }
-  .symbol {
-    @apply min-[768px]:text-base;
-    @apply min-[768px]:w-32;
   }
   .mat-mdc-dialog-actions {
     @apply mb-2;

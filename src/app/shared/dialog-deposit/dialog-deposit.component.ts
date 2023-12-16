@@ -9,14 +9,20 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import type { PublicWallet } from 'projects/central-hash-api-client/src/lib/models/bitcoin/public-wallet';
 import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
 import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { BehaviorSubject } from 'rxjs';
+import { depositDialogTexts } from 'src/app/constants/dashboard/deposit-dialog-texts';
 import { supportedCurrencies } from 'src/app/constants/supported-currencies';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
+import { Currencies } from 'src/app/enums/currencies';
+import { getCurrencyNameFromId } from 'src/app/helpers/get-currency-name-from-Id';
 import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 import { CurrenciesStoreService } from 'src/app/stores';
+import { isCurrency } from 'src/app/type-guards/is-currency';
 import { CurrenciesMenuComponent } from '../currencies-menu/currencies-menu.component';
 import { InputTextComponent } from '../input-text/input-text.component';
 
@@ -40,6 +46,8 @@ import { InputTextComponent } from '../input-text/input-text.component';
     MatIconModule,
     MatMenuModule,
     MatRippleModule,
+    MatTooltipModule,
+    MatSnackBarModule,
   ],
   templateUrl: './dialog-deposit.component.html',
   styleUrls: ['./dialog-deposit.component.scss'],
@@ -48,15 +56,18 @@ import { InputTextComponent } from '../input-text/input-text.component';
 export class DialogDepositComponent {
   private readonly _currenciesStore = inject(CurrenciesStoreService);
   private readonly _fb = inject(NonNullableFormBuilder);
+  private readonly _snackBar = inject(MatSnackBar);
 
   private readonly _cardState$ = new BehaviorSubject<boolean>(false);
   public readonly cardState$ = this._cardState$.asObservable();
   private readonly _message$ = new BehaviorSubject<string>('');
   public readonly message$ = this._message$.asObservable();
   public readonly getCurrencyRepresentation = getCurrencyRepresentation;
+  public readonly getCurrencyNameFromId = getCurrencyNameFromId;
+  public isCopied = false;
 
   public readonly form = this._fb.group({
-    id: 'BTC',
+    id: Currencies.btc,
   });
 
   constructor(
@@ -64,11 +75,22 @@ export class DialogDepositComponent {
     @Inject(MAT_DIALOG_DATA) public walletInformation: PublicWallet,
   ) {}
 
+  public copyWalletAddress(): void {
+    // SSR SUPPORTS???
+    navigator.clipboard.writeText(this.walletInformation.address);
+    this.isCopied = true;
+    this._snackBar.open(depositDialogTexts.tooltip, '', {
+      duration: 2000,
+    });
+  }
+
   public get allCurrencies(): Array<Currency> {
     return this._currenciesStore.findAll.filter(currency => supportedCurrencies.includes(currency.id));
   }
 
   public setSelection(asset: Currency | FiatCurrency): void {
-    this.form.controls.id.setValue(asset.id);
+    if (isCurrency(asset)) {
+      this.form.controls.id.setValue(asset.id);
+    }
   }
 }
