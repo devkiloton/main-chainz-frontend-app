@@ -9,6 +9,7 @@ import { BitcoinService } from 'projects/central-hash-api-client/src/lib/entitie
 import { UserEntity } from 'projects/central-hash-api-client/src/public-api';
 import { firstValueFrom } from 'rxjs';
 import { DialogDepositComponent } from 'src/app/shared/dialog-deposit/dialog-deposit.component';
+import { DialogWithdrawalComponent } from 'src/app/shared/dialog-withdrawal/dialog-withdrawal.component';
 
 @Component({
   standalone: true,
@@ -42,6 +43,14 @@ export default class DashboardComponent {
       exitAnimationDuration,
       width: '410px',
       data: publicWallet,
+    });
+  }
+
+  public async openWithdrawalDialog(enterAnimationDuration: string, exitAnimationDuration: string): Promise<void> {
+    this._dialog.open(DialogWithdrawalComponent, {
+      enterAnimationDuration,
+      exitAnimationDuration,
+      width: '450px',
     });
   }
 }
