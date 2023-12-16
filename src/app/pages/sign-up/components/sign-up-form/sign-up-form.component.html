@@ -59,6 +59,7 @@
             <mat-error class="leading-normal">{{ passwordErrorMessage$ | async }}</mat-error>
           </mat-form-field>
           <mat-checkbox
+            class="mb-4"
             [class.mt-5]="
               signUpForm.controls.password.hasError('strongPassword') && signUpForm.controls.password.touched
             "
