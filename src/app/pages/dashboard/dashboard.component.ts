@@ -40,7 +40,7 @@ export default class DashboardComponent {
     this._dialog.open(DialogDepositComponent, {
       enterAnimationDuration,
       exitAnimationDuration,
-      width: '450px',
+      width: '410px',
       data: publicWallet,
     });
   }
