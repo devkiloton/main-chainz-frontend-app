@@ -9,8 +9,12 @@ body {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: -0.02rem;
+  letter-spacing: -0.1rem;
   @apply min-h-full min-w-[100%];
+}
+
+p,a,span,div,button,li,ul,ol,svg {
+  letter-spacing: -0.01rem;
 }
 
 @layer base {
