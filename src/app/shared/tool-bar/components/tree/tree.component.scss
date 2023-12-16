@@ -1,6 +1,7 @@
 :host {
   .tree {
     background-color: var(--mat-toolbar-container-background-color);
+    @apply py-2
   }
   .tree-invisible {
     @apply hidden;
