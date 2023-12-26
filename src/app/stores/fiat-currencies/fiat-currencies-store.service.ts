@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
-import { FiatCurrenciesService } from 'projects/central-hash-api-client/src/lib/entities/fiat-currencies/fiat-currencies.service';
-import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
+import { FiatCurrenciesService } from 'projects/main-chainz-api-client/src/lib/entities/fiat-currencies/fiat-currencies.service';
+import type { FiatCurrency } from 'projects/main-chainz-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { BehaviorSubject, map, type Observable } from 'rxjs';
 import { supportedFiats } from 'src/app/constants/supported-fiats';
 import type { GetOnlyOps } from '../models/get-only-ops';

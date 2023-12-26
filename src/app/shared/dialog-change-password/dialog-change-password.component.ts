@@ -11,7 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import type { MatStep } from '@angular/material/stepper';
 import { MatStepperModule } from '@angular/material/stepper';
-import { AuthEntity } from 'projects/central-hash-api-client/src/public-api';
+import { AuthEntity } from 'projects/main-chainz-api-client/src/public-api';
 import { isNil } from 'ramda';
 import { BehaviorSubject, firstValueFrom, merge } from 'rxjs';
 import { cardAlert } from 'src/app/constants/sign-in/card-alert';

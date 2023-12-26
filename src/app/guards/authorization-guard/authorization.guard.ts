@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { type CanActivateFn, Router } from '@angular/router';
 import { isNil } from 'lodash-es';
-import { AuthEntity } from 'projects/central-hash-api-client/src/public-api';
+import { AuthEntity } from 'projects/main-chainz-api-client/src/public-api';
 import { firstValueFrom } from 'rxjs';
 import { AuthStateService } from 'src/app/services/auth-state/auth-state.service';
 import { AuthStoreService } from 'src/app/stores/auth/auth-store.service';

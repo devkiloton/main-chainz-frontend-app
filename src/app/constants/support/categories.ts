@@ -1,4 +1,4 @@
-import { Category } from 'projects/central-hash-api-client/src/lib/models/articles/enum/category';
+import { Category } from 'projects/main-chainz-api-client/src/lib/models/articles/enum/category';
 import type { CategorySupport } from 'src/app/types/support/category-support';
 
 export const supportCategories: Array<CategorySupport> = [

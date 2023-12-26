@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
-import { CurrenciesService } from 'projects/central-hash-api-client/src/lib/entities/currencies/currencies.service';
-import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
+import { CurrenciesService } from 'projects/main-chainz-api-client/src/lib/entities/currencies/currencies.service';
+import type { Currency } from 'projects/main-chainz-api-client/src/lib/models/currencies/currency';
 import type { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import type { GetOnlyOps } from '../models/get-only-ops';

@@ -1,8 +1,8 @@
 import { NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { MatMenu, MatMenuModule } from '@angular/material/menu';
-import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
-import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
+import type { Currency } from 'projects/main-chainz-api-client/src/lib/models/currencies/currency';
+import type { FiatCurrency } from 'projects/main-chainz-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 import { isCurrency } from 'src/app/type-guards/is-currency';
