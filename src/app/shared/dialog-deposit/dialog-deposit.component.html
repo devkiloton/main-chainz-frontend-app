@@ -1,6 +1,6 @@
 <div class="flex flex-col items-center justify-center w-full p-4 gap-2">
-  <p class="header">Deposit crypto</p>
-  <p class="description">Select which cryptocurrency you want to deposit in your Main Chainz account.</p>
+  <p class="header" i18n>Deposit crypto</p>
+  <p class="description" i18n>Select which cryptocurrency you want to deposit in your Main Chainz account.</p>
 </div>
 <div class="flex flex-col gap-3 items-center">
   <button
@@ -23,6 +23,7 @@
     mat-stroked-button
     matTooltip="Copy the wallet address"
     (click)="copyWalletAddress()"
+    i18n-aria-label
     aria-label="Button that displays a tooltip when focused or hovered over">
     <mat-icon *ngIf="!isCopied" color="accent">content_copy</mat-icon
     ><mat-icon *ngIf="isCopied" color="accent">done_outline</mat-icon>
@@ -32,6 +33,7 @@
     class="max-w-xs rounded-lg border"
     *ngIf="walletInformation"
     [src]="walletInformation.qrcode"
+    i18n-alt
     alt="Wallet address as QR code" />
   <app-currencies-menu
     (itemSelected)="setSelection($event)"
@@ -40,5 +42,5 @@
     [collection]="allCurrencies"></app-currencies-menu>
 </div>
 <div mat-dialog-actions>
-  <button mat-flat-button color="accent" mat-dialog-close class="w-full">Finish</button>
+  <button mat-flat-button color="accent" mat-dialog-close class="w-full" i18n>Finish</button>
 </div>
