@@ -26,7 +26,6 @@ export class ButtonChangeCurrencyComponent {
   }
 
   public changeDefaultCurrency(currency: FiatCurrency | Currency): void {
-    console.log(JSON.stringify(currency, null, 2));
     if (isFiatCurrency(currency)) {
       this._allCurrenciesService.setDefaultCurrency = currency;
     }

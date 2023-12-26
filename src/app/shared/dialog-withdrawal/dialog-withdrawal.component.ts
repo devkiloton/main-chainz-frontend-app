@@ -104,7 +104,6 @@ export class DialogWithdrawalComponent {
   public async confirmWithdrawal(): Promise<void> {
     const { address, amount } = this.form.value;
     if (isNotNil(address) && isNotNil(amount)) {
-      console.log(address, amount);
       await firstValueFrom(
         this._bitcoin.createTransaction({
           receiver: address,
