@@ -1,0 +1,1921 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="hi-IN" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6342184587777019286" datatype="html">
+        <source>Main Chainz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3674190035452317646" datatype="html">
+        <source>Main Chainz | शुरुआत</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1323082491727384270" datatype="html">
+        <source>Main Chainz | विकेंद्रीकृत प्रोटोकॉल</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3453048310582544234" datatype="html">
+        <source>Main Chainz | समर्थन</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6898439828884040525" datatype="html">
+        <source>Main Chainz | हम जो हैं?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2572688163813676504" datatype="html">
+        <source>Main Chainz | Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5704710791800361367" datatype="html">
+        <source>Main Chainz | प्रवेश करना</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2755046043079261959" datatype="html">
+        <source>Main Chainz | साइन अप करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4887430567522958653" datatype="html">
+        <source>Main Chainz | नहीं मिला</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1541704563410543083" datatype="html">
+        <source>पता कॉपी किया गया!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/dashboard/deposit-dialog-texts.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4012094767214496503" datatype="html">
+        <source>उफ़, कुछ ग़लत हुआ. इसे बाद में आज़माएँ.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/dashboard/withdrawal-dialog-texts.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3613867016414878145" datatype="html">
+        <source>क्रिप्टोकरेंसी क्यों खरीदें?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2746355527114344933" datatype="html">
+        <source>क्रिप्टोकरेंसी डिजिटल मनी का एक रूप है जो लेनदेन को सुरक्षित करने और नई इकाइयों के निर्माण को नियंत्रित करने के लिए एन्क्रिप्शन का उपयोग करती है। जैसे-जैसे Bitcoin का मूल्य बढ़ता है, वैसे-वैसे उनमें निवेश करने वालों का संभावित मुनाफा भी बढ़ता है। हालाँकि, कई लोगों ने चेतावनी दी है कि यह एक बुलबुला है जो फूटने का इंतज़ार कर रहा है।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2573622135253519137" datatype="html">
+        <source>क्रिप्टोकरेंसी कौन खरीद सकता है?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2777709992901029870" datatype="html">
+        <source>क्रिप्टोकरेंसी कोई भी खरीद सकता है. आपको किसी विशेष देश का निवासी होना, न्यूनतम आयु होना या निवेश करने के लिए एक निश्चित राशि होना आवश्यक नहीं है।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8502328276943410286" datatype="html">
+        <source>क्या मैं अपनी क्रिप्टो मुद्राएँ वापस ले सकता हूँ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1128673126806613888" datatype="html">
+        <source>हां, आप या तो अपनी क्रिप्टो मुद्राएं वापस ले सकते हैं या उन्हें किसी अन्य वॉलेट में स्थानांतरित कर सकते हैं।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1746298230815922042" datatype="html">
+        <source>Bitcoin क्या है?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4092023214066071710" datatype="html">
+        <source>Bitcoin एक विकेन्द्रीकृत क्रिप्टोकरेंसी है जिसका आविष्कार 2008 में सातोशी नाकामोटो नाम का उपयोग करने वाले एक अज्ञात व्यक्ति या लोगों के समूह द्वारा किया गया था। मुद्रा का उपयोग 2009 में शुरू हुआ जब इसका कार्यान्वयन ओपन-सोर्स सॉफ़्टवेयर के रूप में जारी किया गया था।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5858523592613941415" datatype="html">
+        <source>Blockchain क्या है?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2403669984012137663" datatype="html">
+        <source>Blockchain रिकॉर्ड्स की एक बढ़ती हुई सूची है, जिसे ब्लॉक कहा जाता है, जो क्रिप्टोग्राफी का उपयोग करके एक साथ जुड़े होते हैं। प्रत्येक ब्लॉक में पिछले ब्लॉक का क्रिप्टोग्राफ़िक हैश, टाइमस्टैम्प और लेनदेन डेटा होता है।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7869563121624264875" datatype="html">
+        <source>क्रिप्टोकरेंसी वॉलेट क्या है?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4164894709894489261" datatype="html">
+        <source>क्रिप्टोकरेंसी वॉलेट एक उपकरण, भौतिक माध्यम, प्रोग्राम या एक सेवा है जो क्रिप्टोकरेंसी लेनदेन के लिए सार्वजनिक और/या निजी कुंजी संग्रहीत करता है। चाबियाँ संग्रहीत करने के इस बुनियादी कार्य के अलावा, एक क्रिप्टोक्यूरेंसी वॉलेट अक्सर एन्क्रिप्टिंग और/या हस्ताक्षरित जानकारी की कार्यक्षमता भी प्रदान करता है।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="583572958891209033" datatype="html">
+        <source>क्रिप्टोकरेंसी एक्सचेंज क्या है?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4893235514384850086" datatype="html">
+        <source>क्रिप्टोक्यूरेंसी एक्सचेंज, या डिजिटल मुद्रा एक्सचेंज, एक ऐसा व्यवसाय है जो ग्राहकों को अन्य परिसंपत्तियों, जैसे पारंपरिक फिएट मनी या अन्य डिजिटल मुद्राओं के लिए क्रिप्टोकरेंसी या डिजिटल मुद्राओं का व्यापार करने की अनुमति देता है।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1652667044648431805" datatype="html">
+        <source>क्रिप्टो खरीदें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6342682425862972636" datatype="html">
+        <source>निवेश</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6892612923889028238" datatype="html">
+        <source>क्रिप्टो व्यापार करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5554233758908758021" datatype="html">
+        <source>P2P शुद्ध</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5223003953154038238" datatype="html">
+        <source>P2P गारंटी के साथ</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6180438732719980220" datatype="html">
+        <source>Tor और IPFS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2501489806101473286" datatype="html">
+        <source>हमारे बारे में</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8606612287285235222" datatype="html">
+        <source>हम जो हैं?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7751010942038334793" datatype="html">
+        <source>ब्लॉग</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2288513108450439427" datatype="html">
+        <source>सहायता</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7307236732616849044" datatype="html">
+        <source>बाज़ार</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9174548963235376863" datatype="html">
+        <source>संबद्ध</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8942351587754185907" datatype="html">
+        <source>API</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7814069298939347422" datatype="html">
+        <source>कानूनी</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1573561306072316026" datatype="html">
+        <source>टर्मोस डे यूसो</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6090931838305354672" datatype="html">
+        <source>गोपनीयता नीति</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3750526230575466380" datatype="html">
+        <source>एक वैध ईमेल टाइप करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7183268998461307644" datatype="html">
+        <source>एक वैध पासवर्ड टाइप करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="187816358994591467" datatype="html">
+        <source>अमान्य डेटा, पुनः प्रयास करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4988132086104574617" datatype="html">
+        <source>कुछ गलत हो गया, बाद में पुनः प्रयास करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="957223318963728582" datatype="html">
+        <source>सभी फ़ील्ड भरें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3244130877832092065" datatype="html">
+        <source>बहुत सारे अनुरोध, बाद में पुनः प्रयास करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1112783085582238148" datatype="html">
+        <source>आपको एक कोड दर्ज करना होगा</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-errors.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8792702169200622643" datatype="html">
+        <source>अापका ईमेल पता क्या है?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6457533088559233187" datatype="html">
+        <source>हम आपके खाते से जुड़े ईमेल पते पर एक कोड वाला एक ईमेल भेजेंगे।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2159130950882492111" datatype="html">
+        <source>रद्द करना</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6490688569532630280" datatype="html">
+        <source>भेजना</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>ईमेल</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5343887197667893879" datatype="html">
+        <source>अपना ईमेल टाइप करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="608914549508618385" datatype="html">
+        <source>अपने ईमेल की जाँच करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4498611563182129247" datatype="html">
+        <source>आपके ईमेल पते पर भेजा गया 6 अंकों का कोड दर्ज करें।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="935187492052582731" datatype="html">
+        <source>जमा करना</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8186013988289067040" datatype="html">
+        <source>कोड</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8743792827739737699" datatype="html">
+        <source>अपना कोड टाइप करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1375188762769896369" datatype="html">
+        <source>अपना पासवर्ड बदलें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5563707991210417503" datatype="html">
+        <source>अपना नया पासवर्ड दर्ज करें।</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1230154438678955604" datatype="html">
+        <source>परिवर्तन</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3588415639242079458" datatype="html">
+        <source>नया पासवर्ड</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4452668579934015009" datatype="html">
+        <source>अपना नया पासवर्ड टाइप करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7587090040417907949" datatype="html">
+        <source>आपको एक पासवर्ड दर्ज करना होगा</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/form-field-messages.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1773949332515229643" datatype="html">
+        <source>आपको एक ईमेल दर्ज करना होगा</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/form-field-messages.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7408541314475571768" datatype="html">
+        <source>वैध ईमेल नहीं है</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/form-field-messages.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8466924095231738630" datatype="html">
+        <source>एक मान्य नाम टाइप करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5536634488552186677" datatype="html">
+        <source>नियम और शर्तों को स्वीकार करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8117915399030123640" datatype="html">
+        <source>आपको एक नाम दर्ज करना होगा</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1544318964568525167" datatype="html">
+        <source>पासवर्ड में कम से कम 8 अक्षर, 1 अपरकेस, 1 लोअरकेस, 1 नंबर और 1 विशेष अक्षर होना चाहिए</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2205525384983445256" datatype="html">
+        <source>नाम में कम से कम 2 अक्षर होने चाहिए</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8893390761160292681" datatype="html">
+        <source>मेरा खाता</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7529829265098697788" datatype="html">
+        <source>जमा और निकासी</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8878700331247603166" datatype="html">
+        <source>सुरक्षा</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1001106846304160351" datatype="html">
+        <source>गुमनामी</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7482217084177855485" datatype="html">
+        <source>P2P</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4551581141684694255" datatype="html">
+        <source>नीतियों</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1877096995803157114" datatype="html">
+        <source>क्रिप्टो ट्रांसफर करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>संपर्क</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8903954975609359428" datatype="html">
+        <source>खरीदना और बेचना</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5508024422979239599" datatype="html">
+        <source>शुरू करना</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6816387915320962785" datatype="html">
+        <source>व्यापार</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2544569632476723854" datatype="html">
+        <source>शर्तें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5881876145178332550" datatype="html">
+        <source>का</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4743002849260529978" datatype="html">
+        <source>आइटम प्रति पेज:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3337301694210287595" datatype="html">
+        <source>अगला पृष्ठ</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3629960544875360046" datatype="html">
+        <source>पिछला पृष्ठ</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5216583664915438242" datatype="html">
+        <source>वर्तमान क्रिप्टो बैलेंस</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5213771062241898526" datatype="html">
+        <source>जमा</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4122395742771296023" datatype="html">
+        <source>निकासी</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1270421233965290368" datatype="html">
+        <source>वर्तमान शेष</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8356536523911549530" datatype="html">
+        <source>धन जोड़ें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6691810268713581510" datatype="html">
+        <source>निकासी</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8290961252729284698" datatype="html">
+        <source>निवेश</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1104731162329809257" datatype="html">
+        <source>निवेश करना</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9036987211678595577" datatype="html">
+        <source> गोपनीयता की तलाश में और          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;" />
+ विकेंद्रीकृत पहुंच? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2085635691077531880" datatype="html">
+        <source> मेन चैनज़ को संभवतः सबसे शत्रुतापूर्ण वातावरण में विरोध करने के लिए डिज़ाइन किया गया था, जैसे कि तानाशाही, युद्ध और अन्य विभिन्न परिस्थितियाँ जिनमें किसी व्यक्ति के बुनियादी मानवाधिकारों को खतरे में डाला जा सकता है। </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">8,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2336823852226369010" datatype="html">
+        <source>Brave, Ipfs और TOR प्रतीक चिन्ह</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9112077778622534643" datatype="html">
+        <source>तेज़ विकेंद्रीकृत पहुंच के लिए IPFS का उपयोग करें</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8384880635071489210" datatype="html">
+        <source> IPFS, एक विकेन्द्रीकृत और पीयर-टू-पीयर प्रणाली है। एकल सर्वर पर निर्भर रहने के बजाय, यह फ़ाइलों को छोटे-छोटे टुकड़ों में तोड़ता है और उन्हें कंप्यूटर के नेटवर्क में वितरित करता है। जब आप किसी फ़ाइल या वेबसाइट तक पहुंचना चाहते हैं, तो आपका डिवाइस इन हिस्सों को कई स्रोतों से लाता है, जिससे प्रक्रिया अधिक लचीली, तेज़ और सेंसरशिप-प्रतिरोधी हो जाती है। </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">26,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1538783191202171739" datatype="html">
+        <source> क्या आप नौसिखिया हैं? IPFS के साथ आरंभ करने के लिए <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;text-blue-700 underline&quot; routerLink=&quot;/home&quot;&gt;" />
+ इस लेख को पढ़ें.        <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />
+      </source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+        <context context-type="linenumber">32,35</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="5991034634221831996" datatype="html">
+      <source>IPFS प्रोजेक्ट लोगो</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+        <context context-type="linenumber">38</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="5387371788034026034" datatype="html">
+      <source>Tor प्रोजेक्ट लोगो</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+        <context context-type="linenumber">44</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="6719987514291830427" datatype="html">
+      <source>अभी तक लागु नहीं किया</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+        <context context-type="linenumber">47</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="4946257106684693851" datatype="html">
+      <source>गोपनीयता और विकेंद्रीकरण के लिए TOR का उपयोग करें</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+        <context context-type="linenumber">48</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="315622167963524304" datatype="html">
+      <source> जब आप नियमित वेब का उपयोग करते हैं, तो वेबसाइटें आपका आईपी पता देख सकती हैं और संभावित रूप से आपकी ऑनलाइन गतिविधियों को ट्रैक कर सकती हैं। टोर स्वयंसेवी-संचालित सर्वरों के नेटवर्क के माध्यम से आपके इंटरनेट ट्रैफ़िक को बढ़ाकर आपकी गोपनीयता की रक्षा करने में मदद करता है, जिससे वेबसाइटों या किसी अन्य के लिए आपके ऑनलाइन कार्यों का पता लगाना मुश्किल हो जाता है। </source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+        <context context-type="linenumber">50,54</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="2149165958319691680" datatype="html">
+      <source>खरीदना</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/components/card-buy/card-buy.component.html</context>
+        <context context-type="linenumber">17</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/components/card-buy/card-buy.component.html</context>
+        <context context-type="linenumber">17</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
+        <context context-type="linenumber">12</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
+        <context context-type="linenumber">12</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="2844510856217880960" datatype="html">
+      <source>एक वैकल्पिक वास्तविकता को डिक्रिप्ट करें</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">5</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="1021030231432706284" datatype="html">
+      <source>Main Chainz लोगो</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">9</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">15</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+        <context context-type="linenumber">15</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+        <context context-type="linenumber">21</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="5851395634803682380" datatype="html">
+      <source>बाजारों में एक नज़र डालें</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">33</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="4628876328312874028" datatype="html">
+      <source>भय और लालच सूचकांक</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">39</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="1175303720383873098" datatype="html">
+      <source> Bitcoin डर और लालच सूचकांक एक लोकप्रिय भावना संकेतक है जिसका उपयोग Bitcoin क्रिप्टोक्यूरेंसी बाजार में बाजार सहभागियों की प्रचलित भावना और भावनाओं को मापने के लिए किया जाता है। यह एक संख्यात्मक स्कोर प्रदान करता है जो दर्शाता है कि क्या निवेशक वर्तमान में Bitcoin की कीमत के बारे में अधिक भयभीत या लालची महसूस कर रहे हैं। </source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">40,44</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="8235805970201248247" datatype="html">
+      <source>अब</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">46</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="4498682414491138092" datatype="html">
+      <source>कल</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">47</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="7591870443991978948" datatype="html">
+      <source>पिछले सप्ताह</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">48</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="4236012474665084450" datatype="html">
+      <source>बारंबार प्रश्न</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+        <context context-type="linenumber">53</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="3887257505197968390" datatype="html">
+      <source>पृष्ठ नहीं मिला :(</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+        <context context-type="linenumber">1</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="6914885732523269434" datatype="html">
+      <source> आपको होम पेज पर पुनः निर्देशित किया जाएगा        <x id="INTERPOLATION" equiv-text="{{ 10 - ((counter$ | async) ?? 0) }}" />
+        <x id="INTERPOLATION_1" equiv-text="{{ (counter$ | async)! &gt;= 9 ? &apos;second&apos; : &apos;seconds&apos; }}" />
+      </source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+        <context context-type="linenumber">2,5</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="2600176046488858632" datatype="html">
+      <source>Nyan बिल्ली अंतरिक्ष में खोई हुई दौड़ रही है</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+        <context context-type="linenumber">6</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="1283241409166703000" datatype="html">
+      <source>निजी</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">7</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">7</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="4200317694838753109" datatype="html">
+      <source>वापसी पर स्वागत है</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">10</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="1431416938026210429" datatype="html">
+      <source>पासवर्ड</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">26</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">36</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">39</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">49</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="7749078167476570327" datatype="html">
+      <source>अपना पासवर्ड टाइप करें</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">32</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">45</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="1446670643492611810" datatype="html">
+      <source>पासवर्ड छिपाएं</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">43</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="2727496946419791472" datatype="html">
+      <source>पासवर्ड भूल गए?</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">53</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="30307474339412458" datatype="html">
+      <source>पासवर्ड भूल गए बटन</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">56</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="6267056941649608759" datatype="html">
+      <source>साइन इन बटन</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">63</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="5207635742003539443" datatype="html">
+      <source>दाखिल करना</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">65</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+        <context context-type="linenumber">89</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="3444283345846409807" datatype="html">
+      <source>भूत</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">77</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">98</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="9181889580801594086" datatype="html">
+      <source>पंजीकरण नहीं किया?</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">87</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="3194101498761000418" datatype="html">
+      <source>साइन अप बटन</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+        <context context-type="linenumber">89</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">84</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="5690241527890097775" datatype="html">
+      <source>शक्ति</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+        <context context-type="linenumber">2</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="3616229206195726198" datatype="html">
+      <source>स्वतंत्रता</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+        <context context-type="linenumber">3</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="4348901842647159701" datatype="html">
+      <source>रक्षा</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+        <context context-type="linenumber">4</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="8237324422844696241" datatype="html">
+      <source>स्वायत्तता</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+        <context context-type="linenumber">5</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="2938852481940320537" datatype="html">
+      <source>Bitcoin इसी बारे में है, और हम भी इसी बारे में हैं।</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+        <context context-type="linenumber">6</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="6610794799304129074" datatype="html">
+      <source>कुछ चरणों में एक खाता बनाएं</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">10</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="1210451390183389265" datatype="html">
+      <source>नाम या उपनाम</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">13</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">22</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="2817424426533477993" datatype="html">
+      <source>अपना नाम या उपनाम लिखें</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">19</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="4159543318674567176" datatype="html">
+      <source>&apos;पासवर्ड छिपाएं&apos;</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">55</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="7337191834904306859" datatype="html">
+      <source> एक खाता बनाकर, मैं Main Chainz सेवा की शर्तों और गोपनीयता नीति से सहमत हूं। </source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">67,69</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="4960241331715335287" datatype="html">
+      <source>पहले से ही पंजीकृत?</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">76</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="2409203497429796038" datatype="html">
+      <source>पहले से ही एक खाता बटन है</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">78</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="7028204981963450021" datatype="html">
+      <source>साइन अप करें</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+        <context context-type="linenumber">86</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+        <context context-type="linenumber">90</context>
+      </context-group>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+        <context context-type="linenumber">105</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="8440128775129354214" datatype="html">
+      <source>गोपनीयता</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+        <context context-type="linenumber">18</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="7227590042704998799" datatype="html">
+      <source>विश्वसनीयता</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+        <context context-type="linenumber">20</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="2256431380785113233" datatype="html">
+      <source>गुमनामी</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+        <context context-type="linenumber">21</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="998198680829811487" datatype="html">
+      <source> इन मानदंडों के साथ एक मंच खोजने की आपकी यात्रा समाप्त हो गई है, मेन चेनज़ में आपका स्वागत है। </source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+        <context context-type="linenumber">22,24</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="6889689669005958674" datatype="html">
+      <source>अन्य लेख</source>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+        <context context-type="linenumber">6</context>
+      </context-group>
+    </trans-unit>
+    <trans-unit id="7503445051604970005" datatype="html">
+      <source>
+        <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+today<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+ पर अद्यतन किया गया      <x id="INTERPOLATION" equiv-text="{{ article.updatedAt | date: &apos;shortDate&apos; }}" />
+    </source>
+    <context-group purpose="location">
+      <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+      <context context-type="linenumber">10,11</context>
+    </context-group>
+  </trans-unit>
+  <trans-unit id="6832609193025865209" datatype="html">
+    <source>
+      <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+visibility<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+    <x id="INTERPOLATION" equiv-text="{{ article.views }}" />
+ दृश्य</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+    <context context-type="linenumber">11</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="6511277488795405399" datatype="html">
+  <source>क्या आपके पास अभी भी प्रश्न हैं?</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+    <context context-type="linenumber">17</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="8049752003309039780" datatype="html">
+  <source>समर्थन से संपर्क करें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+    <context context-type="linenumber">18</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="8116017591055808577" datatype="html">
+  <source>मुख्य चैनज़ सहायता केंद्र</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/components/header/header.component.html</context>
+    <context context-type="linenumber">3</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5063295649720964221" datatype="html">
+  <source>हम आपकी कैसे मदद कर सकते हैं?</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/components/header/header.component.html</context>
+    <context context-type="linenumber">4</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1157633975438915079" datatype="html">
+  <source>अपना प्रश्न टाइप करने के लिए इनपुट करें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/components/header/header.component.html</context>
+    <context context-type="linenumber">8</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1766517444390746867" datatype="html">
+  <source>तुम क्या ढूंढ रहे हो?</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/components/header/header.component.html</context>
+    <context context-type="linenumber">10</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1398409325749709462" datatype="html">
+  <source>श्रेणी के अनुसार खोजें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/support.component.html</context>
+    <context context-type="linenumber">4</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="7289278695682389111" datatype="html">
+  <source>शायद इससे मदद मिलेगी</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/support/support.component.html</context>
+    <context context-type="linenumber">10</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="543019781564247493" datatype="html">
+  <source>हमारा विशेष कार्य</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">2</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="3273824183141363718" datatype="html">
+  <source>यहां मेन चैनज़ में हमारा मिशन कठिन, जोखिम भरा और कई लोगों के लिए पागलपन भरा भी है:</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">3</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="2847675788993472897" datatype="html">
+  <source>
+    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b
+      &gt;" />
+समाज को गोपनीयता और सुरक्षा के साथ एक वैकल्पिक वित्तीय प्रणाली तक पहुंच प्रदान करें, ताकि राज्य और उसके एजेंटों द्वारा लोगों का शोषण न किया जा सके।    <x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b
+    &gt;" />
+  </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">5,8</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="7044927145769162140" datatype="html">
+  <source>हमारा उससे क्या मतलब है?</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">11</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="159823960423726711" datatype="html">
+  <source>खैर, इसकी व्याख्या करने के कई तरीके हैं। मुद्रास्फीति, वित्तीय डेटा तक अप्रतिबंधित पहुंच के साथ गोपनीयता का उल्लंघन, बैंक पतन से बचने के लिए निकासी को सीमित करके संकट के समय में अधिकारों का उल्लंघन और वर्ग परिवर्तन को रोकने वाले अत्यधिक कर, ऐसे कुछ तरीके हैं जिनसे राज्य और बड़े निगमों की शक्ति समाज के विरुद्ध हथियार के रूप में प्रत्ययी प्रणाली का उपयोग प्रकट होता है। </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">12,17</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5094121270433174313" datatype="html">
+  <source> मेन चैनज़ जो पेशकश करता है वह क्रिप्टोकरेंसी और निवेश से कहीं आगे तक जाता है, बल्कि उन सभी क्रूरताओं के प्रतिरोध का एक रूप है जो एक उपकरण (क्रिप्टोकरेंसी) के साथ प्रत्ययी प्रणाली में देखी जाती है जिस पर राज्य का कोई नियंत्रण नहीं है और कभी-कभी इसका ज्ञान भी नहीं होता है। </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">19,23</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1079149704855734110" datatype="html">
+  <source> मेन चैनज़ का जन्म उत्पीड़ितों की शक्ति की आवश्यकता से हुआ था और यह उन सभी लोगों से जुड़ता है जो अपने वित्त पर संप्रभुता चाहते हैं, क्या आप हमसे जुड़ने के लिए तैयार हैं? </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">25,28</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5000243255887431800" datatype="html">
+  <source> मेन चैनज़ ब्राज़ील में स्थित एक कंपनी है, और एक क्रिप्टोक्यूरेंसी ब्रोकर और क्रिप्टोक्यूरेंसी निवेश प्रदाता के रूप में कार्य करती है। </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">31,34</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="7395112147424834310" datatype="html">
+  <source> हमारा मानना है कि प्रौद्योगिकी, क्रिप्टोग्राफी और वित्त के माध्यम से हम फिएट के लिए एक वैकल्पिक प्रणाली की पेशकश करके मानवता और दुनिया भर के समाजों के पाठ्यक्रम को बदल सकते हैं, ताकि तानाशाही कमजोर हो, छद्म लोकतंत्र बेनकाब हो, केंद्रीय बैंकों द्वारा भड़काई जाने वाली मुद्रास्फीति नष्ट हो, अन्य परिवर्तनों के बीच . </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">36,40</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="4746208724857754602" datatype="html">
+  <source>मेन चैनज़ में आपका स्वागत है!</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+    <context context-type="linenumber">43</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="594840641396778644" datatype="html">
+  <source>कीमतों को परिवर्तित करने के लिए उपयोग की जाने वाली मुद्रा को बदलें।</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/button-change-currency/button-change-currency.component.html</context>
+    <context context-type="linenumber">5</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5134116791875286684" datatype="html">
+  <source>वेब साइट थीम लाइट मोड बदलें।</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/button-change-theme/button-change-theme.component.html</context>
+    <context context-type="linenumber">6</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="7171795626704069768" datatype="html">
+  <source>वेब साइट थीम को डार्क मोड में बदलें।</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/button-change-theme/button-change-theme.component.html</context>
+    <context context-type="linenumber">14</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1089762823481395967" datatype="html">
+  <source>समर्थन बटन</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/button-contact/button-contact.component.html</context>
+    <context context-type="linenumber">1</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="56023197195175773" datatype="html">
+  <source>वेब साइट की भाषा बदलें.</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/change-locale-button/change-locale-button.component.html</context>
+    <context context-type="linenumber">1</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="3775383209003375667" datatype="html">
+  <source>संयुक्त राज्य अमेरिका का झंडा.</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/change-locale-button/change-locale-button.component.html</context>
+    <context context-type="linenumber">7</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="226777112940898586" datatype="html">
+  <source>ब्राज़ील का झंडा.</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/change-locale-button/change-locale-button.component.html</context>
+    <context context-type="linenumber">13</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="4280915869956567726" datatype="html">
+  <source>भारत झंडा।</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/change-locale-button/change-locale-button.component.html</context>
+    <context context-type="linenumber">19</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="8347433539480093083" datatype="html">
+  <source>पासवर्ड बदला गया!</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-change-password/dialog-change-password.component.html</context>
+    <context context-type="linenumber">31</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="2603173483119493042" datatype="html">
+  <source> तुम्हारा पासवर्ड सफलतापूर्वक बदल दिया गया है। अब आप अपने नए पासवर्ड से साइन इन कर सकते हैं। </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-change-password/dialog-change-password.component.html</context>
+    <context context-type="linenumber">32,34</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="65984904390749158" datatype="html">
+  <source>खत्म करना</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-change-password/dialog-change-password.component.html</context>
+    <context context-type="linenumber">35</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+    <context context-type="linenumber">45</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">72</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="762257223228937771" datatype="html">
+  <source>क्रिप्टो जमा करें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+    <context context-type="linenumber">2</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">3</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="3400196587132537833" datatype="html">
+  <source>चुनें कि आप अपने मेन चैनज़ खाते में कौन सी क्रिप्टोकरेंसी जमा करना चाहते हैं।</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+    <context context-type="linenumber">3</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="256121104671304415" datatype="html">
+  <source>अपनी क्रिप्टोकरेंसी चुनें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+    <context context-type="linenumber">11</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">12</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/modal-converter/currency-input/currency-input.component.html</context>
+    <context context-type="linenumber">17</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="3873655769195380286" datatype="html">
+  <source>वह बटन जो फ़ोकस करने या उस पर होवर करने पर टूलटिप प्रदर्शित करता है</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+    <context context-type="linenumber">27</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5577290573064496453" datatype="html">
+  <source>क्यूआर कोड के रूप में वॉलेट का पता</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+    <context context-type="linenumber">37</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">52</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1326245797734434832" datatype="html">
+  <source>चुनें कि आप किस क्रिप्टोकरेंसी से निकासी करना चाहते हैं।</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">4</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5417297163253677399" datatype="html">
+  <source>लेन-देन अपरिवर्तनीय हैं, इसलिए सुनिश्चित करें कि पता मौजूद है और आप इसे सही पते पर भेज रहे हैं।</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">26</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="2286358307535981663" datatype="html">
+  <source>वह राशि दर्ज करें जिसे आप निकालना चाहते हैं</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">30</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="6533918067030990396" datatype="html">
+  <source>मात्रा</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">32</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">34</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1878085832047557752" datatype="html">
+  <source>बटुआ पता</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">41</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">43</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="9178182467454450952" datatype="html">
+  <source>पुष्टि करना</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">60</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="6322996053167197045" datatype="html">
+  <source>आपका लेन-देन शुरू हो गया है!</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">65</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="6428115617996545685" datatype="html">
+  <source> लेन-देन संसाधित हो रहा है, इसकी पुष्टि होने में कुछ मिनट लगेंगे लेकिन आप इसे    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;" />
+ मेरे लेन-देन    <x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;" />
+ मेनू पर ट्रैक कर सकते हैं। </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+    <context context-type="linenumber">66,69</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="2622256285331555048" datatype="html">
+  <source>Main Chainz का लोगो</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
+    <context context-type="linenumber">3</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
+    <context context-type="linenumber">4</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="8241494602367691036" datatype="html">
+  <source>कोड डालें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+    <context context-type="linenumber">4</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="10942199050114752" datatype="html">
+  <source>हमने आपको आपके ईमेल पते पर एक कोड भेजा है। कृपया इसे नीचे डालें.</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+    <context context-type="linenumber">5</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="8092074012131474395" datatype="html">
+  <source>पुष्टि कोड</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+    <context context-type="linenumber">8</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="604060438853502841" datatype="html">
+  <source>कोड</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+    <context context-type="linenumber">18</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="4972269325666456756" datatype="html">
+  <source>साइन इन रद्द करें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+    <context context-type="linenumber">27</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="8914272824138963045" datatype="html">
+  <source>कोड बटन सबमिट करें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+    <context context-type="linenumber">34</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="7196360912393502967" datatype="html">
+  <source>आपको एक मान दर्ज करना होगा</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.ts</context>
+    <context context-type="linenumber">112</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="3382905595935147622" datatype="html">
+  <source>अपनी राशि टाइप करें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/modal-converter/currency-input/currency-input.component.html</context>
+    <context context-type="linenumber">8</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="344656956545806818" datatype="html">
+  <source>INR</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.ts</context>
+    <context context-type="linenumber">56</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="6837415268624992987" datatype="html">
+  <source>एक मुद्रा खोजें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+    <context context-type="linenumber">2</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="4327471061205783634" datatype="html">
+  <source>मुद्रा</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+    <context context-type="linenumber">18</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="8894377483833272091" datatype="html">
+  <source>कीमत</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+    <context context-type="linenumber">31</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5693187460840441609" datatype="html">
+  <source>बाज़ार आकार</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+    <context context-type="linenumber">37</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="7817625824147105593" datatype="html">
+  <source>पिछले 24 घंटे</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+    <context context-type="linenumber">43</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="6813192022789916150" datatype="html">
+  <source>से संबंधित कोई मुद्रा नहीं &quot;<x id="INTERPOLATION" equiv-text="{{ input.value }}" />
+&quot;</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+    <context context-type="linenumber">52</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1400806227986623240" datatype="html">
+  <source>क्रिप्टोकरेंसी का पेज चुनें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+    <context context-type="linenumber">60</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="818931697595849329" datatype="html">
+  <source>साइड मेन्यू खोलें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">8</context>
+  </context-group>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">97</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="3448324243745505890" datatype="html">
+  <source>होम पेज पर जाने के लिए बटन.</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">11</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="654733759220725677" datatype="html">
+  <source>क्रिप्टो व्यापार करें    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;icon-size&quot;&gt;" />
+expand_more<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+  </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">29,30</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5393612783227521604" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+group<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+P2P शुद्ध</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">33</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1627341644512664655" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+diversity_3<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+P2P गारंटी के साथ</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">36</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="4539177898819783204" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon [svgIcon]=&quot;&apos;decentralized_protocols&apos;&quot;&gt;" />
+    <x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="Tor and IPFS" />
+Tor और IPFS</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">45</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="288632028777957905" datatype="html">
+  <source>हमारे बारे में    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;icon-size&quot;&gt;" />
+expand_more<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+  </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">49,50</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="2282783562911644522" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+question_mark<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+हम जो हैं</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">53</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="7394509450631159954" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+description<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+Blog</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">56</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="2245750332145299373" datatype="html">
+  <source>अधिक    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;icon-size&quot;&gt;" />
+expand_more<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+  </source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">60,61</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="691655961714499514" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+ support_agent<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+सहायता</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">64</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="5345906949620207963" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+show_chart<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+बाज़ार</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">67</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="3508663307366107615" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+api<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+API</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">70</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="3644254944864530098" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+hub<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+संबद्ध</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">73</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1298050893654323451" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+gavel<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+उपयोग की शर्तें</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">76</context>
+  </context-group>
+</trans-unit>
+<trans-unit id="1917891396957585934" datatype="html">
+  <source>
+    <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;" />
+policy<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
+गोपनीयता नीति</source>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+    <context context-type="linenumber">79</context>
+  </context-group>
+</trans-unit>
+</body>
+</file>
+</xliff>
