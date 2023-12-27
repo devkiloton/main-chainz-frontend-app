@@ -460,13 +460,6 @@
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7315714079098881460" datatype="html">
-        <source>email</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="608914549508618385" datatype="html">
         <source>Check your email</source>
         <context-group purpose="location">
@@ -514,13 +507,6 @@
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3667842621564887364" datatype="html">
-        <source>text</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="1375188762769896369" datatype="html">
         <source>Change your password</source>
         <context-group purpose="location">
@@ -554,13 +540,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
           <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4809196861118879526" datatype="html">
-        <source>password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
-          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7587090040417907949" datatype="html">
@@ -809,18 +788,53 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="5213771062241898526" datatype="html">
+        <source>Deposit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4122395742771296023" datatype="html">
+        <source> Withdrawal </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1270421233965290368" datatype="html">
         <source>Current balance</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8356536523911549530" datatype="html">
+        <source>Add funds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6691810268713581510" datatype="html">
+        <source>Withdrawal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8290961252729284698" datatype="html">
         <source>Invested</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1104731162329809257" datatype="html">
+        <source>Invest</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9036987211678595577" datatype="html">
@@ -898,6 +912,25 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
           <context context-type="linenumber">50,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2149165958319691680" datatype="html">
+        <source>Buy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/components/card-buy/card-buy.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/components/card-buy/card-buy.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2844510856217880960" datatype="html">
@@ -1414,8 +1447,8 @@
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1658176292908627603" datatype="html">
-        <source>Example icon button with a bookmark icon</source>
+      <trans-unit id="1089762823481395967" datatype="html">
+        <source>Support button</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/button-contact/button-contact.component.html</context>
           <context context-type="linenumber">1</context>
@@ -1651,17 +1684,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/modal-converter/currency-input/currency-input.component.html</context>
           <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2149165958319691680" datatype="html">
-        <source>Buy</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
-          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="344656956545806818" datatype="html">

@@ -461,13 +461,6 @@
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7315714079098881460" datatype="html">
-        <source>email</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="608914549508618385" datatype="html">
         <source>Veja seu email</source>
         <context-group purpose="location">
@@ -515,13 +508,6 @@
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3667842621564887364" datatype="html">
-        <source>text</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="1375188762769896369" datatype="html">
         <source>Mudar senha</source>
         <context-group purpose="location">
@@ -555,13 +541,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
           <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4809196861118879526" datatype="html">
-        <source>password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
-          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7587090040417907949" datatype="html">
@@ -1679,12 +1658,62 @@ Transações<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;" />
 <trans-unit id="2149165958319691680" datatype="html">
 <source>Comprar</source>
 <context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/components/card-buy/card-buy.component.html</context>
+<context context-type="linenumber">17</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/components/card-buy/card-buy.component.html</context>
+<context context-type="linenumber">17</context>
+</context-group>
+<context-group purpose="location">
 <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
 <context context-type="linenumber">12</context>
 </context-group>
 <context-group purpose="location">
 <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
 <context context-type="linenumber">12</context>
+</context-group>
+</trans-unit>
+<trans-unit id="5213771062241898526" datatype="html">
+<source>Depositar</source>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+<context context-type="linenumber">8</context>
+</context-group>
+</trans-unit>
+<trans-unit id="4122395742771296023" datatype="html">
+<source>Sacar</source>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+<context context-type="linenumber">9,11</context>
+</context-group>
+</trans-unit>
+<trans-unit id="8356536523911549530" datatype="html">
+<source>Adicionar fundos</source>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+<context context-type="linenumber">24</context>
+</context-group>
+</trans-unit>
+<trans-unit id="6691810268713581510" datatype="html">
+<source>Sacar</source>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+<context context-type="linenumber">25</context>
+</context-group>
+</trans-unit>
+<trans-unit id="1104731162329809257" datatype="html">
+<source>Investir</source>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+<context context-type="linenumber">35</context>
+</context-group>
+</trans-unit>
+<trans-unit id="1089762823481395967" datatype="html">
+<source>Botão de suporte</source>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/shared/button-contact/button-contact.component.html</context>
+<context context-type="linenumber">1</context>
 </context-group>
 </trans-unit>
 <trans-unit id="344656956545806818" datatype="html">
@@ -1831,7 +1860,7 @@ Blog</source>
 </context-group>
 </trans-unit>
 <trans-unit id="2245750332145299373" datatype="html">
-<source>More<x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;icon-size&quot;&gt;" />
+<source>Mais<x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;icon-size&quot;&gt;" />
 expand_more<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;" />
 </source>
 <context-group purpose="location">
