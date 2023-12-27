@@ -1,356 +1,1839 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="1.2"
-  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="175624764029194350" datatype="html">
+      <trans-unit id="6342184587777019286" datatype="html">
         <source>Main Chainz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7200801166640400616" datatype="html">
+      <trans-unit id="3674190035452317646" datatype="html">
         <source>Main Chainz | Home</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1747126662927806548" datatype="html">
-        <source>Main Chainz | Create wallet</source>
+      <trans-unit id="1323082491727384270" datatype="html">
+        <source>Main Chainz | Decentralized protocols</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="9073462274412492633" datatype="html">
-        <source>Main Chainz | Check wallet</source>
+      <trans-unit id="3453048310582544234" datatype="html">
+        <source>Main Chainz | Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">26</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="6704896490811356993" datatype="html">
-        <source>Main Chainz | Create transfer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">30</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="1214745977726045534" datatype="html">
-        <source>Main Chainz | Check transfer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">35</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="4252027105627904167" datatype="html">
-        <source>Main Chainz | Check transaction fee</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5689410621135019134" datatype="html">
-        <source>Main Chainz | Check transaction history</source>
+      <trans-unit id="6898439828884040525" datatype="html">
+        <source>Main Chainz | Who we are?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app-routing.module.ts</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7696835135150934392" datatype="html">
-        <source>Check wallet</source>
+      <trans-unit id="2572688163813676504" datatype="html">
+        <source>Main Chainz | Dashboard</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">53</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="5704710791800361367" datatype="html">
+        <source>Main Chainz | Sign in</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2755046043079261959" datatype="html">
+        <source>Main Chainz | Sign up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4887430567522958653" datatype="html">
+        <source>Main Chainz | Not found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1541704563410543083" datatype="html">
+        <source>Address copied!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/dashboard/deposit-dialog-texts.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4012094767214496503" datatype="html">
+        <source>Oops, something wrong happened. Try it later.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/dashboard/withdrawal-dialog-texts.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3613867016414878145" datatype="html">
+        <source>Why buy crypto currencies?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="322477026935471468" datatype="html">
-        <source>Check transaction history</source>
+      <trans-unit id="2746355527114344933" datatype="html">
+        <source>Cryptocurrencies are a form of digital money that use encryption to secure transactions and control the creation of new units. As Bitcoins rise in value, so do the prospective profits of those investing in them. However, many have warned that this is a bubble waiting to burst.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7757652357017200733" datatype="html">
-        <source>Create wallet</source>
+      <trans-unit id="2573622135253519137" datatype="html">
+        <source>Who can buy crypto currencies?</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5095810357015793342" datatype="html">
-        <source>Create transfer</source>
+      <trans-unit id="2777709992901029870" datatype="html">
+        <source>Anyone can buy cryptocurrencies. You don’t need to be a resident of a particular country, a minimal age, or have a certain amount of money to invest.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8709682396535512886" datatype="html">
-        <source>Check transaction fee</source>
+      <trans-unit id="8502328276943410286" datatype="html">
+        <source>Can I withdraw my crypto currencies?</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">42</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6719429095355215912" datatype="html">
-        <source>Check transfer</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/constants/bitcoin-services-grid-tiles.ts</context>
-          <context context-type="linenumber">51</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3404983853244960848" datatype="html">
-        <source>Ex. tb4ql8agn3j3xdu7h406v48v5cvj40glkgz09uja00</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7881991137830951060" datatype="html">
-        <source>Type here the wallet address...</source>
+      <trans-unit id="1128673126806613888" datatype="html">
+        <source>Yes, you can either withdraw your crypto currencies or transfer them to another wallet any time.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5390355996645347252" datatype="html">
-        <source>Wallet address input.</source>
+      <trans-unit id="1746298230815922042" datatype="html">
+        <source>What is Bitcoin?</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7536890657300313016" datatype="html">
-        <source>Query icon</source>
+      <trans-unit id="4092023214066071710" datatype="html">
+        <source>Bitcoin is a decentralized cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto. The currency began use in 2009 when its implementation was released as open-source software.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1609474093650044651" datatype="html">
-        <source>Find a wallet in the blockchain</source>
+      <trans-unit id="5858523592613941415" datatype="html">
+        <source>What is the blockchain?</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6042393782919769952" datatype="html">
-        <source>Query failed icon</source>
+      <trans-unit id="2403669984012137663" datatype="html">
+        <source>A blockchain is a growing list of records, called blocks, that are linked together using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7869563121624264875" datatype="html">
+        <source>What is a cryptocurrency wallet?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4164894709894489261" datatype="html">
+        <source>A cryptocurrency wallet is a device, physical medium, program or a service which stores the public and/or private keys for cryptocurrency transactions. In addition to this basic function of storing the keys, a cryptocurrency wallet more often also offers the functionality of encrypting and/or signing information.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="583572958891209033" datatype="html">
+        <source>What is a cryptocurrency exchange?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4893235514384850086" datatype="html">
+        <source>A cryptocurrency exchange, or a digital currency exchange (DCE), is a business that allows customers to trade cryptocurrencies or digital currencies for other assets, such as conventional fiat money or other digital currencies.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/home/questions-and-answers.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1652667044648431805" datatype="html">
+        <source>Buy crypto</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1744517053975977026" datatype="html">
-        <source>Wallet not found</source>
+      <trans-unit id="6342682425862972636" datatype="html">
+        <source>Investments</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8043916825107547948" datatype="html">
-        <source>Other services</source>
+      <trans-unit id="6892612923889028238" datatype="html">
+        <source>Trade cryto</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">15</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="5554233758908758021" datatype="html">
+        <source>P2P pure</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5223003953154038238" datatype="html">
+        <source>P2P with guarantee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6180438732719980220" datatype="html">
+        <source>Tor and IPFS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2501489806101473286" datatype="html">
+        <source>About us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8606612287285235222" datatype="html">
+        <source>Who we are?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="1929245797262539865" datatype="html">
-        <source>Icon representing the service.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/check-wallet/check-wallet.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3679725423691555662" datatype="html">
-        <source>A blockchain query tool</source>
+      <trans-unit id="7751010942038334793" datatype="html">
+        <source>Blog</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6902968760689535546" datatype="html">
-        <source>Main Chainz logo</source>
+      <trans-unit id="2288513108450439427" datatype="html">
+        <source>Support</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7307236732616849044" datatype="html">
+        <source>Markets</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9174548963235376863" datatype="html">
+        <source>Affiliate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8942351587754185907" datatype="html">
+        <source>API</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7814069298939347422" datatype="html">
+        <source>Legal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1573561306072316026" datatype="html">
+        <source>Terms of use</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6090931838305354672" datatype="html">
+        <source>Privacy policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/shared/tree-data.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3750526230575466380" datatype="html">
+        <source>Type a valid email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
           <context context-type="linenumber">2</context>
         </context-group>
         <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7183268998461307644" datatype="html">
+        <source>Type a valid password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="187816358994591467" datatype="html">
+        <source>Invalid data, try again</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4988132086104574617" datatype="html">
+        <source>Something went wrong, try again later</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="957223318963728582" datatype="html">
+        <source>Fill up all fields</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3244130877832092065" datatype="html">
+        <source>Too many requests, try again later</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/card-alert.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1112783085582238148" datatype="html">
+        <source>You must enter a code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-errors.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8792702169200622643" datatype="html">
+        <source>What is your email address?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6457533088559233187" datatype="html">
+        <source>We will send an email containing a code to the email address associated with your account.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2159130950882492111" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6490688569532630280" datatype="html">
+        <source>Send</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5343887197667893879" datatype="html">
+        <source>Type your email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7315714079098881460" datatype="html">
+        <source>email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="608914549508618385" datatype="html">
+        <source>Check your email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4498611563182129247" datatype="html">
+        <source>Enter the 6-digit code sent to your email address.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="935187492052582731" datatype="html">
+        <source>Submit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8186013988289067040" datatype="html">
+        <source>Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8743792827739737699" datatype="html">
+        <source>Type your code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3667842621564887364" datatype="html">
+        <source>text</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1375188762769896369" datatype="html">
+        <source>Change your password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5563707991210417503" datatype="html">
+        <source>Enter your new password.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1230154438678955604" datatype="html">
+        <source>Change</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3588415639242079458" datatype="html">
+        <source>New password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4452668579934015009" datatype="html">
+        <source>Type your new password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4809196861118879526" datatype="html">
+        <source>password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/forgot-password-dialogue-steps.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7587090040417907949" datatype="html">
+        <source>You must enter a password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/form-field-messages.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1773949332515229643" datatype="html">
+        <source>You must enter an email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/form-field-messages.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7408541314475571768" datatype="html">
+        <source>Not a valid email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-in/form-field-messages.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8466924095231738630" datatype="html">
+        <source>Type a valid name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5536634488552186677" datatype="html">
+        <source>Accept terms and conditions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/card-alert.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8117915399030123640" datatype="html">
+        <source>You must enter a name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1544318964568525167" datatype="html">
+        <source>Password must contain at least 8 characters, 1 uppercase, 1 lowercase, 1 number and 1 special character</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2205525384983445256" datatype="html">
+        <source>Name must contain at least 2 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/sign-up/form-field-messages.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8893390761160292681" datatype="html">
+        <source>My account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7529829265098697788" datatype="html">
+        <source>Deposit and withdrawal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8878700331247603166" datatype="html">
+        <source>Security</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1001106846304160351" datatype="html">
+        <source>Anonimity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7482217084177855485" datatype="html">
+        <source>P2P</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4551581141684694255" datatype="html">
+        <source>Policies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1877096995803157114" datatype="html">
+        <source>Transfer crypto</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8903954975609359428" datatype="html">
+        <source>Buy and sell</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5508024422979239599" datatype="html">
+        <source>Getting started</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6816387915320962785" datatype="html">
+        <source>Trading</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2544569632476723854" datatype="html">
+        <source>Terms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/categories.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/constants/support/grid-tiles.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5881876145178332550" datatype="html">
+        <source>of</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4011006543906156590" datatype="html">
+        <source><x id="PH" equiv-text="startIndex + 1"/> - <x id="PH_1" equiv-text="endIndex"/> <x id="PH_2" equiv-text="ofWord"/> <x id="PH_3" equiv-text="length"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4743002849260529978" datatype="html">
+        <source>Items per page:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3337301694210287595" datatype="html">
+        <source>Next page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3629960544875360046" datatype="html">
+        <source>Previous page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/helpers/paginator-intl.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5216583664915438242" datatype="html">
+        <source>Current crypto balance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1270421233965290368" datatype="html">
+        <source>Current balance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8290961252729284698" datatype="html">
+        <source>Invested</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9036987211678595577" datatype="html">
+        <source> Looking for privacy and <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> decentralized access? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2085635691077531880" datatype="html">
+        <source> Main Chainz was designed to resist in the most hostile environments possible, such as dictatorships, wars, and other various situations in which an individual&apos;s basic human rights could be put at risk. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">8,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2336823852226369010" datatype="html">
+        <source>Brave, Ipfs and TOR brand logos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9112077778622534643" datatype="html">
+        <source>Use IPFS for fast decentralized access</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8384880635071489210" datatype="html">
+        <source> IPFS, is a decentralized and peer-to-peer system. Instead of relying on a single server, it breaks files into smaller chunks and distributes them across a network of computers. When you want to access a file or a website, your device fetches these chunks from multiple sources, making the process more resilient, faster, and censorship-resistant. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">26,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1538783191202171739" datatype="html">
+        <source> Are you a beginner? Read <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;text-blue-700 underline&quot; routerLink=&quot;/home&quot;&gt;"/>this article<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> to get started with IPFS. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">32,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5991034634221831996" datatype="html">
+        <source>Ipfs project logo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5387371788034026034" datatype="html">
+        <source>Tor project logo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6719987514291830427" datatype="html">
+        <source>Not implemented yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4946257106684693851" datatype="html">
+        <source>Use TOR for privacy and decentralization</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="315622167963524304" datatype="html">
+        <source> When you use the regular web, websites can see your IP address and potentially track your online activities. Tor helps protect your privacy by bouncing your internet traffic through a network of volunteer-operated servers, making it difficult for websites or anyone else to trace your online actions back to you. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/decentralized-protocols/decentralized-protocols.component.html</context>
+          <context context-type="linenumber">50,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2844510856217880960" datatype="html">
+        <source>Decrypt an alternative reality with</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1021030231432706284" datatype="html">
+        <source>Main Chainz logo.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5851395634803682380" datatype="html">
+        <source>Take a look in the markets</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4628876328312874028" datatype="html">
+        <source>Fear and greed index</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1175303720383873098" datatype="html">
+        <source> The Bitcoin Fear and Greed Index is a popular sentiment indicator used to gauge the prevailing sentiment and emotions of market participants in the Bitcoin cryptocurrency market. It provides a numerical score that reflects whether investors are currently feeling more fearful or greedy about the price of Bitcoin. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">40,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8235805970201248247" datatype="html">
+        <source>Now</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4498682414491138092" datatype="html">
+        <source>Yesterday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7591870443991978948" datatype="html">
+        <source>Last week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4236012474665084450" datatype="html">
+        <source>Frequent questions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3887257505197968390" datatype="html">
+        <source>Page not found :(</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6914885732523269434" datatype="html">
+        <source> You will be redirected to the home page in <x id="INTERPOLATION" equiv-text="{{ 10 - ((counter$ | async) ?? 0) }}"/> <x id="INTERPOLATION_1" equiv-text="{{ (counter$ | async)! &gt;= 9 ? &apos;second&apos; : &apos;seconds&apos; }}"/>
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+          <context context-type="linenumber">2,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2600176046488858632" datatype="html">
+        <source>Nyan cat running lost through the space</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1283241409166703000" datatype="html">
+        <source>Personal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4200317694838753109" datatype="html">
+        <source>Welcome back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1431416938026210429" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7749078167476570327" datatype="html">
+        <source>Type your password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1446670643492611810" datatype="html">
+        <source>Hide password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2727496946419791472" datatype="html">
+        <source>Forgot password?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="30307474339412458" datatype="html">
+        <source>Forgot password button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6267056941649608759" datatype="html">
+        <source>Sign in button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5207635742003539443" datatype="html">
+        <source>Sign in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3444283345846409807" datatype="html">
+        <source>Ghost</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9181889580801594086" datatype="html">
+        <source>Not registered yet?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3194101498761000418" datatype="html">
+        <source>Sign up button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/components/sign-in-form/sign-in-form.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5690241527890097775" datatype="html">
+        <source>Power</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3616229206195726198" datatype="html">
+        <source>Freedom</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4348901842647159701" datatype="html">
+        <source>Defense</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8237324422844696241" datatype="html">
+        <source>Autonomy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2938852481940320537" datatype="html">
+        <source>That&apos;s what Bitcoin is about, and that&apos;s what we are about.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6610794799304129074" datatype="html">
+        <source>Create an account in a few steps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1210451390183389265" datatype="html">
+        <source>Name or nickname</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2817424426533477993" datatype="html">
+        <source>Type your name or nickname</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4159543318674567176" datatype="html">
+        <source>&apos;Hide password&apos;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7337191834904306859" datatype="html">
+        <source> By creating an account, I agree to Main Chainz&apos;s Terms of Service and Privacy Policy. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">67,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4960241331715335287" datatype="html">
+        <source>Already registered?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2409203497429796038" datatype="html">
+        <source>Already have an account button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7028204981963450021" datatype="html">
+        <source>Sign up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/components/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8440128775129354214" datatype="html">
+        <source>Privacy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7227590042704998799" datatype="html">
+        <source>Reliability</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2256431380785113233" datatype="html">
+        <source>Anonymity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="998198680829811487" datatype="html">
+        <source> Your journey to find a platform with these criterias has finished, welcome to Main Chainz. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-up/sign-up.component.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6889689669005958674" datatype="html">
+        <source>Other articles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7503445051604970005" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>today<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Updated at <x id="INTERPOLATION" equiv-text="{{ article.updatedAt | date: &apos;shortDate&apos; }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6832609193025865209" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>visibility<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> <x id="INTERPOLATION" equiv-text="{{ article.views }}"/> views</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6511277488795405399" datatype="html">
+        <source>Do you still have questions?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8049752003309039780" datatype="html">
+        <source>Contact support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/children/article/article.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8116017591055808577" datatype="html">
+        <source>Main Chainz support center</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/components/header/header.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5063295649720964221" datatype="html">
+        <source>How can we help you?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/components/header/header.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1157633975438915079" datatype="html">
+        <source>Input to type your question</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/components/header/header.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1766517444390746867" datatype="html">
+        <source>What are you looking for?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/components/header/header.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1398409325749709462" datatype="html">
+        <source>Find by category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/support.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7289278695682389111" datatype="html">
+        <source>Maybe this will help</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/support/support.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="543019781564247493" datatype="html">
+        <source>Our mission</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3273824183141363718" datatype="html">
+        <source>Our mission here at Main Chainz is difficult, risky, and for many even insane:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2847675788993472897" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b
+      &gt;"/>Provide access to an alternative financial system for society with privacy and security, so that people are not exploited by the state and its agents.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b
+    &gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7044927145769162140" datatype="html">
+        <source>What do we mean by that?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="159823960423726711" datatype="html">
+        <source> Well, there are several ways of interpreting it. Inflation, violation of privacy with unrestricted access to financial data, violation of rights in times of crisis by limiting withdrawals to avoid bank collapses and exorbitant taxes that prevent class transition, are just a few ways in which the power of the state and large corporations that use the fiduciary system as a weapon against society is manifested. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">12,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5094121270433174313" datatype="html">
+        <source> What Main Chainz offers goes far beyond cryptocurrencies and investments, but a form of resistance to all the cruelty that is seen in the fiduciary system with a tool (cryptocurrencies) that the state has no control over and sometimes not even knowledge of. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">19,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1079149704855734110" datatype="html">
+        <source> Main Chainz was born out of the need for power of the oppressed and joins all those who seek sovereignty over their finances, are you ready to join us? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">25,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5000243255887431800" datatype="html">
+        <source> Main Chainz is a company based in Brazil, and acts as a cryptocurrency broker and cryptocurrency investment provider. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">31,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7395112147424834310" datatype="html">
+        <source> We believe that through technology, cryptography and finance we can change humanity and the course of societies around the world by offering an alternative system to fiat, so that dictatorships are weakened, pseudo-democracies unmasked, inflation fueled by central banks annihilated, among other changes. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">36,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4746208724857754602" datatype="html">
+        <source>Welcome to Main Chainz!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/who-we-are/who-we-are.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="594840641396778644" datatype="html">
+        <source>Change the currency used to convert prices.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/button-change-currency/button-change-currency.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5134116791875286684" datatype="html">
+        <source>Change the web site theming light mode.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/button-change-theme/button-change-theme.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7171795626704069768" datatype="html">
+        <source>Change the web site theming to dark mode.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/button-change-theme/button-change-theme.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1658176292908627603" datatype="html">
+        <source>Example icon button with a bookmark icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/button-contact/button-contact.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56023197195175773" datatype="html">
+        <source>Change the web site language.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/change-locale-button/change-locale-button.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3775383209003375667" datatype="html">
+        <source>United States flag.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/change-locale-button/change-locale-button.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="226777112940898586" datatype="html">
+        <source>Brazil flag.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/change-locale-button/change-locale-button.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8347433539480093083" datatype="html">
+        <source>Password changed!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-change-password/dialog-change-password.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2603173483119493042" datatype="html">
+        <source> Your password has been changed successfully. You can now sign in with your new password. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-change-password/dialog-change-password.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="65984904390749158" datatype="html">
+        <source>Finish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-change-password/dialog-change-password.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="762257223228937771" datatype="html">
+        <source>Deposit crypto</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3400196587132537833" datatype="html">
+        <source>Select which cryptocurrency you want to deposit in your Main Chainz account.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="256121104671304415" datatype="html">
+        <source>Select your crypto currency</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/modal-converter/currency-input/currency-input.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3873655769195380286" datatype="html">
+        <source>Button that displays a tooltip when focused or hovered over</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5577290573064496453" datatype="html">
+        <source>Wallet address as QR code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-deposit/dialog-deposit.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1326245797734434832" datatype="html">
+        <source>Select which cryptocurrency you want to withdrawal.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5417297163253677399" datatype="html">
+        <source>Transactions are irreversible, so make sure that the address exists and you are sending it to the right address.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2286358307535981663" datatype="html">
+        <source>Enter the amount that you want to withdrawal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6533918067030990396" datatype="html">
+        <source>Amount</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1878085832047557752" datatype="html">
+        <source>Wallet address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9178182467454450952" datatype="html">
+        <source>Confirm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6322996053167197045" datatype="html">
+        <source>Your transaction has started!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6428115617996545685" datatype="html">
+        <source> The transaction is being processed, it&apos;ll take some minutes to be confirmed but you can track it on <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>My Transactions<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> menu. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/dialog-withdrawal/dialog-withdrawal.component.html</context>
+          <context context-type="linenumber">66,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2622256285331555048" datatype="html">
+        <source>Main Chainz logo</source>
+        <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
           <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8241494602367691036" datatype="html">
+        <source>Insert the code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="10942199050114752" datatype="html">
+        <source>We have sent you a code to your email address. Please insert it below.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8092074012131474395" datatype="html">
+        <source>Confirmation code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="604060438853502841" datatype="html">
+        <source>code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4972269325666456756" datatype="html">
+        <source>Cancel the sign in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8914272824138963045" datatype="html">
+        <source>Submit code button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7196360912393502967" datatype="html">
+        <source>You must enter a value</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/insert-your-code/insert-your-code.component.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3382905595935147622" datatype="html">
+        <source>Type your amount</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/modal-converter/currency-input/currency-input.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2149165958319691680" datatype="html">
+        <source>Buy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="344656956545806818" datatype="html">
+        <source>USD</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/modal-converter/modal-converter.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6837415268624992987" datatype="html">
+        <source>Find a currency</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4327471061205783634" datatype="html">
+        <source>Currency</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8894377483833272091" datatype="html">
+        <source>Price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5693187460840441609" datatype="html">
+        <source>Market cap</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7817625824147105593" datatype="html">
+        <source>Last 24h</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6813192022789916150" datatype="html">
+        <source>No currencies related to &quot;<x id="INTERPOLATION" equiv-text="{{ input.value }}"/>&quot;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1400806227986623240" datatype="html">
+        <source>Select page of crypto currencies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/table-prices/table-prices.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="818931697595849329" datatype="html">
+        <source>Open side menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3448324243745505890" datatype="html">
         <source>Button to go to the home page.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4114200202781656348" datatype="html">
-        <source>Main Chainz logo.</source>
+      <trans-unit id="654733759220725677" datatype="html">
+        <source>Trade crypto<x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;icon-size&quot;&gt;"/>expand_more<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5094207302133053833" datatype="html">
-        <source>Menu options.</source>
+      <trans-unit id="5393612783227521604" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>group<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>P2P pure</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2313691775041321810" datatype="html">
-        <source>Change the web site theming.</source>
+      <trans-unit id="1627341644512664655" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>diversity_3<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>P2P with guarantee</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="56023197195175773" datatype="html">
-        <source>Change the web site language.</source>
+      <trans-unit id="4539177898819783204" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon [svgIcon]=&quot;&apos;decentralized_protocols&apos;&quot;&gt;"/><x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="Tor and IPFS"/>Tor and IPFS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3775383209003375667" datatype="html">
-        <source>United States flag.</source>
+      <trans-unit id="288632028777957905" datatype="html">
+        <source>About us<x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;icon-size&quot;&gt;"/>expand_more<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">57</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">79</context>
+          <context context-type="linenumber">49,50</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="226777112940898586" datatype="html">
-        <source>Brazil flag.</source>
+      <trans-unit id="2282783562911644522" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>question_mark<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Who we are</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="594840641396778644" datatype="html">
-        <source>Change the currency used to convert prices.</source>
+      <trans-unit id="7394509450631159954" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>description<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Blog</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2245750332145299373" datatype="html">
+        <source>More<x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;icon-size&quot;&gt;"/>expand_more<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="691655961714499514" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/> support_agent<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5345906949620207963" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>show_chart<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Markets</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3508663307366107615" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>api<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>API</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3644254944864530098" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>hub<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Affiliate</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
           <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4397208842598322712" datatype="html">
-        <source>European Union flag.</source>
+      <trans-unit id="1298050893654323451" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>gavel<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Terms of use</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7345533008555761445" datatype="html">
-        <source>Indian flag.</source>
+      <trans-unit id="1917891396957585934" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="t-icon&gt;"/>policy<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Privacy policy</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">91</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4437977600385055593" datatype="html">
-        <source>Brazilian flag.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">97</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="573332460788264666" datatype="html">
-        <source>Russian flag.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">103</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3774704555156061370" datatype="html">
-        <source>Nigerian flag.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">109</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="534926465068452742" datatype="html">
-        <source>Chinese flag.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">115</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8035623846708742370" datatype="html">
-        <source>Vietnam flag.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">121</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="285878914090793550" datatype="html">
-        <source>Ukranian flag.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/tool-bar/tool-bar.component.html</context>
-          <context context-type="linenumber">127</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6767315089642655383" datatype="html">
-        <source>
-          <x id="INTERPOLATION" equiv-text="{{ wallet.name }}"/>
- icon</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/wallet-card/wallet-card.component.html</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3107457437187088438" datatype="html">
-        <source>
-          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>
-Wallet address:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/wallet-card/wallet-card.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1665996634803926072" datatype="html">
-        <source>
-          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>
-Unconfirmed balance:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/wallet-card/wallet-card.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4616850336492393172" datatype="html">
-        <source>
-          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>
-Total of transactions:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/wallet-card/wallet-card.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
     </body>
