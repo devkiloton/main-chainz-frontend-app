@@ -20,7 +20,7 @@
             "translation": "src/i18n/content.pt-BR.xlf",
             "baseHref": "pt-BR/"
           },
-          "hi-IN":{
+          "hi-IN": {
             "translation": "src/i18n/content.hi-IN.xlf",
             "baseHref": "hi-IN/"
           }
