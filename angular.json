@@ -17,7 +17,7 @@
         "sourceLocale": "en-US",
         "locales": {
           "pt-BR": {
-            "translation": "src/i18n/content.pt.xlf",
+            "translation": "src/i18n/content.pt-BR.xlf",
             "baseHref": "pt-BR/"
           }
         }
@@ -85,14 +85,14 @@
             "production": {
               "browserTarget": "angular-app:build:production,en-US"
             },
-            "production-pt": {
-              "browserTarget": "angular-app:build:production,pt"
+            "production-pt-BR": {
+              "browserTarget": "angular-app:build:production,pt-BR"
             },
             "development": {
               "browserTarget": "angular-app:build:development,en-US"
             },
-            "development-pt": {
-              "browserTarget": "angular-app:build:development,pt"
+            "development-pt-BR": {
+              "browserTarget": "angular-app:build:development,pt-BR"
             }
           },
           "defaultConfiguration": "development"
