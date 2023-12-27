@@ -1,4 +1,4 @@
-import type { Category } from 'projects/central-hash-api-client/src/lib/models/articles/enum/category';
+import type { Category } from 'projects/main-chainz-api-client/src/lib/models/articles/enum/category';
 
 export type CategorySupport = {
   title: string;

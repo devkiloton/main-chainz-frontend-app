@@ -3,7 +3,7 @@
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Bitcoin, USDT, ETH" #input />
 </mat-form-field>
 
-<div class="mat-elevation-z2 rounded-[5px]">
+<div class="mat-elevation-z1 rounded-[5px]">
   <table mat-table [dataSource]="dataSource" matSort>
     <!-- ID Column -->
     <ng-container matColumnDef="id">

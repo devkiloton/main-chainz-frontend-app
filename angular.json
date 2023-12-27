@@ -187,23 +187,23 @@
         }
       }
     },
-    "central-hash-api-client": {
+    "main-chainz-api-client": {
       "projectType": "library",
-      "root": "projects/central-hash-api-client",
-      "sourceRoot": "projects/central-hash-api-client/src",
+      "root": "projects/main-chainz-api-client",
+      "sourceRoot": "projects/main-chainz-api-client/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/central-hash-api-client/ng-package.json"
+            "project": "projects/main-chainz-api-client/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/central-hash-api-client/tsconfig.lib.prod.json"
+              "tsConfig": "projects/main-chainz-api-client/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/central-hash-api-client/tsconfig.lib.json"
+              "tsConfig": "projects/main-chainz-api-client/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"

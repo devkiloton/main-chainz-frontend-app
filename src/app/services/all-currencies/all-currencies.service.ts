@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import type { FiatCurrency } from 'projects/central-hash-api-client/src/lib/models/fiat-currencies/fiat-currency';
+import type { FiatCurrency } from 'projects/main-chainz-api-client/src/lib/models/fiat-currencies/fiat-currency';
 import { isNotNil } from 'ramda';
 import { BehaviorSubject } from 'rxjs';
 import { supportedFiats } from 'src/app/constants/supported-fiats';

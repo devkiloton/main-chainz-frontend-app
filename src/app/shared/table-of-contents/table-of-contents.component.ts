@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
-import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
+import type { Article } from 'projects/main-chainz-api-client/src/lib/models/articles/article';
 import { isCategorySupport } from 'src/app/type-guards/is-category-support';
 import type { CategorySupport } from 'src/app/types/support/category-support';
 

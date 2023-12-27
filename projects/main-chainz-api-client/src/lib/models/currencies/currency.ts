@@ -1,5 +1,7 @@
+import { Currencies } from 'src/app/enums/currencies';
+
 export type Currency = {
-  id: string;
+  id: Currencies;
 
   name: string;
 

@@ -8,7 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
 import { isNil } from 'lodash-es';
-import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
+import type { Article } from 'projects/main-chainz-api-client/src/lib/models/articles/article';
 import type { Observable } from 'rxjs';
 import { BehaviorSubject, catchError, map, of, switchMap } from 'rxjs';
 import { BreadcrumbComponent } from 'src/app/shared/breadcrumb/breadcrumb.component';

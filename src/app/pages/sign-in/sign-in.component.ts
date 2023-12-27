@@ -4,7 +4,7 @@ import type { HttpErrorResponse } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthEntity } from 'projects/central-hash-api-client/src/public-api';
+import { AuthEntity } from 'projects/main-chainz-api-client/src/public-api';
 import { BehaviorSubject, firstValueFrom, map } from 'rxjs';
 import { fader } from 'src/app/animations/fader';
 import { AuthStateService } from 'src/app/services/auth-state/auth-state.service';

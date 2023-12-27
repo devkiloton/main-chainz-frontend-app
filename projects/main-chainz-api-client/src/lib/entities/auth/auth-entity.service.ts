@@ -47,6 +47,6 @@ export class AuthEntity {
   }
 
   public refresh(): Observable<Auth> {
-    return this._httpClient.get<Auth>(`${this.API}/auth/refresh`, {});
+    return this._httpClient.get<Auth>(`${this.API}/auth/refresh`);
   }
 }

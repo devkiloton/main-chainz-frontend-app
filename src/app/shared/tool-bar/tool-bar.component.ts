@@ -11,6 +11,7 @@ import { BehaviorSubject, map } from 'rxjs';
 import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { FiatCurrencies } from 'src/app/enums/fiat-currencies';
 import { ThemesService } from 'src/app/services/themes/themes.service';
+import { AuthStoreService } from 'src/app/stores/auth/auth-store.service';
 import { ButtonChangeCurrencyComponent } from '../button-change-currency/button-change-currency.component';
 import { ButtonChangeThemeComponent } from '../button-change-theme/button-change-theme.component';
 import { ChangeLocaleButtonComponent } from '../change-locale-button/change-locale-button.component';
@@ -42,6 +43,9 @@ import { TreeComponent } from './components/tree/tree.component';
 export class ToolBarComponent {
   private readonly _themesService = inject(ThemesService);
   private readonly _breakpointObserver = inject(BreakpointObserver);
+  private readonly _authEntity = inject(AuthStoreService);
+
+  public readonly isAuthenticated = this._authEntity.isAuthenticated;
 
   public showFiller = false;
   public readonly fiatCurrencies = FiatCurrencies;

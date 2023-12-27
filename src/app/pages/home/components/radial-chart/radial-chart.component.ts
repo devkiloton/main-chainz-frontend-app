@@ -37,12 +37,10 @@ export class RadialChartComponent implements OnInit {
 
   @Input() public set label(data: string) {
     this._label = data;
-    console.log(this._label);
   }
 
   @Input() public set value(data: string) {
     this._value = Number(data);
-    console.log(this._value);
   }
 
   public ngOnInit(): void {

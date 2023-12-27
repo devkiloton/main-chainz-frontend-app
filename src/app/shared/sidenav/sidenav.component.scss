@@ -16,10 +16,12 @@
     @apply top-[90px];
     @apply px-[16px] pt-[8px];
     height: calc(100% - 90px);
+    background-color: var(--mat-toolbar-container-background-color);
   }
 
   .mat-sidenav {
     @apply h-full;
+    @apply min-w-[200px];
     @apply flex flex-col justify-between;
   }
 }

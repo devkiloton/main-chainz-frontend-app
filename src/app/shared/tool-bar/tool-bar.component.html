@@ -1,5 +1,13 @@
 <mat-toolbar *ngIf="isDesktop$ | async; else mobileBlock" class="toolbar">
   <div class="desktop-container">
+    <button
+      *ngIf="isAuthenticated()"
+      mat-icon-button
+      (click)="toggleSideNav()"
+      i18n-aria-label
+      aria-label="Open side menu">
+      <mat-icon>menu</mat-icon>
+    </button>
     <button i18n-aria-label aria-label="Button to go to the home page." routerLink="/">
       <img
         *ngIf="(theme$ | async) === 'dark-mode'"
@@ -14,73 +22,76 @@
         class="app-logo"
         src="assets/images/black-logo.svg" />
     </button>
-    <button mat-button i18n>Buy crypto</button>
-    <button mat-button i18n>Investments</button>
-    <button [matMenuTriggerFor]="tradeAnon" mat-button>
-      <div class="flex-centered" i18n>Trade crypto<mat-icon class="icon-size">expand_more</mat-icon></div>
-    </button>
-    <mat-menu #tradeAnon="matMenu">
-      <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>group</mat-icon>P2P pure</div>
+    <div *ngIf="!isAuthenticated()">
+      <button mat-button i18n>Buy crypto</button>
+      <button mat-button i18n>Investments</button>
+      <button [matMenuTriggerFor]="tradeAnon" mat-button>
+        <div class="flex-centered" i18n>Trade crypto<mat-icon class="icon-size">expand_more</mat-icon></div>
       </button>
-      <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>diversity_3</mat-icon>P2P with guarantee</div>
+      <mat-menu #tradeAnon="matMenu">
+        <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>group</mat-icon>P2P pure</div>
+        </button>
+        <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>diversity_3</mat-icon>P2P with guarantee</div>
+        </button>
+        <!-- <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>lock</mat-icon>Buy without KYC</div>
+        </button> -->
+        <!-- <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>air</mat-icon>Ghost account</div>
+        </button> -->
+        <button mat-menu-item routerLink="/decentralized-protocols">
+          <div class="flex-centered" i18n><mat-icon [svgIcon]="'decentralized_protocols'"></mat-icon>Tor and IPFS</div>
+        </button>
+      </mat-menu>
+      <button [matMenuTriggerFor]="aboutUsMenu" mat-button>
+        <div class="flex-centered" i18n>About us<mat-icon class="icon-size">expand_more</mat-icon></div>
       </button>
-      <!-- <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>lock</mat-icon>Buy without KYC</div>
-      </button> -->
-      <!-- <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>air</mat-icon>Ghost account</div>
-      </button> -->
-      <button mat-menu-item routerLink="/decentralized-protocols">
-        <div class="flex-centered" i18n><mat-icon [svgIcon]="'decentralized_protocols'"></mat-icon>Tor and IPFS</div>
+      <mat-menu #aboutUsMenu="matMenu">
+        <button routerLink="/who-we-are" mat-menu-item>
+          <div class="flex-centered" i18n><mat-icon>question_mark</mat-icon>Who we are</div>
+        </button>
+        <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>description</mat-icon>Blog</div>
+        </button>
+      </mat-menu>
+      <button [matMenuTriggerFor]="moreMenu" mat-button>
+        <div class="flex-centered" i18n>More<mat-icon class="icon-size">expand_more</mat-icon></div>
       </button>
-    </mat-menu>
-    <button [matMenuTriggerFor]="aboutUsMenu" mat-button>
-      <div class="flex-centered" i18n>About us<mat-icon class="icon-size">expand_more</mat-icon></div>
-    </button>
-    <mat-menu #aboutUsMenu="matMenu">
-      <button routerLink="/who-we-are" mat-menu-item>
-        <div class="flex-centered" i18n><mat-icon>question_mark</mat-icon>Who we are</div>
-      </button>
-      <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>description</mat-icon>Blog</div>
-      </button>
-    </mat-menu>
-    <button [matMenuTriggerFor]="moreMenu" mat-button>
-      <div class="flex-centered" i18n>More<mat-icon class="icon-size">expand_more</mat-icon></div>
-    </button>
-    <mat-menu #moreMenu="matMenu">
-      <button mat-menu-item routerLink="/support">
-        <div class="flex-centered" i18n><mat-icon> support_agent</mat-icon>Support</div>
-      </button>
-      <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>show_chart</mat-icon>Markets</div>
-      </button>
-      <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>api</mat-icon>API</div>
-      </button>
-      <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>hub</mat-icon>Affiliate</div>
-      </button>
-      <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>gavel</mat-icon>Terms of use</div>
-      </button>
-      <button mat-menu-item disabled>
-        <div class="flex-centered" i18n><mat-icon>policy</mat-icon>Privacy policy</div>
-      </button>
-    </mat-menu>
+      <mat-menu #moreMenu="matMenu">
+        <button mat-menu-item routerLink="/support">
+          <div class="flex-centered" i18n><mat-icon> support_agent</mat-icon>Support</div>
+        </button>
+        <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>show_chart</mat-icon>Markets</div>
+        </button>
+        <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>api</mat-icon>API</div>
+        </button>
+        <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>hub</mat-icon>Affiliate</div>
+        </button>
+        <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>gavel</mat-icon>Terms of use</div>
+        </button>
+        <button mat-menu-item disabled>
+          <div class="flex-centered" i18n><mat-icon>policy</mat-icon>Privacy policy</div>
+        </button>
+      </mat-menu>
+    </div>
 
     <span class="spacer"></span>
     <app-button-change-theme></app-button-change-theme>
     <app-change-locale-button></app-change-locale-button>
     <app-button-change-currency></app-button-change-currency>
-    <button routerLink="/sign-in" mat-button i18n>Sign in</button>
-    <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
+    <div *ngIf="!isAuthenticated()">
+      <button routerLink="/sign-in" mat-button i18n>Sign in</button>
+      <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
+    </div>
   </div>
 </mat-toolbar>
 <mat-divider></mat-divider>
-<!-- #TODO: put the drawer inside a component to be used in the app component -->
 <ng-template #mobileBlock>
   <mat-toolbar class="shadow-skim flex-centered">
     <button mat-icon-button (click)="toggleSideNav()" i18n-aria-label aria-label="Open side menu">
@@ -91,6 +102,6 @@
       <img *ngIf="(theme$ | async) === 'light-mode'" src="/assets/images/black-logo.svg" alt="Main Chainz logo" />
       <img *ngIf="(theme$ | async) === 'dark-mode'" src="/assets/images/white-logo.svg" alt="Main Chainz logo" />
     </a>
-    <button routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
+    <button *ngIf="!isAuthenticated()" routerLink="/sign-up" mat-flat-button color="accent" i18n>Sign up</button>
   </mat-toolbar>
 </ng-template>

@@ -2,6 +2,10 @@
 
 @include mat.core();
 
+$typography: mat.define-typography-config(
+  $font-family: 'Poppins',
+);
+
 // Define a dark theme
 $dark-theme: mat.define-dark-theme(
   (
@@ -21,10 +25,7 @@ $light-theme: mat.define-light-theme(
       accent: mat.define-palette(mat.$deep-purple-palette, A400),
     ),
     // Only include `typography` and `density` in the default dark theme.
-    typography:
-      mat.define-typography-config(
-        $button: mat.define-typography-level(0.875rem, 0.875rem, 500),
-      ),
+    typography: $typography,
     density: 0,
   )
 );

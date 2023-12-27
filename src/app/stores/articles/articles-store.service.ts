@@ -1,8 +1,8 @@
 import { inject, Injectable } from '@angular/core';
 import { isNil } from 'lodash-es';
-import type { Article } from 'projects/central-hash-api-client/src/lib/models/articles/article';
-import type { Category } from 'projects/central-hash-api-client/src/lib/models/articles/enum/category';
-import { ArticlesService } from 'projects/central-hash-api-client/src/public-api';
+import type { Article } from 'projects/main-chainz-api-client/src/lib/models/articles/article';
+import type { Category } from 'projects/main-chainz-api-client/src/lib/models/articles/enum/category';
+import { ArticlesService } from 'projects/main-chainz-api-client/src/public-api';
 import type { Observable } from 'rxjs';
 import { BehaviorSubject, firstValueFrom, of } from 'rxjs';
 

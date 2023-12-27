@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatPaginator, MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import type { Currency } from 'projects/central-hash-api-client/src/lib/models/currencies/currency';
+import type { Currency } from 'projects/main-chainz-api-client/src/lib/models/currencies/currency';
 import { of, switchMap } from 'rxjs';
 import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
 import { getPaginatorIntl } from 'src/app/helpers/paginator-intl';
