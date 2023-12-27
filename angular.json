@@ -19,6 +19,10 @@
           "pt-BR": {
             "translation": "src/i18n/content.pt-BR.xlf",
             "baseHref": "pt-BR/"
+          },
+          "hi-IN":{
+            "translation": "src/i18n/content.hi-IN.xlf",
+            "baseHref": "hi-IN/"
           }
         }
       },
@@ -46,6 +50,9 @@
             },
             "pt-BR": {
               "localize": ["pt-BR"]
+            },
+            "hi-IN": {
+              "localize": ["hi-IN"]
             },
             "production": {
               "budgets": [
@@ -88,11 +95,17 @@
             "production-pt-BR": {
               "browserTarget": "angular-app:build:production,pt-BR"
             },
+            "production-hi-IN": {
+              "browserTarget": "angular-app:build:production,hi-IN"
+            },
             "development": {
               "browserTarget": "angular-app:build:development,en-US"
             },
             "development-pt-BR": {
               "browserTarget": "angular-app:build:development,pt-BR"
+            },
+            "development-hi-IN": {
+              "browserTarget": "angular-app:build:development,hi-IN"
             }
           },
           "defaultConfiguration": "development"

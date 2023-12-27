@@ -14,4 +14,10 @@
       <span>Português (Brasil)</span>
     </div>
   </button>
+  <button mat-menu-item (appAccessiblePress)="changeLocaleServer(locales.hi_in)">
+    <div class="flex items-center gap-x-2">
+      <img src="assets/images/flags/INR.webp" i18n-alt alt="India flag." class="flag" />
+      <span>हिन्दी (भारत)</span>
+    </div>
+  </button>
 </mat-menu>
