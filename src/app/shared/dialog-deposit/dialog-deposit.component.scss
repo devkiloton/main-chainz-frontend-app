@@ -1,47 +1,46 @@
 .header {
-    @apply text-lg;
-    @apply font-semibold;
-    @apply leading-5;
-    @apply text-center;
-    @apply max-w-[75%];
-  }
-  
-  .description {
-    @apply text-sm;
-    @apply leading-4;
-    @apply text-center;
-    @apply max-w-[80%];
-  }
-  .change-currency {
-    @apply w-fit h-10;
-    @apply flex justify-between items-center;
-    @apply rounded-[4px];
-    @apply cursor-pointer;
-    @apply font-sans;
-    color: var(--mat-toolbar-container-background-color);
-    background-color: var(--mat-toolbar-container-text-color);
-    @apply mr-2;
-    @apply min-[768px]:text-base;
-    @apply min-[768px]:w-fit;
+  @apply text-lg;
+  @apply font-semibold;
+  @apply leading-5;
+  @apply text-center;
+  @apply max-w-[75%];
+}
 
-    img {
-      @apply w-6;
-    }
+.description {
+  @apply text-sm;
+  @apply leading-4;
+  @apply text-center;
+  @apply max-w-[80%];
+}
+.change-currency {
+  @apply w-fit h-10;
+  @apply flex justify-between items-center;
+  @apply rounded-[4px];
+  @apply cursor-pointer;
+  @apply font-sans;
+  color: var(--mat-toolbar-container-background-color);
+  background-color: var(--mat-toolbar-container-text-color);
+  @apply mr-2;
+  @apply min-[768px]:text-base;
+  @apply min-[768px]:w-fit;
+
+  img {
+    @apply w-6;
   }
-  .mat-mdc-dialog-actions {
-    @apply mb-2;
-    @apply flex justify-between;
-    @apply px-6;
-    @apply py-0;
-  }
-  
-  .mdc-dialog__content {
-    @apply pb-0;
-  }
-  
-  .mdc-dialog__title {
-    @apply justify-center;
-    @apply text-center;
-    @apply items-center;
-  }
-  
+}
+.mat-mdc-dialog-actions {
+  @apply mb-2;
+  @apply flex justify-between;
+  @apply px-6;
+  @apply py-0;
+}
+
+.mdc-dialog__content {
+  @apply pb-0;
+}
+
+.mdc-dialog__title {
+  @apply justify-center;
+  @apply text-center;
+  @apply items-center;
+}

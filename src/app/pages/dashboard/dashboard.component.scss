@@ -1,6 +1,6 @@
 .container-dashboard {
   @apply w-full;
-@apply p-4;
+  @apply p-4;
   .stats {
     @apply w-full;
     @apply flex;
@@ -12,7 +12,7 @@
       @apply flex items-center gap-x-4;
       @apply w-fit;
 
-      .mat-icon{
+      .mat-icon {
         font-size: 36px;
         height: 36px;
         width: 36px;
@@ -26,11 +26,10 @@
         @apply font-bold;
       }
 
-      .button-group{
+      .button-group {
         @apply flex gap-x-2;
         @apply mt-4;
       }
     }
-    
   }
 }

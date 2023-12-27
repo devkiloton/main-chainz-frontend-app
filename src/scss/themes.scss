@@ -13,7 +13,7 @@ $dark-theme: mat.define-dark-theme(
       primary: mat.define-palette(mat.$gray-palette, 100),
       warn: mat.define-palette(mat.$red-palette, A400),
       accent: mat.define-palette(mat.$teal-palette, A400),
-    )
+    ),
   )
 );
 
