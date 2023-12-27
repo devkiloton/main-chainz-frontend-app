@@ -7,7 +7,7 @@ export const dialogueSteps = {
     primaryButtonText: $localize`Send` as string,
     label: $localize`Email` as string,
     placeholder: $localize`Type your email` as string,
-    type: $localize`email` as string,
+    type: 'email',
   },
   code: {
     header: $localize`Check your email` as string,
@@ -16,7 +16,7 @@ export const dialogueSteps = {
     primaryButtonText: $localize`Submit` as string,
     label: $localize`Code` as string,
     placeholder: $localize`Type your code` as string,
-    type: $localize`text` as string,
+    type: 'text',
   },
   newPassword: {
     header: $localize`Change your password` as string,
@@ -25,6 +25,6 @@ export const dialogueSteps = {
     primaryButtonText: $localize`Change` as string,
     label: $localize`New password` as string,
     placeholder: $localize`Type your new password` as string,
-    type: $localize`password` as string,
+    type: 'password',
   },
 };
