@@ -14,7 +14,7 @@ const rangeLabel = (page: number, pageSize: number, length: number): string => {
   // If the start index exceeds the list length, do not try and fix the end index to the end.
   const endIndex = startIndex < length ? Math.min(startIndex + pageSize, length) : startIndex + pageSize;
 
-  return $localize`${startIndex + 1} - ${endIndex} ${ofWord} ${length}` as string;
+  return `${startIndex + 1} - ${endIndex} ${ofWord} ${length}`;
 };
 
 export const getPaginatorIntl = (): MatPaginatorIntl => {

@@ -13,10 +13,12 @@ function run() {
   // Start up the Node server
   const appPtBr = getTranslatedServer('pt-BR');
   const appEn = getTranslatedServer('en-US');
+  const appHiIn = getTranslatedServer('hi-IN');
 
   const server = express();
   server.use('/pt-BR', appPtBr);
   server.use('/en-US', appEn);
+  server.use('/hi-IN', appHiIn);
   server.use('', appEn);
 
   server.listen(port, () => {

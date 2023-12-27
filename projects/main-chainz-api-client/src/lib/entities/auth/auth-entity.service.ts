@@ -11,7 +11,7 @@ import { Response } from '../../shared/response';
   providedIn: 'root',
 })
 export class AuthEntity {
-  private readonly API = environment.centralHashApiUrl;
+  private readonly API = environment.mainChainzApiUrl;
   private readonly _httpClient = inject(HttpClient);
 
   public signIn(data: SignIn): Observable<{ message: 'Confirmation email sent' }> {

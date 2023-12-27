@@ -11,6 +11,8 @@ export const getFiatAccordingLocale = (locale: Locales): FiatCurrencies => {
       return FiatCurrencies.usd;
     case Locales.pt_br:
       return FiatCurrencies.brl;
+    case Locales.hi_in:
+      return FiatCurrencies.inr;
     default:
       return FiatCurrencies.usd;
   }

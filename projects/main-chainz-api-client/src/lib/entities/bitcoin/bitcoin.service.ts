@@ -8,7 +8,7 @@ import { PublicWallet } from '../../models/bitcoin/public-wallet';
   providedIn: 'root',
 })
 export class BitcoinService {
-  private readonly API = environment.centralHashApiUrl;
+  private readonly API = environment.mainChainzApiUrl;
   private readonly _httpClient = inject(HttpClient);
 
   public findInformation(): Observable<PublicWallet> {
