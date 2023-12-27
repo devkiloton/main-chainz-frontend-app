@@ -10,7 +10,7 @@ import { Response } from '../../shared/response';
   providedIn: 'root',
 })
 export class UserEntity {
-  private readonly API = environment.centralHashApiUrl;
+  private readonly API = environment.mainChainzApiUrl;
   private readonly _httpClient = inject(HttpClient);
 
   public find(): Observable<Response<UserModel>> {

@@ -9,7 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root',
 })
 export class FiatCurrenciesService {
-  private readonly API = environment.centralHashApiUrl;
+  private readonly API = environment.mainChainzApiUrl;
   private readonly _httpClient = inject(HttpClient);
 
   constructor(@Inject(PLATFORM_ID) private readonly _platformId: Object) {} // eslint-disable-line @typescript-eslint/naming-convention

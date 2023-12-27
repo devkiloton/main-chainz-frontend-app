@@ -10,7 +10,7 @@ import { FearAndGreed } from '../../models/currencies/fear-and-greed';
   providedIn: 'root',
 })
 export class CurrenciesService {
-  private readonly API = environment.centralHashApiUrl;
+  private readonly API = environment.mainChainzApiUrl;
   private readonly _httpClient = inject(HttpClient);
 
   constructor(@Inject(PLATFORM_ID) private readonly _platformId: Object) {} // eslint-disable-line @typescript-eslint/naming-convention

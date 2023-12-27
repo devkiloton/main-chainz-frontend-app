@@ -10,7 +10,7 @@ import { Category } from '../../models/articles/enum/category';
 })
 export class ArticlesService {
   private readonly _httpClient = inject(HttpClient);
-  private readonly API = environment.centralHashApiUrl;
+  private readonly API = environment.mainChainzApiUrl;
 
   constructor(@Inject(LOCALE_ID) private readonly _locale: string) {}
 
