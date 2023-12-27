@@ -5,9 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -17,7 +15,6 @@ import type { FiatCurrency } from 'projects/main-chainz-api-client/src/lib/model
 import { BehaviorSubject } from 'rxjs';
 import { depositDialogTexts } from 'src/app/constants/dashboard/deposit-dialog-texts';
 import { supportedCurrencies } from 'src/app/constants/supported-currencies';
-import { AccessiblePressDirective } from 'src/app/directives/accessible-press/accessible-press.directive';
 import { Currencies } from 'src/app/enums/currencies';
 import { getCurrencyNameFromId } from 'src/app/helpers/get-currency-name-from-Id';
 import { getCurrencyRepresentation } from 'src/app/helpers/get-currency-representation';
@@ -32,16 +29,11 @@ import { InputTextComponent } from '../input-text/input-text.component';
   imports: [
     MatDialogModule,
     MatButtonModule,
-    MatButtonModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
     InputTextComponent,
-    MatFormFieldModule,
-    MatInputModule,
     AsyncPipe,
     NgFor,
     NgIf,
-    AccessiblePressDirective,
     CurrenciesMenuComponent,
     MatIconModule,
     MatMenuModule,
@@ -76,7 +68,6 @@ export class DialogDepositComponent {
   ) {}
 
   public copyWalletAddress(): void {
-    // SSR SUPPORTS???
     navigator.clipboard.writeText(this.walletInformation.address);
     this.isCopied = true;
     this._snackBar.open(depositDialogTexts.tooltip, '', {
