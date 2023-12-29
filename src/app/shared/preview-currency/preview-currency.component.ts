@@ -42,7 +42,9 @@ export class PreviewCurrencyComponent implements OnInit {
     }
     return this.theme$.pipe(
       map(theme => {
-        if (this.priceChange24h > 0) {
+        if (this.priceChange24h > 0 && theme === 'dark-mode') {
+          return 'bull-light';
+        } else if (this.priceChange24h > 0) {
           return 'bull';
         } else if (this.priceChange24h < 0 && theme === 'dark-mode') {
           return 'bear-light';
