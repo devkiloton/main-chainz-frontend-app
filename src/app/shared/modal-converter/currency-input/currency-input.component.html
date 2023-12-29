@@ -13,16 +13,15 @@
     class="change-currency symbol"
     matSuffix
     mat-icon-button
-    i18n-aria-label
-    aria-label="Select your crypto currency"
     [matMenuTriggerFor]="menuCurrencies.matMenu">
     <div class="flex items-center gap-x-2 px-2">
       <img
         [class.h-6]="!isFiatCollection"
+        class="rounded-sm"
         [src]="getCurrencyRepresentation({ asset: form.controls.id.value, isFiat: isFiatCollection })"
         i18n-alt
         [alt]="'Image representing ' + form.controls.id.value" />
-      <span class="font-medium">{{ form.controls.id.value }}</span>
+      <span class="font-bold">{{ form.controls.id.value }}</span>
     </div>
     <mat-icon class="mr-2">keyboard_arrow_down</mat-icon>
   </button>
