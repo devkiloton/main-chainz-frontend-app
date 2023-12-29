@@ -2,19 +2,7 @@
   <app-particle-bg></app-particle-bg>
   <div class="over-animation">
     <div>
-      <p class="mb-2" i18n>Decrypt an alternative reality with</p>
-      <img
-        *ngIf="(theme$ | async) === 'dark-mode'"
-        i18n-alt
-        alt="Main Chainz logo."
-        class="w-72"
-        src="assets/images/white-logo.svg" />
-      <img
-        *ngIf="(theme$ | async) === 'light-mode'"
-        i18n-alt
-        alt="Main Chainz logo."
-        class="w-72"
-        src="assets/images/black-logo.svg" />
+      <p class="mb-2" i18n>Decrypt an alternative reality</p>
     </div>
     <app-modal-converter class="mat-elevation-z4"></app-modal-converter>
   </div>
