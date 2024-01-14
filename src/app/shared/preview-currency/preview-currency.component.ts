@@ -1,17 +1,23 @@
-import { CurrencyPipe, NgIf } from '@angular/common';
+import { AsyncPipe, CurrencyPipe, NgIf } from '@angular/common';
 import type { OnInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import type { Observable } from 'rxjs';
+import { map, of } from 'rxjs';
+import { ThemesService } from 'src/app/services/themes/themes.service';
 
 @Component({
   selector: 'app-preview-currency',
   standalone: true,
-  imports: [NgIf, MatIconModule, CurrencyPipe],
+  imports: [NgIf, MatIconModule, CurrencyPipe, AsyncPipe],
   templateUrl: './preview-currency.component.html',
   styleUrls: ['./preview-currency.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PreviewCurrencyComponent implements OnInit {
+  private readonly _themes$ = inject(ThemesService);
+  public readonly theme$ = this._themes$.theme$;
+
   @Input({ required: true })
   public name!: string;
 
@@ -30,11 +36,22 @@ export class PreviewCurrencyComponent implements OnInit {
     this.priceChange24hAbs = Math.abs(this.priceChange24h);
   }
 
-  public get priceChange24hStatus(): string {
+  public priceChange24hStatus(): Observable<string> {
     if (this.priceChange24h === 0) {
-      return 'neutral';
+      return of('neutral');
     }
-    return this.priceChange24h > 0 ? 'bull' : 'bear';
+    return this.theme$.pipe(
+      map(theme => {
+        if (this.priceChange24h > 0 && theme === 'dark-mode') {
+          return 'bull-light';
+        } else if (this.priceChange24h > 0) {
+          return 'bull';
+        } else if (this.priceChange24h < 0 && theme === 'dark-mode') {
+          return 'bear-light';
+        }
+        return 'bear';
+      }),
+    );
   }
 
   public get priceChange24hIcon(): string {

@@ -13,11 +13,19 @@
   }
 
   .bull {
-    @apply bg-green-500;
+    @apply bg-green-700;
+  }
+
+  .bull-light {
+    @apply bg-green-400;
   }
 
   .bear {
-    @apply bg-red-500;
+    @apply bg-red-700;
+  }
+
+  .bear-light {
+    @apply bg-red-400;
   }
 
   .neutral {

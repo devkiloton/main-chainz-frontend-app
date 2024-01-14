@@ -5,7 +5,7 @@
         [src]="getCurrencyRepresentation({ asset: option.id, isFiat: isFiatCollection })"
         i18n-alt
         [alt]="isCurrency(option) ? option.name : option.id + ' icon'" />
-      <span>{{ isCurrency(option) ? option.name : option.symbol + ' | ' + option.id }}</span>
+      <span>{{ isCurrency(option) ? option.name : option.id + ' | ' + option.symbol }}</span>
     </div>
   </button>
 </mat-menu>
